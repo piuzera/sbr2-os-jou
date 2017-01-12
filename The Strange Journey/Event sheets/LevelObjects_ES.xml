@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelObjects_ES</name>
+    <events>
+        <event-group description="" sid="253184847975030" title="Blocks">
+            <sub-events>
+                <comment>Destroy</comment>
+                <event-block sid="402302360467237">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="359080655736674" type="Player_Sword">
+                            <param id="0" name="Object">Block</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="156138030291548" type="Block">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">Player_Lance.X</param>
+                            <param id="2" name="Y">Player_Lance.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="882169041482424" type="Player_Sword">
+                            <param id="0" name="Instance variable">destroy</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="924330028768266">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="230229454793772" type="Block">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="330891893270714" type="Block" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>HUD_ES</name>
+    <events>
+        <comment>Numbers</comment>
+        <event-block sid="540863122927476">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="187622947165531" type="Spritefonts">
+                    <param id="0" name="Instance variable">type</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;p1energy&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="125563047099158" type="Spritefonts">
+                    <param id="0" name="Text">zeropad(Data_Player_P1.Get(&quot;Energy&quot;)%100,2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="391881821400457">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="425271443795976" type="Spritefonts">
+                    <param id="0" name="Instance variable">type</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;p2energy&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="209237065790249" type="Spritefonts">
+                    <param id="0" name="Text">zeropad(Data_Player_P2.Get(&quot;Energy&quot;)%100,2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="591072588469515">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="297707576037009" type="Spritefonts">
+                    <param id="0" name="Instance variable">type</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;missiles&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="617452075671916" type="Spritefonts">
+                    <param id="0" name="Text">zeropad(Data_Player_P1.Get(&quot;Missiles&quot;),2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="600507836066316">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="281561237152483" type="Spritefonts">
+                    <param id="0" name="Instance variable">type</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;score&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="283918257481130" type="Spritefonts">
+                    <param id="0" name="Text">zeropad(Total_Score, 6)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="260749421121954">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="519841378702138" type="Spritefonts">
+                    <param id="0" name="Instance variable">type</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;time&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="866912117559016" type="Spritefonts">
+                    <param id="0" name="Text">round(TimeLine.TimerRemainder(&quot;LevelTime&quot;))</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Energy tanks</comment>
+        <event-block sid="838955299089694">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="261179279951621" type="HUD_EnergyTank">
+                    <param id="0" name="Instance variable">id</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">Data_Player_P1.Get(&quot;Energy&quot;) / 100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="505729304440965" type="HUD_EnergyTank">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="493791986560151">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="590838131159172" type="HUD_EnergyTank">
+                    <param id="0" name="Instance variable">id</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">Data_Player_P1.Get(&quot;Energy&quot;) / 100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="574600409887299" type="HUD_EnergyTank">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="196005702034559">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="409585813797346" type="HUD_EnergyTank">
+                    <param id="0" name="Instance variable">id</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">Data_Items_P1.Get(&quot;Etanks&quot;)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="167583712454092" type="HUD_EnergyTank">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="981770656485594">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="768330953414818" type="HUD_EnergyTank">
+                    <param id="0" name="Instance variable">id</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">Data_Items_P1.Get(&quot;Etanks&quot;)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="871602472761721" type="HUD_EnergyTank">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Adjust energy / missiles</comment>
+        <event-block sid="890158139621875">
+            <conditions>
+                <condition id="0" name="On function" sid="453735204090888" type="Function">
+                    <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="753455912545460" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;Energy&quot;</param>
+                    <param id="1" name="Value">clamp(Self.Get(&quot;Energy&quot;) + function.Param(0), 0, 99 + Data_Items_P1.Get(&quot;Etanks&quot;) * 100)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="649885752550615">
+            <conditions>
+                <condition id="0" name="On function" sid="107293949118065" type="Function">
+                    <param id="0" name="Name">&quot;Adjust_Energy_P2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="770558943213577" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;Energy&quot;</param>
+                    <param id="1" name="Value">clamp(Self.Get(&quot;Energy&quot;) + function.Param(0), 0, 99 + Data_Items_P2.Get(&quot;Etanks&quot;) * 100)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="929352437962348">
+            <conditions>
+                <condition id="0" name="On function" sid="903371293845795" type="Function">
+                    <param id="0" name="Name">&quot;Adjust_Missiles&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="696199664267299" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;Missiles&quot;</param>
+                    <param id="1" name="Value">clamp(Self.Get(&quot;Missiles&quot;) + function.Param(0), 0, Data_Items_P1.Get(&quot;MissileTanks&quot;) * 5)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Make missile counter visible if you have missiles</comment>
+        <event-block sid="386454021839417">
+            <conditions>
+                <condition id="0" name="Compare value" sid="645973874605891" type="Data_Items_P1">
+                    <param id="0" name="Key">&quot;MissileTanks&quot;</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="453676354023330" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="757461294779311" type="HUD_MissileCounter">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="299682712256554">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="436245280229774" type="Spritefonts">
+                            <param id="0" name="Instance variable">category</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HUD&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="508183765481002" type="Spritefonts">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;missiles&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="555432697825088" type="Spritefonts">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="273928581442919">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="156698213383838" type="System" />
+            </conditions>
+            <actions>
+                <action id="30" name="Create timer" sid="742296257396185" type="TimeLine">
+                    <param id="0" name="Timer">&quot;LevelTime&quot;</param>
+                    <param id="1" name="Name">&quot;LevelTime&quot;</param>
+                    <param id="2" name="Parameter {n}"></param>
+                </action>
+                <action id="3" name="Start" sid="772185590780823" type="TimeLine">
+                    <param id="0" name="Name">&quot;LevelTime&quot;</param>
+                    <param id="1" name="Time">60</param>
+                    <param id="2" name="Repeat">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

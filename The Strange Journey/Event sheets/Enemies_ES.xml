@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Enemies_ES</name>
+    <events>
+        <event-group description="" sid="118892386883504" title="Enemy AI">
+            <sub-events>
+                <event-group description="" sid="692183519409171" title="Pig">
+                    <sub-events>
+                        <comment>Actions on floor</comment>
+                        <event-block sid="405474781361703">
+                            <conditions>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="953549784442583" type="En_Pig" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="989873187104619">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="943392487125104" type="En_Pig">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Player1_Base.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="787722805224985" type="En_Pig">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="318140707570373" type="En_Pig">
+                                            <param id="0" name="Instance variable">side</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="386601407031577">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="638351082454765" type="En_Pig">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Player1_Base.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="872471363154602" type="En_Pig">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="963136529051863" type="En_Pig">
+                                            <param id="0" name="Instance variable">side</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="889996349554259">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="282971891263380" type="System">
+                                            <param id="0" name="Interval (seconds)">0.75</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="362699846671231" type="En_Pig">
+                                            <param id="0" name="Instance variable">direction</param>
+                                            <param id="1" name="Value">choose(0,1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="952312438096733">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="939298185810609" type="En_Pig">
+                                            <param id="0" name="Instance variable">direction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="729983239375895" type="En_Pig">
+                                            <param id="0" name="Object">Player1_Base</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="730954197104602" type="En_Pig">
+                                            <param id="0" name="Animation">&quot;PreJump&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="384010948459856" type="En_Pig">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="389243732835959">
+                                            <conditions>
+                                                <condition behavior="Platform" id="0" name="Is moving" sid="539249741699470" type="En_Pig" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="622556730928438" type="En_Pig">
+                                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="462156015358124">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="228802784577990" type="En_Pig">
+                                            <param id="0" name="Instance variable">direction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="609873902989894" type="En_Pig">
+                                            <param id="0" name="Object">Player1_Base</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="179688203777305" type="En_Pig">
+                                            <param id="0" name="Animation">&quot;PreJump&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="702502206440545" type="En_Pig">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="323040201963500">
+                                            <conditions>
+                                                <condition behavior="Platform" id="0" name="Is moving" sid="194905735088713" type="En_Pig" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="621962647744530" type="En_Pig">
+                                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="634604737381056">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="567934510208401" type="System">
+                                            <param id="0" name="Interval (seconds)">random(2,6)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="189787621070456" type="En_Pig">
+                                            <param id="0" name="Animation">&quot;PreJump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Hop</comment>
+                        <event-block sid="242525039648600">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="921545530061524" type="En_Pig">
+                                    <param id="0" name="Animation">&quot;PreJump&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="241695181092101" type="En_Pig">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="375459485292437" type="En_Pig">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Move left/right when in the air</comment>
+                        <event-block sid="584894672384851">
+                            <conditions>
+                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="617814295878683" type="En_Pig" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="497314872168978">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="398806446402775" type="En_Pig">
+                                            <param id="0" name="Instance variable">side</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="942485818519339" type="En_Pig">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="517479564409990">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="556819206452038" type="En_Pig">
+                                            <param id="0" name="Instance variable">side</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="574178170023572" type="En_Pig">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="277084592477332">
+                                    <conditions>
+                                        <condition behavior="Platform" id="4" name="Is falling" sid="818685856504151" type="En_Pig" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="148143831212020" type="En_Pig">
+                                            <param id="0" name="Animation">&quot;Fall&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="987848904749227" title="Dragonfly">
+                    <sub-events>
+                        <comment>Air Movement</comment>
+                        <event-block sid="630437344206135">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="496377548175211" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="861259427589267" type="En_Dragonfly">
+                                    <param id="0" name="Angle">random(0,360)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="798341954471448">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="962349171819625" type="En_Dragonfly">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Player1_Base.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="306675403472577" type="En_Dragonfly">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="312778042004057">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="857563732683619" type="En_Dragonfly">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">Player1_Base.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="798852555398183" type="En_Dragonfly">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="620895971925857" title="Green Dragonfly">
+                    <sub-events>
+                        <comment>Chasing and Air Movement</comment>
+                        <variable constant="0" name="HitVar" sid="954482143387095" static="1" type="number">0</variable>
+                        <event-block sid="591944164719203">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="950968975168073" type="System">
+                                    <param id="0" name="Variable">HitVar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="728417140239848">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="951670812396696" type="System">
+                                            <param id="0" name="Interval (seconds)">0.5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="199211135854463" type="En_Dragonfly">
+                                            <param id="0" name="Angle">random(0,360)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="919294022944445">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="187022995806389" type="En_GreenDragonfly">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Player1_Base.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="490859887968927" type="En_GreenDragonfly">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="600130265602654">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="629139597658045" type="En_GreenDragonfly">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">Player1_Base.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="964725191285883" type="En_GreenDragonfly">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="182689205246842">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="701413649557747" type="En_GreenDragonfly">
+                                    <param id="0" name="Object">Player1_Base</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="198763917039626" type="System">
+                                    <param id="0" name="Variable">HitVar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="982947529170711" type="En_GreenDragonfly">
+                                    <param id="0" name="Angle">angle(En_GreenDragonfly.X,En_GreenDragonfly.Y,Player1_Base.X,Player1_Base.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="447714076202440">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="551441686605529" type="En_GreenDragonfly">
+                                    <param id="0" name="Object">Player1_Base</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="864390414254373" type="System">
+                                    <param id="0" name="Variable">HitVar</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="686354241413631" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="360012171604090" type="System">
+                                    <param id="0" name="Variable">HitVar</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="686641081965610" title="Evil Plant">
+                    <sub-events>
+                        <comment>Attack on sight</comment>
+                        <event-block sid="236927873351057">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="873572462561023" type="En_EvilPlant">
+                                    <param id="0" name="Object">Player1_Base</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="192379886262663" type="En_EvilPlant">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="590789174704631">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="631018225165518" type="En_EvilPlant">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Player1_Base.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="776926159316466" type="En_EvilPlant">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="912719880498444">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="284795035838931" type="En_EvilPlant">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Player1_Base.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="843454374041300" type="En_EvilPlant">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="203039767952939">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="174808145685694" type="En_EvilPlant">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="201116726860256">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="673246040362227" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="881363930198852" type="System">
+                                                    <param id="0" name="Object to create">Enemy_EyeProjectile</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">En_EvilPlant.ImagePointX(1)</param>
+                                                    <param id="3" name="Y">En_EvilPlant.ImagePointY(1)</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="184204801117076" type="Enemy_EyeProjectile">
+                                                    <param id="0" name="Angle">angle(En_EvilPlant.X,En_EvilPlant.Y,Player1_Base.X,Player1_Base.Y)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="229198068559504">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="662765885222309" type="En_EvilPlant">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                </condition>
+                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="970060054951806" type="En_EvilPlant">
+                                    <param id="0" name="Object">Player1_Base</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="582787102826802" type="En_EvilPlant">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="150472139204588" type="En_EvilPlant">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="654859788702524" title="Damage Enemy">
+            <sub-events>
+                <comment>Damage an enemy with a projectile</comment>
+                <event-block sid="485646525837998">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="903467860856658" type="Projectiles">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="391698277103886" type="Projectiles">
+                            <param id="0" name="Instance variable">owner</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;player&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="259442756211122" type="Projectiles">
+                            <param id="0" name="Instance variable">destroy</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="771340489391400" type="Enemies">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">Projectiles.power</param>
+                        </action>
+                        <action id="0" name="Call function" sid="640501155685618" type="Function">
+                            <param id="0" name="Name">&quot;Object_Flash&quot;</param>
+                            <param id="1" name="Parameter {n}">Enemies.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Destroy enemy</comment>
+                <event-block sid="388630021889084">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="912661903513643" type="Enemies">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="276833483460865" type="Enemies" />
+                        <action id="-10" name="Add to" sid="493865478434998" type="System">
+                            <param id="0" name="Variable">Total_Score</param>
+                            <param id="1" name="Value">150</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Drop a pickup</comment>
+                        <variable constant="0" name="ItemDrop" sid="174898673927425" static="0" type="number">0</variable>
+                        <event-block sid="162919658671337">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="519612334297765" type="System">
+                                    <param id="0" name="Variable">ItemDrop</param>
+                                    <param id="1" name="Value">random(10)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="105350370222512">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="572101605741025" type="System">
+                                            <param id="0" name="Variable">ItemDrop</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="168798274981474" type="System">
+                                            <param id="0" name="Object to create">Pickups</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">Enemies.X</param>
+                                            <param id="3" name="Y">Enemies.Y - Enemies.Height / 2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="669278058656633" type="Pickups">
+                                            <param id="0" name="Animation">choose(&quot;Energy&quot;,&quot;Missiles&quot;)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

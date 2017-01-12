@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Projectiles_ES</name>
+    <events>
+        <comment>Destroy when colliding with collisions or solids</comment>
+        <event-block any="1" sid="579835754884703">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="149600660810992" type="Projectiles">
+                    <param id="0" name="Object">Tilemap_Collisions</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="341499044185365" type="Projectiles">
+                    <param id="0" name="Instance variable">destroy</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Destroy bullet</comment>
+        <event-block sid="355284619216573">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="282588893342871" type="Player_Lance">
+                    <param id="0" name="Instance variable">destroy</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="778470529388552" type="System">
+                    <param id="0" name="Object">Player_Lance</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="330783129039094" type="Player_Lance" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

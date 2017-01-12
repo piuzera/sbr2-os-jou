@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Globals_ES</name>
+    <events>
+        <variable comment="Window width (without borders)" constant="1" name="RES_WIDTH" sid="830754086780085" static="0" type="number">320</variable>
+        <variable comment="Window height (without borders)" constant="1" name="RES_HEIGHT" sid="432669705259440" static="0" type="number">224</variable>
+        <variable comment="Is the subscreen open?" constant="0" name="PAUSE" sid="587653042663871" static="0" type="number">0</variable>
+        <variable comment="This prevents you from opening the subscreen during room transitions, item collect sequences, etc." constant="0" name="PAUSE_LOCK" sid="341901103388380" static="0" type="number">0</variable>
+        <variable comment="This is to see if you&apos;ve started a new game or loaded one." constant="0" name="LOADGAME" sid="246567793858611" static="0" type="number">0</variable>
+        <variable comment="This is to pick which Controller_Menu to use." constant="0" name="CURRENT_MENU" sid="400903410400201" static="0" type="text">TitleScreen</variable>
+        <variable comment="The current cutscene." constant="0" name="Cutscene" sid="438405120933895" static="0" type="text"></variable>
+        <variable comment="This is to see if you&apos;ve enabled SaveData_Max and destroys all items." constant="0" name="SaveData_Max" sid="649985295078788" static="0" type="number">0</variable>
+        <variable comment="Total score of the session." constant="0" name="Total_Score" sid="816849773640728" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>

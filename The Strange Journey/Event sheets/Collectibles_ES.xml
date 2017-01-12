@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Collectibles_ES</name>
+    <events>
+        <event-group description="" sid="476696729226275" title="Items">
+            <sub-events>
+                <comment>Player 1 collects an item</comment>
+                <event-block sid="805761659764802">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="874563853955969" type="Player1_Base">
+                            <param id="0" name="Object">Items</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="880610091208437" type="Function">
+                            <param id="0" name="Name">&quot;Item_Collect&quot;</param>
+                            <param id="1" name="Parameter {n}">Items.AnimationName</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="436154125411735" type="System">
+                            <param id="0" name="Variable">PAUSE_LOCK</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>&gt;Pause the game for the item collect sequence</comment>
+                        <event-block sid="572911616248799">
+                            <conditions />
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="812064665243495" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="331314423584127" type="System">
+                                    <param id="0" name="Group name">&quot;Player 1 Engine&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="533882983372928" type="System">
+                                    <param id="0" name="Group name">&quot;Player 2 Engine&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>&gt;Set the item&apos;s timescale to 1 so it can flash during the item collect sequence</comment>
+                        <event-block sid="299522721284231">
+                            <conditions />
+                            <actions>
+                                <action id="-14" name="Set object time scale" sid="182667540891202" type="System">
+                                    <param id="0" name="Object">Items</param>
+                                    <param id="1" name="Time scale">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="765867564264846" type="Items">
+                                    <param id="0" name="&apos;On&apos; time">0.05</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.05</param>
+                                    <param id="2" name="Duration">Infinity</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>&gt;Add item to save data &amp; create message</comment>
+                        <event-block sid="833128310842733">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="831532933216592" type="Items">
+                                    <param id="0" name="Animation">&quot;EnergyTank&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="336345202397481" type="Data_Items_P1">
+                                    <param id="0" name="Key">&quot;Etanks&quot;</param>
+                                    <param id="1" name="Value">Self.Get(&quot;Etanks&quot;) + 1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="887840273780431" type="Function">
+                                    <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
+                                    <param id="1" name="Parameter {n}">9999</param>
+                                </action>
+                                <action id="0" name="Call function" sid="688264711710211" type="Function">
+                                    <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;-ENERGY TANK-&quot;{###}&quot;INCREASES MAX ENERGY&quot;{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="588631263149914">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="707161084133911" type="Items">
+                                    <param id="0" name="Animation">&quot;MissileTank&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="406173228761077" type="Data_Items_P1">
+                                    <param id="0" name="Key">&quot;MissileTanks&quot;</param>
+                                    <param id="1" name="Value">Self.Get(&quot;MissileTanks&quot;) + 1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="811646805863009" type="Function">
+                                    <param id="0" name="Name">&quot;Adjust_Missiles&quot;</param>
+                                    <param id="1" name="Parameter {n}">9999</param>
+                                </action>
+                                <action id="0" name="Call function" sid="871313748239583" type="Function">
+                                    <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;-MISSILE TANK-&quot;{###}&quot;INCREASES MAX MISSILES&quot;{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="337627297093613">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="984789784318965" type="Items">
+                                    <param id="0" name="Animation">&quot;HiJumpBoots&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="592435692893014" type="Data_Items_P1">
+                                    <param id="0" name="Key">&quot;HiJumpBoots&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="622679379682030" type="Function">
+                                    <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;-HI JUMP BOOTS-&quot;{###}&quot;INCREASES JUMP HEIGHT&quot;{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="257608064090311">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="454648652802872" type="Items">
+                                    <param id="0" name="Animation">&quot;Armor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="862123254002457" type="Data_Items_P1">
+                                    <param id="0" name="Key">&quot;Armor&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="563414062240052" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">equip</param>
+                                    <param id="1" name="Value">&quot;Armor&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="578932403774497" type="Function">
+                                    <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;-ARMOR-&quot;{###}&quot;INCREASES DEFENSE&quot;{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="897091558731400">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="587818162690355" type="Items">
+                                    <param id="0" name="Animation">&quot;Map&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="199534381294743" type="Data_Items_P1">
+                                    <param id="0" name="Key">&quot;Map&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="844491443384737" type="Function">
+                                    <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;-MAP-&quot;{###}&quot;REVEALS AREA MAP&quot;{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Add the ID of the item to Data_Persist so it doesn&apos;t show up again. (See eRoomSystem event 48-49)</comment>
+                        <event-block sid="887277168541779">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Add key" sid="745476488701938" type="Data_Persist">
+                                    <param id="0" name="Key">Items.ID</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Player 2 collects an item</comment>
+                <event-block sid="254840721512198">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="511704570792933" type="Player2_Base">
+                            <param id="0" name="Object">Items</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="491291367531401" type="Function">
+                            <param id="0" name="Name">&quot;Item_Collect&quot;</param>
+                            <param id="1" name="Parameter {n}">Items.AnimationName</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="367315563716722" type="System">
+                            <param id="0" name="Variable">PAUSE_LOCK</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>&gt;Pause the game for the item collect sequence</comment>
+                        <event-block sid="792777641615815">
+                            <conditions />
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="613094315021563" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="383224316353116" type="System">
+                                    <param id="0" name="Group name">&quot;Player 1 Engine&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="267706780161887" type="System">
+                                    <param id="0" name="Group name">&quot;Player 2 Engine&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>&gt;Set the item&apos;s timescale to 1 so it can flash during the item collect sequence</comment>
+                        <event-block sid="471620583982193">
+                            <conditions />
+                            <actions>
+                                <action id="-14" name="Set object time scale" sid="204260159036483" type="System">
+                                    <param id="0" name="Object">Items</param>
+                                    <param id="1" name="Time scale">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="949232601192674" type="Items">
+                                    <param id="0" name="&apos;On&apos; time">0.05</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.05</param>
+                                    <param id="2" name="Duration">Infinity</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>&gt;Add item to save data &amp; create message</comment>
+                        <event-block sid="435405954056539">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="610096959321228" type="Items">
+                                    <param id="0" name="Animation">&quot;EnergyTank&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="528946878990660" type="Data_Items_P2">
+                                    <param id="0" name="Key">&quot;Etanks&quot;</param>
+                                    <param id="1" name="Value">Self.Get(&quot;Etanks&quot;) + 1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="570660659654811" type="Function">
+                                    <param id="0" name="Name">&quot;Adjust_Energy_P2&quot;</param>
+                                    <param id="1" name="Parameter {n}">9999</param>
+                                </action>
+                                <action id="0" name="Call function" sid="709598706588125" type="Function">
+                                    <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;-ENERGY TANK-&quot;{###}&quot;INCREASES MAX ENERGY&quot;{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="891399325911371">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="720273707164083" type="Items">
+                                    <param id="0" name="Animation">&quot;MissileTank&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="396790184040550" type="Data_Items_P2">
+                                    <param id="0" name="Key">&quot;MissileTanks&quot;</param>
+                                    <param id="1" name="Value">Self.Get(&quot;MissileTanks&quot;) + 1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="813216135289153" type="Function">
+                                    <param id="0" name="Name">&quot;Adjust_Missiles&quot;</param>
+                                    <param id="1" name="Parameter {n}">9999</param>
+                                </action>
+                                <action id="0" name="Call function" sid="399202251599445" type="Function">
+                                    <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;-MISSILE TANK-&quot;{###}&quot;INCREASES MAX MISSILES&quot;{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="707221130126939">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="902463713698384" type="Items">
+                                    <param id="0" name="Animation">&quot;HiJumpBoots&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="764989950087298" type="Data_Items_P2">
+                                    <param id="0" name="Key">&quot;HiJumpBoots&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="401272003503572" type="Function">
+                                    <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;-HI JUMP BOOTS-&quot;{###}&quot;INCREASES JUMP HEIGHT&quot;{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="362995979424388">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="928574616634106" type="Items">
+                                    <param id="0" name="Animation">&quot;HeatSuit&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="951680428852751" type="Data_Items_P2">
+                                    <param id="0" name="Key">&quot;HeatSuit&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="454543292530143" type="Function">
+                                    <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;-HEAT SUIT-&quot;{###}&quot;PROTECTS FROM LAVA&quot;{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="675206913604818">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="395787136549950" type="Items">
+                                    <param id="0" name="Animation">&quot;Map&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="606365757550643" type="Data_Items_P2">
+                                    <param id="0" name="Key">&quot;Map&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="165302330942103" type="Function">
+                                    <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;-MAP-&quot;{###}&quot;REVEALS AREA MAP&quot;{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Add the ID of the item to Data_Persist so it doesn&apos;t show up again. (See eRoomSystem event 48-49)</comment>
+                        <event-block sid="991838645466875">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Add key" sid="973475615645059" type="Data_Persist">
+                                    <param id="0" name="Key">Items.ID</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="162987797744952" title="Pickups">
+            <sub-events>
+                <event-block sid="964112383395140">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="885169010460100" type="Player1_Base">
+                            <param id="0" name="Object">Pickups</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="625556138074452" type="Pickups" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="580313957339255">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="294210368251030" type="Pickups">
+                                    <param id="0" name="Animation">&quot;Energy&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="536135660862683" type="Function">
+                                    <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
+                                    <param id="1" name="Parameter {n}">25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="187120850342387">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="474440380391278" type="Pickups">
+                                    <param id="0" name="Animation">&quot;Missiles&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="901521227955482" type="Function">
+                                    <param id="0" name="Name">&quot;Adjust_Missiles&quot;</param>
+                                    <param id="1" name="Parameter {n}">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="702384692134490">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="194793578168026" type="Player2_Base">
+                            <param id="0" name="Object">Pickups</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="147829397293239" type="Pickups" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="362704694963056">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="177851179002397" type="Pickups">
+                                    <param id="0" name="Animation">&quot;Energy&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="246495920236339" type="Function">
+                                    <param id="0" name="Name">&quot;Adjust_Energy_P2&quot;</param>
+                                    <param id="1" name="Parameter {n}">25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="671285548801229">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="365006806982977" type="Pickups">
+                                    <param id="0" name="Animation">&quot;Missiles&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="428876931411253" type="Function">
+                                    <param id="0" name="Name">&quot;Adjust_Missiles&quot;</param>
+                                    <param id="1" name="Parameter {n}">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="253094876123073" title="Message box">
+            <sub-events>
+                <comment>This displays a message when an item is collected.</comment>
+                <event-block sid="790335430794969">
+                    <conditions>
+                        <condition id="0" name="On function" sid="586145287159082" type="Function">
+                            <param id="0" name="Name">&quot;Message_Create&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>&gt;Create message box</comment>
+                        <event-block sid="576763484980951">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="861527162296250" type="System">
+                                    <param id="0" name="Object to create">AlertBox</param>
+                                    <param id="1" name="Layer">&quot;Transitions&quot;</param>
+                                    <param id="2" name="X">RES_WIDTH / 2</param>
+                                    <param id="3" name="Y">RES_HEIGHT - 180</param>
+                                </action>
+                                <action id="-14" name="Set object time scale" sid="294372080129145" type="System">
+                                    <param id="0" name="Object">AlertBox</param>
+                                    <param id="1" name="Time scale">1</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="150298967917830" type="AlertBox">
+                                    <param id="0" name="Duration">2</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;destroy&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Two lines for item name &amp; description</comment>
+                                <event-block sid="972694370506457">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="503257415401007" type="Function">
+                                            <param id="0" name="Index">2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="283727843302495" type="System">
+                                            <param id="0" name="Object to create">SpriteFont</param>
+                                            <param id="1" name="Layer">&quot;Transitions&quot;</param>
+                                            <param id="2" name="X">AlertBox.X</param>
+                                            <param id="3" name="Y">AlertBox.Y - 6</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="820606177456772" type="SpriteFont">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Value">&quot;message&quot;</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="525907964402554" type="SpriteFont">
+                                            <param id="0" name="Width">AlertBox.Width</param>
+                                            <param id="1" name="Height">AlertBox.Height</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="735297745264309" type="SpriteFont">
+                                            <param id="0" name="Text">function.Param(0)</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="539573086595541" type="System">
+                                            <param id="0" name="Object to create">SpriteFont</param>
+                                            <param id="1" name="Layer">&quot;Transitions&quot;</param>
+                                            <param id="2" name="X">AlertBox.X</param>
+                                            <param id="3" name="Y">AlertBox.Y + 6</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="872450473434772" type="SpriteFont">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Value">&quot;message&quot;</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="760949551805508" type="SpriteFont">
+                                            <param id="0" name="Width">AlertBox.Width</param>
+                                            <param id="1" name="Height">AlertBox.Height</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="341136442816809" type="SpriteFont">
+                                            <param id="0" name="Text">function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>One centered line for simple messages (Game Saved, etc.)</comment>
+                                <event-block sid="290626159216818">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="152543299190637" type="Function">
+                                            <param id="0" name="Index">2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="784416333338744" type="System">
+                                            <param id="0" name="Object to create">SpriteFont</param>
+                                            <param id="1" name="Layer">&quot;Transitions&quot;</param>
+                                            <param id="2" name="X">AlertBox.X</param>
+                                            <param id="3" name="Y">AlertBox.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="270194034415610" type="SpriteFont">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Value">&quot;message&quot;</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="812131031836019" type="SpriteFont">
+                                            <param id="0" name="Width">AlertBox.Width</param>
+                                            <param id="1" name="Height">AlertBox.Height</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="502031156707024" type="SpriteFont">
+                                            <param id="0" name="Text">function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>When the collect item sequence is finished, destroy the message box and resume the game.</comment>
+                <event-block sid="121810983668793">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="977669765753569" type="AlertBox">
+                            <param id="0" name="Tag">&quot;destroy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="695701751335247" type="Function">
+                            <param id="0" name="Name">&quot;Message_Destroy&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="235965978232092">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="411433262327727" type="System">
+                            <param id="0" name="Variable">PAUSE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="492856714800640" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="147539439083638" type="Function">
+                            <param id="0" name="Name">&quot;Message_Destroy&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Finish / Destroy the message box</comment>
+                <event-block sid="682724056302726">
+                    <conditions>
+                        <condition id="0" name="On function" sid="746648463901201" type="Function">
+                            <param id="0" name="Name">&quot;Message_Destroy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="779353488402872" type="AlertBox" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="335734073010738">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="418763705574028" type="Spritefonts">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;message&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="530383794941383" type="Spritefonts" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="557972626258256">
+                            <conditions>
+                                <condition behavior="Flash" id="0" name="Is flashing" sid="980342263995120" type="Items" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="744540233034605" type="Items" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="651182949982199">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="103613683152765" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="157172239794701" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="542878933328556" type="System">
+                                    <param id="0" name="Group name">&quot;Player 1 Engine&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="609045977639178" type="System">
+                                    <param id="0" name="Group name">&quot;Player 2 Engine&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="247626087593899" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
