@@ -12,7 +12,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Level 1</layout>
         <event-sheet active="1" order="1">Player1_ES</event-sheet>
-        <event-sheet order="2">Player2_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
