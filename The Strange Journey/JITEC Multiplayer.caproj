@@ -203,6 +203,7 @@
                 <instance-variable name="weapon" sid="324497101111153" type="string" />
                 <instance-variable name="shootAngle" sid="231511733109265" type="number" />
                 <instance-variable name="hurtTimer" sid="233192609702047" type="number" />
+                <instance-variable name="initiatedJump" sid="875396299376940" type="boolean" />
             </instance-variables>
             <effects>
                 <effect-type name="ReplaceColor">

@@ -961,6 +961,7 @@
                         <weapon></weapon>
                         <shootAngle>0</shootAngle>
                         <hurtTimer>0</hurtTimer>
+                        <initiatedJump>false</initiatedJump>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

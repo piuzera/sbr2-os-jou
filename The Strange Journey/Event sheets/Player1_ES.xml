@@ -57,12 +57,14 @@
             <sub-events>
                 <event-group description="" sid="729587107748018" title="Player 1 Input">
                     <sub-events>
-                        <comment>Stop player if he&apos;s attacking from the ground</comment>
                         <comment>Move Right</comment>
                         <event-block sid="869588738812082">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="170900098974594" type="Player1_Mask">
                                     <param id="0" name="Instance variable">crouch</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="466171512879559" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">shoot</param>
                                 </condition>
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="890912727958768" type="Player1_Base" />
                             </conditions>
@@ -81,13 +83,6 @@
                                         <action behavior="Platform" id="7" name="Simulate control" sid="748631684488581" type="Player1_Base">
                                             <param id="0" name="Control">1</param>
                                         </action>
-                                        <action id="7" name="Set mirrored" sid="988754273664537" type="Player1_Mask">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="116659089968538" type="Player1_Mask">
-                                            <param id="0" name="Instance variable">direction</param>
-                                            <param id="1" name="Value">&quot;right&quot;</param>
-                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="165961490895397">
@@ -102,13 +97,6 @@
                                     <actions>
                                         <action behavior="Platform" id="7" name="Simulate control" sid="549155453521910" type="Player1_Base">
                                             <param id="0" name="Control">0</param>
-                                        </action>
-                                        <action id="7" name="Set mirrored" sid="494815083262542" type="Player1_Mask">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="711830671908855" type="Player1_Mask">
-                                            <param id="0" name="Instance variable">direction</param>
-                                            <param id="1" name="Value">&quot;left&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -129,6 +117,39 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Direction (separated from the movement like in GnG)</comment>
+                        <event-block sid="490831774323948">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="241076086425572" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="116659089968538" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="637771609841751" type="Player1_Mask">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="837147741895961">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="663823895859327" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="711830671908855" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="297581426070528" type="Player1_Mask">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Jump</comment>
                         <event-block sid="185938506427933">
                             <conditions>
@@ -144,6 +165,35 @@
                                 <action id="0" name="Call function" sid="973300844089365" type="Function">
                                     <param id="0" name="Name">&quot;Player_Jump&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="455209673820112" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">initiatedJump</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="817926545771669">
+                            <conditions>
+                                <condition behavior="Platform" id="9" name="On landed" sid="435909382317649" type="Player1_Base" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="137427336831465" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">initiatedJump</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Fall</comment>
+                        <event-block sid="390159070872200">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="891234179307462" type="Player1_Base" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="587751291988048" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">initiatedJump</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="629891735665310" type="Player1_Base">
+                                    <param id="0" name="Vector X">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1064,6 +1114,9 @@
                                                 <action id="4" name="Set animation" sid="808862315676408" type="Player1_Mask">
                                                     <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Up&quot;</param>
                                                     <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="236743250038279" type="Player1_Base">
+                                                    <param id="0" name="Vector X">0</param>
                                                 </action>
                                                 <action disabled="1" id="-12" name="Set group active" sid="989283600395735" type="System">
                                                     <param id="0" name="Group name">&quot;Player 1 Input&quot;</param>
