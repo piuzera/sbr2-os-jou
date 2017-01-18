@@ -46,7 +46,7 @@
                             <param id="0" name="Input">0</param>
                         </action>
                         <action id="-1" name="Set X" sid="427096514619002" type="Player1_Base">
-                            <param id="0" name="X">LadderCollision.X + 6</param>
+                            <param id="0" name="X">LadderCollision.X + 8</param>
                         </action>
                         <action behavior="Solid" id="0" name="Set enabled" sid="390369040341062" type="LadderGround">
                             <param id="0" name="State">0</param>

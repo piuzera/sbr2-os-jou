@@ -207,6 +207,11 @@
                                     <param id="0" name="Key">40 (Down arrow)</param>
                                 </condition>
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="620343358063578" type="Player1_Base" />
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="417758187940368" type="Player1_Base">
+                                    <param id="0" name="Object">LadderCollision</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">16</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="465419363391674" type="Function">
@@ -262,20 +267,32 @@
                                     <param id="1" name="Offset X">0</param>
                                     <param id="2" name="Offset Y">16</param>
                                 </condition>
-                                <condition id="-2" name="Compare Y" sid="197395813613371" type="Player1_Base">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">LadderCollision.Y</param>
-                                </condition>
                                 <condition id="2" name="Key is down" sid="161442071938127" type="Keyboard">
                                     <param id="0" name="Key">40 (Down arrow)</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="923158946117146" type="Function">
-                                    <param id="0" name="Name">&quot;Player_Climb&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;True&quot;{###}&quot;Down&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="384732254616296">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="755046255005292" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Call function" sid="923158946117146" type="Function">
+                                            <param id="0" name="Name">&quot;Player_Climb&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;True&quot;{###}&quot;Down&quot;</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="465437910240559" type="Player1_Mask">
+                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Climb_Bottom&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="412149270745624" type="Function">
+                                            <param id="0" name="Name">&quot;Player_Climb_Start_Bottom&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="644400688247858">
                             <conditions>
@@ -285,25 +302,33 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="582002786908289" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="582002786908289" type="Function">
                                     <param id="0" name="Name">&quot;Player_Climb&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;False&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="850809544944572">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="967392903582174" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="879340312974170" type="Function">
+                                            <param id="0" name="Name">&quot;Player_Climb_Start_Top&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="548509394221633">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="857977473488854" type="Player1_Mask">
                                     <param id="0" name="Instance variable">ladders</param>
                                 </condition>
-                                <condition id="9" name="Is overlapping at offset" sid="922958153149552" type="Player1_Base">
-                                    <param id="0" name="Object">LadderGround</param>
-                                    <param id="1" name="Offset X">0</param>
-                                    <param id="2" name="Offset Y">16</param>
-                                </condition>
                                 <condition id="-2" name="Compare Y" sid="244549181941539" type="Player1_Base">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">LadderGround.Y</param>
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">LadderCollision.Y+LadderCollision.Height-3</param>
                                 </condition>
                                 <condition id="2" name="Key is down" sid="405204712769186" type="Keyboard">
                                     <param id="0" name="Key">40 (Down arrow)</param>
@@ -594,6 +619,59 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Climb End</comment>
+                        <event-block sid="461139572224999">
+                            <conditions>
+                                <condition id="0" name="On function" sid="451398785649207" type="Function">
+                                    <param id="0" name="Name">&quot;Player_Climb_Start_Top&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="668333964849400" type="Player1_Mask">
+                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Climb_Top&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="852037287402216" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="852647284789904" type="Function">
+                                    <param id="0" name="Name">&quot;Player_Climb&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;False&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Climb Start</comment>
+                        <event-block sid="558937212269985">
+                            <conditions>
+                                <condition id="0" name="On function" sid="803665255660732" type="Function">
+                                    <param id="0" name="Name">&quot;Player_Climb_Start_Bottom&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="797061340178140" type="Function">
+                                    <param id="0" name="Name">&quot;Player_Climb&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;True&quot;{###}&quot;Down&quot;{###}&quot;Start&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="526791422663930" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="348298750571631" type="Player1_Mask">
+                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Climb&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="418845837455813" type="Player1_Base">
+                                    <param id="0" name="Y">LadderCollision.Y + 32</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="108350715232413">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="757574317012436" type="System" />
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <comment>Climb</comment>
                         <event-block sid="663168959721591">
                             <conditions>
@@ -627,10 +705,22 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-2" name="Set Y" sid="488144980211781" type="Player1_Base">
+                                                <action disabled="1" id="-2" name="Set Y" sid="488144980211781" type="Player1_Base">
                                                     <param id="0" name="Y">LadderCollision.Y + 16</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="263381760270339">
+                                                    <conditions>
+                                                        <condition id="1" name="Compare parameter" sid="199995047422453" type="Function">
+                                                            <param id="0" name="Index">2</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Start&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -867,6 +957,9 @@
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="726908313650922" type="Player1_Base" />
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="580689826725373" type="Player1_Mask">
                                     <param id="0" name="Instance variable">landing</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="925264043270157" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">ladders</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -1143,6 +1236,9 @@
                         <event-block sid="865461498857599">
                             <conditions>
                                 <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="652690659856170" type="Player1_Base" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="645012137642265" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">ladders</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -1299,22 +1395,39 @@
                                     <param id="0" name="Instance variable">ladders</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="298457783379750" type="Player1_Mask">
-                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Climb&quot;</param>
-                                    <param id="1" name="From">0</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
+                                <event-block sid="200469491452530">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="216187185999410" type="System" />
+                                        <condition id="2" inverted="1" name="Is playing" sid="369923355002274" type="Player1_Mask">
+                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Climb_Bottom&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="298457783379750" type="Player1_Mask">
+                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Climb&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="169892040752058">
                                     <conditions>
                                         <condition behavior="8Direction" id="0" name="Is moving" sid="239015031373980" type="Player1_Base" />
                                     </conditions>
-                                    <actions>
-                                        <action id="3" name="Start" sid="775545365313592" type="Player1_Mask">
-                                            <param id="0" name="From">0</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="753873181764658">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="550555032598214" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Start" sid="378261114325605" type="Player1_Mask">
+                                                    <param id="0" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="904451173087623">
                                     <conditions>
@@ -1334,6 +1447,9 @@
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="116946970513388" type="Player1_Mask">
                                     <param id="0" name="Instance variable">shoot</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="258194577592273" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">ladders</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -1473,10 +1589,6 @@
                                                             <param id="0" name="Seconds">0.2</param>
                                                         </action>
                                                         <action id="-13" name="Set boolean" sid="955172436323322" type="Player1_Mask">
-                                                            <param id="0" name="Instance variable">shoot</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                        <action disabled="1" id="-13" name="Set boolean" sid="103833176637617" type="Player1_Mask">
                                                             <param id="0" name="Instance variable">shoot</param>
                                                             <param id="1" name="Value">0</param>
                                                         </action>
