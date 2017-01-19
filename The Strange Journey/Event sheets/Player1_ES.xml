@@ -85,6 +85,24 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="832728084423870">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="521109164265339" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="516518591832880">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="618055788341155" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="177002849661940" type="Player1_Base">
+                                                    <param id="0" name="Vector X">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <event-block sid="165961490895397">
                                     <conditions>
                                         <condition id="2" name="Key is down" sid="743541274105112" type="Keyboard">
@@ -99,6 +117,24 @@
                                             <param id="0" name="Control">0</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="883661602407725">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="880623637218711" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="625987643019201">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="768026456494344" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="589616670104220" type="Player1_Base">
+                                                    <param id="0" name="Vector X">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="172598919612441">
                                     <conditions>
@@ -197,6 +233,129 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Climb ladders</comment>
+                        <event-block sid="723005711885844">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="306749395817815" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">climb</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="263905879886559">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="801727979708000" type="Player1_Mask">
+                                            <param id="0" name="Instance variable">shoot</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="871278626503968" type="Player1_Mask">
+                                            <param id="0" name="Instance variable">bouncing</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="452380789961521" type="Player1_Base">
+                                            <param id="0" name="Object">LadderCollision</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="432066508864358">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="230765386238662" type="Keyboard">
+                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="339495510446769" type="Function">
+                                                    <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;Deactivated&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="563577614683421" type="Function">
+                                                    <param id="0" name="Name">&quot;Player_Climb&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;True&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="107625131147837">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="690980653333325" type="System" />
+                                        <condition id="9" name="Is overlapping at offset" sid="826456317545469" type="Player1_Base">
+                                            <param id="0" name="Object">LadderCollision</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">16</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="161442071938127" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="827746338785817" type="Player1_Mask">
+                                            <param id="0" name="Instance variable">crouch</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="384732254616296">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="755046255005292" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action disabled="1" id="0" name="Call function" sid="923158946117146" type="Function">
+                                                    <param id="0" name="Name">&quot;Player_Climb&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;True&quot;{###}&quot;Down&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="665333959255144" type="Function">
+                                                    <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;Deactivated&quot;</param>
+                                                </action>
+                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="346564329374179" type="Player1_Base">
+                                                    <param id="0" name="Input">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="465437910240559" type="Player1_Mask">
+                                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Climb_Bottom&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="412149270745624" type="Function">
+                                                    <param id="0" name="Name">&quot;Player_Climb_Start_Bottom&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="644400688247858">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="974921715685476" type="System" />
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="483653086974558" type="Player1_Base">
+                                            <param id="0" name="Object">LadderCollision</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Call function" sid="582002786908289" type="Function">
+                                            <param id="0" name="Name">&quot;Player_Climb&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;False&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="850809544944572">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="967392903582174" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="283235198453897" type="Function">
+                                                    <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;Deactivated&quot;</param>
+                                                </action>
+                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="537651744112276" type="Player1_Base">
+                                                    <param id="0" name="Input">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="879340312974170" type="Function">
+                                                    <param id="0" name="Name">&quot;Player_Climb_Start_Top&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <comment>Crouch (Activated)</comment>
                         <event-block sid="359797454505837">
                             <conditions>
@@ -207,11 +366,6 @@
                                     <param id="0" name="Key">40 (Down arrow)</param>
                                 </condition>
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="620343358063578" type="Player1_Base" />
-                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="417758187940368" type="Player1_Base">
-                                    <param id="0" name="Object">LadderCollision</param>
-                                    <param id="1" name="Offset X">0</param>
-                                    <param id="2" name="Offset Y">16</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="465419363391674" type="Function">
@@ -220,106 +374,33 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Climb ladders</comment>
-                        <event-block sid="263905879886559">
+                        <event-block sid="963763450695347">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="306749395817815" type="Player1_Mask">
-                                    <param id="0" name="Instance variable">climb</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="801727979708000" type="Player1_Mask">
-                                    <param id="0" name="Instance variable">shoot</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="871278626503968" type="Player1_Mask">
-                                    <param id="0" name="Instance variable">bouncing</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="840710716218997" type="Player1_Mask">
-                                    <param id="0" name="Instance variable">crouch</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="452380789961521" type="Player1_Base">
-                                    <param id="0" name="Object">LadderCollision</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="432066508864358">
-                                    <conditions>
-                                        <condition id="2" name="Key is down" sid="230765386238662" type="Keyboard">
-                                            <param id="0" name="Key">38 (Up arrow)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="563577614683421" type="Function">
-                                            <param id="0" name="Name">&quot;Player_Climb&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;True&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="107625131147837">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="690980653333325" type="System" />
-                                <condition id="-8" name="Is boolean instance variable set" sid="839767576848264" type="Player1_Mask">
-                                    <param id="0" name="Instance variable">climb</param>
-                                </condition>
-                                <condition id="9" name="Is overlapping at offset" sid="826456317545469" type="Player1_Base">
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="580461152430784" type="Player1_Base">
                                     <param id="0" name="Object">LadderCollision</param>
                                     <param id="1" name="Offset X">0</param>
-                                    <param id="2" name="Offset Y">16</param>
-                                </condition>
-                                <condition id="2" name="Key is down" sid="161442071938127" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                    <param id="2" name="Offset Y">32</param>
                                 </condition>
                             </conditions>
                             <actions />
-                            <sub-events>
-                                <event-block sid="384732254616296">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="755046255005292" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action disabled="1" id="0" name="Call function" sid="923158946117146" type="Function">
-                                            <param id="0" name="Name">&quot;Player_Climb&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;True&quot;{###}&quot;Down&quot;</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="465437910240559" type="Player1_Mask">
-                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Climb_Bottom&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="412149270745624" type="Function">
-                                            <param id="0" name="Name">&quot;Player_Climb_Start_Bottom&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
-                        <event-block sid="644400688247858">
+                        <comment>Crouch (Deactivated)</comment>
+                        <event-block sid="708731129780622">
                             <conditions>
-                                <condition id="-22" name="Else" sid="974921715685476" type="System" />
-                                <condition id="1" inverted="1" name="Is overlapping another object" sid="483653086974558" type="Player1_Base">
-                                    <param id="0" name="Object">LadderCollision</param>
+                                <condition id="3" name="On key released" sid="767495597626049" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="565010936158639" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="811025387425646" type="Player1_Base" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="0" name="Call function" sid="582002786908289" type="Function">
-                                    <param id="0" name="Name">&quot;Player_Climb&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;False&quot;</param>
+                                <action id="0" name="Call function" sid="412632647346394" type="Function">
+                                    <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Deactivated&quot;</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="850809544944572">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="967392903582174" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="879340312974170" type="Function">
-                                            <param id="0" name="Name">&quot;Player_Climb_Start_Top&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="548509394221633">
                             <conditions>
@@ -357,29 +438,14 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Crouch (Deactivated)</comment>
-                        <event-block sid="708731129780622">
-                            <conditions>
-                                <condition id="3" name="On key released" sid="767495597626049" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
-                                </condition>
-                                <condition id="2" inverted="1" name="Key is down" sid="565010936158639" type="Keyboard">
-                                    <param id="0" name="Key">38 (Up arrow)</param>
-                                </condition>
-                                <condition behavior="Platform" id="2" name="Is on floor" sid="811025387425646" type="Player1_Base" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="412632647346394" type="Function">
-                                    <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Deactivated&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <comment>Action Buttons</comment>
                         <event-block sid="938166387479592">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="317026843135813" type="Keyboard">
                                     <param id="0" name="Key">88 (X)</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="292011956168754" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">ladders</param>
                                 </condition>
                                 <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="583495529660165" type="Player1_Mask">
                                     <param id="0" name="Instance variable">shoot</param>
@@ -396,6 +462,9 @@
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="245067220773777" type="Keyboard">
                                     <param id="0" name="Key">67 (C)</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="165472355041103" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">ladders</param>
                                 </condition>
                                 <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="929013939946467" type="Player1_Mask">
                                     <param id="0" name="Instance variable">shoot</param>
@@ -627,12 +696,18 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action disabled="1" id="-2" name="Set Y" sid="632818585374090" type="Player1_Base">
+                                    <param id="0" name="Y">LadderCollision.Y -32</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="668333964849400" type="Player1_Mask">
                                     <param id="0" name="Animation">Self.equip&amp;&quot;_Climb_Top&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="852037287402216" type="System">
                                     <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="236933292846050" type="Player1_Base">
+                                    <param id="0" name="Input">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="852647284789904" type="Function">
                                     <param id="0" name="Name">&quot;Player_Climb&quot;</param>
@@ -648,9 +723,18 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="264729784323139" type="Player1_Base">
+                                    <param id="0" name="Input">1</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="317110732950406" type="Player1_Base">
+                                    <param id="0" name="State">0</param>
+                                </action>
                                 <action id="0" name="Call function" sid="797061340178140" type="Function">
                                     <param id="0" name="Name">&quot;Player_Climb&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;True&quot;{###}&quot;Down&quot;{###}&quot;Start&quot;</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="709595637952394" type="Player1_Base">
+                                    <param id="0" name="Y">LadderCollision.Y + 2</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="526791422663930" type="System">
                                     <param id="0" name="Seconds">0.1</param>
@@ -660,7 +744,10 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-2" name="Set Y" sid="418845837455813" type="Player1_Base">
-                                    <param id="0" name="Y">LadderCollision.Y + 32</param>
+                                    <param id="0" name="Y">LadderCollision.Y + 38</param>
+                                </action>
+                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="648661099540666" type="Player1_Base">
+                                    <param id="0" name="Input">0</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -941,6 +1028,67 @@
                                         <action id="-13" name="Set boolean" sid="954314646443058" type="Player1_Mask">
                                             <param id="0" name="Instance variable">bouncing</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="593922476126424" title="Ladders">
+                    <sub-events>
+                        <event-block sid="969061468109173">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="679759585439681" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">ladders</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="886147140582488" type="Player1_Base">
+                                    <param id="0" name="Object">LadderCollision</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="367433898966078" type="Player1_Base">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="283813284620289" type="Player1_Base">
+                                    <param id="0" name="Input">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="991679475663418" type="Player1_Base">
+                                    <param id="0" name="X">LadderCollision.X + 8</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="682980942733080" type="LadderGround">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="421147959808329" type="Player1_Base">
+                                    <param id="0" name="Vector X">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="391377149155425" type="Player1_Base">
+                                    <param id="0" name="Vector Y">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="327181075229485">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="857944573927501" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="814027649197562" type="Player1_Base">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="629887276631455" type="Player1_Base">
+                                    <param id="0" name="Input">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="737546975276872">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="117454053303414" type="Player1_Base">
+                                            <param id="0" name="Object">LadderGround</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="194925394452117" type="LadderGround">
+                                            <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
