@@ -1800,6 +1800,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="787621461080446" type="Function">
+                                    <param id="0" name="Name">&quot;Player_Climb&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;False&quot;</param>
+                                </action>
                                 <action id="0" name="Call function" sid="400922085121354" type="Function">
                                     <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
                                     <param id="1" name="Parameter {n}">Function.Param(0)</param>
