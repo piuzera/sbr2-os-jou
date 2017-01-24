@@ -314,7 +314,7 @@
                                                 </action>
                                                 <action id="0" name="Call function" sid="412149270745624" type="Function">
                                                     <param id="0" name="Name">&quot;Player_Climb_Start_Bottom&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
+                                                    <param id="1" name="Parameter {n}">LadderCollision.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -406,6 +406,11 @@
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="857977473488854" type="Player1_Mask">
                                     <param id="0" name="Instance variable">ladders</param>
+                                </condition>
+                                <condition id="-15" name="Pick nearest/furthest" sid="239134097228203" type="LadderCollision">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">Player1_Base.X</param>
+                                    <param id="2" name="Y">player1_Base.Y</param>
                                 </condition>
                                 <condition id="-2" name="Compare Y" sid="244549181941539" type="Player1_Base">
                                     <param id="0" name="Comparison">5</param>
@@ -609,6 +614,40 @@
                                             <param id="0" name="Vector Y">-250</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block disabled="1" sid="850705736255827">
+                                            <conditions>
+                                                <condition behavior="Platform" id="0" name="Is moving" sid="272491671184191" type="Player1_Base" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block disabled="1" sid="739696944267715">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="465698234378603" type="System">
+                                                            <param id="0" name="First value">Player1_Base.Platform.VectorX</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-1" name="Set X" sid="450037992349658" type="Player1_Base">
+                                                            <param id="0" name="X">100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block disabled="1" sid="530938636845142">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="767858044953433" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-1" name="Set X" sid="451914735580122" type="Player1_Base">
+                                                            <param id="0" name="X">-100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <comment>SpinJump</comment>
                                 <event-block sid="580674352950778">
@@ -721,6 +760,12 @@
                                 <condition id="0" name="On function" sid="803665255660732" type="Function">
                                     <param id="0" name="Name">&quot;Player_Climb_Start_Bottom&quot;</param>
                                 </condition>
+                                <condition id="-33" name="Pick by comparison" sid="553719961806377" type="System">
+                                    <param id="0" name="Object">LadderCollision</param>
+                                    <param id="1" name="Expression">LadderCollision.UID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Function.Param(0)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="8Direction" id="2" name="Set ignoring input" sid="264729784323139" type="Player1_Base">
@@ -734,7 +779,7 @@
                                     <param id="1" name="Parameter {n}">&quot;True&quot;{###}&quot;Down&quot;{###}&quot;Start&quot;</param>
                                 </action>
                                 <action id="-2" name="Set Y" sid="709595637952394" type="Player1_Base">
-                                    <param id="0" name="Y">LadderCollision.Y + 2</param>
+                                    <param id="0" name="Y">LadderCollision.Y + 1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="526791422663930" type="System">
                                     <param id="0" name="Seconds">0.1</param>
@@ -751,10 +796,8 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="108350715232413">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="757574317012436" type="System" />
-                                    </conditions>
+                                <event-block sid="600335131006435">
+                                    <conditions />
                                     <actions />
                                 </event-block>
                             </sub-events>
@@ -797,6 +840,12 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
+                                                <event-block sid="744434758249896">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="983976070572147" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
                                                 <event-block sid="263381760270339">
                                                     <conditions>
                                                         <condition id="1" name="Compare parameter" sid="199995047422453" type="Function">

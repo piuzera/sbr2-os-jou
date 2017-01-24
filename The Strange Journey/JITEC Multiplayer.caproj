@@ -8,10 +8,11 @@
     <author-website>www.onagrostudios.com</author-website>
     <app-id></app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>24100</saved-with-version>
+    <saved-with-version>24200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Mikael Nilsson" id="CAMFTimeManager" version="1.100000024">Time Manager</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -1386,6 +1387,115 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TimeManager" sid="679530084546023">
+            <plugin id="CAMFTimeManager" />
+        </object-type>
+        <object-type name="En_Vulture" sid="869310311552262">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="side" sid="459020084496243" type="number" />
+                <instance-variable name="direction" sid="680485767531378" type="number" />
+                <instance-variable name="state" sid="651591626850954" type="string" />
+                <instance-variable name="initX" sid="661291309304322" type="number" />
+                <instance-variable name="initY" sid="266433083775380" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="630400868824647" speed="15">
+                    <frame duration="1" hotspotX="0.484375" hotspotY="0.65625">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Flying_Up" pingpong="0" repeatcount="1" repeatto="0" sid="785450050358650" speed="15">
+                    <frame duration="1" hotspotX="0.484375" hotspotY="0.65625">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.484375" hotspotY="0.65625">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.484375" hotspotY="0.65625">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.484375" hotspotY="0.65625">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="1" name="Diving" pingpong="0" repeatcount="1" repeatto="3" sid="818213788077338" speed="15">
+                    <frame duration="1" hotspotX="0.484375" hotspotY="0.65625">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.484375" hotspotY="0.65625">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.203125" y="0.3125" />
+                            <point x="0.859375" y="0.3125" />
+                            <point x="0.859375" y="0.65625" />
+                            <point x="0.203125" y="0.660156" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Behaviors" plugin-id="Sprite" sid="389202517335220">
@@ -1394,6 +1504,7 @@
                 <member>En_EvilPlant</member>
                 <member>En_GreenDragonfly</member>
                 <member>En_Pig</member>
+                <member>En_Vulture</member>
                 <member>Enemy_EyeProjectile</member>
                 <member>Player1_Base</member>
                 <member>Player1_Mask</member>
@@ -1449,6 +1560,7 @@
                 <member>En_EvilPlant</member>
                 <member>En_GreenDragonfly</member>
                 <member>En_Pig</member>
+                <member>En_Vulture</member>
             </members>
             <instance-variables>
                 <instance-variable name="health" sid="776899356094340" type="number" />
@@ -1535,6 +1647,7 @@
         </global-instance>
         <global-instance type="Browser" uid="7" />
         <global-instance type="Function" uid="8" />
+        <global-instance type="TimeManager" uid="67" />
     </global-instances>
     <sounds-folder />
     <music-folder />
