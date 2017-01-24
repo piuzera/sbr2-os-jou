@@ -441,7 +441,7 @@
                     <sub-events>
                         <event-block sid="134582674970889">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="148593471873051" type="En_Vulture">
+                                <condition id="1" name="Is overlapping another object" sid="148593471873051" type="En_Vulture">
                                     <param id="0" name="Object">Player1_Base</param>
                                 </condition>
                             </conditions>
@@ -478,13 +478,13 @@
                                     <conditions>
                                         <condition id="-21" name="Is between values" sid="593145364674040" type="System">
                                             <param id="0" name="Value">en_vulture.X</param>
-                                            <param id="1" name="Lower bound">en_vulture.initX - 5</param>
-                                            <param id="2" name="Upper bound">en_vulture.initX +5</param>
+                                            <param id="1" name="Lower bound">en_vulture.initX - 10</param>
+                                            <param id="2" name="Upper bound">en_vulture.initX +10</param>
                                         </condition>
                                         <condition id="-21" name="Is between values" sid="463209442147659" type="System">
                                             <param id="0" name="Value">en_vulture.Y</param>
-                                            <param id="1" name="Lower bound">en_vulture.initY - 5</param>
-                                            <param id="2" name="Upper bound">en_vulture.initY +5</param>
+                                            <param id="1" name="Lower bound">en_vulture.initY - 10</param>
+                                            <param id="2" name="Upper bound">en_vulture.initY +10</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -627,68 +627,93 @@
                                 <condition id="-11" name="For Each" sid="774510392073569" type="System">
                                     <param id="0" name="Object">En_Vulture</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="259205619634453" type="En_Vulture">
-                                    <param id="0" name="Instance variable">state</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;landed&quot;</param>
-                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="540279159400943">
+                                <event-block any="1" sid="915811644306876">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="127457883908557" type="System">
-                                            <param id="0" name="First value">distance(En_Vulture.X,en_vulture.Y,Player1_Base.X,Player1_Base.y)</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Second value">40</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="209096824406259" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="154968327379237" type="En_Vulture">
+                                        <condition id="-7" name="Compare instance variable" sid="685756170652372" type="En_Vulture">
                                             <param id="0" name="Instance variable">state</param>
-                                            <param id="1" name="Value">&quot;fly_up&quot;</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="100199897054948" type="En_Vulture">
-                                            <param id="0" name="Animation">&quot;Flying_Up&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action behavior="Timer" id="0" name="Start timer" sid="355526479488108" type="En_Vulture">
-                                            <param id="0" name="Duration">1.0</param>
-                                            <param id="1" name="Type">0</param>
-                                            <param id="2" name="Tag">&quot;attack&quot;</param>
-                                        </action>
-                                        <action behavior="Bullet" id="5" name="Set enabled" sid="371894706502492" type="En_Vulture">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="235666651425471" type="En_Vulture">
-                                            <param id="0" name="Angle">270</param>
-                                        </action>
-                                    </actions>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;landed&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="888160078046802" type="En_Vulture">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;fly_up&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block sid="936099784721195">
+                                        <event-block sid="803148117790824">
                                             <conditions>
-                                                <condition id="-1" name="Compare X" sid="210793155998470" type="En_Vulture">
+                                                <condition id="-1" name="Compare X" sid="897890336668295" type="En_Vulture">
                                                     <param id="0" name="Comparison">4</param>
                                                     <param id="1" name="X co-ordinate">Player1_Base.X</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="7" name="Set mirrored" sid="652009020894921" type="En_Vulture">
+                                                <action id="7" name="Set mirrored" sid="300959140983825" type="En_Vulture">
                                                     <param id="0" name="State">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="793314059287115">
+                                        <event-block sid="282269606355845">
                                             <conditions>
-                                                <condition id="-1" name="Compare X" sid="430813315355105" type="En_Vulture">
+                                                <condition id="-1" name="Compare X" sid="847885881289920" type="En_Vulture">
                                                     <param id="0" name="Comparison">2</param>
                                                     <param id="1" name="X co-ordinate">Player1_Base.X</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="7" name="Set mirrored" sid="599489950708783" type="En_Vulture">
+                                                <action id="7" name="Set mirrored" sid="994480516197077" type="En_Vulture">
                                                     <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="784849653205311">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="259205619634453" type="En_Vulture">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;landed&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="540279159400943">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="127457883908557" type="System">
+                                                    <param id="0" name="First value">distance(En_Vulture.X,en_vulture.Y,Player1_Base.X,Player1_Base.y)</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">100</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="209096824406259" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="782107533835307" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="154968327379237" type="En_Vulture">
+                                                    <param id="0" name="Instance variable">state</param>
+                                                    <param id="1" name="Value">&quot;fly_up&quot;</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="100199897054948" type="En_Vulture">
+                                                    <param id="0" name="Animation">&quot;Flying_Up&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="Timer" id="0" name="Start timer" sid="355526479488108" type="En_Vulture">
+                                                    <param id="0" name="Duration">1.0</param>
+                                                    <param id="1" name="Type">0</param>
+                                                    <param id="2" name="Tag">&quot;attack&quot;</param>
+                                                </action>
+                                                <action behavior="Bullet" id="5" name="Set enabled" sid="371894706502492" type="En_Vulture">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="235666651425471" type="En_Vulture">
+                                                    <param id="0" name="Angle">270</param>
                                                 </action>
                                             </actions>
                                         </event-block>

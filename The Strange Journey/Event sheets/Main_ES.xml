@@ -9,9 +9,9 @@
         <include>HUD_ES</include>
         <include>Projectiles_ES</include>
         <include>FX_ES</include>
-        <include>Enemies_ES</include>
         <include>Player1_ES</include>
         <include>Player2_ES</include>
+        <include>Enemies_ES</include>
         <event-group description="" sid="127030302326891" title="Camera">
             <sub-events>
                 <event-block sid="927467330655327">
