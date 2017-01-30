@@ -3,10 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player1_ES</name>
     <events>
-        <variable constant="0" name="player_Defense" sid="369120008939707" static="0" type="number">1.5</variable>
-        <variable constant="0" name="player_maxSpeed" sid="616802687643496" static="0" type="number">100</variable>
-        <variable constant="0" name="player_jumpHeight" sid="532186471034318" static="0" type="number">-250</variable>
-        <variable constant="0" name="player_fallSpeed" sid="172170101295071" static="0" type="number">650</variable>
+        <variable constant="0" name="player_type" sid="103903282315533" static="0" type="number">0</variable>
         <event-group description="" sid="444123292717814" title="Player 1 Passive">
             <sub-events>
                 <comment>Position mask to base</comment>
@@ -68,10 +65,10 @@
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="1" name="Set max speed" sid="580074647284901" type="Player1_Mask">
-                                    <param id="0" name="Max Speed">player_maxSpeed</param>
+                                    <param id="0" name="Max Speed">self.p_maxSpeed</param>
                                 </action>
                                 <action behavior="Platform" id="5" name="Set gravity" sid="758132937192966" type="Player1_Mask">
-                                    <param id="0" name="Gravity">player_fallSpeed</param>
+                                    <param id="0" name="Gravity">self.p_fallSpeed</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -102,12 +99,6 @@
                                             <param id="0" name="Control">1</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="832728084423870">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="521109164265339" type="System" />
-                                    </conditions>
-                                    <actions />
                                     <sub-events>
                                         <event-block sid="516518591832880">
                                             <conditions>
@@ -135,12 +126,6 @@
                                             <param id="0" name="Control">0</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="883661602407725">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="880623637218711" type="System" />
-                                    </conditions>
-                                    <actions />
                                     <sub-events>
                                         <event-block sid="625987643019201">
                                             <conditions>
@@ -204,6 +189,44 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Super Arts</comment>
+                        <event-block sid="927490655415381">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="400425517061997" type="Keyboard">
+                                    <param id="0" name="Key">86 (V)</param>
+                                </condition>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="406958026389618" type="Player1_Base" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="990017928189356" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">crouch</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="225329335655339" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">shoot</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="496878853257175" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">bouncing</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="372137547192010" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">ladders</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="828666091722789">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="884334677730746" type="HUD_special_arts_count">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="516503076548536" type="Function">
+                                            <param id="0" name="Name">&quot;Player_UseArts&quot;</param>
+                                            <param id="1" name="Parameter {n}">player_type</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <comment>Jump</comment>
                         <event-block sid="185938506427933">
                             <conditions>
@@ -257,6 +280,9 @@
                                 <condition id="-8" name="Is boolean instance variable set" sid="306749395817815" type="Player1_Mask">
                                     <param id="0" name="Instance variable">climb</param>
                                 </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="249059456585346" type="Player1_Mask">
+                                    <param id="0" name="Instance variable">hurt</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -303,6 +329,9 @@
                                         </condition>
                                         <condition id="2" name="Key is down" sid="161442071938127" type="Keyboard">
                                             <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="699108080864303" type="Player1_Mask">
+                                            <param id="0" name="Instance variable">shoot</param>
                                         </condition>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="827746338785817" type="Player1_Mask">
                                             <param id="0" name="Instance variable">crouch</param>
@@ -605,6 +634,50 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <event-block sid="938938176120033">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="608723023261356" type="System">
+                                            <param id="0" name="First value">Player1_Base.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="895617068433342">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="536178777475398" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="311728908829122" type="Player1_Base">
+                                                    <param id="0" name="Vector X">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="596073008797175">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="787742462311359" type="System">
+                                            <param id="0" name="First value">Player1_Base.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="855544506064251">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="372115230394665" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="440389178958309" type="Player1_Base">
+                                                    <param id="0" name="Vector X">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <event-block sid="910154038313426">
                                     <conditions>
                                         <condition id="0" name="Compare value" sid="746958988920545" type="Data_Items_P1">
@@ -615,7 +688,7 @@
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="9" name="Set vector Y" sid="864770991373620" type="Player1_Base">
-                                            <param id="0" name="Vector Y">player_jumpHeight</param>
+                                            <param id="0" name="Vector Y">Player1_Mask.p_jumpHeight</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -666,6 +739,31 @@
                                     <param id="0" name="Vector Y">Self.Platform.VectorY / 4</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>Use Arts</comment>
+                        <event-block sid="201101806032855">
+                            <conditions>
+                                <condition id="0" name="On function" sid="959641164026225" type="Function">
+                                    <param id="0" name="Name">&quot;Player_UseArts&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="798180436416000" type="Player1_Mask">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="424304562736631">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="402218693594337" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Crouch</comment>
                         <event-block sid="967392164764930">
@@ -1624,6 +1722,14 @@
                 </event-group>
                 <event-group description="" sid="979050037512421" title="Player 1 Shoot">
                     <sub-events>
+                        <event-block sid="905407840623188">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="612415064164781" type="Player_Lance" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="883623669009139" type="Player_Lance" />
+                            </actions>
+                        </event-block>
                         <event-block sid="190416995934255">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="116946970513388" type="Player1_Mask">
@@ -1800,7 +1906,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="995742822164451" type="Function">
                                     <param id="0" name="Name">&quot;Player_Hurt&quot;</param>
-                                    <param id="1" name="Parameter {n}">((Enemies.power / player_Defense) * -1)</param>
+                                    <param id="1" name="Parameter {n}">((Enemies.power / Player1_mask.p_defense) * -1)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1837,6 +1943,10 @@
                                 <action id="0" name="Call function" sid="787621461080446" type="Function">
                                     <param id="0" name="Name">&quot;Player_Climb&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;False&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="992181807773371" type="Function">
+                                    <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Deactivated&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="400922085121354" type="Function">
                                     <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
