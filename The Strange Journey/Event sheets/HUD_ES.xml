@@ -86,7 +86,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="866912117559016" type="Spritefonts">
-                    <param id="0" name="Text">TimeManager.MMSS(str(round(TimeLine.TimerRemainder(&quot;LevelTime&quot;))))</param>
+                    <param id="0" name="Text">Floor(TimeLine.TimerRemainder(&quot;LevelTime&quot;)/60) &amp; &quot;:&quot; &amp; right(&quot;00&quot;&amp;Floor(TimeLine.TimerRemainder(&quot;LevelTime&quot;)%60),2)</param>
                 </action>
             </actions>
         </event-block>

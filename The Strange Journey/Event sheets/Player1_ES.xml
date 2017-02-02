@@ -106,7 +106,7 @@
                                             </conditions>
                                             <actions>
                                                 <action behavior="Platform" id="8" name="Set vector X" sid="177002849661940" type="Player1_Base">
-                                                    <param id="0" name="Vector X">0</param>
+                                                    <param id="0" name="Vector X">100</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -133,7 +133,7 @@
                                             </conditions>
                                             <actions>
                                                 <action behavior="Platform" id="8" name="Set vector X" sid="589616670104220" type="Player1_Base">
-                                                    <param id="0" name="Vector X">0</param>
+                                                    <param id="0" name="Vector X">-100</param>
                                                 </action>
                                             </actions>
                                         </event-block>
