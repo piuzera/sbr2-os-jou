@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main_ES</name>
     <events>
+        <include>Init_ES</include>
         <include>LevelObjects_ES</include>
         <include>Collectibles_ES</include>
         <include>Globals_ES</include>

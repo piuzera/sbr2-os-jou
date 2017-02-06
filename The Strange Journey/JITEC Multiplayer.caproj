@@ -1682,6 +1682,7 @@
         <layout>Level 1.xml</layout>
         <layout>HUD.xml</layout>
         <layout>Object Bank.xml</layout>
+        <layout>SetControls.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Player1_ES.xml</event-sheet>
@@ -1694,6 +1695,8 @@
         <event-sheet>Collectibles_ES.xml</event-sheet>
         <event-sheet>LevelObjects_ES.xml</event-sheet>
         <event-sheet>Player2_ES.xml</event-sheet>
+        <event-sheet>Init_ES.xml</event-sheet>
+        <event-sheet>SetControls_ES.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

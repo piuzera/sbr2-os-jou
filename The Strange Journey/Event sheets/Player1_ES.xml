@@ -87,8 +87,8 @@
                             <sub-events>
                                 <event-block sid="502147353588726">
                                     <conditions>
-                                        <condition id="2" name="Key is down" sid="242652804350552" type="Keyboard">
-                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        <condition id="5" name="Key code is down" sid="242652804350552" type="Keyboard">
+                                            <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_RIGHT&quot;))</param>
                                         </condition>
                                         <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="814697496692818" type="Player1_Base">
                                             <param id="0" name="Side">1</param>
@@ -114,8 +114,8 @@
                                 </event-block>
                                 <event-block sid="165961490895397">
                                     <conditions>
-                                        <condition id="2" name="Key is down" sid="743541274105112" type="Keyboard">
-                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        <condition id="5" name="Key code is down" sid="743541274105112" type="Keyboard">
+                                            <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_LEFT&quot;))</param>
                                         </condition>
                                         <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="491972773698031" type="Player1_Base">
                                             <param id="0" name="Side">0</param>
@@ -141,11 +141,11 @@
                                 </event-block>
                                 <event-block sid="172598919612441">
                                     <conditions>
-                                        <condition id="2" inverted="1" name="Key is down" sid="712482814209145" type="Keyboard">
-                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        <condition id="5" inverted="1" name="Key code is down" sid="712482814209145" type="Keyboard">
+                                            <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_RIGHT&quot;))</param>
                                         </condition>
-                                        <condition id="2" inverted="1" name="Key is down" sid="867603538683789" type="Keyboard">
-                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        <condition id="5" inverted="1" name="Key code is down" sid="867603538683789" type="Keyboard">
+                                            <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_LEFT&quot;))</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -159,8 +159,8 @@
                         <comment>Direction (separated from the movement like in GnG)</comment>
                         <event-block sid="490831774323948">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="241076086425572" type="Keyboard">
-                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                <condition id="5" name="Key code is down" sid="958332433283043" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_RIGHT&quot;))</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -175,8 +175,8 @@
                         </event-block>
                         <event-block sid="837147741895961">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="663823895859327" type="Keyboard">
-                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                <condition id="5" name="Key code is down" sid="327446895258008" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_LEFT&quot;))</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -192,8 +192,8 @@
                         <comment>Super Arts</comment>
                         <event-block sid="927490655415381">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="400425517061997" type="Keyboard">
-                                    <param id="0" name="Key">86 (V)</param>
+                                <condition id="4" name="On key code pressed" sid="400425517061997" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_ARTS&quot;))</param>
                                 </condition>
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="406958026389618" type="Player1_Base" />
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="990017928189356" type="Player1_Mask">
@@ -230,8 +230,8 @@
                         <comment>Jump</comment>
                         <event-block sid="185938506427933">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="770132959670478" type="Keyboard">
-                                    <param id="0" name="Key">90 (Z)</param>
+                                <condition id="4" name="On key code pressed" sid="770132959670478" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_JUMP&quot;))</param>
                                 </condition>
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="304727528805755" type="Player1_Base" />
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="554627813642029" type="Player1_Mask">
@@ -302,8 +302,8 @@
                                     <sub-events>
                                         <event-block sid="432066508864358">
                                             <conditions>
-                                                <condition id="2" name="Key is down" sid="230765386238662" type="Keyboard">
-                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                <condition id="5" name="Key code is down" sid="679420069859861" type="Keyboard">
+                                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_UP&quot;))</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -327,8 +327,8 @@
                                             <param id="1" name="Offset X">0</param>
                                             <param id="2" name="Offset Y">16</param>
                                         </condition>
-                                        <condition id="2" name="Key is down" sid="161442071938127" type="Keyboard">
-                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        <condition id="5" name="Key code is down" sid="881110810275465" type="Keyboard">
+                                            <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_DOWN&quot;))</param>
                                         </condition>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="699108080864303" type="Player1_Mask">
                                             <param id="0" name="Instance variable">shoot</param>
@@ -406,11 +406,11 @@
                         <comment>Crouch (Activated)</comment>
                         <event-block sid="359797454505837">
                             <conditions>
-                                <condition id="2" inverted="1" name="Key is down" sid="425018999799032" type="Keyboard">
-                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                <condition id="5" inverted="1" name="Key code is down" sid="879780006375533" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_UP&quot;))</param>
                                 </condition>
-                                <condition id="2" name="Key is down" sid="790259497485536" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                <condition id="5" name="Key code is down" sid="245986257492315" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_DOWN&quot;))</param>
                                 </condition>
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="620343358063578" type="Player1_Base" />
                             </conditions>
@@ -434,11 +434,11 @@
                         <comment>Crouch (Deactivated)</comment>
                         <event-block sid="708731129780622">
                             <conditions>
-                                <condition id="3" name="On key released" sid="767495597626049" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                <condition id="6" name="On key code released" sid="767495597626049" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_DOWN&quot;))</param>
                                 </condition>
-                                <condition id="2" inverted="1" name="Key is down" sid="565010936158639" type="Keyboard">
-                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                <condition id="5" inverted="1" name="Key code is down" sid="575377051776335" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_UP&quot;))</param>
                                 </condition>
                                 <condition behavior="Platform" id="2" name="Is on floor" sid="811025387425646" type="Player1_Base" />
                             </conditions>
@@ -463,8 +463,8 @@
                                     <param id="0" name="Comparison">5</param>
                                     <param id="1" name="Y co-ordinate">LadderCollision.Y+LadderCollision.Height-3</param>
                                 </condition>
-                                <condition id="2" name="Key is down" sid="405204712769186" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                <condition id="5" name="Key code is down" sid="424559237596132" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_DOWN&quot;))</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -476,8 +476,8 @@
                         </event-block>
                         <event-block sid="194734994346098">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="589456010257044" type="Keyboard">
-                                    <param id="0" name="Key">90 (Z)</param>
+                                <condition id="4" name="On key code pressed" sid="589456010257044" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_JUMP&quot;))</param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="157834940838934" type="Player1_Mask">
                                     <param id="0" name="Instance variable">ladders</param>
@@ -493,8 +493,8 @@
                         <comment>Action Buttons</comment>
                         <event-block sid="938166387479592">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="317026843135813" type="Keyboard">
-                                    <param id="0" name="Key">88 (X)</param>
+                                <condition id="4" name="On key code pressed" sid="123174615745084" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_MAINWP&quot;))</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="292011956168754" type="Player1_Mask">
                                     <param id="0" name="Instance variable">ladders</param>
@@ -512,8 +512,8 @@
                         </event-block>
                         <event-block sid="953829886256780">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="245067220773777" type="Keyboard">
-                                    <param id="0" name="Key">67 (C)</param>
+                                <condition id="4" name="On key code pressed" sid="156309002656429" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_SUBWP&quot;))</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="165472355041103" type="Player1_Mask">
                                     <param id="0" name="Instance variable">ladders</param>
@@ -532,11 +532,11 @@
                         <comment>Aim</comment>
                         <event-block sid="482133077414753">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="485732816200357" type="Keyboard">
-                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                <condition id="5" name="Key code is down" sid="455079447474589" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_UP&quot;))</param>
                                 </condition>
-                                <condition id="2" inverted="1" name="Key is down" sid="564736825244408" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                <condition id="5" inverted="1" name="Key code is down" sid="298573687274392" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_DOWN&quot;))</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -548,11 +548,11 @@
                         </event-block>
                         <event-block sid="337780555153366">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="337757969192219" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                <condition id="5" name="Key code is down" sid="431876177417902" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_DOWN&quot;))</param>
                                 </condition>
-                                <condition id="2" inverted="1" name="Key is down" sid="490007402441028" type="Keyboard">
-                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                <condition id="5" inverted="1" name="Key code is down" sid="255138106272242" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_UP&quot;))</param>
                                 </condition>
                                 <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="329205016342117" type="Player1_Base" />
                             </conditions>
@@ -565,11 +565,11 @@
                         </event-block>
                         <event-block sid="461617820059456">
                             <conditions>
-                                <condition id="2" inverted="1" name="Key is down" sid="562548285291914" type="Keyboard">
-                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                <condition id="5" inverted="1" name="Key code is down" sid="357821421494759" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_UP&quot;))</param>
                                 </condition>
-                                <condition id="2" inverted="1" name="Key is down" sid="466432535169548" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                <condition id="5" inverted="1" name="Key code is down" sid="966600980749204" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_DOWN&quot;))</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -581,11 +581,11 @@
                         </event-block>
                         <event-block sid="356790133146435">
                             <conditions>
-                                <condition id="2" inverted="1" name="Key is down" sid="179597794420179" type="Keyboard">
-                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                <condition id="5" inverted="1" name="Key code is down" sid="152411089047896" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_UP&quot;))</param>
                                 </condition>
-                                <condition id="2" name="Key is down" sid="790483188322703" type="Keyboard">
-                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                <condition id="5" name="Key code is down" sid="348327107756006" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Player_P1.Get(&quot;player_1_control_DOWN&quot;))</param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="977675552261247" type="Player1_Mask">
                                     <param id="0" name="Instance variable">crouch</param>

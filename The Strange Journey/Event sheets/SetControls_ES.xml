@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SetControls_ES</name>
+    <events>
+        <include>Init_ES</include>
+        <variable constant="0" name="pressKey" sid="419717903648594" static="0" type="number">0</variable>
+        <variable constant="0" name="keyOrder" sid="853942901154565" static="0" type="text">UP,DOWN,LEFT,RIGHT,JUMP,MAINWP,SUBWP,ARTS,CHANGE_MAINWP,CHANGE_SUBWP</variable>
+        <event-block sid="809320077804048">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="128608728782072" type="System">
+                    <param id="0" name="Variable">pressKey</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">11</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="256969945038741" type="System">
+                    <param id="0" name="Variable">pressKey</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="369755049347490">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="402739938629612" type="System">
+                    <param id="0" name="Variable">pressKey</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="112316431993236" type="Spritefonts">
+                    <param id="0" name="Text">&quot;PRESS &quot;&amp;tokenat(keyOrder,pressKey-1,&quot;,&quot;)&amp;&quot; KEY...&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="445925078599905">
+                    <conditions>
+                        <condition id="7" name="On any key released" sid="143933879123109" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="813698167302281" type="Data_Player_P1">
+                            <param id="0" name="Key">&quot;player_1_control_&quot;&amp;tokenat(keyOrder,pressKey-1,&quot;,&quot;)</param>
+                            <param id="1" name="Value">Keyboard.LastKeyCode</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="936667191123048" type="System">
+                            <param id="0" name="Variable">pressKey</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="790347575384726">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="923646977224687" type="System">
+                    <param id="0" name="Variable">pressKey</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="369029502245711" type="Spritefonts">
+                    <param id="0" name="Text">&quot;PLAYER 1&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;UP: &quot;&amp;Data_Player_P1.Get(&quot;player_1_control_UP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;DOWN: &quot;&amp;Data_Player_P1.Get(&quot;player_1_control_DOWN&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;LEFT: &quot;&amp;Data_Player_P1.Get(&quot;player_1_control_LEFT&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;RIGHT: &quot;&amp;Data_Player_P1.Get(&quot;player_1_control_RIGHT&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;JUMP: &quot;&amp;Data_Player_P1.Get(&quot;player_1_control_JUMP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE MAIN WEAPON: &quot;&amp;Data_Player_P1.Get(&quot;player_1_control_MAINWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE SUB WEAPON: &quot;&amp;Data_Player_P1.Get(&quot;player_1_control_SUBWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE SUPER ART: &quot;&amp;Data_Player_P1.Get(&quot;player_1_control_ARTS&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;SWITCH MAIN WEAPON: &quot;&amp;Data_Player_P1.Get(&quot;player_1_control_CHANGE_MAINWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;SWITCH SUB WEAPON: &quot;&amp;Data_Player_P1.Get(&quot;player_1_control_CHANGE_SUBWP&quot;)&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;PRESS ENTER TO REMAP KEYS&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="862241726139696">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="969481287693868" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="435715514030658" type="System">
+                            <param id="0" name="Variable">pressKey</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

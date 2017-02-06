@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Init_ES</name>
+    <events>
+        <comment>Populate Data_Player_P1</comment>
+        <event-block sid="797127062616332">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="264846463199272" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="119456189870175" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;playertype&quot;</param>
+                    <param id="1" name="Value">&quot;highlander,knight,roman,barbarian,indian,egyptian,hippie,futureman&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="683195301287494" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;playertype_arts&quot;</param>
+                    <param id="1" name="Value">&quot;600,600,600,600,600,600,600,600&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="568697681878120" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;player_1_control_UP&quot;</param>
+                    <param id="1" name="Value">&quot;38&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="141340187764694" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;player_1_control_DOWN&quot;</param>
+                    <param id="1" name="Value">&quot;48&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="887192435851191" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;player_1_control_LEFT&quot;</param>
+                    <param id="1" name="Value">&quot;37&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="301381071185586" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;player_1_control_RIGHT&quot;</param>
+                    <param id="1" name="Value">&quot;39&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="147091920704678" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;player_1_control_MAINWP&quot;</param>
+                    <param id="1" name="Value">&quot;88&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="228343282861941" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;player_1_control_SUBWP&quot;</param>
+                    <param id="1" name="Value">&quot;67&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="530175209737975" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;player_1_control_JUMP&quot;</param>
+                    <param id="1" name="Value">&quot;98&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="933665381236881" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;player_1_control_ARTS&quot;</param>
+                    <param id="1" name="Value">&quot;86&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="847884986797007" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;player_1_control_CHANGE_MAINWP&quot;</param>
+                    <param id="1" name="Value">&quot;83&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="872947118346292" type="Data_Player_P1">
+                    <param id="0" name="Key">&quot;player_1_control_CHANGE_SUBWP&quot;</param>
+                    <param id="1" name="Value">&quot;68&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="424246430666944" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;player_2_control_UP&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="716886299982463" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;player_2_control_DOWN&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="326917319334422" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;player_2_control_LEFT&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="907163198803199" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;player_2_control_RIGHT&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="301512166298948" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;player_2_control_MAINWP&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="358349259718951" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;player_2_control_SUBWP&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="720570232595686" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;player_2_control_JUMP&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="493370910920928" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;player_2_control_ARTS&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="430615827551182" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;player_2_control_CHANGE_MAINWP&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="655426757456098" type="Data_Player_P2">
+                    <param id="0" name="Key">&quot;player_2_control_CHANGE_SUBWP&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
