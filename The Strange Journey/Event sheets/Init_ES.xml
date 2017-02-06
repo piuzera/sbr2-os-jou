@@ -23,7 +23,7 @@
                 </action>
                 <action id="0" name="Add key" sid="141340187764694" type="Data_Player_P1">
                     <param id="0" name="Key">&quot;player_1_control_DOWN&quot;</param>
-                    <param id="1" name="Value">&quot;48&quot;</param>
+                    <param id="1" name="Value">&quot;40&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="887192435851191" type="Data_Player_P1">
                     <param id="0" name="Key">&quot;player_1_control_LEFT&quot;</param>
@@ -43,7 +43,7 @@
                 </action>
                 <action id="0" name="Add key" sid="530175209737975" type="Data_Player_P1">
                     <param id="0" name="Key">&quot;player_1_control_JUMP&quot;</param>
-                    <param id="1" name="Value">&quot;98&quot;</param>
+                    <param id="1" name="Value">&quot;90&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="933665381236881" type="Data_Player_P1">
                     <param id="0" name="Key">&quot;player_1_control_ARTS&quot;</param>

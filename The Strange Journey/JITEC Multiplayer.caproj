@@ -563,7 +563,7 @@
         <object-type name="Player_Sword" sid="774239933983104">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default_0" pingpong="0" repeatcount="1" repeatto="0" sid="364245850113095" speed="20">
+                <animation framecount="3" loop="0" name="Default_0" pingpong="0" repeatcount="1" repeatto="0" sid="364245850113095" speed="15">
                     <frame duration="1" hotspotX="1.46341" hotspotY="1.39024" original-source="C:\Users\sizay\Desktop\JitEC\Sprites\sword4.png">
                         <collision-poly>
                             <point x="0.621951" y="0.640244" />
@@ -589,7 +589,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="2" loop="1" name="Default_90" pingpong="0" repeatcount="1" repeatto="0" sid="780742280055342" speed="10">
+                <animation framecount="2" loop="1" name="Default_90" pingpong="0" repeatcount="1" repeatto="0" sid="780742280055342" speed="15">
                     <frame duration="1" hotspotX="0.487805" hotspotY="0.487805">
                         <collision-poly>
                             <point x="0" y="0" />
@@ -606,7 +606,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="3" loop="0" name="Default_180" pingpong="0" repeatcount="1" repeatto="0" sid="245324289554745" speed="20">
+                <animation framecount="3" loop="0" name="Default_180" pingpong="0" repeatcount="1" repeatto="0" sid="245324289554745" speed="15">
                     <frame duration="1" hotspotX="-0.463415" hotspotY="1.39024">
                         <collision-poly>
                             <point x="0.371951" y="0.737805" />
@@ -632,7 +632,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="2" loop="1" name="Default_270" pingpong="0" repeatcount="1" repeatto="0" sid="475502637063710" speed="10">
+                <animation framecount="2" loop="1" name="Default_270" pingpong="0" repeatcount="1" repeatto="0" sid="475502637063710" speed="15">
                     <frame duration="1" hotspotX="0.512195" hotspotY="0.512195">
                         <collision-poly>
                             <point x="0" y="0" />
