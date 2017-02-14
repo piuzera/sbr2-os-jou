@@ -579,7 +579,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>112</x>
+                        <x>119</x>
                         <y>200</y>
                         <z>0</z>
                         <width>32</width>
@@ -834,6 +834,60 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HUD_player_weapon" uid="82">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <whichWeapon>0</whichWeapon>
+                        <whichPlayer>1</whichPlayer>
+                        <type>main</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>66</x>
+                        <y>200</y>
+                        <z>0</z>
+                        <width>23</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>-0.391304344</hotspotX>
+                        <hotspotY>-0.166666672</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HUD_player_weapon" uid="95">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <whichWeapon>0</whichWeapon>
+                        <whichPlayer>1</whichPlayer>
+                        <type>sub</type>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>88</x>
+                        <y>200</y>
+                        <z>0</z>
+                        <width>23</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>-0.391304344</hotspotX>
+                        <hotspotY>-0.166666672</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

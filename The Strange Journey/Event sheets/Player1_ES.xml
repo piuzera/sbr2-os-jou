@@ -221,7 +221,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="516503076548536" type="Function">
                                             <param id="0" name="Name">&quot;Player_UseArts&quot;</param>
-                                            <param id="1" name="Parameter {n}">player_type</param>
+                                            <param id="1" name="Parameter {n}">Player1_Mask.p_type</param>
                                         </action>
                                     </actions>
                                 </event-block>

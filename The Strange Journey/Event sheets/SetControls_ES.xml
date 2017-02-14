@@ -3,7 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>SetControls_ES</name>
     <events>
+        <comment>mode 0 = main menu&#x0D;&#x0A;mode 1 = options&#x0D;&#x0A;mode 2 = set controls player 1&#x0D;&#x0A;mode 3 = set controls player 2</comment>
         <include>Init_ES</include>
+        <variable constant="0" name="mode" sid="601482324260019" static="0" type="number">0</variable>
+        <variable constant="0" name="curPlayer" sid="453483573786655" static="0" type="number">0</variable>
         <variable constant="0" name="pressKey" sid="419717903648594" static="0" type="number">0</variable>
         <variable constant="0" name="keyOrder" sid="853942901154565" static="0" type="text">UP,DOWN,LEFT,RIGHT,JUMP,MAINWP,SUBWP,ARTS,CHANGE_MAINWP,CHANGE_SUBWP</variable>
         <event-block sid="809320077804048">

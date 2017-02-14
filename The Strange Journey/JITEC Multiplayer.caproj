@@ -259,6 +259,7 @@
                     <animation framecount="2" loop="0" name="Default_Throw_Normal" pingpong="0" repeatcount="1" repeatto="0" sid="664320455935313" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.854167" y="0.791667" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.979167" y="0.75" />
@@ -266,29 +267,24 @@
                     </animation>
                     <animation framecount="2" loop="0" name="Default_Throw_Up" pingpong="0" repeatcount="1" repeatto="0" sid="730873519069328" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Imagepoint 1" x="0.65625" y="-0.03125" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Imagepoint 1" x="0.65625" y="-0.03125" />
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                     <animation framecount="2" loop="0" name="Default_Throw_Down" pingpong="0" repeatcount="1" repeatto="0" sid="412508450131918" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Imagepoint 1" x="0.546875" y="0.875" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Imagepoint 1" x="0.546875" y="0.875" />
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                     <animation framecount="2" loop="0" name="Default_Throw_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="100430901751874" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Imagepoint 1" x="0.90625" y="0.734375" />
-                            <image-point name="Imagepoint 2" x="0.921875" y="0.578125" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Imagepoint 1" x="0.90625" y="0.734375" />
-                            <image-point name="Imagepoint 2" x="0.875" y="0.3125" />
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                     <animation framecount="4" loop="1" name="Default_Climb" pingpong="0" repeatcount="1" repeatto="0" sid="229090534133927" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -1567,6 +1563,38 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="HUD_player_weapon" sid="691034690008656">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="whichWeapon" sid="708325690301536" type="number" />
+                <instance-variable name="whichPlayer" sid="674379248835840" type="number" />
+                <instance-variable name="type" sid="456860751822626" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="349933495916221" speed="0">
+                    <frame duration="1" hotspotX="-0.391304" hotspotY="-0.166667" original-source="E:\Dropbox\Copy Girl\Gamekit stuff\Metroid\UI\missilecounter.png">
+                        <collision-poly>
+                            <point x="0" y="0.166666" />
+                            <point x="0.913043" y="0.166666" />
+                            <point x="0.956522" y="0.499999" />
+                            <point x="0.913043" y="0.916667" />
+                            <point x="0" y="0.916667" />
+                            <point x="0" y="0.499999" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="-0.391304" hotspotY="-0.166667">
+                        <collision-poly>
+                            <point x="0" y="0.166666" />
+                            <point x="0.913043" y="0.166666" />
+                            <point x="0.956522" y="0.499999" />
+                            <point x="0.913043" y="0.916667" />
+                            <point x="0" y="0.916667" />
+                            <point x="0" y="0.499999" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Behaviors" plugin-id="Sprite" sid="389202517335220">
@@ -1694,7 +1722,6 @@
         <event-sheet>Globals_ES.xml</event-sheet>
         <event-sheet>Collectibles_ES.xml</event-sheet>
         <event-sheet>LevelObjects_ES.xml</event-sheet>
-        <event-sheet>Player2_ES.xml</event-sheet>
         <event-sheet>Init_ES.xml</event-sheet>
         <event-sheet>SetControls_ES.xml</event-sheet>
     </event-folder>
