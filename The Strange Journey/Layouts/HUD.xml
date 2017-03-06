@@ -575,6 +575,7 @@
                     </properties>
                     <instance-variables>
                         <bar_points>0</bar_points>
+                        <player>0</player>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

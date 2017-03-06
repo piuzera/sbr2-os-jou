@@ -8,7 +8,7 @@
                 <comment>Player 1 collects an item</comment>
                 <event-block sid="805761659764802">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="874563853955969" type="Player1_Base">
+                        <condition id="0" name="On collision with another object" sid="874563853955969" type="Player_Base">
                             <param id="0" name="Object">Items</param>
                         </condition>
                     </conditions>
@@ -24,7 +24,7 @@
                     </actions>
                     <sub-events>
                         <comment>&gt;Pause the game for the item collect sequence</comment>
-                        <event-block sid="572911616248799">
+                        <event-block disabled="1" sid="572911616248799">
                             <conditions />
                             <actions>
                                 <action id="-13" name="Set time scale" sid="812064665243495" type="System">
@@ -41,7 +41,7 @@
                             </actions>
                         </event-block>
                         <comment>&gt;Set the item&apos;s timescale to 1 so it can flash during the item collect sequence</comment>
-                        <event-block sid="299522721284231">
+                        <event-block disabled="1" sid="299522721284231">
                             <conditions />
                             <actions>
                                 <action id="-14" name="Set object time scale" sid="182667540891202" type="System">
@@ -56,7 +56,7 @@
                             </actions>
                         </event-block>
                         <comment>&gt;Add item to save data &amp; create message</comment>
-                        <event-block sid="833128310842733">
+                        <event-block disabled="1" sid="833128310842733">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="831532933216592" type="Items">
                                     <param id="0" name="Animation">&quot;EnergyTank&quot;</param>
@@ -77,7 +77,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="588631263149914">
+                        <event-block disabled="1" sid="588631263149914">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="707161084133911" type="Items">
                                     <param id="0" name="Animation">&quot;MissileTank&quot;</param>
@@ -98,7 +98,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="337627297093613">
+                        <event-block disabled="1" sid="337627297093613">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="984789784318965" type="Items">
                                     <param id="0" name="Animation">&quot;HiJumpBoots&quot;</param>
@@ -115,7 +115,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="257608064090311">
+                        <event-block disabled="1" sid="257608064090311">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="454648652802872" type="Items">
                                     <param id="0" name="Animation">&quot;Armor&quot;</param>
@@ -126,7 +126,7 @@
                                     <param id="0" name="Key">&quot;Armor&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="563414062240052" type="Player1_Mask">
+                                <action id="-10" name="Set value" sid="563414062240052" type="Player_Mask">
                                     <param id="0" name="Instance variable">equip</param>
                                     <param id="1" name="Value">&quot;Armor&quot;</param>
                                 </action>
@@ -136,7 +136,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="897091558731400">
+                        <event-block disabled="1" sid="897091558731400">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="587818162690355" type="Items">
                                     <param id="0" name="Animation">&quot;Map&quot;</param>
@@ -154,7 +154,7 @@
                             </actions>
                         </event-block>
                         <comment>Add the ID of the item to Data_Persist so it doesn&apos;t show up again. (See eRoomSystem event 48-49)</comment>
-                        <event-block sid="887277168541779">
+                        <event-block disabled="1" sid="887277168541779">
                             <conditions />
                             <actions>
                                 <action id="0" name="Add key" sid="745476488701938" type="Data_Persist">
@@ -166,12 +166,8 @@
                     </sub-events>
                 </event-block>
                 <comment>Player 2 collects an item</comment>
-                <event-block sid="254840721512198">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="511704570792933" type="Player2_Base">
-                            <param id="0" name="Object">Items</param>
-                        </condition>
-                    </conditions>
+                <event-block disabled="1" sid="254840721512198">
+                    <conditions />
                     <actions>
                         <action id="0" name="Call function" sid="491291367531401" type="Function">
                             <param id="0" name="Name">&quot;Item_Collect&quot;</param>
@@ -184,7 +180,7 @@
                     </actions>
                     <sub-events>
                         <comment>&gt;Pause the game for the item collect sequence</comment>
-                        <event-block sid="792777641615815">
+                        <event-block disabled="1" sid="792777641615815">
                             <conditions />
                             <actions>
                                 <action id="-13" name="Set time scale" sid="613094315021563" type="System">
@@ -201,7 +197,7 @@
                             </actions>
                         </event-block>
                         <comment>&gt;Set the item&apos;s timescale to 1 so it can flash during the item collect sequence</comment>
-                        <event-block sid="471620583982193">
+                        <event-block disabled="1" sid="471620583982193">
                             <conditions />
                             <actions>
                                 <action id="-14" name="Set object time scale" sid="204260159036483" type="System">
@@ -216,7 +212,7 @@
                             </actions>
                         </event-block>
                         <comment>&gt;Add item to save data &amp; create message</comment>
-                        <event-block sid="435405954056539">
+                        <event-block disabled="1" sid="435405954056539">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="610096959321228" type="Items">
                                     <param id="0" name="Animation">&quot;EnergyTank&quot;</param>
@@ -237,7 +233,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="891399325911371">
+                        <event-block disabled="1" sid="891399325911371">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="720273707164083" type="Items">
                                     <param id="0" name="Animation">&quot;MissileTank&quot;</param>
@@ -258,7 +254,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="707221130126939">
+                        <event-block disabled="1" sid="707221130126939">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="902463713698384" type="Items">
                                     <param id="0" name="Animation">&quot;HiJumpBoots&quot;</param>
@@ -275,7 +271,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="362995979424388">
+                        <event-block disabled="1" sid="362995979424388">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="928574616634106" type="Items">
                                     <param id="0" name="Animation">&quot;HeatSuit&quot;</param>
@@ -292,7 +288,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="675206913604818">
+                        <event-block disabled="1" sid="675206913604818">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="395787136549950" type="Items">
                                     <param id="0" name="Animation">&quot;Map&quot;</param>
@@ -310,7 +306,7 @@
                             </actions>
                         </event-block>
                         <comment>Add the ID of the item to Data_Persist so it doesn&apos;t show up again. (See eRoomSystem event 48-49)</comment>
-                        <event-block sid="991838645466875">
+                        <event-block disabled="1" sid="991838645466875">
                             <conditions />
                             <actions>
                                 <action id="0" name="Add key" sid="973475615645059" type="Data_Persist">
@@ -327,7 +323,7 @@
             <sub-events>
                 <event-block sid="964112383395140">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="885169010460100" type="Player1_Base">
+                        <condition id="0" name="On collision with another object" sid="885169010460100" type="Player_Base">
                             <param id="0" name="Object">Pickups</param>
                         </condition>
                     </conditions>
@@ -364,11 +360,7 @@
                     </sub-events>
                 </event-block>
                 <event-block sid="702384692134490">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="194793578168026" type="Player2_Base">
-                            <param id="0" name="Object">Pickups</param>
-                        </condition>
-                    </conditions>
+                    <conditions />
                     <actions>
                         <action id="-9" name="Destroy" sid="147829397293239" type="Pickups" />
                     </actions>

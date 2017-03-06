@@ -10,9 +10,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">HUD</layout>
-        <layout active="1" order="3">Level 1</layout>
-        <event-sheet order="2">Player1_ES</event-sheet>
+        <layout order="0">HUD</layout>
+        <layout order="7">Object Bank</layout>
+        <layout order="8">SetControls</layout>
+        <layout active="1" order="9">Level 1</layout>
+        <event-sheet order="1">Player1_ES</event-sheet>
+        <event-sheet order="2">HUD_ES</event-sheet>
+        <event-sheet order="3">Enemies_ES</event-sheet>
+        <event-sheet order="4">Collectibles_ES</event-sheet>
+        <event-sheet order="5">Init_ES</event-sheet>
+        <event-sheet order="6">Main_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -35,10 +42,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/Player1_Base/" />
-        <folder expanded="1" path="animation-folder/Player1_Mask/" />
-        <folder expanded="1" path="animation-folder/Player1_Mask/Default/" />
-        <folder expanded="1" path="animation-folder/Player1_Mask/Armor/" />
+        <folder expanded="1" path="animation-folder/Player_Base/" />
+        <folder expanded="1" path="animation-folder/Player_Mask/" />
+        <folder expanded="1" path="animation-folder/Player_Mask/Default/" />
+        <folder expanded="1" path="animation-folder/Player_Mask/Armor/" />
         <folder expanded="1" path="animation-folder/Player_Lance/" />
         <folder expanded="1" path="animation-folder/Camera/" />
         <folder expanded="1" path="animation-folder/En_Pig/" />
@@ -50,8 +57,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Items/" />
         <folder expanded="1" path="animation-folder/Pickups/" />
         <folder expanded="1" path="animation-folder/Block/" />
-        <folder expanded="1" path="animation-folder/Player2_Mask/" />
-        <folder expanded="1" path="animation-folder/Player2_Base/" />
         <folder expanded="1" path="animation-folder/Camera_Boundary/" />
         <folder expanded="1" path="animation-folder/En_Dragonfly/" />
         <folder expanded="1" path="animation-folder/En_GreenDragonfly/" />
@@ -64,5 +69,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/HUD_special_arts_count/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/HUD_player_weapon/" />
+        <folder expanded="1" path="animation-folder/Player2_Mask/" />
+        <folder expanded="1" path="animation-folder/Player2_Mask/Default/" />
+        <folder expanded="1" path="animation-folder/Player2_Mask/Armor/" />
+        <folder expanded="1" path="animation-folder/Player2_Base/" />
     </folders-expanded>
 </c2uistate>

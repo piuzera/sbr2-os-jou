@@ -424,229 +424,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player2_Base" uid="88">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>100</max-speed>
-                                <acceleration>1000</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>650</jump-strength>
-                                <gravity>600</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>240</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>4</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>50</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="Flash" />
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>200</max-speed>
-                                <acceleration>600</acceleration>
-                                <deceleration>500</deceleration>
-                                <directions>Up &amp; down</directions>
-                                <set-angle>No</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>339</x>
-                        <y>87</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Player2_Mask" uid="89">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <direction>right</direction>
-                        <landing>false</landing>
-                        <shootAngle>0</shootAngle>
-                        <aimDirection></aimDirection>
-                        <shoot>false</shoot>
-                        <weapon></weapon>
-                        <hurt>false</hurt>
-                        <hurtTimer>0</hurtTimer>
-                        <bouncing>false</bouncing>
-                        <spinjump>false</spinjump>
-                        <crouch>false</crouch>
-                        <equip>Default</equip>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>100</max-speed>
-                                <acceleration>1000</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>650</jump-strength>
-                                <gravity>600</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>400</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>4</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>50</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="Flash" />
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>200</max-speed>
-                                <acceleration>600</acceleration>
-                                <deceleration>500</deceleration>
-                                <directions>Up &amp; down</directions>
-                                <set-angle>No</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="ReplaceColor">
-                            <parameters>
-                                <b-replace>118</b-replace>
-                                <b-source>168</b-source>
-                                <g-replace>150</g-replace>
-                                <g-source>200</g-source>
-                                <r-replace>232</r-replace>
-                                <r-source>232</r-source>
-                                <tolerance>0.01</tolerance>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="ReplaceColor2">
-                            <parameters>
-                                <b-replace>62</b-replace>
-                                <b-source>112</b-source>
-                                <g-replace>102</g-replace>
-                                <g-source>152</g-source>
-                                <r-replace>184</r-replace>
-                                <r-source>184</r-source>
-                                <tolerance>0.01</tolerance>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="ReplaceColor3">
-                            <parameters>
-                                <b-replace>0</b-replace>
-                                <b-source>0</b-source>
-                                <g-replace>46</g-replace>
-                                <g-source>96</g-source>
-                                <r-replace>136</r-replace>
-                                <r-source>136</r-source>
-                                <tolerance>0.01</tolerance>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="ReplaceColor4">
-                            <parameters>
-                                <b-replace>0</b-replace>
-                                <b-source>0</b-source>
-                                <g-replace>30</g-replace>
-                                <g-source>80</g-source>
-                                <r-replace>112</r-replace>
-                                <r-source>112</r-source>
-                                <tolerance>0.01</tolerance>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>342</x>
-                        <y>192</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.78125</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Player1_Mask" uid="90">
+                <instance type="Player_Mask" uid="90">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -660,7 +438,7 @@
                         <bouncing>false</bouncing>
                         <spinjump>false</spinjump>
                         <crouch>false</crouch>
-                        <climb>false</climb>
+                        <climb>true</climb>
                         <ladders>false</ladders>
                         <direction>right</direction>
                         <equip>Default</equip>
@@ -674,6 +452,7 @@
                         <p_jumpHeight>-250</p_jumpHeight>
                         <p_fallSpeed>650</p_fallSpeed>
                         <p_type>0</p_type>
+                        <curLadder>0</curLadder>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -734,37 +513,11 @@
                                 <brightness>1</brightness>
                             </parameters>
                         </effect-instance>
-                        <effect-instance type="ReplaceColor">
+                        <effect-instance type="AdjustHSL">
                             <parameters>
-                                <b-replace>0</b-replace>
-                                <b-source>255</b-source>
-                                <g-replace>0</g-replace>
-                                <g-source>255</g-source>
-                                <r-replace>0</r-replace>
-                                <r-source>255</r-source>
-                                <tolerance>0.01</tolerance>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="ReplaceColor2">
-                            <parameters>
-                                <b-replace>0</b-replace>
-                                <b-source>255</b-source>
-                                <g-replace>0</g-replace>
-                                <g-source>255</g-source>
-                                <r-replace>0</r-replace>
-                                <r-source>255</r-source>
-                                <tolerance>0.01</tolerance>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="ReplaceColor3">
-                            <parameters>
-                                <b-replace>0</b-replace>
-                                <b-source>255</b-source>
-                                <g-replace>0</g-replace>
-                                <g-source>255</g-source>
-                                <r-replace>0</r-replace>
-                                <r-source>255</r-source>
-                                <tolerance>0.01</tolerance>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -1202,7 +955,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player1_Base" uid="93">
+                <instance type="Player_Base" uid="93">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
