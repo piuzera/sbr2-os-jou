@@ -13,8 +13,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">HUD</layout>
         <layout order="7">Object Bank</layout>
         <layout order="8">SetControls</layout>
-        <layout active="1" order="9">Level 1</layout>
-        <event-sheet order="1">Player1_ES</event-sheet>
+        <layout order="9">Level 1</layout>
+        <event-sheet active="1" order="1">Player1_ES</event-sheet>
         <event-sheet order="2">HUD_ES</event-sheet>
         <event-sheet order="3">Enemies_ES</event-sheet>
         <event-sheet order="4">Collectibles_ES</event-sheet>

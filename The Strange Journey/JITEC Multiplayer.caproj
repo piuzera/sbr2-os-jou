@@ -212,7 +212,8 @@
                 <instance-variable name="p_jumpHeight" sid="478941608324774" type="number" />
                 <instance-variable name="p_fallSpeed" sid="387757874752991" type="number" />
                 <instance-variable name="p_type" sid="247662259314786" type="number" />
-                <instance-variable name="curLadder" sid="619620029359580" type="number" />
+                <instance-variable name="wasMovingBeforeJump" sid="975437892771092" type="string" />
+                <instance-variable name="hasLadderOnBottom" sid="184323314512755" type="boolean" />
             </instance-variables>
             <effects>
                 <effect-type name="AdjustHSL">
@@ -1710,6 +1711,7 @@
                 <instance-variable name="health" sid="776899356094340" type="number" />
                 <instance-variable name="power" sid="699227454656491" type="number" />
                 <instance-variable name="points" sid="405690309751405" type="number" />
+                <instance-variable name="active" sid="847464539492036" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="LineOfSight" sid="174731930225332">
