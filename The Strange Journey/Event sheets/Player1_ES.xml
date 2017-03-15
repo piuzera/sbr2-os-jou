@@ -2572,7 +2572,7 @@
                                     <actions>
                                         <action id="4" name="Set animation" sid="511468852517264" type="Player_Mask">
                                             <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Normal_Air&quot;</param>
-                                            <param id="1" name="From">0</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2602,7 +2602,7 @@
                                     <actions>
                                         <action id="4" name="Set animation" sid="115337903119416" type="Player_Mask">
                                             <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Up_Air&quot;</param>
-                                            <param id="1" name="From">0</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2632,7 +2632,7 @@
                                     <actions>
                                         <action id="4" name="Set animation" sid="611925059087289" type="Player_Mask">
                                             <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Down_Air&quot;</param>
-                                            <param id="1" name="From">0</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2793,7 +2793,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="879177478289563" type="System">
                                                             <param id="0" name="Object to create">Player_Sword</param>
-                                                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">0</param>
                                                             <param id="3" name="Y">0</param>
                                                         </action>
@@ -2805,16 +2805,39 @@
                                                                     <param id="0" name="Instance variable">crouch</param>
                                                                 </condition>
                                                             </conditions>
-                                                            <actions>
-                                                                <action id="4" name="Set animation" sid="143613484479331" type="Player_Sword">
-                                                                    <param id="0" name="Animation">&quot;Default_&quot; &amp; Player_Mask.shootAngle</param>
-                                                                    <param id="1" name="From">1</param>
-                                                                </action>
-                                                                <action id="-3" name="Set position" sid="273054068323941" type="Player_Sword">
-                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
-                                                                </action>
-                                                            </actions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="720311650278850">
+                                                                    <conditions>
+                                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="879520381532112" type="Player_Mask" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="143613484479331" type="Player_Sword">
+                                                                            <param id="0" name="Animation">&quot;Default_&quot; &amp; Player_Mask.shootAngle</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                        <action id="-3" name="Set position" sid="273054068323941" type="Player_Sword">
+                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="670813801373563">
+                                                                    <conditions>
+                                                                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="834951899442549" type="Player_Mask" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="201594426502737" type="Player_Sword">
+                                                                            <param id="0" name="Animation">&quot;Default_Air_&quot; &amp; Player_Mask.shootAngle</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                        <action id="-3" name="Set position" sid="100084135411614" type="Player_Sword">
+                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
                                                         <event-block sid="909243209162973">
                                                             <conditions>
@@ -2869,7 +2892,7 @@
                                                                     <param id="1" name="Mode">0</param>
                                                                 </action>
                                                                 <action id="-16" name="Wait" sid="797960656394360" type="System">
-                                                                    <param id="0" name="Seconds">0.2</param>
+                                                                    <param id="0" name="Seconds">0.32</param>
                                                                 </action>
                                                                 <action id="-13" name="Set boolean" sid="955172436323322" type="Player_Mask">
                                                                     <param id="0" name="Instance variable">shoot</param>

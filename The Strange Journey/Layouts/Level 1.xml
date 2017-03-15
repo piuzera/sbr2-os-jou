@@ -890,24 +890,6 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Player" sid="6199299691916345">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
         <layer name="Objects" sid="733703347133252">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -1227,8 +1209,8 @@
                         <width>128</width>
                         <height>160</height>
                         <depth>0</depth>
-                        <hotspotX>0.421875</hotspotX>
-                        <hotspotY>0.568750024</hotspotY>
+                        <hotspotX>0.3828125</hotspotX>
+                        <hotspotY>0.618749976</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1421,6 +1403,24 @@
                     </world>
                 </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="Player" sid="6199299691916345">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
         <layer name="Transitions" sid="621293137250448">
