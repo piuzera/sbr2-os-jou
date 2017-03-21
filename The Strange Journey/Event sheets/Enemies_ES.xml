@@ -830,6 +830,154 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-group description="" sid="626150495744314" title="Scarab">
+                    <sub-events>
+                        <event-block sid="702352140927654">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="200328926359764" type="En_Scarab">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="669400225421522">
+                                    <conditions>
+                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="689936546732662" type="En_Scarab">
+                                            <param id="0" name="Object">Player_Base</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="953107229895549">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="754730737202951" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="701823808031882" type="En_Scarab">
+                                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="465139195196144" type="En_Scarab">
+                                                    <param id="0" name="Angle">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="572673970430402">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="413161089794846" type="En_Scarab">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="536765239416522">
+                                                    <conditions>
+                                                        <condition id="2" name="Is playing" sid="984279799320797" type="En_Scarab">
+                                                            <param id="0" name="Animation">&quot;Fly&quot;</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="195335924737060" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="7" name="Set mirrored" sid="460953713034089" type="En_Scarab">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="322106364432534" type="System">
+                                                            <param id="0" name="Seconds">random(0.1,0.5)</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="788205994914821" type="En_Scarab">
+                                                            <param id="0" name="Angle">180</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="123876475184160">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="555023974745668" type="En_Scarab">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="728095916304778">
+                                                    <conditions>
+                                                        <condition id="2" name="Is playing" sid="151578283621477" type="En_Scarab">
+                                                            <param id="0" name="Animation">&quot;Fly&quot;</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="517904256158777" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="7" name="Set mirrored" sid="220534384272705" type="En_Scarab">
+                                                            <param id="0" name="State">0</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="134362370235718" type="System">
+                                                            <param id="0" name="Seconds">random(0.1,0.5)</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="506101514812877" type="En_Scarab">
+                                                            <param id="0" name="Angle">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="763314164232814">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="425684444158066" type="En_Scarab">
+                                            <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="213937453798060" type="En_Scarab">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="588793164165987" type="En_Scarab">
+                                            <param id="0" name="Angle">270</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="252333749947732" type="En_Scarab">
+                                            <param id="0" name="Animation">&quot;Fly&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="427217938471863">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="589291531990597" type="En_Scarab">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="274807433983971" type="En_Scarab">
+                                            <param id="0" name="Angle">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="274283650707938">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="163270061305505" type="System">
+                                            <param id="0" name="First value">En_Scarab.Bullet.AngleOfMotion</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="740856302693775" type="System">
+                                            <param id="0" name="First value">En_Scarab.Bullet.AngleOfMotion</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LineOfSight" id="0" name="Set range" sid="349835389435195" type="En_Scarab">
+                                            <param id="0" name="Range">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="654859788702524" title="Damage Enemy">

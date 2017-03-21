@@ -1840,6 +1840,29 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="En_Scarab" sid="780976536467716">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="side" sid="850599417560105" type="number" />
+                <instance-variable name="direction" sid="159940596011946" type="number" />
+                <instance-variable name="state" sid="247758702040478" type="string" />
+                <instance-variable name="initX" sid="819037537158625" type="number" />
+                <instance-variable name="initY" sid="262103849516779" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="910518038917637" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6875" />
+                </animation>
+                <animation framecount="2" loop="0" name="Emerge" pingpong="0" repeatcount="6" repeatto="0" sid="972517301960827" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6875" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6875" />
+                </animation>
+                <animation framecount="2" loop="1" name="Fly" pingpong="0" repeatcount="0" repeatto="0" sid="180749301726326" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Behaviors" plugin-id="Sprite" sid="389202517335220">
@@ -1848,6 +1871,7 @@
                 <member>En_EvilPlant</member>
                 <member>En_GreenDragonfly</member>
                 <member>En_Pig</member>
+                <member>En_Scarab</member>
                 <member>En_Vulture</member>
                 <member>Enemy_EyeProjectile</member>
                 <member>Player2_Base</member>
@@ -1906,6 +1930,7 @@
                 <member>En_EvilPlant</member>
                 <member>En_GreenDragonfly</member>
                 <member>En_Pig</member>
+                <member>En_Scarab</member>
                 <member>En_Vulture</member>
             </members>
             <instance-variables>

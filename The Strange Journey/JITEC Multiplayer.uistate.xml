@@ -10,15 +10,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Level 1</layout>
-        <layout order="6">Object Bank</layout>
-        <layout order="7">SetControls</layout>
-        <layout order="8">HUD</layout>
-        <event-sheet order="1">Player1_ES</event-sheet>
-        <event-sheet order="2">HUD_ES</event-sheet>
-        <event-sheet order="3">Collectibles_ES</event-sheet>
-        <event-sheet order="4">Init_ES</event-sheet>
-        <event-sheet order="5">Main_ES</event-sheet>
+        <layout order="1">Level 1</layout>
+        <layout order="7">Object Bank</layout>
+        <layout order="8">SetControls</layout>
+        <layout order="9">HUD</layout>
+        <event-sheet order="2">Player1_ES</event-sheet>
+        <event-sheet order="3">HUD_ES</event-sheet>
+        <event-sheet order="4">Collectibles_ES</event-sheet>
+        <event-sheet order="5">Init_ES</event-sheet>
+        <event-sheet order="6">Main_ES</event-sheet>
+        <event-sheet active="1" order="10">Enemies_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -77,5 +78,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Player_Arts/" />
         <folder expanded="1" path="animation-folder/Player_Arts/Default/" />
         <folder expanded="1" path="animation-folder/HUD_Super_Arts_Icon/" />
+        <folder expanded="1" path="animation-folder/En_Scarab/" />
     </folders-expanded>
 </c2uistate>
