@@ -893,6 +893,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="HUD_Super_Arts_Icon" uid="89">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>56</x>
+                        <y>200</y>
+                        <z>0</z>
+                        <width>23</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>-0.391304344</hotspotX>
+                        <hotspotY>-0.166666672</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

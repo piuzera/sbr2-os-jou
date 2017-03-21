@@ -6,6 +6,9 @@
         <comment>Activate enemies when they are on-screen</comment>
         <event-block sid="867977147619472">
             <conditions>
+                <condition id="-11" name="For Each" sid="810788382142847" type="System">
+                    <param id="0" name="Object">Enemies</param>
+                </condition>
                 <condition id="-3" name="Is on-screen" sid="505317045112665" type="Enemies" />
             </conditions>
             <actions>
@@ -15,13 +18,13 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="769726760282105">
+        <event-block disabled="1" sid="769726760282105">
             <conditions>
                 <condition id="-18" name="On created" sid="264763442982042" type="Enemies" />
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="635783144376857">
+                <event-block disabled="1" sid="635783144376857">
                     <conditions>
                         <condition id="-3" inverted="1" name="Is on-screen" sid="736895201009356" type="Enemies" />
                     </conditions>

@@ -27,6 +27,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -214,6 +215,8 @@
                 <instance-variable name="p_type" sid="247662259314786" type="number" />
                 <instance-variable name="wasMovingBeforeJump" sid="975437892771092" type="string" />
                 <instance-variable name="hasLadderOnBottom" sid="184323314512755" type="boolean" />
+                <instance-variable name="isUsingArts" sid="454499542144478" type="boolean" />
+                <instance-variable name="superArtsCounter" sid="313963880239643" type="number" />
             </instance-variables>
             <effects>
                 <effect-type name="AdjustHSL">
@@ -1779,6 +1782,59 @@
                             <point x="0.487805" y="0.560976" />
                             <point x="0.487805" y="0.414634" />
                             <point x="1" y="0.414634" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_black_superart" sid="106516901591042">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573792733036050" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player_Arts" sid="160618848535667">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="906014143237358">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="256718013173805">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="AdjustHSL">
+                    <effect id="hsladjust" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation-folder name="Default">
+                    <animation framecount="1" loop="0" name="Default_Use_Arts" pingpong="0" repeatcount="1" repeatto="0" sid="715688160471592" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </animation-folder>
+        </object-type>
+        <object-type name="HUD_Super_Arts_Icon" sid="245545603704427">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="820422798763741">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="885484531326206" speed="0">
+                    <frame duration="1" hotspotX="-0.391304" hotspotY="-0.166667" original-source="E:\Dropbox\Copy Girl\Gamekit stuff\Metroid\UI\missilecounter.png">
+                        <collision-poly>
+                            <point x="0" y="0.166666" />
+                            <point x="0.913043" y="0.166666" />
+                            <point x="0.956522" y="0.499999" />
+                            <point x="0.913043" y="0.916667" />
+                            <point x="0" y="0.916667" />
+                            <point x="0" y="0.499999" />
                         </collision-poly>
                     </frame>
                 </animation>
