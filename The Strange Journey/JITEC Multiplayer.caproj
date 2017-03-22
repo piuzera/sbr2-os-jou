@@ -219,9 +219,17 @@
                 <instance-variable name="superArtsCounter" sid="313963880239643" type="number" />
                 <instance-variable name="superArtsEffect" sid="203367045112902" type="boolean" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="tintSine" sid="155147957893527">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <effects>
                 <effect-type name="AdjustHSL">
                     <effect id="hsladjust" />
+                </effect-type>
+                <effect-type name="Tint">
+                    <effect id="tint" />
                 </effect-type>
             </effects>
             <animation-folder>
@@ -1828,8 +1836,8 @@
         <object-type name="HUD_Super_Arts_Icon" sid="245545603704427">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Flash" sid="820422798763741">
-                    <behavior id="Flash" />
+                <behavior-type name="Sine" sid="849326450524448">
+                    <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>

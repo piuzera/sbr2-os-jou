@@ -460,6 +460,7 @@
                         <hasLadderOnBottom>false</hasLadderOnBottom>
                         <isUsingArts>false</isUsingArts>
                         <superArtsCounter>0</superArtsCounter>
+                        <superArtsEffect>false</superArtsEffect>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -513,6 +514,19 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="tintSine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Value only</movement>
+                                <wave>Triangle</wave>
+                                <period>1</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>1</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Brightness">
@@ -525,6 +539,19 @@
                                 <hue>0</hue>
                                 <luminosity>1</luminosity>
                                 <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="Tint">
+                            <parameters>
+<<<<<<< HEAD
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+=======
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+>>>>>>> origin/watch
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -1204,6 +1231,13 @@
                                 <hue>0</hue>
                                 <luminosity>1</luminosity>
                                 <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="Tint">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
