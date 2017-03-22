@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>254.133</position-x>
-        <position-y>539.578</position-y>
-        <position-z>60.3596</position-z>
-        <lookat-x>254.133</lookat-x>
-        <lookat-y>539.578</lookat-y>
+        <position-x>474.084</position-x>
+        <position-y>468.576</position-y>
+        <position-z>77.1758</position-z>
+        <lookat-x>474.084</lookat-x>
+        <lookat-y>468.576</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -23,15 +23,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Objects" />
+    <active-layer name="Tileset" />
     <layers>
-        <layer locked="0" name="Collisions" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Parallax 2" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Parallax 1" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Collisions" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Tileset" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Jump-Thru" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Enemies" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Objects" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Player" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Transitions" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Camera Boundaries" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="HUD" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Transitions" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Camera Boundaries" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="HUD" parallax-in-editor="0" visible="0" />
     </layers>
 </c2uistate>
