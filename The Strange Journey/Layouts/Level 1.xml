@@ -335,6 +335,7 @@
                         <power>2</power>
                         <destroy>false</destroy>
                         <owner>player</owner>
+                        <comeBack>false</comeBack>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -353,12 +354,12 @@
                         </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>0</speed>
+                                <speed>400</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
-                                <initial-state>Disabled</initial-state>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Sine">

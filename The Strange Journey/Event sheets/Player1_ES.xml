@@ -3295,14 +3295,41 @@
                                                             <param id="1" name="From">1</param>
                                                         </action>
                                                         <action id="-16" name="Wait" sid="408263133251579" type="System">
-                                                            <param id="0" name="Seconds">0.2</param>
+                                                            <param id="0" name="Seconds">0.3</param>
                                                         </action>
-                                                        <action id="-13" name="Set boolean" sid="353722907327273" type="Player_Mask">
-                                                            <param id="0" name="Instance variable">shoot</param>
-                                                            <param id="1" name="Value">0</param>
+                                                        <action id="-13" name="Set boolean" sid="813889970713781" type="Player_Shield">
+                                                            <param id="0" name="Instance variable">comeBack</param>
+                                                            <param id="1" name="Value">1</param>
                                                         </action>
-                                                        <action id="-9" name="Destroy" sid="290490170530082" type="Player_Shield" />
                                                     </actions>
+                                                </event-block>
+                                                <event-block sid="287977024053545">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="439620324420869" type="Player_Shield">
+                                                            <param id="0" name="Instance variable">comeBack</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="376948052245925" type="Player_Shield">
+                                                            <param id="0" name="Angle">angle(self.X,self.Y,Player_Mask.X,player_mask.y-16)</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="726931911564052">
+                                                            <conditions>
+                                                                <condition id="0" name="On collision with another object" sid="207829822433639" type="Player_Shield">
+                                                                    <param id="0" name="Object">Player_Mask</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-13" name="Set boolean" sid="831365150764935" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">shoot</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="-9" name="Destroy" sid="780078024950415" type="Player_Shield" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-group description="" disabled="1" sid="339409782640809" title="(Old) Lance">
                                                     <sub-events>
