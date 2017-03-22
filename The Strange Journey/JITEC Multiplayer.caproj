@@ -1143,7 +1143,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="En_EvilPlant" sid="597441964151671">
+        <object-type name="En_SeedBomber" sid="597441964151671">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="side" sid="992995886059163" type="number" />
@@ -1915,12 +1915,12 @@
         <family name="Behaviors" plugin-id="Sprite" sid="389202517335220">
             <members>
                 <member>En_Dragonfly</member>
-                <member>En_EvilPlant</member>
                 <member>En_GreenDragonfly</member>
                 <member>En_PET</member>
                 <member>En_Pig</member>
                 <member>En_Sandit</member>
                 <member>En_Scarab</member>
+                <member>En_SeedBomber</member>
                 <member>Enemy_EyeProjectile</member>
                 <member>Player2_Base</member>
                 <member>Player2_Mask</member>
@@ -1975,12 +1975,12 @@
         <family name="Enemies" plugin-id="Sprite" sid="506137335352544">
             <members>
                 <member>En_Dragonfly</member>
-                <member>En_EvilPlant</member>
                 <member>En_GreenDragonfly</member>
                 <member>En_PET</member>
                 <member>En_Pig</member>
                 <member>En_Sandit</member>
                 <member>En_Scarab</member>
+                <member>En_SeedBomber</member>
             </members>
             <instance-variables>
                 <instance-variable name="health" sid="776899356094340" type="number" />

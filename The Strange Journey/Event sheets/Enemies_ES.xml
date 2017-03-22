@@ -421,16 +421,16 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="686641081965610" title="Evil Plant">
+                <event-group description="" sid="686641081965610" title="Seed Bomber">
                     <sub-events>
                         <event-block sid="402352714949872">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="998210227826408" type="En_EvilPlant">
+                                <condition id="-8" name="Is boolean instance variable set" sid="998210227826408" type="En_SeedBomber">
                                     <param id="0" name="Instance variable">active</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="352953483320634" type="En_EvilPlant">
+                                <action behavior="Platform" id="11" name="Set enabled" sid="352953483320634" type="En_SeedBomber">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -438,12 +438,12 @@
                                 <comment>Attack on sight</comment>
                                 <event-block sid="236927873351057">
                                     <conditions>
-                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="873572462561023" type="En_EvilPlant">
+                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="873572462561023" type="En_SeedBomber">
                                             <param id="0" name="Object">Player_Base</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="192379886262663" type="En_EvilPlant">
+                                        <action id="4" name="Set animation" sid="192379886262663" type="En_SeedBomber">
                                             <param id="0" name="Animation">&quot;Attack&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -451,33 +451,33 @@
                                     <sub-events>
                                         <event-block sid="590789174704631">
                                             <conditions>
-                                                <condition id="-1" name="Compare X" sid="631018225165518" type="En_EvilPlant">
+                                                <condition id="-1" name="Compare X" sid="631018225165518" type="En_SeedBomber">
                                                     <param id="0" name="Comparison">4</param>
                                                     <param id="1" name="X co-ordinate">Player_Base.X</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="7" name="Set mirrored" sid="776926159316466" type="En_EvilPlant">
+                                                <action id="7" name="Set mirrored" sid="776926159316466" type="En_SeedBomber">
                                                     <param id="0" name="State">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="912719880498444">
                                             <conditions>
-                                                <condition id="-1" name="Compare X" sid="284795035838931" type="En_EvilPlant">
+                                                <condition id="-1" name="Compare X" sid="284795035838931" type="En_SeedBomber">
                                                     <param id="0" name="Comparison">2</param>
                                                     <param id="1" name="X co-ordinate">Player_Base.X</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="7" name="Set mirrored" sid="843454374041300" type="En_EvilPlant">
+                                                <action id="7" name="Set mirrored" sid="843454374041300" type="En_SeedBomber">
                                                     <param id="0" name="State">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="203039767952939">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="174808145685694" type="En_EvilPlant">
+                                                <condition id="3" name="Compare frame" sid="174808145685694" type="En_SeedBomber">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">1</param>
                                                 </condition>
@@ -492,11 +492,11 @@
                                                         <action id="-3" name="Create object" sid="881363930198852" type="System">
                                                             <param id="0" name="Object to create">Enemy_EyeProjectile</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                            <param id="2" name="X">En_EvilPlant.ImagePointX(1)</param>
-                                                            <param id="3" name="Y">En_EvilPlant.ImagePointY(1)</param>
+                                                            <param id="2" name="X">En_SeedBomber.ImagePointX(1)</param>
+                                                            <param id="3" name="Y">En_SeedBomber.ImagePointY(1)</param>
                                                         </action>
                                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="184204801117076" type="Enemy_EyeProjectile">
-                                                            <param id="0" name="Angle">angle(En_EvilPlant.X,En_EvilPlant.Y,Player_Base.X,Player_Base.Y)</param>
+                                                            <param id="0" name="Angle">angle(En_SeedBomber.X,En_SeedBomber.Y,Player_Base.X,Player_Base.Y)</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -506,19 +506,19 @@
                                 </event-block>
                                 <event-block sid="229198068559504">
                                     <conditions>
-                                        <condition id="4" name="On finished" sid="662765885222309" type="En_EvilPlant">
+                                        <condition id="4" name="On finished" sid="662765885222309" type="En_SeedBomber">
                                             <param id="0" name="Animation">&quot;Attack&quot;</param>
                                         </condition>
-                                        <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="970060054951806" type="En_EvilPlant">
+                                        <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="970060054951806" type="En_SeedBomber">
                                             <param id="0" name="Object">Player_Base</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="582787102826802" type="En_EvilPlant">
+                                        <action id="4" name="Set animation" sid="582787102826802" type="En_SeedBomber">
                                             <param id="0" name="Animation">&quot;Default&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="5" name="Set frame" sid="150472139204588" type="En_EvilPlant">
+                                        <action id="5" name="Set frame" sid="150472139204588" type="En_SeedBomber">
                                             <param id="0" name="Frame number">2</param>
                                         </action>
                                     </actions>
