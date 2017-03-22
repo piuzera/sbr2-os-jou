@@ -1256,7 +1256,7 @@
         <object-type name="TimeManager" sid="679530084546023">
             <plugin id="CAMFTimeManager" />
         </object-type>
-        <object-type name="En_Vulture" sid="869310311552262">
+        <object-type name="En_PET" sid="869310311552262">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="side" sid="459020084496243" type="number" />
@@ -1917,10 +1917,10 @@
                 <member>En_Dragonfly</member>
                 <member>En_EvilPlant</member>
                 <member>En_GreenDragonfly</member>
+                <member>En_PET</member>
                 <member>En_Pig</member>
                 <member>En_Sandit</member>
                 <member>En_Scarab</member>
-                <member>En_Vulture</member>
                 <member>Enemy_EyeProjectile</member>
                 <member>Player2_Base</member>
                 <member>Player2_Mask</member>
@@ -1977,10 +1977,10 @@
                 <member>En_Dragonfly</member>
                 <member>En_EvilPlant</member>
                 <member>En_GreenDragonfly</member>
+                <member>En_PET</member>
                 <member>En_Pig</member>
                 <member>En_Sandit</member>
                 <member>En_Scarab</member>
-                <member>En_Vulture</member>
             </members>
             <instance-variables>
                 <instance-variable name="health" sid="776899356094340" type="number" />

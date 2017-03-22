@@ -1052,7 +1052,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="En_Vulture" uid="15">
+                <instance type="En_PET" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
