@@ -217,6 +217,7 @@
                 <instance-variable name="hasLadderOnBottom" sid="184323314512755" type="boolean" />
                 <instance-variable name="isUsingArts" sid="454499542144478" type="boolean" />
                 <instance-variable name="superArtsCounter" sid="313963880239643" type="number" />
+                <instance-variable name="superArtsEffect" sid="203367045112902" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="tintSine" sid="155147957893527">
@@ -1819,6 +1820,9 @@
             <effects>
                 <effect-type name="AdjustHSL">
                     <effect id="hsladjust" />
+                </effect-type>
+                <effect-type name="Tint">
+                    <effect id="tint" />
                 </effect-type>
             </effects>
             <animation-folder>

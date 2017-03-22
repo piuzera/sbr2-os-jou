@@ -460,6 +460,7 @@
                         <hasLadderOnBottom>false</hasLadderOnBottom>
                         <isUsingArts>false</isUsingArts>
                         <superArtsCounter>0</superArtsCounter>
+                        <superArtsEffect>false</superArtsEffect>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -542,9 +543,15 @@
                         </effect-instance>
                         <effect-instance type="Tint">
                             <parameters>
+<<<<<<< HEAD
                                 <blue>0</blue>
                                 <green>0</green>
                                 <red>0</red>
+=======
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+>>>>>>> origin/watch
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -1224,6 +1231,13 @@
                                 <hue>0</hue>
                                 <luminosity>1</luminosity>
                                 <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="Tint">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
