@@ -516,9 +516,6 @@
                                             <param id="0" name="Instance variable">p_defense</param>
                                             <param id="1" name="Value">2</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="994055679021167" type="HUD_Super_Arts_Icon">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="641128793032382">
@@ -534,6 +531,20 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="300091821728301">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="536399964043599" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">superArtsCounter</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Set opacity" sid="994055679021167" type="HUD_Super_Arts_Icon">
+                                                    <param id="0" name="Opacity">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                                 <event-block sid="162775462400858">
@@ -544,13 +555,19 @@
                                             <param id="2" name="Value">5</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action behavior="Flash" id="0" name="Flash" sid="373386195624268" type="HUD_Super_Arts_Icon">
-                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">5</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="792533623671271">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="775011756597109" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Sine" id="0" name="Set active" sid="745106956280927" type="HUD_Super_Arts_Icon">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="994905451333476">
                                     <conditions>
@@ -565,10 +582,122 @@
                                             <param id="0" name="Instance variable">p_defense</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="634478083711795" type="HUD_Super_Arts_Icon">
-                                            <param id="0" name="Visibility">0</param>
+                                        <action behavior="Sine" id="0" name="Set active" sid="234063921579288" type="HUD_Super_Arts_Icon">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="225820251866699" type="HUD_Super_Arts_Icon">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                        <action behavior="tintSine" id="0" name="Set active" sid="438090484106656" type="Player_Mask">
+                                            <param id="0" name="State">0</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="698810570837658">
+                                    <conditions>
+                                        <condition behavior="tintSine" id="0" name="Is active" sid="378522954933512" type="Player_Mask" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="749837591316307">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="688392851536736" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-27" name="Set effect enabled" sid="211437792829562" type="Player_Mask">
+                                                    <param id="0" name="Mode">1</param>
+                                                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="438470938303894">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="561663666873995" type="System">
+                                                    <param id="0" name="First value">Player_Mask.tintSine.Value</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="937413591337756">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="819832084869021" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-28" name="Set effect parameter" sid="426458151249309" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">255</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="335488230064764" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">128</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="207521853665411" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="190865819692487">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="664747687411817" type="System">
+                                                    <param id="0" name="First value">Player_Mask.tintSine.Value</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="358630984010671">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="679024589942899" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-28" name="Set effect parameter" sid="326830852925165" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">180</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="419863527695647" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">180</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="461998214821365" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">180</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="455077771935004">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="208251188750292" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="154414603722181">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="111246932860291" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-27" name="Set effect enabled" sid="782561004723039" type="Player_Mask">
+                                                    <param id="0" name="Mode">0</param>
+                                                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="286087849550719">
                                     <conditions>
@@ -1971,6 +2100,9 @@
                                         <action id="-10" name="Set value" sid="921622258047740" type="Player_Mask">
                                             <param id="0" name="Instance variable">superArtsCounter</param>
                                             <param id="1" name="Value">26</param>
+                                        </action>
+                                        <action behavior="tintSine" id="0" name="Set active" sid="804760335838685" type="Player_Mask">
+                                            <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
