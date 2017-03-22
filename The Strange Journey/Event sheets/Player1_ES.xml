@@ -641,7 +641,7 @@
                                         <action id="-28" name="Set effect parameter" sid="912206946601441" type="Player_Mask">
                                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                                             <param id="1" name="Parameter index">2</param>
-                                            <param id="2" name="Value">100</param>
+                                            <param id="2" name="Value">101</param>
                                         </action>
                                     </actions>
                                 </event-block>
