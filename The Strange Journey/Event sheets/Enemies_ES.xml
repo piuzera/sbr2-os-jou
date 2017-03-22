@@ -978,6 +978,118 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-group description="" sid="959304138966523" title="Sandit">
+                    <sub-events>
+                        <event-block sid="780336329450228">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="389301889432392" type="En_Sandit">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="703692986459347">
+                                    <conditions>
+                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="351588097353726" type="En_Sandit">
+                                            <param id="0" name="Object">Player_Base</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="827140642325646">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="906003025600181" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="149531675826850" type="En_Sandit">
+                                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="769003234587246">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="937181665542195" type="En_Sandit">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="678386047149665" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="696134992934781" type="En_Sandit">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="894034705273124">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="399961806954015" type="En_Sandit">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="320888160264231" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="523424459990731" type="En_Sandit">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="906666456163600">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="892009121353958" type="En_Sandit">
+                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="622082838389998">
+                                            <conditions>
+                                                <condition id="7" name="Is mirrored" sid="167206728674642" type="En_Sandit" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="7" name="Simulate control" sid="981793353956758" type="En_Sandit">
+                                                    <param id="0" name="Control">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="333541840608280">
+                                            <conditions>
+                                                <condition id="7" inverted="1" name="Is mirrored" sid="635811826418117" type="En_Sandit" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="7" name="Simulate control" sid="900593241711887" type="En_Sandit">
+                                                    <param id="0" name="Control">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="640705719379868">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="816404641185231" type="En_Sandit">
+                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="369775052960802" type="En_Sandit">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="541361726079715" type="En_Sandit">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="LineOfSight" id="0" name="Set range" sid="822702087819272" type="En_Sandit">
+                                    <param id="0" name="Range">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="654859788702524" title="Damage Enemy">

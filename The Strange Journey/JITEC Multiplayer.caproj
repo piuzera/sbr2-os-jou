@@ -1873,6 +1873,43 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="En_Sandit" sid="201015553718535">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="side" sid="225259024799547" type="number" />
+                <instance-variable name="direction" sid="264435034679341" type="number" />
+                <instance-variable name="state" sid="845530832033870" type="string" />
+                <instance-variable name="initX" sid="573411533976751" type="number" />
+                <instance-variable name="initY" sid="914753461364648" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="243499580599192" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6875" />
+                </animation>
+                <animation framecount="2" loop="0" name="Emerge" pingpong="0" repeatcount="6" repeatto="0" sid="521387446632709" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6875" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6875" />
+                </animation>
+                <animation framecount="2" loop="1" name="Walk" pingpong="0" repeatcount="0" repeatto="0" sid="323323795597581" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Behaviors" plugin-id="Sprite" sid="389202517335220">
@@ -1881,6 +1918,7 @@
                 <member>En_EvilPlant</member>
                 <member>En_GreenDragonfly</member>
                 <member>En_Pig</member>
+                <member>En_Sandit</member>
                 <member>En_Scarab</member>
                 <member>En_Vulture</member>
                 <member>Enemy_EyeProjectile</member>
@@ -1940,6 +1978,7 @@
                 <member>En_EvilPlant</member>
                 <member>En_GreenDragonfly</member>
                 <member>En_Pig</member>
+                <member>En_Sandit</member>
                 <member>En_Scarab</member>
                 <member>En_Vulture</member>
             </members>

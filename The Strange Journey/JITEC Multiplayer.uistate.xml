@@ -15,10 +15,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="7">SetControls</layout>
         <layout order="8">HUD</layout>
         <event-sheet order="2">Player1_ES</event-sheet>
-        <event-sheet order="4">Init_ES</event-sheet>
+        <event-sheet order="9">Init_ES</event-sheet>
         <event-sheet order="5">Collectibles_ES</event-sheet>
         <event-sheet order="6">Main_ES</event-sheet>
-        <event-sheet order="9">HUD_ES</event-sheet>
+        <event-sheet order="10">HUD_ES</event-sheet>
+        <event-sheet order="4">Enemies_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -78,5 +79,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Player_Arts/Default/" />
         <folder expanded="1" path="animation-folder/HUD_Super_Arts_Icon/" />
         <folder expanded="1" path="animation-folder/En_Scarab/" />
+        <folder expanded="1" path="animation-folder/En_Sandit/" />
     </folders-expanded>
 </c2uistate>
