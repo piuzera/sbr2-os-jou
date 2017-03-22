@@ -223,6 +223,9 @@
                 <effect-type name="AdjustHSL">
                     <effect id="hsladjust" />
                 </effect-type>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
             </effects>
             <animation-folder>
                 <animation-folder name="Default">
