@@ -331,7 +331,7 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="60" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="2" loop="0" name="Defauly_Sub_Down_Air" pingpong="0" repeatcount="1" repeatto="0" sid="298080282637893" speed="15">
+                    <animation framecount="2" loop="0" name="Default_Sub_Down_Air" pingpong="0" repeatcount="1" repeatto="0" sid="298080282637893" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
@@ -1754,7 +1754,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="1" name="Default_0" pingpong="0" repeatcount="1" repeatto="0" sid="375671021158703" speed="15">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\JITEC\assets\sprites\highlander\shield.gif">
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="D:\Dropbox\JITEC\assets\sprites\highlander\shield.gif">
                         <collision-poly>
                             <point x="0.317073" y="0.365853" />
                             <point x="0.780488" y="0.365853" />
