@@ -1754,7 +1754,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="1" name="Default_0" pingpong="0" repeatcount="1" repeatto="0" sid="375671021158703" speed="15">
-                    <frame duration="1" hotspotX="0.560976" hotspotY="0.512195" original-source="C:\Users\sizay\Desktop\JitEC\Sprites\Spear.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\JITEC\assets\sprites\highlander\shield.gif">
                         <collision-poly>
                             <point x="0.317073" y="0.365853" />
                             <point x="0.780488" y="0.365853" />
