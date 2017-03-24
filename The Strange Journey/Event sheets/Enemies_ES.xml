@@ -1097,23 +1097,23 @@
                 <comment>Damage an enemy with a projectile</comment>
                 <event-block sid="485646525837998">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="903467860856658" type="Projectiles">
+                        <condition id="0" name="On collision with another object" sid="903467860856658" type="WeaponsEtc">
                             <param id="0" name="Object">Enemies</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="391698277103886" type="Projectiles">
+                        <condition id="-7" name="Compare instance variable" sid="391698277103886" type="WeaponsEtc">
                             <param id="0" name="Instance variable">owner</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;player&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="259442756211122" type="Projectiles">
+                        <action id="-13" name="Set boolean" sid="259442756211122" type="WeaponsEtc">
                             <param id="0" name="Instance variable">destroy</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-12" name="Subtract from" sid="771340489391400" type="Enemies">
                             <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">Projectiles.power</param>
+                            <param id="1" name="Value">WeaponsEtc.power</param>
                         </action>
                         <action id="0" name="Call function" sid="640501155685618" type="Function">
                             <param id="0" name="Name">&quot;Object_Flash&quot;</param>

@@ -2081,7 +2081,7 @@
                 </effect-type>
             </effects>
         </family>
-        <family name="Projectiles" plugin-id="Sprite" sid="966639895379555">
+        <family name="WeaponsEtc" plugin-id="Sprite" sid="966639895379555">
             <members>
                 <member>Enemy_EyeProjectile</member>
                 <member>Player_Lance</member>
