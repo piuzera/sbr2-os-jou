@@ -1755,7 +1755,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="1" name="Default_0" pingpong="0" repeatcount="1" repeatto="0" sid="375671021158703" speed="15">
-                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="D:\Dropbox\JITEC\assets\sprites\highlander\shield.gif">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\JITEC\assets\sprites\highlander\shield.gif">
                         <collision-poly>
                             <point x="0.317073" y="0.365853" />
                             <point x="0.780488" y="0.365853" />
@@ -2002,6 +2002,20 @@
         <object-type name="TiledBackground2" sid="206857820099087">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\Piu\Dropbox\JITEC\assets\tilemap\bg_mountain2.png" />
+        </object-type>
+        <object-type name="Enemy_Respawner" sid="459367122300130">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="active" sid="503820381711609" type="boolean" />
+                <instance-variable name="enemy" sid="297472832897001" type="string" />
+                <instance-variable name="RespawnTime" sid="235898307479010" type="number" />
+                <instance-variable name="distance" sid="570334082371158" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="998104326673179" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
