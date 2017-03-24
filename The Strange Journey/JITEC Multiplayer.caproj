@@ -1314,6 +1314,7 @@
                 </animation>
                 <animation framecount="6" loop="1" name="Diving" pingpong="0" repeatcount="1" repeatto="3" sid="818213788077338" speed="15">
                     <frame duration="1" hotspotX="0.484375" hotspotY="0.65625">
+                        <image-point name="hit" x="0.15625" y="0.4375" />
                         <collision-poly>
                             <point x="0.203125" y="0.3125" />
                             <point x="0.859375" y="0.3125" />
@@ -1322,6 +1323,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.484375" hotspotY="0.65625">
+                        <image-point name="hit" x="0.15625" y="0.4375" />
                         <collision-poly>
                             <point x="0.203125" y="0.3125" />
                             <point x="0.859375" y="0.3125" />
@@ -1330,6 +1332,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="hit" x="0.15625" y="0.4375" />
                         <collision-poly>
                             <point x="0.203125" y="0.3125" />
                             <point x="0.859375" y="0.3125" />
@@ -1338,6 +1341,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="hit" x="0.15625" y="0.4375" />
                         <collision-poly>
                             <point x="0.203125" y="0.3125" />
                             <point x="0.859375" y="0.3125" />
@@ -1346,6 +1350,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="hit" x="0.15625" y="0.4375" />
                         <collision-poly>
                             <point x="0.203125" y="0.3125" />
                             <point x="0.859375" y="0.3125" />
@@ -1354,6 +1359,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="hit" x="0.15625" y="0.4375" />
                         <collision-poly>
                             <point x="0.203125" y="0.3125" />
                             <point x="0.859375" y="0.3125" />
@@ -1755,7 +1761,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="1" name="Default_0" pingpong="0" repeatcount="1" repeatto="0" sid="375671021158703" speed="15">
-                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="D:\Dropbox\JITEC\assets\sprites\highlander\shield.gif">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\JITEC\assets\sprites\highlander\shield.gif">
                         <collision-poly>
                             <point x="0.317073" y="0.365853" />
                             <point x="0.780488" y="0.365853" />
@@ -2002,6 +2008,21 @@
         <object-type name="TiledBackground2" sid="206857820099087">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\Piu\Dropbox\JITEC\assets\tilemap\bg_mountain2.png" />
+        </object-type>
+        <object-type name="Player_shield_Particle" sid="814683577606191">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default_0" pingpong="0" repeatcount="1" repeatto="0" sid="833000134452162" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\JITEC\assets\sprites\highlander\shieldT.gif">
+                        <collision-poly>
+                            <point x="0.317073" y="0.365853" />
+                            <point x="0.780488" y="0.365853" />
+                            <point x="0.780488" y="0.658537" />
+                            <point x="0.317073" y="0.658537" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

@@ -230,7 +230,7 @@
                                                         <condition id="-7" inverted="1" name="Compare instance variable" sid="428044516523660" type="Player_Mask">
                                                             <param id="0" name="Instance variable">hurtTimer</param>
                                                             <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">0.6</param>
+                                                            <param id="2" name="Value">1.6</param>
                                                         </condition>
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="816336735787650" type="Player_Mask">
                                                             <param id="0" name="Instance variable">isUsingArts</param>
@@ -257,7 +257,7 @@
                                                         <condition id="-7" inverted="1" name="Compare instance variable" sid="165496999408055" type="Player_Mask">
                                                             <param id="0" name="Instance variable">hurtTimer</param>
                                                             <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">0.6</param>
+                                                            <param id="2" name="Value">1.6</param>
                                                         </condition>
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="237359059722704" type="Player_Mask">
                                                             <param id="0" name="Instance variable">isUsingArts</param>
@@ -1621,7 +1621,7 @@
                                                 <condition id="-7" inverted="1" name="Compare instance variable" sid="840559884376246" type="Player_Mask">
                                                     <param id="0" name="Instance variable">hurtTimer</param>
                                                     <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">0.6</param>
+                                                    <param id="2" name="Value">1.6</param>
                                                 </condition>
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="583495529660165" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shoot</param>
@@ -1642,7 +1642,7 @@
                                                 <condition id="-7" inverted="1" name="Compare instance variable" sid="623065915707568" type="Player_Mask">
                                                     <param id="0" name="Instance variable">hurtTimer</param>
                                                     <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">0.6</param>
+                                                    <param id="2" name="Value">1.6</param>
                                                 </condition>
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="165472355041103" type="Player_Mask">
                                                     <param id="0" name="Instance variable">ladders</param>
@@ -2442,7 +2442,7 @@
                                 <condition id="-7" inverted="1" name="Compare instance variable" sid="807648452683938" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurtTimer</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0.6</param>
+                                    <param id="2" name="Value">1.6</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="251254453938234" type="Player_Mask">
                                     <param id="0" name="Instance variable">isUsingArts</param>
@@ -2855,7 +2855,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="367882100437724" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurtTimer</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0.6</param>
+                                    <param id="2" name="Value">1.6</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2957,6 +2957,73 @@
                 </event-group>
                 <event-group description="" sid="979050037512421" title="Player 1 Shoot">
                     <sub-events>
+                        <event-block sid="962073136167113">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="580838376298899" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="989496281817669" type="Player_Shield">
+                                    <param id="0" name="Object">Player_shield_Particle</param>
+                                    <param id="1" name="Layer">self.LayerName</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="459055087945441" type="Player_shield_Particle">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">Player_Shield</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="317710211054763">
+                            <conditions />
+                            <actions>
+                                <action id="-7" name="Set size" sid="590627748947113" type="Player_shield_Particle">
+                                    <param id="0" name="Width">self.Width-1</param>
+                                    <param id="1" name="Height">self.Height-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="454840768762146">
+                            <conditions>
+                                <condition id="-5" name="Compare width" sid="318274660356667" type="Player_shield_Particle">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Width">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="635580519484153" type="Player_shield_Particle" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="603872947769993">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="424900227438792" type="Player_Shield">
+                                    <param id="0" name="Instance variable">comeBack</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="993626598158091" type="Player_Shield">
+                                    <param id="0" name="Angle">anglelerp(self.Bullet.AngleOfMotion,angle(self.X,self.Y,player_base.X,player_base.Y-16)+10,20*dt)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="152188321588758">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="240543382773530" type="Player_Shield">
+                                            <param id="0" name="Object">Player_Base</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="588974668746905" type="System">
+                                            <param id="0" name="Seconds">0.04</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="353722907327273" type="Player_Mask">
+                                            <param id="0" name="Instance variable">shoot</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="290490170530082" type="Player_Shield" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="190416995934255">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="116946970513388" type="Player_Mask">
@@ -3308,15 +3375,41 @@
                                                             <param id="2" name="X">Player_Mask.ImagepointX(1)</param>
                                                             <param id="3" name="Y">Player_Mask.ImagepointY(1)</param>
                                                         </action>
-                                                        <action id="-16" name="Wait" sid="408263133251579" type="System">
-                                                            <param id="0" name="Seconds">0.2</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="353722907327273" type="Player_Mask">
-                                                            <param id="0" name="Instance variable">shoot</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                        <action id="-9" name="Destroy" sid="290490170530082" type="Player_Shield" />
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="662536631271196">
+                                                            <conditions>
+                                                                <condition id="7" inverted="1" name="Is mirrored" sid="650758100857549" type="Player_Mask" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="115802634972686" type="Player_Shield">
+                                                                    <param id="0" name="Angle">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="831804728167723">
+                                                            <conditions>
+                                                                <condition id="7" name="Is mirrored" sid="102511309220922" type="Player_Mask" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="808572612194284" type="Player_Shield">
+                                                                    <param id="0" name="Angle">180</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="806591183019139">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="-16" name="Wait" sid="192361775428953" type="System">
+                                                                    <param id="0" name="Seconds">0.2</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="979223453952277" type="Player_Shield">
+                                                                    <param id="0" name="Instance variable">comeBack</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -3339,12 +3432,31 @@
                                     <param id="0" name="Instance variable">hurt</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="995742822164451" type="Function">
-                                    <param id="0" name="Name">&quot;Player_Hurt&quot;</param>
-                                    <param id="1" name="Parameter {n}">((Enemies.power / Player_Mask.p_defense) * -1)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="526780531628287">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="859787589681910" type="En_PET">
+                                            <param id="0" name="Object">Player_Base</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="283719738199196" type="En_PET">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Value">&quot;fly_back_home&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="660831201320514">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="995742822164451" type="Function">
+                                            <param id="0" name="Name">&quot;Player_Hurt&quot;</param>
+                                            <param id="1" name="Parameter {n}">((Enemies.power / Player_Mask.p_defense) * -1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Hurt the player when touching an enemy projectile</comment>
                         <event-block sid="545335378744055">
@@ -3409,7 +3521,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="780109837734270" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurtTimer</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                                 <action behavior="Flash" id="0" name="Flash" sid="992210539991126" type="Player_Mask">
                                     <param id="0" name="&apos;On&apos; time">0.05</param>
@@ -3479,7 +3591,7 @@
                                         <condition id="-7" name="Compare instance variable" sid="253935692654033" type="Player_Mask">
                                             <param id="0" name="Instance variable">hurtTimer</param>
                                             <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Value">0.6</param>
+                                            <param id="2" name="Value">1.6</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="211974158428151" type="System" />
                                     </conditions>
