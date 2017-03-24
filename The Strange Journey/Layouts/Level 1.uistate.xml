@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>349.059</position-x>
-        <position-y>504.849</position-y>
+        <position-x>459.681</position-x>
+        <position-y>488.642</position-y>
         <position-z>77.1758</position-z>
-        <lookat-x>349.059</lookat-x>
-        <lookat-y>504.849</lookat-y>
+        <lookat-x>459.681</lookat-x>
+        <lookat-y>488.642</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -23,13 +23,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Jump-Thru" />
+    <active-layer name="Enemies" />
     <layers>
         <layer locked="1" name="Parallax 2" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Parallax 1" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Collisions" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Tileset" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Jump-Thru" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Jump-Thru" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Enemies" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Objects" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Player" parallax-in-editor="0" visible="1" />

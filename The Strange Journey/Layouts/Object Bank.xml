@@ -1069,6 +1069,7 @@
                         <state>landed</state>
                         <initX>0</initX>
                         <initY>0</initY>
+                        <testDis>0</testDis>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

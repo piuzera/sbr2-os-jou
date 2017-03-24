@@ -1265,6 +1265,7 @@
                 <instance-variable name="state" sid="651591626850954" type="string" />
                 <instance-variable name="initX" sid="661291309304322" type="number" />
                 <instance-variable name="initY" sid="266433083775380" type="number" />
+                <instance-variable name="testDis" sid="985922046244798" type="number" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="630400868824647" speed="15">
@@ -1760,36 +1761,6 @@
                             <point x="0.780488" y="0.365853" />
                             <point x="0.780488" y="0.658537" />
                             <point x="0.317073" y="0.658537" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="1" name="Default_90" pingpong="0" repeatcount="1" repeatto="0" sid="964760118962954" speed="15">
-                    <frame duration="1" hotspotX="0.487805" hotspotY="0.439024" original-source="C:\Users\sizay\Desktop\JitEC\Sprites\Spear.png">
-                        <collision-poly>
-                            <point x="0.512195" y="0.439024" />
-                            <point x="0.512195" y="0.585366" />
-                            <point x="0" y="0.585366" />
-                            <point x="0" y="0.439024" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="1" name="Default_270" pingpong="0" repeatcount="1" repeatto="0" sid="553106690275421" speed="15">
-                    <frame duration="1" hotspotX="0.512195" hotspotY="0.560976" original-source="C:\Users\sizay\Desktop\JitEC\Sprites\Spear.png">
-                        <collision-poly>
-                            <point x="0" y="0.560976" />
-                            <point x="0" y="0.414634" />
-                            <point x="0.512195" y="0.414634" />
-                            <point x="0.512195" y="0.560976" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="1" name="Default_180" pingpong="0" repeatcount="1" repeatto="0" sid="151580244533348" speed="15">
-                    <frame duration="1" hotspotX="0.439024" hotspotY="0.512195" original-source="C:\Users\sizay\Desktop\JitEC\Sprites\Spear.png">
-                        <collision-poly>
-                            <point x="1" y="0.560976" />
-                            <point x="0.487805" y="0.560976" />
-                            <point x="0.487805" y="0.414634" />
-                            <point x="1" y="0.414634" />
                         </collision-poly>
                     </frame>
                 </animation>
