@@ -1189,5 +1189,101 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="863972839966259" title="Respawner">
+            <sub-events>
+                <event-block sid="236055428593503">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="822066225724099" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="131523760026664" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="458210518420671" type="System">
+                            <param id="0" name="Seconds">Enemy_Respawner.time</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="780537460537589">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="748159251550960" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">enemy</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;PET&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="654429465692221" type="System">
+                                    <param id="0" name="Object to create">En_PET</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Enemy_Respawner.X</param>
+                                    <param id="3" name="Y">Enemy_Respawner.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="106257281802474">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="327475456570431" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">enemy</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Scarab&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="884092390785915" type="System">
+                                    <param id="0" name="Object to create">En_Scarab</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Enemy_Respawner.X</param>
+                                    <param id="3" name="Y">Enemy_Respawner.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="427763561253707">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="171721586834223" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">enemy</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Sandit&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="331181751177662" type="System">
+                                    <param id="0" name="Object to create">En_Sandit</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Enemy_Respawner.X</param>
+                                    <param id="3" name="Y">Enemy_Respawner.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="965664040571997">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="159679032956966" type="System">
+                            <param id="0" name="First value">distance(Enemy_Respawner.X,Enemy_Respawner.Y,Player_Base.X,Player_Base.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">Enemy_Respawner.distance</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="997715240304425" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="487027953041131">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="973384716598842" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="195682513535987" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
