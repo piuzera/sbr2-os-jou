@@ -80,6 +80,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/HUD_Super_Arts_Icon/" />
         <folder expanded="1" path="animation-folder/En_Scarab/" />
         <folder expanded="1" path="animation-folder/En_Sandit/" />
-        <folder expanded="1" path="animation-folder/Enemy_Respawner/" />
+        <folder expanded="1" path="animation-folder/Player_shield_Particle/" />
     </folders-expanded>
 </c2uistate>

@@ -529,152 +529,118 @@
                 </event-group>
                 <event-group description="" sid="314465774741067" title="PET">
                     <sub-events>
-                        <event-block sid="797873728085726">
+                        <event-block sid="321493654695077">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="738872630332989" type="En_PET">
-                                    <param id="0" name="Instance variable">active</param>
+                                <condition id="-11" name="For Each" sid="980948018806610" type="System">
+                                    <param id="0" name="Object">En_PET</param>
                                 </condition>
                             </conditions>
                             <actions />
+                        </event-block>
+                        <event-block sid="413686574817338">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="312371219641572" type="En_PET">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;fly_back_home&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="517473679884716" type="En_PET">
+                                    <param id="0" name="Angle">anglelerp(self.Bullet.AngleOfMotion,(angle(self.X,self.Y,self.initX,self.initY)),3*dt)</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="989471838629265" type="En_PET">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="134582674970889">
+                                <event-block sid="503187889479773">
                                     <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="413933395946423" type="En_PET">
-                                            <param id="0" name="Object">Player_Base</param>
+                                        <condition id="-33" name="Pick by comparison" sid="593145364674040" type="System">
+                                            <param id="0" name="Object">En_PET</param>
+                                            <param id="1" name="Expression">distance(en_pet.x,en_PET.y,en_PET.initx,en_PET.inity)</param>
+                                            <param id="2" name="Comparison">2</param>
+                                            <param id="3" name="Value">20</param>
                                         </condition>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="148593471873051" type="Player_Mask">
-                                            <param id="0" name="Instance variable">hurt</param>
-                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="514333601299883" type="En_PET">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="549829461977376" type="En_PET">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="977560028917277" type="En_PET">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="143669821139403" type="En_PET">
+                                            <param id="0" name="X">self.initX</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="769600986514107" type="En_PET">
+                                            <param id="0" name="Y">self.initY</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="726318417430864" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="928962280942764" type="En_PET">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Value">&quot;landed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="117913081958679">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="780472801582816" type="System" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="537052188317020">
+                                        <event-block sid="704573715266975">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="111814334285380" type="En_PET">
-                                                    <param id="0" name="Instance variable">state</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;attack&quot;</param>
-                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="901230333752205" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="-10" name="Set value" sid="922389061914212" type="En_PET">
-                                                    <param id="0" name="Instance variable">state</param>
-                                                    <param id="1" name="Value">&quot;fly_back_home&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="413686574817338">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="312371219641572" type="En_PET">
-                                            <param id="0" name="Instance variable">state</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;fly_back_home&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="517473679884716" type="En_PET">
-                                            <param id="0" name="Angle">anglelerp(self.Bullet.AngleOfMotion,(angle(self.X,self.Y,self.initX,self.initY)),3*dt)</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="898088538489363" type="En_PET">
-                                            <param id="0" name="Instance variable">testDis</param>
-                                            <param id="1" name="Value">distance(en_pet.x,en_PET.y,en_PET.initx,en_PET.inity)</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="503187889479773">
-                                            <conditions>
-                                                <condition id="-33" name="Pick by comparison" sid="593145364674040" type="System">
-                                                    <param id="0" name="Object">En_PET</param>
-                                                    <param id="1" name="Expression">distance(en_pet.x,en_PET.y,en_PET.initx,en_PET.inity)</param>
-                                                    <param id="2" name="Comparison">2</param>
-                                                    <param id="3" name="Value">20</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action behavior="Bullet" id="0" name="Set speed" sid="514333601299883" type="En_PET">
-                                                    <param id="0" name="Speed">0</param>
-                                                </action>
-                                                <action behavior="Bullet" id="5" name="Set enabled" sid="549829461977376" type="En_PET">
-                                                    <param id="0" name="State">0</param>
-                                                </action>
-                                                <action id="4" name="Set animation" sid="977560028917277" type="En_PET">
-                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                <action id="4" name="Set animation" sid="277767590255350" type="En_PET">
+                                                    <param id="0" name="Animation">&quot;Flying_Up&quot;</param>
                                                     <param id="1" name="From">1</param>
                                                 </action>
-                                                <action id="-1" name="Set X" sid="143669821139403" type="En_PET">
-                                                    <param id="0" name="X">self.initX</param>
+                                                <action behavior="Bullet" id="5" name="Set enabled" sid="482981169718880" type="En_PET">
+                                                    <param id="0" name="State">1</param>
                                                 </action>
-                                                <action id="-2" name="Set Y" sid="769600986514107" type="En_PET">
-                                                    <param id="0" name="Y">self.initY</param>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="310786307028691" type="En_PET">
+                                                    <param id="0" name="Angle">270</param>
                                                 </action>
-                                                <action id="-16" name="Wait" sid="726318417430864" type="System">
-                                                    <param id="0" name="Seconds">0.5</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="928962280942764" type="En_PET">
-                                                    <param id="0" name="Instance variable">state</param>
-                                                    <param id="1" name="Value">&quot;landed&quot;</param>
+                                                <action behavior="Bullet" id="0" name="Set speed" sid="365738861729752" type="En_PET">
+                                                    <param id="0" name="Speed">100</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="117913081958679">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="780472801582816" type="System" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="704573715266975">
-                                                    <conditions>
-                                                        <condition id="-4" name="Trigger once while true" sid="901230333752205" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="277767590255350" type="En_PET">
-                                                            <param id="0" name="Animation">&quot;Flying_Up&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action behavior="Platform" id="11" name="Set enabled" sid="989471838629265" type="En_PET">
-                                                            <param id="0" name="State">0</param>
-                                                        </action>
-                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="482981169718880" type="En_PET">
-                                                            <param id="0" name="State">1</param>
-                                                        </action>
-                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="310786307028691" type="En_PET">
-                                                            <param id="0" name="Angle">270</param>
-                                                        </action>
-                                                        <action behavior="Bullet" id="0" name="Set speed" sid="365738861729752" type="En_PET">
-                                                            <param id="0" name="Speed">100</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="937838223089716">
-                                    <conditions>
-                                        <condition behavior="Timer" id="0" name="On timer" sid="207202114156955" type="En_PET">
-                                            <param id="0" name="Tag">&quot;attack&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Bullet" id="5" name="Set enabled" sid="492107929158473" type="En_PET">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action behavior="Platform" id="11" name="Set enabled" sid="320139516423278" type="En_PET">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="157400665870013" type="En_PET">
-                                            <param id="0" name="Animation">&quot;Diving&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="653999865291965" type="En_PET">
-                                            <param id="0" name="Instance variable">state</param>
-                                            <param id="1" name="Value">&quot;attack&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="937838223089716">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="207202114156955" type="En_PET">
+                                    <param id="0" name="Tag">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="492107929158473" type="En_PET">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="320139516423278" type="En_PET">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="157400665870013" type="En_PET">
+                                    <param id="0" name="Animation">&quot;Diving&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="653999865291965" type="En_PET">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">&quot;attack&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="538478794317569">
                             <conditions>
