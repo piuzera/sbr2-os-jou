@@ -235,6 +235,9 @@
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="816336735787650" type="Player_Mask">
                                                             <param id="0" name="Instance variable">isUsingArts</param>
                                                         </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="446775083128268" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">shoot</param>
+                                                        </condition>
                                                     </conditions>
                                                     <actions>
                                                         <action id="-10" name="Set value" sid="116659089968538" type="Player_Mask">
@@ -258,6 +261,9 @@
                                                         </condition>
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="237359059722704" type="Player_Mask">
                                                             <param id="0" name="Instance variable">isUsingArts</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="569587058651934" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">shoot</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -867,6 +873,9 @@
                                                         <condition behavior="Platform" id="2" name="Is on floor" sid="806924033551985" type="Player_Base" />
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="612596701561181" type="Player_Mask">
                                                             <param id="0" name="Instance variable">crouch</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="382805471496540" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">shoot</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -1614,7 +1623,7 @@
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Value">0.6</param>
                                                 </condition>
-                                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="583495529660165" type="Player_Mask">
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="583495529660165" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shoot</param>
                                                 </condition>
                                             </conditions>
@@ -1638,7 +1647,7 @@
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="165472355041103" type="Player_Mask">
                                                     <param id="0" name="Instance variable">ladders</param>
                                                 </condition>
-                                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="929013939946467" type="Player_Mask">
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="929013939946467" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shoot</param>
                                                 </condition>
                                             </conditions>
@@ -1736,6 +1745,9 @@
                                                 <condition id="5" inverted="1" name="Key code is down" sid="298573687274392" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
                                                 </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="745644537080198" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shoot</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="893721856717997" type="Function">
@@ -1753,6 +1765,9 @@
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
                                                 </condition>
                                                 <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="329205016342117" type="Player_Base" />
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="801122970406014" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shoot</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="987826077750636" type="Function">
@@ -1768,6 +1783,9 @@
                                                 </condition>
                                                 <condition id="5" inverted="1" name="Key code is down" sid="966600980749204" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="333846017655837" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shoot</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -1789,6 +1807,9 @@
                                                     <param id="0" name="Instance variable">crouch</param>
                                                 </condition>
                                                 <condition behavior="Platform" id="2" name="Is on floor" sid="767568536218213" type="Player_Base" />
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="570089929222497" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shoot</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="247542077387819" type="Function">
@@ -2484,25 +2505,12 @@
                                                     <param id="2" name="Value">&quot;Normal&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="227593081140708">
-                                                    <conditions>
-                                                        <condition id="2" inverted="1" name="Is playing" sid="465151044222592" type="Player_Mask">
-                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Run&quot;</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Is playing" sid="599732240843877" type="Player_Mask">
-                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Up&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="216184403208423" type="Player_Mask">
-                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Normal&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="216184403208423" type="Player_Mask">
+                                                    <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Normal&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <comment>Standing Up Throw Move</comment>
                                         <event-block sid="965402111661051">
@@ -2516,25 +2524,12 @@
                                                     <param id="2" name="Value">&quot;Up&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="246227537827684">
-                                                    <conditions>
-                                                        <condition id="2" inverted="1" name="Is playing" sid="978173322306290" type="Player_Mask">
-                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Run&quot;</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Is playing" sid="274088310176551" type="Player_Mask">
-                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Normal&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="546816720796600" type="Player_Mask">
-                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Up&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="546816720796600" type="Player_Mask">
+                                                    <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Up&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                         <comment>Crouching Throw Move</comment>
                                         <event-block sid="535022726331794">
@@ -2554,12 +2549,6 @@
                                                     <conditions>
                                                         <condition id="2" inverted="1" name="Is playing" sid="493751920189815" type="Player_Mask">
                                                             <param id="0" name="Animation">Self.equip&amp;&quot;_Run&quot;</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Is playing" sid="549316362243645" type="Player_Mask">
-                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Normal&quot;</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Is playing" sid="220845423423674" type="Player_Mask">
-                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Up&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -2625,9 +2614,6 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Normal&quot;</param>
                                                 </condition>
-                                                <condition id="2" inverted="1" name="Is playing" sid="336857498015403" type="Player_Mask">
-                                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Up&quot;</param>
-                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="4" name="Set animation" sid="829631566797467" type="Player_Mask">
@@ -2664,9 +2650,6 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Up&quot;</param>
                                                 </condition>
-                                                <condition id="2" inverted="1" name="Is playing" sid="259373057952141" type="Player_Mask">
-                                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Normal&quot;</param>
-                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="4" name="Set animation" sid="808862315676408" type="Player_Mask">
@@ -2688,10 +2671,6 @@
                                                     <param id="1" name="State">1</param>
                                                 </action>
                                             </actions>
-                                        </event-block>
-                                        <event-block sid="996048720175583">
-                                            <conditions />
-                                            <actions />
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -2790,12 +2769,6 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Normal&quot;</param>
                                         </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="502644703278410" type="Player_Mask">
-                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Up&quot;</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="337775348405574" type="Player_Mask">
-                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Down&quot;</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="4" name="Set animation" sid="511468852517264" type="Player_Mask">
@@ -2815,17 +2788,6 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Up&quot;</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="779923035800331" type="Player_Mask">
-                                            <param id="0" name="Instance variable">weapon</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Main&quot;</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="897846358666972" type="Player_Mask">
-                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Normal&quot;</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="709634525562196" type="Player_Mask">
-                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Down&quot;</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="4" name="Set animation" sid="115337903119416" type="Player_Mask">
@@ -2844,17 +2806,6 @@
                                             <param id="0" name="Instance variable">aimDirection</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Down&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="130753520534169" type="Player_Mask">
-                                            <param id="0" name="Instance variable">weapon</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Main&quot;</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="975064000221240" type="Player_Mask">
-                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Normal&quot;</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="933558284688208" type="Player_Mask">
-                                            <param id="0" name="Animation">Self.equip&amp;&quot;_Throw_Up&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -3006,14 +2957,6 @@
                 </event-group>
                 <event-group description="" sid="979050037512421" title="Player 1 Shoot">
                     <sub-events>
-                        <event-block sid="905407840623188">
-                            <conditions>
-                                <condition id="-3" inverted="1" name="Is on-screen" sid="612415064164781" type="Player_Lance" />
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="883623669009139" type="Player_Lance" />
-                            </actions>
-                        </event-block>
                         <event-block sid="190416995934255">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="116946970513388" type="Player_Mask">
@@ -3365,10 +3308,6 @@
                                                             <param id="2" name="X">Player_Mask.ImagepointX(1)</param>
                                                             <param id="3" name="Y">Player_Mask.ImagepointY(1)</param>
                                                         </action>
-                                                        <action id="4" name="Set animation" sid="277467518836679" type="Player_Lance">
-                                                            <param id="0" name="Animation">&quot;Default_&quot; &amp; Player_Mask.shootAngle</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
                                                         <action id="-16" name="Wait" sid="408263133251579" type="System">
                                                             <param id="0" name="Seconds">0.2</param>
                                                         </action>
@@ -3379,37 +3318,6 @@
                                                         <action id="-9" name="Destroy" sid="290490170530082" type="Player_Shield" />
                                                     </actions>
                                                 </event-block>
-                                                <event-group description="" disabled="1" sid="339409782640809" title="(Old) Lance">
-                                                    <sub-events>
-                                                        <event-block sid="896990697367937">
-                                                            <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="916784649021339" type="System" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-3" name="Create object" sid="592498381841785" type="System">
-                                                                    <param id="0" name="Object to create">Player_Lance</param>
-                                                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                                                    <param id="2" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                    <param id="3" name="Y">Player_Mask.ImagepointY(1)</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="409261963371078" type="Player_Lance">
-                                                                    <param id="0" name="Angle">Player_Mask.shootAngle</param>
-                                                                </action>
-                                                                <action id="4" name="Set animation" sid="163736766924004" type="Player_Lance">
-                                                                    <param id="0" name="Animation">&quot;Default_&quot; &amp; Player_Mask.shootAngle</param>
-                                                                    <param id="1" name="From">1</param>
-                                                                </action>
-                                                                <action id="-16" name="Wait" sid="105556316874226" type="System">
-                                                                    <param id="0" name="Seconds">0.2</param>
-                                                                </action>
-                                                                <action id="-13" name="Set boolean" sid="861809905865122" type="Player_Mask">
-                                                                    <param id="0" name="Instance variable">shoot</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-group>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
@@ -3442,12 +3350,12 @@
                         <event-block sid="545335378744055">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="506978665911332" type="Player_Base">
-                                    <param id="0" name="Object">Projectiles</param>
+                                    <param id="0" name="Object">WeaponsEtc</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="549826684534917" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurt</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="574269659888728" type="Projectiles">
+                                <condition id="-7" name="Compare instance variable" sid="574269659888728" type="WeaponsEtc">
                                     <param id="0" name="Instance variable">owner</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;enemy&quot;</param>
@@ -3456,7 +3364,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="464010068616185" type="Function">
                                     <param id="0" name="Name">&quot;Player_Hurt&quot;</param>
-                                    <param id="1" name="Parameter {n}">Projectiles.power * -1</param>
+                                    <param id="1" name="Parameter {n}">WeaponsEtc.power * -1</param>
                                 </action>
                             </actions>
                         </event-block>

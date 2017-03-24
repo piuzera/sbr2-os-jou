@@ -6,12 +6,12 @@
         <comment>Destroy when colliding with collisions or solids</comment>
         <event-block any="1" sid="579835754884703">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="149600660810992" type="Projectiles">
+                <condition id="0" name="On collision with another object" sid="149600660810992" type="WeaponsEtc">
                     <param id="0" name="Object">Tilemap_Collisions</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="341499044185365" type="Projectiles">
+                <action id="-13" name="Set boolean" sid="341499044185365" type="WeaponsEtc">
                     <param id="0" name="Instance variable">destroy</param>
                     <param id="1" name="Value">1</param>
                 </action>
