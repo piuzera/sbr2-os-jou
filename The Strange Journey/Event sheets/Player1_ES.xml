@@ -3001,7 +3001,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="993626598158091" type="Player_Shield">
-                                    <param id="0" name="Angle">anglelerp(self.Bullet.AngleOfMotion,angle(self.X,self.Y,player_base.X,player_base.Y-16)+10,20*dt)</param>
+                                    <param id="0" name="Angle">anglelerp(self.Bullet.AngleOfMotion,angle(self.X,self.Y,player_base.X,player_base.Y-32),20*dt)</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -3377,29 +3377,12 @@
                                                         </action>
                                                     </actions>
                                                     <sub-events>
-                                                        <event-block sid="662536631271196">
-                                                            <conditions>
-                                                                <condition id="7" inverted="1" name="Is mirrored" sid="650758100857549" type="Player_Mask" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="115802634972686" type="Player_Shield">
-                                                                    <param id="0" name="Angle">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="831804728167723">
-                                                            <conditions>
-                                                                <condition id="7" name="Is mirrored" sid="102511309220922" type="Player_Mask" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="808572612194284" type="Player_Shield">
-                                                                    <param id="0" name="Angle">180</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
                                                         <event-block sid="806591183019139">
                                                             <conditions />
                                                             <actions>
+                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="808572612194284" type="Player_Shield">
+                                                                    <param id="0" name="Angle">Player_Mask.shootAngle</param>
+                                                                </action>
                                                                 <action id="-16" name="Wait" sid="192361775428953" type="System">
                                                                     <param id="0" name="Seconds">0.2</param>
                                                                 </action>
