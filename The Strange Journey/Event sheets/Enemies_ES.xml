@@ -907,6 +907,32 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block any="1" sid="988097452627378">
+                            <conditions>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="846721147697345" type="En_Sandit">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="274202021853325" type="En_Sandit">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="746543452858307" type="En_Sandit">
+                                    <param id="0" name="Animation">&quot;Descend&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="685058580931092">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="773367816454914" type="En_Sandit">
+                                    <param id="0" name="Animation">&quot;Descend&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="339157130222333" type="En_Sandit" />
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
             </sub-events>
