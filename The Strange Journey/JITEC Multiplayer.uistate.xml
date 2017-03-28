@@ -10,16 +10,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">Level 1</layout>
-        <layout order="6">SetControls</layout>
-        <layout order="7">HUD</layout>
-        <layout order="10">Object Bank</layout>
-        <event-sheet order="2">Player1_ES</event-sheet>
-        <event-sheet order="3">Enemies_ES</event-sheet>
-        <event-sheet order="4">Collectibles_ES</event-sheet>
-        <event-sheet order="5">Main_ES</event-sheet>
-        <event-sheet order="8">Init_ES</event-sheet>
-        <event-sheet order="9">HUD_ES</event-sheet>
+        <layout active="1" order="0">Level 1</layout>
+        <layout order="4">SetControls</layout>
+        <layout order="5">HUD</layout>
+        <layout order="8">Object Bank</layout>
+        <event-sheet order="1">Enemies_ES</event-sheet>
+        <event-sheet order="2">Collectibles_ES</event-sheet>
+        <event-sheet order="3">Main_ES</event-sheet>
+        <event-sheet order="6">Init_ES</event-sheet>
+        <event-sheet order="7">HUD_ES</event-sheet>
+        <event-sheet order="9">Player1_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
