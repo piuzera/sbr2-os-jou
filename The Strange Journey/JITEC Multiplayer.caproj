@@ -1758,6 +1758,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="comeBack" sid="578800198191815" type="boolean" />
+                <instance-variable name="arc" sid="179825239406053" type="boolean" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="1" name="Default_0" pingpong="0" repeatcount="1" repeatto="0" sid="375671021158703" speed="15">

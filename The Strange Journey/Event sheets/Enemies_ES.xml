@@ -349,60 +349,50 @@
                 <event-group description="" sid="686641081965610" title="Seed Bomber">
                     <sub-events>
                         <comment>Attack on sight</comment>
-                        <event-block sid="616903870500772">
+                        <event-block sid="236927873351057">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="493201971327806" type="System">
-                                    <param id="0" name="Object">En_SeedBomber</param>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="873572462561023" type="En_SeedBomber">
+                                    <param id="0" name="Object">Player_Base</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="4" name="Set animation" sid="192379886262663" type="En_SeedBomber">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="236927873351057">
+                                <event-block sid="590789174704631">
                                     <conditions>
-                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="873572462561023" type="En_SeedBomber">
-                                            <param id="0" name="Object">Player_Base</param>
+                                        <condition id="-1" name="Compare X" sid="631018225165518" type="En_SeedBomber">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
                                         </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="510069130940715" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="192379886262663" type="En_SeedBomber">
-                                            <param id="0" name="Animation">&quot;Attack&quot;</param>
-                                            <param id="1" name="From">1</param>
+                                        <action id="7" name="Set mirrored" sid="776926159316466" type="En_SeedBomber">
+                                            <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="590789174704631">
-                                            <conditions>
-                                                <condition id="-1" name="Compare X" sid="631018225165518" type="En_SeedBomber">
-                                                    <param id="0" name="Comparison">4</param>
-                                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="7" name="Set mirrored" sid="776926159316466" type="En_SeedBomber">
-                                                    <param id="0" name="State">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="912719880498444">
-                                            <conditions>
-                                                <condition id="-1" name="Compare X" sid="284795035838931" type="En_SeedBomber">
-                                                    <param id="0" name="Comparison">2</param>
-                                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="7" name="Set mirrored" sid="843454374041300" type="En_SeedBomber">
-                                                    <param id="0" name="State">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
+                                </event-block>
+                                <event-block sid="912719880498444">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="284795035838931" type="En_SeedBomber">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="843454374041300" type="En_SeedBomber">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="203039767952939">
                             <conditions>
+                                <condition id="6" name="On frame changed" sid="676453972333659" type="En_SeedBomber" />
                                 <condition id="2" name="Is playing" sid="861895382646624" type="En_SeedBomber">
                                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                                 </condition>
@@ -411,31 +401,23 @@
                                     <param id="1" name="Number">1</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="402074311917712">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="938367845848032" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Spawn another object" sid="458046767473752" type="En_SeedBomber">
-                                            <param id="0" name="Object">Enemy_EyeProjectile</param>
-                                            <param id="1" name="Layer">&quot;Player&quot;</param>
-                                            <param id="2" name="Image point">1</param>
-                                        </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="180467853542247" type="Enemy_EyeProjectile">
-                                            <param id="0" name="Angle">angle(En_SeedBomber.X,En_SeedBomber.Y,Player_Base.X,Player_Base.Y)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="458046767473752" type="En_SeedBomber">
+                                    <param id="0" name="Object">Enemy_EyeProjectile</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="180467853542247" type="Enemy_EyeProjectile">
+                                    <param id="0" name="Angle">angle(En_SeedBomber.X,En_SeedBomber.Y,Player_Base.X,Player_Base.Y)</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="229198068559504">
                             <conditions>
                                 <condition id="4" name="On finished" sid="662765885222309" type="En_SeedBomber">
                                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                                 </condition>
-                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="970060054951806" type="En_SeedBomber">
+                                <condition behavior="LineOfSight" disabled="1" id="0" inverted="1" name="Has LOS to object" sid="970060054951806" type="En_SeedBomber">
                                     <param id="0" name="Object">Player_Base</param>
                                 </condition>
                             </conditions>
