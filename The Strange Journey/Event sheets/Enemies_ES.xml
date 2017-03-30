@@ -355,12 +355,7 @@
                                     <param id="0" name="Object">Player_Base</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="192379886262663" type="En_SeedBomber">
-                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="590789174704631">
                                     <conditions>
@@ -388,46 +383,82 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="187895942358640">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="181578558990610" type="En_SeedBomber">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="192379886262663" type="En_SeedBomber">
+                                            <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="944600928050823">
+                                    <conditions>
+                                        <condition id="2" inverted="1" name="Is playing" sid="191954891857376" type="En_SeedBomber">
+                                            <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="642443049642067" type="En_SeedBomber">
+                                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="203039767952939">
+                        <event-block sid="855380337793808">
                             <conditions>
-                                <condition id="6" name="On frame changed" sid="676453972333659" type="En_SeedBomber" />
-                                <condition id="2" name="Is playing" sid="861895382646624" type="En_SeedBomber">
+                                <condition id="4" name="On finished" sid="337987668632988" type="En_SeedBomber">
+                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="530003724953343" type="En_SeedBomber">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="386400510291197">
+                            <conditions>
+                                <condition id="6" name="On frame changed" sid="195186329620998" type="En_SeedBomber" />
+                                <condition id="2" name="Is playing" sid="787149107218196" type="En_SeedBomber">
                                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                                 </condition>
-                                <condition id="3" name="Compare frame" sid="174808145685694" type="En_SeedBomber">
+                                <condition id="3" name="Compare frame" sid="345251314629652" type="En_SeedBomber">
                                     <param id="0" name="Comparison">0</param>
                                     <param id="1" name="Number">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="458046767473752" type="En_SeedBomber">
+                                <action id="0" name="Spawn another object" sid="854573690300604" type="En_SeedBomber">
                                     <param id="0" name="Object">Enemy_EyeProjectile</param>
                                     <param id="1" name="Layer">&quot;Player&quot;</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="180467853542247" type="Enemy_EyeProjectile">
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="329663524551912" type="Enemy_EyeProjectile">
                                     <param id="0" name="Angle">angle(En_SeedBomber.X,En_SeedBomber.Y,Player_Base.X,Player_Base.Y)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="229198068559504">
+                        <event-block sid="306636242355188">
                             <conditions>
-                                <condition id="4" name="On finished" sid="662765885222309" type="En_SeedBomber">
+                                <condition id="4" name="On finished" sid="384291203759561" type="En_SeedBomber">
                                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                                 </condition>
-                                <condition behavior="LineOfSight" disabled="1" id="0" inverted="1" name="Has LOS to object" sid="970060054951806" type="En_SeedBomber">
+                                <condition behavior="LineOfSight" disabled="1" id="0" inverted="1" name="Has LOS to object" sid="412935787320427" type="En_SeedBomber">
                                     <param id="0" name="Object">Player_Base</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="582787102826802" type="En_SeedBomber">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                <action id="4" name="Set animation" sid="630854999660255" type="En_SeedBomber">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
                                     <param id="1" name="From">1</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="150472139204588" type="En_SeedBomber">
-                                    <param id="0" name="Frame number">2</param>
                                 </action>
                             </actions>
                         </event-block>
