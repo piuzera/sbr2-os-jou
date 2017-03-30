@@ -156,7 +156,7 @@
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
-                                <initial-state>Disabled</initial-state>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Bullet">
@@ -255,7 +255,7 @@
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
-                                <initial-state>Disabled</initial-state>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Bullet">
@@ -1279,12 +1279,12 @@
                         </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>0</speed>
+                                <speed>128</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>Yes</bounce-off-solids>
                                 <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Sine">
@@ -1316,7 +1316,7 @@
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
-                                <obstacles>Solids</obstacles>
+                                <obstacles>Custom</obstacles>
                                 <range>128</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
