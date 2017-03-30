@@ -10,16 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Level 1</layout>
-        <layout order="5">SetControls</layout>
-        <layout order="6">HUD</layout>
-        <layout order="9">Object Bank</layout>
-        <event-sheet active="1" order="2">Enemies_ES</event-sheet>
-        <event-sheet order="3">Collectibles_ES</event-sheet>
-        <event-sheet order="4">Main_ES</event-sheet>
-        <event-sheet order="7">Init_ES</event-sheet>
-        <event-sheet order="8">HUD_ES</event-sheet>
-        <event-sheet order="10">Player1_ES</event-sheet>
+        <layout active="1" order="0">Level 1</layout>
+        <layout order="3">Object Bank</layout>
+        <event-sheet order="1">Enemies_ES</event-sheet>
+        <event-sheet order="2">Player1_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -35,9 +29,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Solids" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />

@@ -996,7 +996,7 @@
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="530910171554964" type="System" />
+                        <condition disabled="1" id="-4" name="Trigger once while true" sid="530910171554964" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="593465011680653" type="Enemies">
@@ -1076,101 +1076,264 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="863972839966259" title="Respawner">
+        <event-group description="" sid="863972839966259" title="Respawner" />
+        <comment>Use the animation frames to pick the enemy the respawner should spawn. &#x0D;&#x0A;1: Scarab / 2: PET / 3: PIG / 4: Seedbomber/ 5: Dragonfly / 6: GreenDragonfly </comment>
+        <event-block sid="550017207751181">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="418604237347573" type="Enemies" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="316688945573831" type="Enemies" />
+            </actions>
+        </event-block>
+        <event-block sid="138286449469958">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="183074260515511" type="Enemies" />
+            </conditions>
+            <actions />
             <sub-events>
-                <event-block sid="236055428593503">
+                <event-block sid="677416032248518">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="822066225724099" type="Enemy_Respawner">
-                            <param id="0" name="Instance variable">active</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="131523760026664" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="458210518420671" type="System">
-                            <param id="0" name="Seconds">Enemy_Respawner.time</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="780537460537589">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="748159251550960" type="Enemy_Respawner">
-                                    <param id="0" name="Instance variable">enemy</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;PET&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="654429465692221" type="System">
-                                    <param id="0" name="Object to create">En_PET</param>
-                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
-                                    <param id="2" name="X">Enemy_Respawner.X</param>
-                                    <param id="3" name="Y">Enemy_Respawner.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="106257281802474">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="327475456570431" type="Enemy_Respawner">
-                                    <param id="0" name="Instance variable">enemy</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Scarab&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="884092390785915" type="System">
-                                    <param id="0" name="Object to create">En_Scarab</param>
-                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
-                                    <param id="2" name="X">Enemy_Respawner.X</param>
-                                    <param id="3" name="Y">Enemy_Respawner.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="427763561253707">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="171721586834223" type="Enemy_Respawner">
-                                    <param id="0" name="Instance variable">enemy</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Sandit&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="331181751177662" type="System">
-                                    <param id="0" name="Object to create">En_Sandit</param>
-                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
-                                    <param id="2" name="X">Enemy_Respawner.X</param>
-                                    <param id="3" name="Y">Enemy_Respawner.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="965664040571997">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="159679032956966" type="System">
-                            <param id="0" name="First value">distance(Enemy_Respawner.X,Enemy_Respawner.Y,Player_Base.X,Player_Base.Y)</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">Enemy_Respawner.distance</param>
+                        <condition id="-33" name="Pick by comparison" sid="568411005347993" type="System">
+                            <param id="0" name="Object">Enemy_Respawner</param>
+                            <param id="1" name="Expression">Enemy_Respawner.UID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Enemies.createdByResUID</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="997715240304425" type="Enemy_Respawner">
-                            <param id="0" name="Instance variable">active</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="487027953041131">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="973384716598842" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="195682513535987" type="Enemy_Respawner">
-                            <param id="0" name="Instance variable">active</param>
+                        <action id="-13" name="Set boolean" sid="247410902637822" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-group>
+        </event-block>
+        <event-block sid="937905719147953">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="803796014113945" type="Enemy_Respawner">
+                    <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="255919095756315" type="Enemy_Respawner">
+                    <param id="0" name="Instance variable">time</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">120</param>
+                </condition>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="747876037138223" type="Enemy_Respawner" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="302290772583882" type="Enemy_Respawner">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="411602150375099">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="894537916604951" type="Enemy_Respawner">
+                    <param id="0" name="Instance variable">time</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">120</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="662092878464406" type="Enemy_Respawner">
+                    <param id="0" name="Instance variable">time</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="265044949116244">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="727573423714109" type="Enemy_Respawner">
+                    <param id="0" name="Instance variable">active</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="485639000697121" type="Enemy_Respawner" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="784753978628365">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="795793689080957" type="Enemy_Respawner">
+                            <param id="0" name="Animation">&quot;scarab&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="565985155980686" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="807659488575310" type="Enemy_Respawner">
+                            <param id="0" name="Object">En_Scarab</param>
+                            <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="281765063713165" type="En_Scarab">
+                            <param id="0" name="Instance variable">createdByResUID</param>
+                            <param id="1" name="Value">Enemy_Respawner.UID</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="866519551317920" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="427579826708639" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">time</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="114847185003475">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="548557821683985" type="Enemy_Respawner">
+                            <param id="0" name="Animation">&quot;PET&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="197424275565969" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="279195792766779" type="Enemy_Respawner">
+                            <param id="0" name="Object">En_PET</param>
+                            <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="586399500243331" type="En_PET">
+                            <param id="0" name="Instance variable">createdByResUID</param>
+                            <param id="1" name="Value">Enemy_Respawner.UID</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="170134275474134" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="628498910884079" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">time</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="172934399320375">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="838677998419222" type="Enemy_Respawner">
+                            <param id="0" name="Animation">&quot;Pig&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="704012392289041" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="182589266501377" type="Enemy_Respawner">
+                            <param id="0" name="Object">En_Pig</param>
+                            <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="853329988311915" type="En_Pig">
+                            <param id="0" name="Instance variable">createdByResUID</param>
+                            <param id="1" name="Value">Enemy_Respawner.UID</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="560333492496483" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="209768534216448" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">time</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="890403965149027">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="757976889251355" type="Enemy_Respawner">
+                            <param id="0" name="Animation">&quot;Seedbomber&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="700513102805333" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="505150530811551" type="Enemy_Respawner">
+                            <param id="0" name="Object">En_SeedBomber</param>
+                            <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="200916373964736" type="En_SeedBomber">
+                            <param id="0" name="Instance variable">createdByResUID</param>
+                            <param id="1" name="Value">Enemy_Respawner.UID</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="493935240033540" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="857824960641583" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">time</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="814722769168674">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="380677151452883" type="Enemy_Respawner">
+                            <param id="0" name="Animation">&quot;Dragonfly&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="684077670596449" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="586697123827387" type="Enemy_Respawner">
+                            <param id="0" name="Object">En_Dragonfly</param>
+                            <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="602294998381092" type="En_Dragonfly">
+                            <param id="0" name="Instance variable">createdByResUID</param>
+                            <param id="1" name="Value">Enemy_Respawner.UID</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="261449836264404" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="418341576883999" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">time</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="400914171224988">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="199317834298823" type="Enemy_Respawner">
+                            <param id="0" name="Animation">&quot;GreenDragonfly&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="326581599925239" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="859986458736613" type="Enemy_Respawner">
+                            <param id="0" name="Object">En_GreenDragonfly</param>
+                            <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="134398738354827" type="En_GreenDragonfly">
+                            <param id="0" name="Instance variable">createdByResUID</param>
+                            <param id="1" name="Value">Enemy_Respawner.UID</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="482028118300135" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="250140876959985" type="Enemy_Respawner">
+                            <param id="0" name="Instance variable">time</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
