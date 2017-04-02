@@ -961,6 +961,9 @@
                                 <event-block sid="370563765332674">
                                     <conditions>
                                         <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="349814463844284" type="En_CybersandWolf" />
+                                        <condition id="2" inverted="1" name="Is playing" sid="234619443356933" type="En_CybersandWolf">
+                                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="4" name="Set animation" sid="973839732248612" type="En_CybersandWolf">
@@ -1029,6 +1032,9 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="846982396861517" type="En_CybersandWolf">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="901611900609929" type="En_CybersandWolf">
@@ -1050,6 +1056,9 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="225130781202143" type="En_CybersandWolf">
+                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="913215232602037" type="En_CybersandWolf">
@@ -1061,6 +1070,21 @@
                                 </action>
                                 <action id="7" name="Set mirrored" sid="989918992592620" type="En_CybersandWolf">
                                     <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="931809451227054">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="405656777473411" type="En_CybersandWolf">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="933260073352973" type="En_CybersandWolf">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1084,10 +1108,41 @@
                                     <param id="1" name="Layer">&quot;Player&quot;</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="553154841219790" type="Enemy_WolfLaser">
-                                    <param id="0" name="Angle">angle(En_SeedBomber.X,En_SeedBomber.Y,Player_Base.X,Player_Base.Y)</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="190433817324809">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="112649561901578" type="En_CybersandWolf">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="553154841219790" type="Enemy_WolfLaser">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="251514318867364" type="Enemy_WolfLaser">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="632519755963180">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="514498866591016" type="En_CybersandWolf">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="783153124180052" type="Enemy_WolfLaser">
+                                            <param id="0" name="Angle">270</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="352100180497194" type="Enemy_WolfLaser">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="805680260779184">
                             <conditions>
@@ -1099,6 +1154,7 @@
                                 <action behavior="Platform" id="0" name="Set ignoring input" sid="655505263272029" type="En_CybersandWolf">
                                     <param id="0" name="Input">0</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="904294878778120" type="Enemy_WolfLaser" />
                             </actions>
                             <sub-events>
                                 <event-block sid="986816979967800">
@@ -1128,6 +1184,19 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="625417722631546">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="247645425259816" type="En_CybersandWolf">
+                                    <param id="0" name="Object">Enemy_DirectionalCollider</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="768602369213263" type="En_CybersandWolf">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
