@@ -1491,7 +1491,7 @@
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.6875</hotspotY>
+                        <hotspotY>0.90625</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

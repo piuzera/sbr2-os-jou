@@ -1651,12 +1651,24 @@
                                                     <param id="0" name="Instance variable">shoot</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="310020002315740" type="Function">
-                                                    <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="926638729262685">
+                                                    <conditions>
+                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="604518902230870" type="HUD_subammo">
+                                                            <param id="0" name="Instance variable">curValue</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="310020002315740" type="Function">
+                                                            <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -3397,6 +3409,22 @@
                                                         </action>
                                                     </actions>
                                                     <sub-events>
+                                                        <event-block sid="427366425070593">
+                                                            <conditions>
+                                                                <condition id="-33" name="Pick by comparison" sid="588219979427938" type="System">
+                                                                    <param id="0" name="Object">HUD_subammo</param>
+                                                                    <param id="1" name="Expression">HUD_subammo.type</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Value">&quot;p1&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-12" name="Subtract from" sid="457838927024934" type="HUD_subammo">
+                                                                    <param id="0" name="Instance variable">curValue</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
                                                         <event-block any="1" sid="806591183019139">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="216485518348391" type="Player_Mask">

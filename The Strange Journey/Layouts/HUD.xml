@@ -918,6 +918,52 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="HUD_subammo" uid="105">
+                    <properties>
+                        <character-width>8</character-width>
+                        <character-height>7</character-height>
+                        <character-set>1234567890</character-set>
+                        <text>5</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>-2</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <category>HUD</category>
+                        <type>p1</type>
+                        <Menu_ID>0</Menu_ID>
+                        <curValue>5</curValue>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Brightness">
+                            <parameters>
+                                <brightness>1</brightness>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>112</x>
+                        <y>205</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

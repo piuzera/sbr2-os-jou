@@ -284,5 +284,13 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="498629849344237" title="SubAmmo">
+            <sub-events>
+                <event-block sid="205216712066159">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
