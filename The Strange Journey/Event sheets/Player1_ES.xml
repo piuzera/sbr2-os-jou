@@ -2971,7 +2971,9 @@
                     <sub-events>
                         <event-block sid="962073136167113">
                             <conditions>
-                                <condition id="-1" name="Every tick" sid="580838376298899" type="System" />
+                                <condition id="-6" name="Every X seconds" sid="580838376298899" type="System">
+                                    <param id="0" name="Interval (seconds)">0.075</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="989496281817669" type="Player_Shield">
@@ -3477,7 +3479,7 @@
                                                                     <param id="1" name="Value">0</param>
                                                                 </action>
                                                                 <action id="-16" name="Wait" sid="795226784829391" type="System">
-                                                                    <param id="0" name="Seconds">0.2</param>
+                                                                    <param id="0" name="Seconds">0.275</param>
                                                                 </action>
                                                                 <action id="-13" name="Set boolean" sid="983778925299783" type="Player_Shield">
                                                                     <param id="0" name="Instance variable">comeBack</param>

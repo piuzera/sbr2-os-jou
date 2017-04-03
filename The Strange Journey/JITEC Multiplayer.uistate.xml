@@ -78,5 +78,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/En_Sandit/" />
         <folder expanded="1" path="animation-folder/Player_shield_Particle/" />
         <folder expanded="1" path="animation-folder/Enemy_Respawner/" />
+        <folder expanded="1" path="animation-folder/En_CybersandWolf/" />
+        <folder expanded="1" path="animation-folder/Enemy_WolfLaser/" />
+        <folder expanded="1" path="animation-folder/Enemy_DirectionalCollider/" />
     </folders-expanded>
 </c2uistate>
