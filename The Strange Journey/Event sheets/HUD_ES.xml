@@ -286,9 +286,72 @@
         </event-block>
         <event-group description="" sid="498629849344237" title="SubAmmo">
             <sub-events>
-                <event-block sid="205216712066159">
-                    <conditions />
+                <event-block sid="293044720225070">
+                    <conditions>
+                        <condition id="0" name="On function" sid="794904617924539" type="Function">
+                            <param id="0" name="Name">&quot;p1addammo&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions />
+                    <sub-events>
+                        <event-block sid="742767452197084">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="502147383439454" type="System">
+                                    <param id="0" name="Object">HUD_subammo</param>
+                                    <param id="1" name="Expression">HUD_subammo.type</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">&quot;p1ammo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="598599330980524">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="874156798879711" type="HUD_subammo">
+                                            <param id="0" name="Instance variable">ammo</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="950920945720197" type="HUD_subammo">
+                                            <param id="0" name="Instance variable">ammo</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="158561791620314" type="Function">
+                                            <param id="0" name="Name">&quot;p1updateammo&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="205216712066159">
+                    <conditions>
+                        <condition id="0" name="On function" sid="413385233251024" type="Function">
+                            <param id="0" name="Name">&quot;p1updateammo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="603585344411784">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="985303701431062" type="System">
+                                    <param id="0" name="Object">HUD_subammo</param>
+                                    <param id="1" name="Expression">HUD_subammo.type</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">&quot;p1ammo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="406420508430279" type="HUD_subammo">
+                                    <param id="0" name="Text">str(self.ammo)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

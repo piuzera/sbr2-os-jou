@@ -2337,6 +2337,13 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="HUD_subammo" sid="154513027916744">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="ammo" sid="518084287904718" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\Tokinsom\Desktop\font1.png" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Behaviors" plugin-id="Sprite" sid="389202517335220">
@@ -2428,6 +2435,7 @@
         </family>
         <family name="Spritefonts" plugin-id="Spritefont2" sid="567447238331401">
             <members>
+                <member>HUD_subammo</member>
                 <member>SpriteFont</member>
                 <member>SpriteFont2</member>
             </members>

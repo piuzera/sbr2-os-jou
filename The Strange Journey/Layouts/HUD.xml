@@ -854,7 +854,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>66</x>
+                        <x>63</x>
                         <y>200</y>
                         <z>0</z>
                         <width>23</width>
@@ -881,7 +881,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>88</x>
+                        <x>85</x>
                         <y>200</y>
                         <z>0</z>
                         <width>23</width>
@@ -906,7 +906,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>56</x>
+                        <x>53</x>
                         <y>200</y>
                         <z>0</z>
                         <width>23</width>
@@ -918,7 +918,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HUD_subammo" uid="105">
+                <instance type="HUD_subammo" uid="108">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>7</character-height>
@@ -935,9 +935,9 @@
                     </properties>
                     <instance-variables>
                         <category>HUD</category>
-                        <type>p1</type>
+                        <type>p1ammo</type>
                         <Menu_ID>0</Menu_ID>
-                        <curValue>5</curValue>
+                        <ammo>5</ammo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -953,10 +953,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>112</x>
-                        <y>205</y>
+                        <y>203</y>
                         <z>0</z>
-                        <width>20</width>
-                        <height>12</height>
+                        <width>24</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

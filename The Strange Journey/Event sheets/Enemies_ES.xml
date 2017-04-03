@@ -1248,7 +1248,7 @@
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition disabled="1" id="-4" name="Trigger once while true" sid="530910171554964" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="530910171554964" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="593465011680653" type="Enemies">
@@ -1300,10 +1300,6 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="555145794216037">
-                            <conditions />
-                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>

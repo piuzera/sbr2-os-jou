@@ -282,7 +282,7 @@
                                                         <condition id="-7" inverted="1" name="Compare instance variable" sid="864591518271905" type="Player_Mask">
                                                             <param id="0" name="Instance variable">hurtTimer</param>
                                                             <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">0.1</param>
+                                                            <param id="2" name="Value">1.6</param>
                                                         </condition>
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="144857438231353" type="Player_Mask">
                                                             <param id="0" name="Instance variable">isUsingArts</param>
@@ -1655,9 +1655,9 @@
                                             <sub-events>
                                                 <event-block sid="926638729262685">
                                                     <conditions>
-                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="604518902230870" type="HUD_subammo">
-                                                            <param id="0" name="Instance variable">curValue</param>
-                                                            <param id="1" name="Comparison">3</param>
+                                                        <condition id="-7" name="Compare instance variable" sid="234157375862463" type="HUD_subammo">
+                                                            <param id="0" name="Instance variable">ammo</param>
+                                                            <param id="1" name="Comparison">4</param>
                                                             <param id="2" name="Value">0</param>
                                                         </condition>
                                                     </conditions>
@@ -1930,20 +1930,6 @@
                 </event-group>
                 <event-group description="" sid="468930795681126" title="Player Mechanics">
                     <sub-events>
-                        <comment>Move</comment>
-                        <event-block sid="532943353917147">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="283031556486735" type="Player_Mask">
-                                    <param id="0" name="Instance variable">landing</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="193558752324685" type="Player_Mask">
-                                    <param id="0" name="Instance variable">landing</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-group description="" sid="483620776097780" title="Func - Jump">
                             <sub-events>
                                 <event-block sid="395176893431719">
@@ -2205,186 +2191,254 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <comment>Aim</comment>
-                        <event-block sid="479050733673508">
-                            <conditions>
-                                <condition id="0" name="On function" sid="833994476637138" type="Function">
-                                    <param id="0" name="Name">&quot;Player_Aim&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
+                        <event-group description="" sid="289409181179219" title="Func - Aim">
                             <sub-events>
-                                <event-block sid="948083723938863">
+                                <comment>Aim</comment>
+                                <event-block sid="479050733673508">
                                     <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="759382269261274" type="System">
-                                            <param id="0" name="Object">Player_Mask</param>
-                                            <param id="1" name="Expression">Player_Mask.IID</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">int(Function.Param(1))</param>
+                                        <condition id="0" name="On function" sid="833994476637138" type="Function">
+                                            <param id="0" name="Name">&quot;Player_Aim&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="529252875102898" type="Player_Mask">
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="948083723938863">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="759382269261274" type="System">
+                                                    <param id="0" name="Object">Player_Mask</param>
+                                                    <param id="1" name="Expression">Player_Mask.IID</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">int(Function.Param(1))</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="529252875102898" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">aimDirection</param>
+                                                    <param id="1" name="Value">function.Param(0)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="945130816258668">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="542913375136654" type="Player_Mask">
                                             <param id="0" name="Instance variable">aimDirection</param>
-                                            <param id="1" name="Value">function.Param(0)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Normal&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="601700175135716">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="492532249297449" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="673988201794126" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="112661015078757">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="410799562900790" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="574113482856727" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                    <param id="1" name="Value">180</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="259658967062708">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="623712944788681" type="Player_Mask">
+                                            <param id="0" name="Instance variable">aimDirection</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Crouch&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="340840351150584">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="578889874829392" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="397184959128347" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="128809645656029">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="541210246007643" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="804741709860274" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                    <param id="1" name="Value">180</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="984365943954425">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="406068291127381" type="Player_Mask">
+                                            <param id="0" name="Instance variable">aimDirection</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Up&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="701104687983551" type="Player_Mask">
+                                            <param id="0" name="Instance variable">shootAngle</param>
+                                            <param id="1" name="Value">270</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="602950860898565">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="791207923755685" type="Player_Mask">
+                                            <param id="0" name="Instance variable">aimDirection</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Down&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="588720140027303" type="Player_Mask">
+                                            <param id="0" name="Instance variable">shootAngle</param>
+                                            <param id="1" name="Value">90</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="945130816258668">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="542913375136654" type="Player_Mask">
-                                    <param id="0" name="Instance variable">aimDirection</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Normal&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
+                        </event-group>
+                        <event-group description="" sid="284952872988000" title="Func - Shoot">
                             <sub-events>
-                                <event-block sid="601700175135716">
+                                <comment>Shoot (Instead of shooting a bullet here, I set the Player&apos;s &quot;shoot&quot; boolean to true and have that shoot the bullet. This allows the player to exit the spin jump or other states before shooting, ensuring the bullet is created at the proper image point.) (See: Player Shoot Group)</comment>
+                                <event-block bookmark="1" sid="994995929590453">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="492532249297449" type="Player_Mask">
-                                            <param id="0" name="Instance variable">direction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;right&quot;</param>
+                                        <condition id="0" name="On function" sid="420839136375999" type="Function">
+                                            <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="840432892179510">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="240848161759917" type="System">
+                                                    <param id="0" name="Object">Player_Mask</param>
+                                                    <param id="1" name="Expression">Player_Mask.IID</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">int(Function.Param(1))</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="910088667963739" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shoot</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="544418402229137" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">weapon</param>
+                                                    <param id="1" name="Value">function.Param(0)</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <comment>Check if player is on ground</comment>
+                                                <event-block sid="788858789249313">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="756464854973130" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">spinjump</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="278381503958412" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">spinjump</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="445152332829234" title="Func - Land">
+                            <sub-events>
+                                <comment>Landing stuff</comment>
+                                <event-block sid="640805664122938">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="718683593431044" type="Player_Mask">
+                                            <param id="0" name="Instance variable">landing</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="673988201794126" type="Player_Mask">
-                                            <param id="0" name="Instance variable">shootAngle</param>
+                                        <action id="-13" name="Set boolean" sid="766316816373984" type="Player_Mask">
+                                            <param id="0" name="Instance variable">landing</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="112661015078757">
+                                <event-block sid="327661633510671">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="410799562900790" type="Player_Mask">
-                                            <param id="0" name="Instance variable">direction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;left&quot;</param>
-                                        </condition>
+                                        <condition behavior="Platform" id="9" name="On landed" sid="924161824302994" type="Player_Base" />
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="574113482856727" type="Player_Mask">
-                                            <param id="0" name="Instance variable">shootAngle</param>
-                                            <param id="1" name="Value">180</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="259658967062708">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="623712944788681" type="Player_Mask">
-                                    <param id="0" name="Instance variable">aimDirection</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Crouch&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="340840351150584">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="578889874829392" type="Player_Mask">
-                                            <param id="0" name="Instance variable">direction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;right&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="397184959128347" type="Player_Mask">
-                                            <param id="0" name="Instance variable">shootAngle</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="128809645656029">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="541210246007643" type="Player_Mask">
-                                            <param id="0" name="Instance variable">direction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;left&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="804741709860274" type="Player_Mask">
-                                            <param id="0" name="Instance variable">shootAngle</param>
-                                            <param id="1" name="Value">180</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="984365943954425">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="406068291127381" type="Player_Mask">
-                                    <param id="0" name="Instance variable">aimDirection</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Up&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="701104687983551" type="Player_Mask">
-                                    <param id="0" name="Instance variable">shootAngle</param>
-                                    <param id="1" name="Value">270</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="602950860898565">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="791207923755685" type="Player_Mask">
-                                    <param id="0" name="Instance variable">aimDirection</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Down&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="588720140027303" type="Player_Mask">
-                                    <param id="0" name="Instance variable">shootAngle</param>
-                                    <param id="1" name="Value">90</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>Shoot (Instead of shooting a bullet here, I set the Player&apos;s &quot;shoot&quot; boolean to true and have that shoot the bullet. This allows the player to exit the spin jump or other states before shooting, ensuring the bullet is created at the proper image point.) (See: Player Shoot Group)</comment>
-                        <event-block bookmark="1" sid="994995929590453">
-                            <conditions>
-                                <condition id="0" name="On function" sid="420839136375999" type="Function">
-                                    <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="840432892179510">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="240848161759917" type="System">
-                                            <param id="0" name="Object">Player_Mask</param>
-                                            <param id="1" name="Expression">Player_Mask.IID</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">int(Function.Param(1))</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="910088667963739" type="Player_Mask">
-                                            <param id="0" name="Instance variable">shoot</param>
+                                        <action id="-13" name="Set boolean" sid="797307582269502" type="Player_Mask">
+                                            <param id="0" name="Instance variable">landing</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="544418402229137" type="Player_Mask">
-                                            <param id="0" name="Instance variable">weapon</param>
-                                            <param id="1" name="Value">function.Param(0)</param>
+                                        <action behavior="Platform" disabled="1" id="8" name="Set vector X" sid="380456761470764" type="Player_Base">
+                                            <param id="0" name="Vector X">0</param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <comment>Check if player is on ground</comment>
-                                        <event-block sid="788858789249313">
+                                        <event-block sid="925145809544128">
                                             <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="756464854973130" type="Player_Mask">
+                                                <condition id="-8" name="Is boolean instance variable set" sid="666339564685695" type="Player_Mask">
                                                     <param id="0" name="Instance variable">spinjump</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-13" name="Set boolean" sid="278381503958412" type="Player_Mask">
+                                                <action id="-13" name="Set boolean" sid="741032425686829" type="Player_Mask">
                                                     <param id="0" name="Instance variable">spinjump</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="649710020059307">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="460439418098585" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">bouncing</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="954314646443058" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">bouncing</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
@@ -2392,50 +2446,7 @@
                                     </sub-events>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <comment>Landing stuff</comment>
-                        <event-block sid="327661633510671">
-                            <conditions>
-                                <condition behavior="Platform" id="9" name="On landed" sid="924161824302994" type="Player_Base" />
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="797307582269502" type="Player_Mask">
-                                    <param id="0" name="Instance variable">landing</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action behavior="Platform" disabled="1" id="8" name="Set vector X" sid="380456761470764" type="Player_Base">
-                                    <param id="0" name="Vector X">0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="925145809544128">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="666339564685695" type="Player_Mask">
-                                            <param id="0" name="Instance variable">spinjump</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="741032425686829" type="Player_Mask">
-                                            <param id="0" name="Instance variable">spinjump</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="649710020059307">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="460439418098585" type="Player_Mask">
-                                            <param id="0" name="Instance variable">bouncing</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="954314646443058" type="Player_Mask">
-                                            <param id="0" name="Instance variable">bouncing</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
+                        </event-group>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="885760202061221" title="Player 1 Animations">
@@ -3413,17 +3424,21 @@
                                                     <sub-events>
                                                         <event-block sid="427366425070593">
                                                             <conditions>
-                                                                <condition id="-33" name="Pick by comparison" sid="588219979427938" type="System">
+                                                                <condition id="-33" name="Pick by comparison" sid="780429999731234" type="System">
                                                                     <param id="0" name="Object">HUD_subammo</param>
                                                                     <param id="1" name="Expression">HUD_subammo.type</param>
                                                                     <param id="2" name="Comparison">0</param>
-                                                                    <param id="3" name="Value">&quot;p1&quot;</param>
+                                                                    <param id="3" name="Value">&quot;p1ammo&quot;</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-12" name="Subtract from" sid="457838927024934" type="HUD_subammo">
-                                                                    <param id="0" name="Instance variable">curValue</param>
+                                                                <action id="-12" name="Subtract from" sid="970045828416983" type="HUD_subammo">
+                                                                    <param id="0" name="Instance variable">ammo</param>
                                                                     <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="665674885673604" type="Function">
+                                                                    <param id="0" name="Name">&quot;p1updateammo&quot;</param>
+                                                                    <param id="1" name="Parameter {n}"></param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
