@@ -120,21 +120,35 @@
                                 </event-block>
                                 <event-block sid="603066259731769">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="905033595064977" type="HUD_special_arts_count">
+                                        <condition id="-7" name="Compare instance variable" sid="905033595064977" type="HUD_special_arts_bar">
                                             <param id="0" name="Instance variable">player</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">Player_Mask.IID</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="5" name="Set frame" sid="721297614071938" type="HUD_special_arts_count">
-                                            <param id="0" name="Frame number">int(HUD_special_arts_count.bar_points/tempCurrArtsNeededDivided)</param>
+                                        <action id="5" name="Set frame" sid="721297614071938" type="HUD_special_arts_bar">
+                                            <param id="0" name="Frame number">int(HUD_special_arts_bar.bar_points/tempCurrArtsNeededDivided)</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="948327398804285">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="628060635809115" type="HUD_special_arts_bar">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="244534196635888" type="HUD_special_arts_bar">
+                            <param id="0" name="Animation">&quot;Super&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

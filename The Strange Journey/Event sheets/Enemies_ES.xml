@@ -1260,7 +1260,7 @@
                             <param id="0" name="Variable">Total_Score</param>
                             <param id="1" name="Value">Enemies.points</param>
                         </action>
-                        <action id="-11" name="Add to" sid="716376125180874" type="HUD_special_arts_count">
+                        <action id="-11" name="Add to" sid="716376125180874" type="HUD_special_arts_bar">
                             <param id="0" name="Instance variable">bar_points</param>
                             <param id="1" name="Value">enemies.points</param>
                         </action>

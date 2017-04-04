@@ -574,6 +574,21 @@
                                                     <param id="1" name="Parameter index">2</param>
                                                     <param id="2" name="Value">0</param>
                                                 </action>
+                                                <action id="-28" name="Set effect parameter" sid="475871329716114" type="HUD_player_icon">
+                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">255</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="266867719023489" type="HUD_player_icon">
+                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">100</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="891964577233289" type="HUD_player_icon">
+                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="798225602227707">
@@ -594,6 +609,21 @@
                                                     <param id="2" name="Value">230</param>
                                                 </action>
                                                 <action id="-28" name="Set effect parameter" sid="897688896280011" type="Player_Mask">
+                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">230</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="204397858531819" type="HUD_player_icon">
+                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">230</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="219950162471382" type="HUD_player_icon">
+                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">230</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="856227026112982" type="HUD_player_icon">
                                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                                     <param id="1" name="Parameter index">2</param>
                                                     <param id="2" name="Value">230</param>
@@ -647,7 +677,22 @@
                                         <action id="-28" name="Set effect parameter" sid="912206946601441" type="Player_Mask">
                                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                                             <param id="1" name="Parameter index">2</param>
-                                            <param id="2" name="Value">101</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="433281853362762" type="HUD_player_icon">
+                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="227529806478710" type="HUD_player_icon">
+                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                            <param id="1" name="Parameter index">1</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="317060379737571" type="HUD_player_icon">
+                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                            <param id="1" name="Parameter index">2</param>
+                                            <param id="2" name="Value">100</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -691,9 +736,8 @@
                                             <sub-events>
                                                 <event-block sid="828666091722789">
                                                     <conditions>
-                                                        <condition id="3" name="Compare frame" sid="884334677730746" type="HUD_special_arts_count">
-                                                            <param id="0" name="Comparison">0</param>
-                                                            <param id="1" name="Number">7</param>
+                                                        <condition id="2" name="Is playing" sid="348547714747000" type="HUD_special_arts_bar">
+                                                            <param id="0" name="Animation">&quot;Super&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -751,9 +795,8 @@
                                             <sub-events>
                                                 <event-block sid="126806851321707">
                                                     <conditions>
-                                                        <condition id="3" name="Compare frame" sid="918649296871858" type="HUD_special_arts_count">
-                                                            <param id="0" name="Comparison">0</param>
-                                                            <param id="1" name="Number">7</param>
+                                                        <condition id="2" name="Is playing" sid="857967272185877" type="HUD_special_arts_bar">
+                                                            <param id="0" name="Animation">&quot;Super&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -2038,7 +2081,7 @@
                                         <action behavior="Platform" id="11" name="Set enabled" sid="798180436416000" type="Player_Mask">
                                             <param id="0" name="State">0</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="618154997649601" type="HUD_special_arts_count">
+                                        <action id="-10" name="Set value" sid="618154997649601" type="HUD_special_arts_bar">
                                             <param id="0" name="Instance variable">bar_points</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
