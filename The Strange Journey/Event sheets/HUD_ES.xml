@@ -52,7 +52,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="283918257481130" type="Spritefonts">
-                    <param id="0" name="Text">zeropad(Total_Score, 6)</param>
+                    <param id="0" name="Text">zeropad(Total_Score, 8)</param>
                 </action>
             </actions>
         </event-block>

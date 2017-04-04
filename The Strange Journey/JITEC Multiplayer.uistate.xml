@@ -10,13 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Level 1</layout>
-        <layout order="2">Object Bank</layout>
-        <layout order="3">HUD</layout>
-        <event-sheet order="1">Player1_ES</event-sheet>
-        <event-sheet order="4">HUD_ES</event-sheet>
-        <event-sheet order="5">Collectibles_ES</event-sheet>
-        <event-sheet active="1" order="6">Enemies_ES</event-sheet>
+        <layout order="1">Level 1</layout>
+        <layout order="3">Object Bank</layout>
+        <layout active="1" order="4">HUD</layout>
+        <event-sheet order="2">Player1_ES</event-sheet>
+        <event-sheet order="5">HUD_ES</event-sheet>
+        <event-sheet order="6">Collectibles_ES</event-sheet>
+        <event-sheet order="7">Enemies_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -64,7 +64,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/En_PET/" />
         <folder expanded="1" path="animation-folder/Par_Explosion/" />
         <folder expanded="1" path="animation-folder/HUD_special_arts_count/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/HUD_Frame/" />
         <folder expanded="1" path="animation-folder/HUD_player_weapon/" />
         <folder expanded="1" path="animation-folder/Player2_Mask/" />
         <folder expanded="1" path="animation-folder/Player2_Mask/Default/" />
@@ -82,5 +82,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/En_CybersandWolf/" />
         <folder expanded="1" path="animation-folder/Enemy_WolfLaser/" />
         <folder expanded="1" path="animation-folder/Enemy_DirectionalCollider/" />
+        <folder expanded="1" path="animation-folder/HUD_player_icon/" />
+        <folder expanded="1" path="animation-folder/HUD_special_arts_count2/" />
     </folders-expanded>
 </c2uistate>
