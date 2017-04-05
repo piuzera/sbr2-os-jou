@@ -2444,6 +2444,10 @@
                                             <param id="0" name="Instance variable">landing</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="-13" name="Set boolean" sid="601697311345961" type="Player_Mask">
+                                            <param id="0" name="Instance variable">shoot</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="327661633510671">
@@ -2577,6 +2581,21 @@
                                                     <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="733665744025473">
+                                                    <conditions>
+                                                        <condition id="4" name="On finished" sid="399659167565173" type="Player_Mask">
+                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Normal&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="454949274886668" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">shoot</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <comment>Standing Up Throw Move</comment>
                                         <event-block sid="965402111661051">
@@ -2596,6 +2615,21 @@
                                                     <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="114999926444394">
+                                                    <conditions>
+                                                        <condition id="4" name="On finished" sid="468997975485955" type="Player_Mask">
+                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Up&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="286422439253700" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">shoot</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <comment>Crouching Throw Move</comment>
                                         <event-block sid="535022726331794">
@@ -2623,6 +2657,21 @@
                                                             <param id="1" name="From">1</param>
                                                         </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="227519014269500">
+                                                            <conditions>
+                                                                <condition id="4" name="On finished" sid="189940515001847" type="Player_Mask">
+                                                                    <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Crouch&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-13" name="Set boolean" sid="724474974192494" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">shoot</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -2689,18 +2738,22 @@
                                                 <action behavior="Platform" id="8" name="Set vector X" sid="633746725907973" type="Player_Base">
                                                     <param id="0" name="Vector X">0</param>
                                                 </action>
-                                                <action disabled="1" id="-12" name="Set group active" sid="778417627074923" type="System">
-                                                    <param id="0" name="Group name">&quot;Player 1 Input&quot;</param>
-                                                    <param id="1" name="State">0</param>
-                                                </action>
-                                                <action disabled="1" id="-16" name="Wait" sid="779723170124238" type="System">
-                                                    <param id="0" name="Seconds">0.2</param>
-                                                </action>
-                                                <action disabled="1" id="-12" name="Set group active" sid="314930054401495" type="System">
-                                                    <param id="0" name="Group name">&quot;Player 1 Input&quot;</param>
-                                                    <param id="1" name="State">1</param>
-                                                </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="913871990996981">
+                                                    <conditions>
+                                                        <condition id="4" name="On finished" sid="807319049329922" type="Player_Mask">
+                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Normal&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="303458168822914" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">shoot</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <comment>Running Up Throw Move</comment>
                                         <event-block sid="336177563618926">
@@ -2725,18 +2778,22 @@
                                                 <action behavior="Platform" id="8" name="Set vector X" sid="236743250038279" type="Player_Base">
                                                     <param id="0" name="Vector X">0</param>
                                                 </action>
-                                                <action disabled="1" id="-12" name="Set group active" sid="989283600395735" type="System">
-                                                    <param id="0" name="Group name">&quot;Player 1 Input&quot;</param>
-                                                    <param id="1" name="State">0</param>
-                                                </action>
-                                                <action disabled="1" id="-16" name="Wait" sid="156969297156321" type="System">
-                                                    <param id="0" name="Seconds">0.2</param>
-                                                </action>
-                                                <action disabled="1" id="-12" name="Set group active" sid="209342073941964" type="System">
-                                                    <param id="0" name="Group name">&quot;Player 1 Input&quot;</param>
-                                                    <param id="1" name="State">1</param>
-                                                </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="149875850843877">
+                                                    <conditions>
+                                                        <condition id="4" name="On finished" sid="280788892519013" type="Player_Mask">
+                                                            <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Up&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="869704432197126" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">shoot</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -2842,6 +2899,21 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="727372463773428">
+                                            <conditions>
+                                                <condition id="4" name="On finished" sid="429087456060674" type="Player_Mask">
+                                                    <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Normal_Air&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="583918104276885" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shoot</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <comment>Jumping Up Throw Move</comment>
                                 <event-block sid="587970764079114">
@@ -2861,6 +2933,21 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="941492355415638">
+                                            <conditions>
+                                                <condition id="4" name="On finished" sid="600526704868602" type="Player_Mask">
+                                                    <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Up_Air&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="156024741147145" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shoot</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <comment>Jumping Down Throw Move</comment>
                                 <event-block sid="475707798825672">
@@ -2880,6 +2967,21 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="236333880270526">
+                                            <conditions>
+                                                <condition id="4" name="On finished" sid="238659849372049" type="Player_Mask">
+                                                    <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Down_Air&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="433298197747453" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shoot</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -3048,6 +3150,16 @@
                                     <param id="0" name="Width">self.Width-1</param>
                                     <param id="1" name="Height">self.Height-1</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="477332530000882">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="487056496887899" type="Player_Mask">
+                                    <param id="0" name="Instance variable">shoot</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="121193330398232" type="Player_Sword" />
                             </actions>
                         </event-block>
                         <event-block sid="454840768762146">
@@ -3424,14 +3536,6 @@
                                                                     <param id="0" name="Pin to">Player_Mask</param>
                                                                     <param id="1" name="Mode">0</param>
                                                                 </action>
-                                                                <action id="-16" name="Wait" sid="797960656394360" type="System">
-                                                                    <param id="0" name="Seconds">0.32</param>
-                                                                </action>
-                                                                <action id="-13" name="Set boolean" sid="955172436323322" type="Player_Mask">
-                                                                    <param id="0" name="Instance variable">shoot</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-9" name="Destroy" sid="816544155939679" type="Player_Sword" />
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
