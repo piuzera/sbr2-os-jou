@@ -2895,7 +2895,7 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="933546238431497" type="Player_Mask">
-                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Land&quot;</param>
+                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Idle&quot;</param>
                                     <param id="1" name="From">0</param>
                                 </action>
                             </actions>
@@ -3659,6 +3659,7 @@
                                     <param id="0" name="Instance variable">hurtTimer</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="236683265119392" type="Player_Sword" />
                                 <action behavior="Flash" id="0" name="Flash" sid="992210539991126" type="Player_Mask">
                                     <param id="0" name="&apos;On&apos; time">0.05</param>
                                     <param id="1" name="&apos;Off&apos; time">0.05</param>

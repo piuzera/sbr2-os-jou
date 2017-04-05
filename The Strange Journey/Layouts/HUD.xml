@@ -782,7 +782,7 @@
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
                         <text>SCORE</text>
                         <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -827,7 +827,7 @@
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
                         <text>00000000</text>
                         <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>

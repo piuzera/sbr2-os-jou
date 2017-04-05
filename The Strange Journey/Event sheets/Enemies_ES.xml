@@ -437,26 +437,23 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="854573690300604" type="En_SeedBomber">
-                                    <param id="0" name="Object">Enemy_EyeProjectile</param>
+                                    <param id="0" name="Object">Enemy_SeedProjectile</param>
                                     <param id="1" name="Layer">&quot;Player&quot;</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="329663524551912" type="Enemy_EyeProjectile">
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="329663524551912" type="Enemy_SeedProjectile">
                                     <param id="0" name="Angle">angle(En_SeedBomber.X,En_SeedBomber.Y,Player_Base.X,Player_Base.Y)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="306636242355188">
+                        <event-block sid="144089540695476">
                             <conditions>
-                                <condition id="4" name="On finished" sid="384291203759561" type="En_SeedBomber">
+                                <condition id="4" name="On finished" sid="274496957337320" type="En_SeedBomber">
                                     <param id="0" name="Animation">&quot;Attack&quot;</param>
-                                </condition>
-                                <condition behavior="LineOfSight" disabled="1" id="0" inverted="1" name="Has LOS to object" sid="412935787320427" type="En_SeedBomber">
-                                    <param id="0" name="Object">Player_Base</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="630854999660255" type="En_SeedBomber">
+                                <action id="4" name="Set animation" sid="987398496647938" type="En_SeedBomber">
                                     <param id="0" name="Animation">&quot;Idle&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -1405,7 +1402,7 @@
                         <event-block sid="522238643252306">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="212349728348847" type="Enemy_Respawner">
-                                    <param id="0" name="Animation">&quot;scarab&quot;</param>
+                                    <param id="0" name="Animation">&quot;Scarab&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1495,7 +1492,7 @@
                         <event-block sid="498145182078306">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="231005950977963" type="Enemy_Respawner">
-                                    <param id="0" name="Animation">&quot;Seedbomber&quot;</param>
+                                    <param id="0" name="Animation">&quot;SeedBomber&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1525,7 +1522,7 @@
                         <event-block sid="226953261883498">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="976523769526255" type="Enemy_Respawner">
-                                    <param id="0" name="Animation">&quot;Dragonfly&quot;</param>
+                                    <param id="0" name="Animation">&quot;Sandit&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1534,7 +1531,7 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="495592897574482" type="Enemy_Respawner">
-                                    <param id="0" name="Object">En_Dragonfly</param>
+                                    <param id="0" name="Object">En_Sandit</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>

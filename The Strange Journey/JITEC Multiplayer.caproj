@@ -370,7 +370,14 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                     <animation framecount="1" loop="0" name="Default_Use_Arts" pingpong="0" repeatcount="1" repeatto="0" sid="627151552476748" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Default_Hurt" pingpong="0" repeatcount="1" repeatto="0" sid="871570336872789" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -1212,7 +1219,7 @@
                             <point x="0" y="0.833333" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333">
+                    <frame duration="3" hotspotX="0.5" hotspotY="0.833333">
                         <image-point name="Imagepoint 1" x="0.166667" y="0.375" />
                         <collision-poly>
                             <point x="0" y="0" />
@@ -1233,7 +1240,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Enemy_EyeProjectile" sid="673836384491764">
+        <object-type name="Enemy_SeedProjectile" sid="673836384491764">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="255520690797117" speed="7">
@@ -2076,10 +2083,24 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.7875" />
                 </animation>
                 <animation framecount="1" loop="0" name="SeedBomber" pingpong="0" repeatcount="1" repeatto="0" sid="657967858112963" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.734375" />
+                    <frame duration="1" hotspotX="0.515625" hotspotY="0.75">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.75" y="0" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0" y="0.75" />
+                        </collision-poly>
+                    </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Dragonfly" pingpong="0" repeatcount="1" repeatto="0" sid="377044872790458" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Sandit" pingpong="0" repeatcount="1" repeatto="0" sid="377044872790458" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.666667">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.666667" y="0" />
+                            <point x="0.666667" y="0.666667" />
+                            <point x="0" y="0.666667" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="GreenDragonfly" pingpong="0" repeatcount="1" repeatto="0" sid="425530502294476" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -2421,7 +2442,7 @@
                 <member>En_Sandit</member>
                 <member>En_Scarab</member>
                 <member>En_SeedBomber</member>
-                <member>Enemy_EyeProjectile</member>
+                <member>Enemy_SeedProjectile</member>
                 <member>Enemy_WolfLaser</member>
                 <member>Player2_Base</member>
                 <member>Player2_Mask</member>
@@ -2462,7 +2483,7 @@
         </family>
         <family name="WeaponsEtc" plugin-id="Sprite" sid="966639895379555">
             <members>
-                <member>Enemy_EyeProjectile</member>
+                <member>Enemy_SeedProjectile</member>
                 <member>Enemy_WolfLaser</member>
                 <member>Player_Lance</member>
                 <member>Player_Shield</member>

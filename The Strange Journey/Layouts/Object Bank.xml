@@ -116,8 +116,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>342</x>
-                        <y>395</y>
+                        <x>515.879760742</x>
+                        <y>239.780532837</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -215,8 +215,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>461</x>
-                        <y>377</y>
+                        <x>582.291381836</x>
+                        <y>220.084030151</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -321,8 +321,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>532</x>
-                        <y>376</y>
+                        <x>650.534973145</x>
+                        <y>221.629119873</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -341,7 +341,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <health>8</health>
+                        <health>1</health>
                         <power>25</power>
                         <points>150</points>
                         <active>true</active>
@@ -420,8 +420,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>406</x>
-                        <y>392</y>
+                        <x>251.629104614</x>
+                        <y>385.214630127</y>
                         <z>0</z>
                         <width>48</width>
                         <height>48</height>
@@ -808,7 +808,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy_EyeProjectile" uid="98">
+                <instance type="Enemy_SeedProjectile" uid="98">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1147,8 +1147,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>277</x>
-                        <y>384</y>
+                        <x>305.837982178</x>
+                        <y>378.910491943</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -1586,8 +1586,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>129.471832275</x>
-                        <y>364.40020752</y>
+                        <x>123.534393311</x>
+                        <y>387.301391602</y>
                         <z>0</z>
                         <width>80</width>
                         <height>80</height>
@@ -1673,8 +1673,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>620</x>
-                        <y>470</y>
+                        <x>593.705749512</x>
+                        <y>503.927490234</y>
                         <z>0</z>
                         <width>480</width>
                         <height>80</height>
