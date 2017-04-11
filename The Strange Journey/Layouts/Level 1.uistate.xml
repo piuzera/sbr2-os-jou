@@ -4,15 +4,15 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>156.198</position-x>
-        <position-y>522.684</position-y>
-        <position-z>39.6033</position-z>
-        <lookat-x>156.198</lookat-x>
-        <lookat-y>522.684</lookat-y>
+        <position-x>431.18</position-x>
+        <position-y>413.53</position-y>
+        <position-z>112.255</position-z>
+        <lookat-x>431.18</lookat-x>
+        <lookat-y>413.53</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
-    <show-grid>0</show-grid>
+    <show-grid>1</show-grid>
     <snap-width>16</snap-width>
     <snap-height>16</snap-height>
     <show-collision-polys>0</show-collision-polys>
@@ -23,13 +23,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Top Tileset" />
+    <active-layer name="Bottom Tileset" />
     <layers>
         <layer locked="1" name="Parallax 2" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Parallax 1" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Collisions" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Bottom Tileset" parallax-in-editor="0" visible="1" />
-        <layer locked="1" name="Middle Tileset" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Jump-Thru" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Enemies" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Objects" parallax-in-editor="0" visible="1" />

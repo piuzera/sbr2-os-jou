@@ -925,6 +925,9 @@
                                 <condition behavior="Platform" id="10" name="Is by wall" sid="274202021853325" type="En_Sandit">
                                     <param id="0" name="Side">1</param>
                                 </condition>
+                                <condition id="1" name="Is overlapping another object" sid="548500730957043" type="En_Sandit">
+                                    <param id="0" name="Object">Enemy_Collider</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="746543452858307" type="En_Sandit">
@@ -1185,7 +1188,7 @@
                         <event-block sid="625417722631546">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="247645425259816" type="En_CybersandWolf">
-                                    <param id="0" name="Object">Enemy_DirectionalCollider</param>
+                                    <param id="0" name="Object">Enemy_Collider</param>
                                 </condition>
                             </conditions>
                             <actions>
