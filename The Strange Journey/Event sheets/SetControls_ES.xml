@@ -65,7 +65,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="369029502245711" type="Spritefonts">
-                    <param id="0" name="Text">&quot;PLAYER 1&quot;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;UP: &quot;&amp;Data_Players.Get(&quot;player_1_control_UP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;DOWN: &quot;&amp;Data_Players.Get(&quot;player_1_control_DOWN&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;LEFT: &quot;&amp;Data_Players.Get(&quot;player_1_control_LEFT&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;RIGHT: &quot;&amp;Data_Players.Get(&quot;player_1_control_RIGHT&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;JUMP: &quot;&amp;Data_Players.Get(&quot;player_1_control_JUMP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE MAIN WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_MAINWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE SUB WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_SUBWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE SUPER ART: &quot;&amp;Data_Players.Get(&quot;player_1_control_ARTS&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;SWITCH MAIN WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_CHANGE_MAINWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;SWITCH SUB WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_CHANGE_SUBWP&quot;)&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;PRESS ENTER TO REMAP KEYS&quot;</param>
+                    <param id="0" name="Text">&quot;PLAYER 1&quot;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;UP: &quot;&amp;Data_Players.Get(&quot;player_1_control_UP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;DOWN: &quot;&amp;Data_Players.Get(&quot;player_1_control_DOWN&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;LEFT: &quot;&amp;Data_Players.Get(&quot;player_1_control_LEFT&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;RIGHT: &quot;&amp;Data_Players.Get(&quot;player_1_control_RIGHT&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;JUMP: &quot;&amp;Data_Players.Get(&quot;player_1_control_JUMP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE MAIN WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_MAINWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE SUB WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_SUBWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE SUPER ART: &quot;&amp;Data_Players.Get(&quot;player_1_control_ARTS&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;SWITCH MAIN WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_CHANGE_MAINWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;SWITCH SUB WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_CHANGE_SUBWP&quot;)&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;PRESS ENTER TO REMAP KEYS&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;PRESS ESC TO GO BACK&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -79,6 +79,18 @@
                         <action id="-10" name="Add to" sid="435715514030658" type="System">
                             <param id="0" name="Variable">pressKey</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="728896350253032">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="579260534701890" type="Keyboard">
+                            <param id="0" name="Key">27 (Esc)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="510946072156071" type="System">
+                            <param id="0" name="Layout">TitleScreen</param>
                         </action>
                     </actions>
                 </event-block>

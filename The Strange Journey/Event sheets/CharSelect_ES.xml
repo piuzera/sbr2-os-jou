@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CharSelect_ES</name>
+    <events>
+        <include>Init_ES</include>
+        <variable constant="0" name="menu_charselect" sid="414414041147407" static="0" type="number">0</variable>
+        <event-group description="" sid="483587471215138" title="CharSelect">
+            <sub-events>
+                <event-block sid="492072142554682">
+                    <conditions>
+                        <condition id="5" name="Key code is down" sid="987419489322131" type="Keyboard">
+                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_LEFT&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="861644975483059">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="527267648458808" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="337672681433910" type="System">
+                                    <param id="0" name="Variable">menu_charselect</param>
+                                    <param id="1" name="Value">clamp(menu_charselect-1,0,char_select_bg2.Count-1)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="646180811927785" type="Function">
+                                    <param id="0" name="Name">&quot;change_title&quot;</param>
+                                    <param id="1" name="Parameter {n}">menu_charselect</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="607424899112980">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="167468969129382" type="System">
+                                            <param id="0" name="Object">char_select_bg2</param>
+                                            <param id="1" name="Expression">char_select_bg2.char_pick</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">menu_charselect</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="644729196247086" type="char_select_bg3">
+                                            <param id="0" name="X">char_select_bg2.X</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="877003347236499">
+                    <conditions>
+                        <condition id="5" name="Key code is down" sid="755088095939230" type="Keyboard">
+                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_RIGHT&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="644672539553181">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="696623505773927" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="222975140217319" type="System">
+                                    <param id="0" name="Variable">menu_charselect</param>
+                                    <param id="1" name="Value">clamp(menu_charselect+1,0,char_select_bg2.Count-1)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="858243471982257" type="Function">
+                                    <param id="0" name="Name">&quot;change_title&quot;</param>
+                                    <param id="1" name="Parameter {n}">menu_charselect</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="905625238300595">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="854841249370539" type="System">
+                                            <param id="0" name="Object">char_select_bg2</param>
+                                            <param id="1" name="Expression">char_select_bg2.char_pick</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">menu_charselect</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="467174816444885" type="char_select_bg3">
+                                            <param id="0" name="X">char_select_bg2.X</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="843206056726021">
+                    <conditions>
+                        <condition id="5" name="Key code is down" sid="221854322124709" type="Keyboard">
+                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_JUMP&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="540682570264625">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="847367339440267" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="321546259079901">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="171261340900989" type="System">
+                                            <param id="0" name="Variable">menu_waitInput</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="632370285285351" type="System">
+                                            <param id="0" name="Variable">menu_waitInput</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="302639130347914">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="815286748253359" type="System">
+                                                    <param id="0" name="Variable">menu_charselect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Go to layout" sid="626160618912962" type="System">
+                                                    <param id="0" name="Layout">Level 1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="326937375912667">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="453153887112572" type="System">
+                            <param id="0" name="Variable">menu_waitInput</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="484365275323113" type="System">
+                            <param id="0" name="Variable">menu_waitInput</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="442504574313601">
+                    <conditions>
+                        <condition id="0" name="On function" sid="209311734767528" type="Function">
+                            <param id="0" name="Name">&quot;change_title&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="534818064745345">
+                            <conditions>
+                                <condition id="-34" name="Pick by evaluate" sid="190930274169453" type="System">
+                                    <param id="0" name="Object">SpriteFont_Menus</param>
+                                    <param id="1" name="Expression">SpriteFont_Menus.option_num = 0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="152249851796002">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="323469888656859" type="System">
+                                            <param id="0" name="Variable">menu_charselect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="517113599017290" type="SpriteFont_Menus">
+                                            <param id="0" name="Text">&quot;HIGHLANDER&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="854645819750260">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="257570783086713" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="442384840871751" type="SpriteFont_Menus">
+                                            <param id="0" name="Text">&quot;???&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="817096949684051">
+                            <conditions>
+                                <condition id="-34" name="Pick by evaluate" sid="278947654723049" type="System">
+                                    <param id="0" name="Object">SpriteFont_Menus</param>
+                                    <param id="1" name="Expression">SpriteFont_Menus.option_num = 1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="305037491464244">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="528069553829855" type="System">
+                                            <param id="0" name="Variable">menu_charselect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="938397223219000" type="SpriteFont_Menus">
+                                            <param id="0" name="Text">&quot;THE WARRIOR THAT STRIVES TO TAKE BACK HIS LAND&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="453330287230208">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="777320268632262" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="838018285774377" type="SpriteFont_Menus">
+                                            <param id="0" name="Text">&quot;???&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -68,6 +68,7 @@
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder>
+        <object-folder name="intro" />
         <object-type name="WebStorage" sid="1510269620771624">
             <plugin id="WebStorage" />
         </object-type>
@@ -2631,6 +2632,58 @@
                 </tile>
             </tiles>
         </object-type>
+        <object-type name="TitleScreen_BG" sid="136525194910590">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589595335124818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\JITEC\Game Screens\2_Title _Screen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont_Menus" sid="666021299320951">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="option_num" sid="374411839726903" type="number" />
+            </instance-variables>
+            <texture original-source="E:\Dropbox\Copy Girl\Assets\UI\font_normal.png" />
+        </object-type>
+        <object-type name="char_select_bg" sid="120271285817725">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="230934028213300" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\JITEC\Game Screens\4_Character_Select.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="char_select_bg2" sid="603244892383154">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="char_pick" sid="598784849764268" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="highlander" pingpong="0" repeatcount="1" repeatto="0" sid="627236455022083" speed="5">
+                    <frame duration="1" hotspotX="0.457143" hotspotY="0.964286" original-source="D:\Dropbox\JITEC\Game Screens\4_Character_Select.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="egyptian" pingpong="0" repeatcount="1" repeatto="0" sid="595717981810038" speed="5">
+                    <frame duration="1" hotspotX="0.485714" hotspotY="0.964286" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="char_select_bg3" sid="791490255114771">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="highlander" pingpong="0" repeatcount="1" repeatto="0" sid="308020816875768" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="D:\Dropbox\JITEC\Game Screens\4_Character_Select.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.8" />
+                            <point x="0" y="0.8" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Behaviors" plugin-id="Sprite" sid="389202517335220">
@@ -2760,6 +2813,9 @@
         <layout>HUD.xml</layout>
         <layout>Object Bank.xml</layout>
         <layout>SetControls.xml</layout>
+        <layout>TitleScreen.xml</layout>
+        <layout>Options.xml</layout>
+        <layout>CharSelect.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Player1_ES.xml</event-sheet>
@@ -2773,6 +2829,8 @@
         <event-sheet>LevelObjects_ES.xml</event-sheet>
         <event-sheet>Init_ES.xml</event-sheet>
         <event-sheet>SetControls_ES.xml</event-sheet>
+        <event-sheet>TitleScreen_ES.xml</event-sheet>
+        <event-sheet>CharSelect_ES.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
