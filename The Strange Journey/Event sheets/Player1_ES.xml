@@ -2028,42 +2028,15 @@
                                                         <action behavior="Platform" id="9" name="Set vector Y" sid="409585828330750" type="Player_Base">
                                                             <param id="0" name="Vector Y">Player_Mask.p_jumpHeight</param>
                                                         </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block disabled="1" sid="883920558340676">
-                                                    <conditions>
-                                                        <condition id="0" name="Compare value" sid="124390860319720" type="Data_Items_P1">
-                                                            <param id="0" name="Key">&quot;HiJumpBoots&quot;</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">1</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action behavior="Platform" id="9" name="Set vector Y" sid="550091957908492" type="Player_Base">
-                                                            <param id="0" name="Vector Y">-315</param>
+                                                        <action id="0" name="Play" sid="263420000668309" type="Audio">
+                                                            <param id="0" name="Audio file">sfx_movement_jump13</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-6</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
-                                        </event-block>
-                                        <comment>SpinJump</comment>
-                                        <event-block disabled="1" sid="580674352950778">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="834249820738951" type="System">
-                                                    <param id="0" name="First value">Player_Base.Platform.VectorX</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Second value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="841059665427498" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">spinjump</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action behavior="Platform" id="3" name="Set deceleration" sid="773264277117133" type="Player_Base">
-                                                    <param id="0" name="Deceleration">0</param>
-                                                </action>
-                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -2461,6 +2434,12 @@
                                         </action>
                                         <action behavior="Platform" disabled="1" id="8" name="Set vector X" sid="380456761470764" type="Player_Base">
                                             <param id="0" name="Vector X">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="671516556356230" type="Audio">
+                                            <param id="0" name="Audio file">sfx_movement_jump14_landing</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -3152,6 +3131,22 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="662841108879395">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="512691471507822" type="Player_Shield" />
+                                <condition id="-6" name="Every X seconds" sid="789887751188505" type="System">
+                                    <param id="0" name="Interval (seconds)">0.12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="690258727775916" type="Audio">
+                                    <param id="0" name="Audio file">sfx_wpn_sword2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="477332530000882">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="487056496887899" type="Player_Mask">
@@ -3265,6 +3260,12 @@
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">0</param>
                                                             <param id="3" name="Y">0</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="563486206736570" type="Audio">
+                                                            <param id="0" name="Audio file">sfx_weapon_singleshot1</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-6</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                                         </action>
                                                     </actions>
                                                     <sub-events>
@@ -3728,6 +3729,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="521646097408924" type="Audio">
+                                    <param id="0" name="Audio file">sfx_damage_hit5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action behavior="Platform" id="0" name="Set ignoring input" sid="681201260265363" type="Player_Base">
                                     <param id="0" name="Input">1</param>
                                 </action>

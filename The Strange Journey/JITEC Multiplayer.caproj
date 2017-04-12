@@ -36,11 +36,14 @@
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Yeremia AI (lunarray)" id="lunarray_Tween" version="1.600000024">EaseTween</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
         <effect author="Scirra" id="hsladjust">Adjust HSL</effect>
+        <effect author="Scirra" id="pixellate">Pixellate</effect>
         <effect author="Scirra" id="replacecolor">Replace color</effect>
         <effect author="Scirra" id="tint">Tint</effect>
     </used-effects>
@@ -61,7 +64,7 @@
         <prop name="Fullscreen scaling">Low quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
         <prop name="Hide address bar">No</prop>
-        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Point</prop>
@@ -100,7 +103,7 @@
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
-            <texture original-source="C:\Users\Piu\Dropbox\JITEC\assets\tilemap\tileset_desert_collisions.png" />
+            <texture original-source="C:\Users\Piu\Dropbox\JITEC\assets\tilemap\tileset_desert_new_new.png" />
             <tiles>
                 <tile id="0">
                     <collision-poly>
@@ -1527,7 +1530,7 @@
                             <point x="0.291667" y="0.354167" />
                             <point x="0.729167" y="0.354167" />
                             <point x="0.729167" y="0.729167" />
-                            <point x="0.510417" y="0.854167" />
+                            <point x="0.510417" y="0.9375" />
                             <point x="0.291667" y="0.729167" />
                         </collision-poly>
                     </frame>
@@ -1536,7 +1539,7 @@
                             <point x="0.291667" y="0.354167" />
                             <point x="0.729167" y="0.354167" />
                             <point x="0.729167" y="0.729167" />
-                            <point x="0.510417" y="0.854167" />
+                            <point x="0.510417" y="0.9375" />
                             <point x="0.291667" y="0.729167" />
                         </collision-poly>
                     </frame>
@@ -1545,7 +1548,7 @@
                             <point x="0.291667" y="0.354167" />
                             <point x="0.729167" y="0.354167" />
                             <point x="0.729167" y="0.729167" />
-                            <point x="0.510417" y="0.854167" />
+                            <point x="0.510417" y="0.9375" />
                             <point x="0.291667" y="0.729167" />
                         </collision-poly>
                     </frame>
@@ -1554,7 +1557,7 @@
                             <point x="0.291667" y="0.354167" />
                             <point x="0.729167" y="0.354167" />
                             <point x="0.729167" y="0.729167" />
-                            <point x="0.510417" y="0.854167" />
+                            <point x="0.510417" y="0.9375" />
                             <point x="0.291667" y="0.729167" />
                         </collision-poly>
                     </frame>
@@ -1563,7 +1566,7 @@
                             <point x="0.291667" y="0.354167" />
                             <point x="0.729167" y="0.354167" />
                             <point x="0.729167" y="0.729167" />
-                            <point x="0.510417" y="0.854167" />
+                            <point x="0.510417" y="0.9375" />
                             <point x="0.291667" y="0.729167" />
                         </collision-poly>
                     </frame>
@@ -2625,7 +2628,7 @@
         </object-type>
         <object-type name="Tilemap_Desert_Bottom" sid="702887734641057">
             <plugin id="Tilemap" />
-            <texture original-source="C:\Users\Piu\Dropbox\JITEC\assets\tilemap\tileset_desert_template.png" />
+            <texture original-source="C:\Users\Piu\Dropbox\JITEC\assets\tilemap\tileset_desert_new_new.png" />
             <tiles>
                 <tile id="1">
                     <collision-poly>
@@ -2852,6 +2855,11 @@
             <instance-variables>
                 <instance-variable name="option_num" sid="374411839726903" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="EaseTween" sid="123869304883800">
+                    <behavior id="lunarray_Tween" />
+                </behavior-type>
+            </behaviors>
             <texture original-source="E:\Dropbox\Copy Girl\Assets\UI\font_normal.png" />
         </object-type>
         <object-type name="char_select_bg" sid="120271285817725">
@@ -2886,6 +2894,124 @@
                             <point x="1" y="0" />
                             <point x="1" y="0.8" />
                             <point x="0" y="0.8" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tilemap" sid="401707307680250">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="628150415201245">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Piu\Dropbox\JITEC\assets\tilemap\tileset_desert_new.png" />
+            <tiles />
+        </object-type>
+        <object-type name="CharSelect_Highlander" sid="670669528948811">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="805286236796066">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="205996451781682" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Landed" pingpong="0" repeatcount="1" repeatto="0" sid="502702051160723" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="692314048563551" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="476285732226646" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CharSelect_Camera" sid="694243853121691">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="461417080560165">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="EaseTween" sid="801380779934153">
+                    <behavior id="lunarray_Tween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="275654764628523" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CharSelect_Egyptian" sid="571442180048781">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="374202053940628">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="136693860110219" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Landed" pingpong="0" repeatcount="1" repeatto="0" sid="443382187946753" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="507323576707074" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="980388049549887" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="385806878054433">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832897801861551" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Map_Sprite" sid="442388263322927">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="EaseTween" sid="502041282256739">
+                    <behavior id="lunarray_Tween" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Pixellate">
+                    <effect id="pixellate" />
+                </effect-type>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819315961479419" speed="5">
+                    <frame duration="1" hotspotX="0.363636" hotspotY="0.5" original-source="C:\Users\Piu\Dropbox\JITEC\Game Screens\5_Map.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.727273" y="0" />
+                            <point x="0.727273" y="1" />
+                            <point x="0" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -3023,6 +3149,7 @@
         <layout>TitleScreen.xml</layout>
         <layout>Options.xml</layout>
         <layout>CharSelect.xml</layout>
+        <layout>Map.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Player1_ES.xml</event-sheet>
@@ -3038,6 +3165,7 @@
         <event-sheet>SetControls_ES.xml</event-sheet>
         <event-sheet>TitleScreen_ES.xml</event-sheet>
         <event-sheet>CharSelect_ES.xml</event-sheet>
+        <event-sheet>Map_ES.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
@@ -3065,8 +3193,38 @@
         <global-instance type="Function" uid="8" />
         <global-instance type="TimeManager" uid="67" />
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="sfx_movement_jump13.m4a" />
+        <file name="sfx_movement_jump13.ogg" />
+        <file name="sfx_movement_jump14_landing.m4a" />
+        <file name="sfx_movement_jump14_landing.ogg" />
+        <file name="sfx_weapon_singleshot1.m4a" />
+        <file name="sfx_weapon_singleshot1.ogg" />
+        <file name="sfx_damage_hit5.m4a" />
+        <file name="sfx_damage_hit5.ogg" />
+        <file name="sfx_sounds_impact11.m4a" />
+        <file name="sfx_sounds_impact11.ogg" />
+        <file name="sfx_sounds_impact6.m4a" />
+        <file name="sfx_sounds_impact6.ogg" />
+        <file name="sfx_wpn_laser5.m4a" />
+        <file name="sfx_wpn_laser5.ogg" />
+        <file name="sfx_wpn_cannon4.m4a" />
+        <file name="sfx_wpn_cannon4.ogg" />
+        <file name="sfx_movement_footsteps1a.m4a" />
+        <file name="sfx_movement_footsteps1a.ogg" />
+        <file name="sfx_sounds_interaction16.m4a" />
+        <file name="sfx_sounds_interaction16.ogg" />
+        <file name="sfx_wpn_sword2.m4a" />
+        <file name="sfx_wpn_sword2.ogg" />
+        <file name="sfx_sounds_pause5_in.m4a" />
+        <file name="sfx_sounds_pause5_in.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="02 World Nap.ogg" />
+        <file name="CHOMAKAI_00021.m4a" />
+        <file name="CHOMAKAI_00021.ogg" />
+        <file name="MP2(Intro).ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

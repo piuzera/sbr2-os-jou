@@ -10,19 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Level 1</layout>
+        <layout active="1" order="0">Level 1</layout>
         <layout order="2">Object Bank</layout>
-        <layout order="3">HUD</layout>
-        <layout order="6">SetControls</layout>
-        <layout order="7">TitleScreen</layout>
-        <layout order="12">Options</layout>
-        <layout order="13">CharSelect</layout>
+        <layout order="4">Map</layout>
+        <layout order="5">TitleScreen</layout>
         <event-sheet order="1">Player1_ES</event-sheet>
-        <event-sheet order="4">HUD_ES</event-sheet>
-        <event-sheet order="5">Enemies_ES</event-sheet>
-        <event-sheet active="1" order="10">TitleScreen_ES</event-sheet>
-        <event-sheet order="11">Init_ES</event-sheet>
-        <event-sheet order="14">CharSelect_ES</event-sheet>
+        <event-sheet order="3">Enemies_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -95,5 +88,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/char_select_bg/" />
         <folder expanded="1" path="animation-folder/char_select_bg2/" />
         <folder expanded="1" path="animation-folder/char_select_bg3/" />
+        <folder expanded="1" path="animation-folder/CharSelect_Highlander/" />
+        <folder expanded="1" path="animation-folder/CharSelect_Camera/" />
+        <folder expanded="1" path="animation-folder/CharSelect_Egyptian/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Map_Sprite/" />
     </folders-expanded>
 </c2uistate>

@@ -411,6 +411,22 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="505284006522679">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="306492510441426" type="En_SeedBomber">
+                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="751591557547329" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="553524511618930" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_interaction16</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="855380337793808">
                             <conditions>
                                 <condition id="4" name="On finished" sid="337987668632988" type="En_SeedBomber">
@@ -443,6 +459,12 @@
                                 </action>
                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="329663524551912" type="Enemy_SeedProjectile">
                                     <param id="0" name="Angle">angle(En_SeedBomber.X,En_SeedBomber.Y,Player_Base.X,Player_Base.Y)</param>
+                                </action>
+                                <action id="0" name="Play" sid="192208986079356" type="Audio">
+                                    <param id="0" name="Audio file">sfx_wpn_cannon4</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -743,6 +765,61 @@
                                     <param id="0" name="Animation">&quot;Emerge&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="620262459751180" type="En_Scarab">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="290020415596188">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="388664025199337" type="En_Scarab">
+                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="220338016940558" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="598150802836142" type="Audio">
+                                    <param id="0" name="Audio file">sfx_movement_footsteps1a</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="643526100290614" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Play" sid="544353971107451" type="Audio">
+                                    <param id="0" name="Audio file">sfx_movement_footsteps1a</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="749532852315915" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Play" sid="556459804115676" type="Audio">
+                                    <param id="0" name="Audio file">sfx_movement_footsteps1a</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="450600955130251" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Play" sid="956902876926941" type="Audio">
+                                    <param id="0" name="Audio file">sfx_movement_footsteps1a</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="945634667297353" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Play" sid="419184133966261" type="Audio">
+                                    <param id="0" name="Audio file">sfx_movement_footsteps1a</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="763314164232814">
@@ -837,6 +914,9 @@
                                 <action id="4" name="Set animation" sid="149531675826850" type="En_Sandit">
                                     <param id="0" name="Animation">&quot;Emerge&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="583595110540512" type="En_Sandit">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -1108,6 +1188,12 @@
                                     <param id="1" name="Layer">&quot;Player&quot;</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
+                                <action id="0" name="Play" sid="620790064902970" type="Audio">
+                                    <param id="0" name="Audio file">sfx_wpn_laser5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="190433817324809">
@@ -1229,6 +1315,12 @@
                             <param id="0" name="Name">&quot;Object_Flash&quot;</param>
                             <param id="1" name="Parameter {n}">Enemies.UID</param>
                         </action>
+                        <action id="0" name="Play" sid="200249372209533" type="Audio">
+                            <param id="0" name="Audio file">sfx_sounds_impact6</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-6</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Particles</comment>
@@ -1251,6 +1343,12 @@
                         <condition id="-4" name="Trigger once while true" sid="530910171554964" type="System" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="784615659239291" type="Audio">
+                            <param id="0" name="Audio file">sfx_sounds_impact11</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-6</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="0" name="Spawn another object" sid="593465011680653" type="Enemies">
                             <param id="0" name="Object">Par_Explosion</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
@@ -1327,7 +1425,7 @@
         <event-group description="" sid="863972839966259" title="Respawner">
             <sub-events>
                 <comment>Use the animation frames to pick the enemy the respawner should spawn. &#x0D;&#x0A;1: Scarab / 2: PET / 3: PIG / 4: Seedbomber/ 5: Dragonfly / 6: GreenDragonfly </comment>
-                <event-block sid="383814390217396">
+                <event-block disabled="1" sid="383814390217396">
                     <conditions>
                         <condition id="-3" inverted="1" name="Is on-screen" sid="116710928480388" type="Enemies" />
                     </conditions>
@@ -1538,7 +1636,7 @@
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="281881957756307" type="En_Dragonfly">
+                                <action id="-10" name="Set value" sid="281881957756307" type="En_Sandit">
                                     <param id="0" name="Instance variable">createdByResUID</param>
                                     <param id="1" name="Value">Enemy_Respawner.UID</param>
                                 </action>
@@ -1547,36 +1645,6 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="704658864919358" type="Enemy_Respawner">
-                                    <param id="0" name="Instance variable">time</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="689862913161483">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="351212953904618" type="Enemy_Respawner">
-                                    <param id="0" name="Animation">&quot;GreenDragonfly&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="113416258389171" type="Enemy_Respawner">
-                                    <param id="0" name="Instance variable">active</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="574228066076496" type="Enemy_Respawner">
-                                    <param id="0" name="Object">En_GreenDragonfly</param>
-                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="732435248782053" type="En_GreenDragonfly">
-                                    <param id="0" name="Instance variable">createdByResUID</param>
-                                    <param id="1" name="Value">Enemy_Respawner.UID</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="800054020427434" type="Enemy_Respawner">
-                                    <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="973894683649779" type="Enemy_Respawner">
                                     <param id="0" name="Instance variable">time</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
