@@ -19,7 +19,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="943392487125104" type="En_Pig">
                                             <param id="0" name="Comparison">4</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -36,7 +36,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="638351082454765" type="En_Pig">
                                             <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -70,7 +70,7 @@
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                         <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="729983239375895" type="En_Pig">
-                                            <param id="0" name="Object">Player_Base</param>
+                                            <param id="0" name="Object">Player</param>
                                         </condition>
                                         <condition id="2" inverted="1" name="Is playing" sid="730954197104602" type="En_Pig">
                                             <param id="0" name="Animation">&quot;PreJump&quot;</param>
@@ -103,7 +103,7 @@
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                         <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="609873902989894" type="En_Pig">
-                                            <param id="0" name="Object">Player_Base</param>
+                                            <param id="0" name="Object">Player</param>
                                         </condition>
                                         <condition id="2" inverted="1" name="Is playing" sid="179688203777305" type="En_Pig">
                                             <param id="0" name="Animation">&quot;PreJump&quot;</param>
@@ -229,7 +229,7 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="962349171819625" type="En_Dragonfly">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -242,7 +242,7 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="857563732683619" type="En_Dragonfly">
                                     <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -285,7 +285,7 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="187022995806389" type="En_GreenDragonfly">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -298,7 +298,7 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="629139597658045" type="En_GreenDragonfly">
                                     <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -310,7 +310,7 @@
                         <event-block sid="182689205246842">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="701413649557747" type="En_GreenDragonfly">
-                                    <param id="0" name="Object">Player_Base</param>
+                                    <param id="0" name="Object">Player</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="198763917039626" type="System">
                                     <param id="0" name="Variable">HitVar</param>
@@ -320,14 +320,14 @@
                             </conditions>
                             <actions>
                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="982947529170711" type="En_GreenDragonfly">
-                                    <param id="0" name="Angle">angle(En_GreenDragonfly.X,En_GreenDragonfly.Y,Player_Base.X,Player_Base.Y)</param>
+                                    <param id="0" name="Angle">angle(En_GreenDragonfly.X,En_GreenDragonfly.Y,Player.X,Player.Y)</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="447714076202440">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="551441686605529" type="En_GreenDragonfly">
-                                    <param id="0" name="Object">Player_Base</param>
+                                    <param id="0" name="Object">Player</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -352,7 +352,7 @@
                         <event-block sid="236927873351057">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="873572462561023" type="En_SeedBomber">
-                                    <param id="0" name="Object">Player_Base</param>
+                                    <param id="0" name="Object">Player</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -361,7 +361,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="631018225165518" type="En_SeedBomber">
                                             <param id="0" name="Comparison">4</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -374,7 +374,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="284795035838931" type="En_SeedBomber">
                                             <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -458,7 +458,7 @@
                                     <param id="2" name="Image point">1</param>
                                 </action>
                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="329663524551912" type="Enemy_SeedProjectile">
-                                    <param id="0" name="Angle">angle(En_SeedBomber.X,En_SeedBomber.Y,Player_Base.X,Player_Base.Y)</param>
+                                    <param id="0" name="Angle">angle(En_SeedBomber.X,En_SeedBomber.Y,Player.X,Player.Y)</param>
                                 </action>
                                 <action id="0" name="Play" sid="192208986079356" type="Audio">
                                     <param id="0" name="Audio file">sfx_wpn_cannon4</param>
@@ -636,7 +636,7 @@
                                     <conditions>
                                         <condition id="-33" name="Pick by comparison" sid="127457883908557" type="System">
                                             <param id="0" name="Object">En_PET</param>
-                                            <param id="1" name="Expression">distance(En_PET.X,En_PET.Y,Player_Base.X,Player_Base.y)</param>
+                                            <param id="1" name="Expression">distance(En_PET.X,En_PET.Y,Player.X,Player.y)</param>
                                             <param id="2" name="Comparison">2</param>
                                             <param id="3" name="Value">100</param>
                                         </condition>
@@ -721,7 +721,7 @@
                                             <conditions>
                                                 <condition id="-1" name="Compare X" sid="897890336668295" type="En_PET">
                                                     <param id="0" name="Comparison">4</param>
-                                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                                    <param id="1" name="X co-ordinate">Player.X</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -734,7 +734,7 @@
                                             <conditions>
                                                 <condition id="-1" name="Compare X" sid="847885881289920" type="En_PET">
                                                     <param id="0" name="Comparison">2</param>
-                                                    <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                                    <param id="1" name="X co-ordinate">Player.X</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -754,7 +754,7 @@
                         <event-block sid="669400225421522">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="689936546732662" type="En_Scarab">
-                                    <param id="0" name="Object">Player_Base</param>
+                                    <param id="0" name="Object">Player</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -848,7 +848,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="413161089794846" type="En_Scarab">
                                             <param id="0" name="Comparison">4</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -875,7 +875,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="555023974745668" type="En_Scarab">
                                             <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -907,7 +907,7 @@
                         <event-block sid="703692986459347">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="351588097353726" type="En_Sandit">
-                                    <param id="0" name="Object">Player_Base</param>
+                                    <param id="0" name="Object">Player</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -924,7 +924,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="937181665542195" type="En_Sandit">
                                             <param id="0" name="Comparison">4</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -937,7 +937,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="399961806954015" type="En_Sandit">
                                             <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1033,7 +1033,7 @@
                         <event-block sid="371663942674780">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="844834412656903" type="En_CybersandWolf">
-                                    <param id="0" name="Object">Player_Base</param>
+                                    <param id="0" name="Object">Player</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -1057,7 +1057,7 @@
                         <event-block sid="341930866771379">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="672658465494728" type="En_CybersandWolf">
-                                    <param id="0" name="Object">Player_Base</param>
+                                    <param id="0" name="Object">Player</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -1066,7 +1066,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="859429672895145" type="En_CybersandWolf">
                                             <param id="0" name="Comparison">4</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1079,7 +1079,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="618767379533746" type="En_CybersandWolf">
                                             <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1091,7 +1091,7 @@
                                 <event-block sid="573026261467834">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="503038018338002" type="System">
-                                            <param id="0" name="First value">distance(En_CybersandWolf.X,En_CybersandWolf.Y,Player_Base.X,Player_Base.Y)</param>
+                                            <param id="0" name="First value">distance(En_CybersandWolf.X,En_CybersandWolf.Y,Player.X,Player.Y)</param>
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Second value">48</param>
                                         </condition>
@@ -1200,7 +1200,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="112649561901578" type="En_CybersandWolf">
                                             <param id="0" name="Comparison">4</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1216,7 +1216,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="514498866591016" type="En_CybersandWolf">
                                             <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="X co-ordinate">Player_Base.X</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1246,7 +1246,7 @@
                                 <event-block sid="986816979967800">
                                     <conditions>
                                         <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="244662159272019" type="En_CybersandWolf">
-                                            <param id="0" name="Object">Player_Base</param>
+                                            <param id="0" name="Object">Player</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1259,7 +1259,7 @@
                                 <event-block sid="303780905430268">
                                     <conditions>
                                         <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="755181492054558" type="En_CybersandWolf">
-                                            <param id="0" name="Object">Player_Base</param>
+                                            <param id="0" name="Object">Player</param>
                                         </condition>
                                     </conditions>
                                     <actions>

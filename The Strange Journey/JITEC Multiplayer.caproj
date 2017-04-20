@@ -8,7 +8,7 @@
     <author-website>www.onagrostudios.com</author-website>
     <app-id></app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>24300</saved-with-version>
+    <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -87,8 +87,12 @@
         <object-type name="Browser" sid="3498868852026895">
             <plugin id="Browser" />
         </object-type>
-        <object-type name="Player_Base" sid="853311356717008">
+        <object-type name="Player" sid="853311356717008">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="CameraAux01" sid="915990222701221" type="boolean" />
+                <instance-variable name="CameraAux02" sid="707617476550277" type="number" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974518547773123" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -729,7 +733,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Camera" sid="827184400427741">
+        <object-type name="Camera02" sid="827184400427741">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643776994085056" speed="5">
@@ -3017,6 +3021,33 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Screensize_Aux" sid="734390273703127">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Player_Camera" sid="116328474145142">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="col_camera_limit" sid="242624125720838">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="IsActive" sid="369679976134758" type="boolean" />
+                <instance-variable name="Tag" sid="941693985974893" type="string" />
+                <instance-variable name="CameraXFocus" sid="489069656155095" type="string" />
+                <instance-variable name="ImmediateFocus" sid="671200623966527" type="boolean" />
+                <instance-variable name="ImmediateFocusXOnly" sid="954227982384044" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="543316856595789" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1">
+                        <image-point name="left" x="0" y="0.5" />
+                        <image-point name="center" x="0.5" y="0.5" />
+                        <image-point name="right" x="1" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Behaviors" plugin-id="Sprite" sid="389202517335220">
@@ -3031,9 +3062,9 @@
                 <member>En_SeedBomber</member>
                 <member>Enemy_SeedProjectile</member>
                 <member>Enemy_WolfLaser</member>
+                <member>Player</member>
                 <member>Player2_Base</member>
                 <member>Player2_Mask</member>
-                <member>Player_Base</member>
                 <member>Player_Lance</member>
                 <member>Player_Mask</member>
                 <member>Player_Shield</member>
@@ -3137,6 +3168,27 @@
             <behaviors>
                 <behavior-type name="Solid" sid="548214701405763">
                     <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Camera" plugin-id="TiledBg" sid="386356009513631">
+            <members>
+                <member>Player_Camera</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="targetX" sid="243430768469734" type="number" />
+                <instance-variable name="targetY" sid="679693444948721" type="number" />
+                <instance-variable name="targetDeltaX" sid="266303368369579" type="number" />
+                <instance-variable name="targetDeltaY" sid="316626991268816" type="number" />
+                <instance-variable name="targetDeltaYFalling" sid="853908835498494" type="number" />
+                <instance-variable name="lerpFactorX" sid="785804220387460" type="number" />
+                <instance-variable name="lerpFactorY" sid="325440812316350" type="number" />
+                <instance-variable name="fallingYTreshold" sid="672339990821443" type="number" />
+                <instance-variable name="playerMaxY" sid="196640821212225" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="868681028247184">
+                    <behavior id="scrollto" />
                 </behavior-type>
             </behaviors>
         </family>

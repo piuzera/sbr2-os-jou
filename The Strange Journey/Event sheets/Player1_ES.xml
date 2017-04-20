@@ -12,24 +12,24 @@
                     </conditions>
                     <actions>
                         <action disabled="1" id="-3" name="Set position" sid="302712401607700" type="Player_Mask">
-                            <param id="0" name="X">Player_Base.X</param>
-                            <param id="1" name="Y">Player_Base.Y</param>
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>Creates animations</comment>
                 <event-block sid="989201012926198">
                     <conditions>
-                        <condition id="-18" name="On created" sid="865999393050107" type="Player_Base" />
+                        <condition id="-18" name="On created" sid="865999393050107" type="Player" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="965989660961050" type="Player_Base">
+                        <action id="0" name="Spawn another object" sid="965989660961050" type="Player">
                             <param id="0" name="Object">Player_Mask</param>
                             <param id="1" name="Layer">&quot;Player&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="342883082701918" type="Player_Mask">
-                            <param id="0" name="Pin to">Player_Base</param>
+                            <param id="0" name="Pin to">Player</param>
                             <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
@@ -105,8 +105,8 @@
                                 <event-block sid="774934767891638">
                                     <conditions>
                                         <condition id="-24" name="For Each (ordered)" sid="831657559983667" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Order">0</param>
                                         </condition>
                                     </conditions>
@@ -125,7 +125,7 @@
                                             <sub-events>
                                                 <event-block sid="869588738812082">
                                                     <conditions>
-                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="890912727958768" type="Player_Base" />
+                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="890912727958768" type="Player" />
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="170900098974594" type="Player_Mask">
                                                             <param id="0" name="Instance variable">crouch</param>
                                                         </condition>
@@ -141,14 +141,14 @@
                                                         <event-block sid="502147353588726">
                                                             <conditions>
                                                                 <condition id="5" name="Key code is down" sid="242652804350552" type="Keyboard">
-                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player_Base.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
+                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
                                                                 </condition>
-                                                                <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="814697496692818" type="Player_Base">
+                                                                <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="814697496692818" type="Player">
                                                                     <param id="0" name="Side">1</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action behavior="Platform" id="7" name="Simulate control" sid="748631684488581" type="Player_Base">
+                                                                <action behavior="Platform" id="7" name="Simulate control" sid="748631684488581" type="Player">
                                                                     <param id="0" name="Control">1</param>
                                                                 </action>
                                                             </actions>
@@ -158,7 +158,7 @@
                                                                         <condition id="-4" name="Trigger once while true" sid="618055788341155" type="System" />
                                                                     </conditions>
                                                                     <actions>
-                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="177002849661940" type="Player_Base">
+                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="177002849661940" type="Player">
                                                                             <param id="0" name="Vector X">100</param>
                                                                         </action>
                                                                         <action id="-10" name="Set value" sid="605263429402882" type="Player_Mask">
@@ -172,14 +172,14 @@
                                                         <event-block sid="165961490895397">
                                                             <conditions>
                                                                 <condition id="5" name="Key code is down" sid="743541274105112" type="Keyboard">
-                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player_Base.IID+1&amp;&quot;_control_LEFT&quot;))</param>
+                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_LEFT&quot;))</param>
                                                                 </condition>
-                                                                <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="491972773698031" type="Player_Base">
+                                                                <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="491972773698031" type="Player">
                                                                     <param id="0" name="Side">0</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action behavior="Platform" id="7" name="Simulate control" sid="549155453521910" type="Player_Base">
+                                                                <action behavior="Platform" id="7" name="Simulate control" sid="549155453521910" type="Player">
                                                                     <param id="0" name="Control">0</param>
                                                                 </action>
                                                             </actions>
@@ -189,7 +189,7 @@
                                                                         <condition id="-4" name="Trigger once while true" sid="768026456494344" type="System" />
                                                                     </conditions>
                                                                     <actions>
-                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="589616670104220" type="Player_Base">
+                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="589616670104220" type="Player">
                                                                             <param id="0" name="Vector X">-100</param>
                                                                         </action>
                                                                         <action id="-10" name="Set value" sid="788585629368201" type="Player_Mask">
@@ -203,14 +203,14 @@
                                                         <event-block sid="172598919612441">
                                                             <conditions>
                                                                 <condition id="5" inverted="1" name="Key code is down" sid="712482814209145" type="Keyboard">
-                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player_Base.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
+                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
                                                                 </condition>
                                                                 <condition id="5" inverted="1" name="Key code is down" sid="867603538683789" type="Keyboard">
-                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player_Base.IID+1&amp;&quot;_control_LEFT&quot;))</param>
+                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_LEFT&quot;))</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action behavior="Platform" id="8" name="Set vector X" sid="427175467660711" type="Player_Base">
+                                                                <action behavior="Platform" id="8" name="Set vector X" sid="427175467660711" type="Player">
                                                                     <param id="0" name="Vector X">0</param>
                                                                 </action>
                                                                 <action id="-10" name="Set value" sid="709431234256042" type="Player_Mask">
@@ -225,7 +225,7 @@
                                                 <event-block sid="490831774323948">
                                                     <conditions>
                                                         <condition id="5" name="Key code is down" sid="958332433283043" type="Keyboard">
-                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player_Base.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
+                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
                                                         </condition>
                                                         <condition id="-7" inverted="1" name="Compare instance variable" sid="428044516523660" type="Player_Mask">
                                                             <param id="0" name="Instance variable">hurtTimer</param>
@@ -252,7 +252,7 @@
                                                 <event-block sid="837147741895961">
                                                     <conditions>
                                                         <condition id="5" name="Key code is down" sid="327446895258008" type="Keyboard">
-                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player_Base.IID+1&amp;&quot;_control_LEFT&quot;))</param>
+                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_LEFT&quot;))</param>
                                                         </condition>
                                                         <condition id="-7" inverted="1" name="Compare instance variable" sid="165496999408055" type="Player_Mask">
                                                             <param id="0" name="Instance variable">hurtTimer</param>
@@ -278,7 +278,7 @@
                                                 </event-block>
                                                 <event-block sid="137423510159616">
                                                     <conditions>
-                                                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="509920412821793" type="Player_Base" />
+                                                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="509920412821793" type="Player" />
                                                         <condition id="-7" inverted="1" name="Compare instance variable" sid="864591518271905" type="Player_Mask">
                                                             <param id="0" name="Instance variable">hurtTimer</param>
                                                             <param id="1" name="Comparison">4</param>
@@ -299,7 +299,7 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action behavior="Platform" id="8" name="Set vector X" sid="327889182891567" type="Player_Base">
+                                                                <action behavior="Platform" id="8" name="Set vector X" sid="327889182891567" type="Player">
                                                                     <param id="0" name="Vector X">100</param>
                                                                 </action>
                                                             </actions>
@@ -319,7 +319,7 @@
                                                                         </condition>
                                                                     </conditions>
                                                                     <actions>
-                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="411141663454929" type="Player_Base">
+                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="411141663454929" type="Player">
                                                                             <param id="0" name="Vector X">-100</param>
                                                                         </action>
                                                                     </actions>
@@ -329,7 +329,7 @@
                                                                         <condition id="-22" name="Else" sid="802948046593927" type="System" />
                                                                     </conditions>
                                                                     <actions>
-                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="520005612841497" type="Player_Base">
+                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="520005612841497" type="Player">
                                                                             <param id="0" name="Vector X">0</param>
                                                                         </action>
                                                                     </actions>
@@ -347,8 +347,8 @@
                                         <event-block sid="831039645921505">
                                             <conditions>
                                                 <condition id="-33" name="Pick by comparison" sid="324106701235966" type="System">
-                                                    <param id="0" name="Object">Player_Base</param>
-                                                    <param id="1" name="Expression">Player_Base.IID</param>
+                                                    <param id="0" name="Object">Player</param>
+                                                    <param id="1" name="Expression">Player.IID</param>
                                                     <param id="2" name="Comparison">0</param>
                                                     <param id="3" name="Value">0</param>
                                                 </condition>
@@ -362,7 +362,7 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="948735682804245" type="Player_Base">
+                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="948735682804245" type="Player">
                                                             <param id="0" name="Control">2</param>
                                                         </action>
                                                     </actions>
@@ -374,7 +374,7 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="854063767707349" type="Player_Base">
+                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="854063767707349" type="Player">
                                                             <param id="0" name="Control">3</param>
                                                         </action>
                                                     </actions>
@@ -384,8 +384,8 @@
                                         <event-block sid="839596452584576">
                                             <conditions>
                                                 <condition id="-33" name="Pick by comparison" sid="655935714009050" type="System">
-                                                    <param id="0" name="Object">Player_Base</param>
-                                                    <param id="1" name="Expression">Player_Base.IID</param>
+                                                    <param id="0" name="Object">Player</param>
+                                                    <param id="1" name="Expression">Player.IID</param>
                                                     <param id="2" name="Comparison">0</param>
                                                     <param id="3" name="Value">1</param>
                                                 </condition>
@@ -399,7 +399,7 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="290333815930735" type="Player_Base">
+                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="290333815930735" type="Player">
                                                             <param id="0" name="Control">2</param>
                                                         </action>
                                                     </actions>
@@ -411,7 +411,7 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="334051585059030" type="Player_Base">
+                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="334051585059030" type="Player">
                                                             <param id="0" name="Control">3</param>
                                                         </action>
                                                     </actions>
@@ -442,29 +442,29 @@
                                                         <event-block sid="398095992674887">
                                                             <conditions>
                                                                 <condition id="-33" name="Pick by comparison" sid="300179443070202" type="System">
-                                                                    <param id="0" name="Object">Player_Base</param>
-                                                                    <param id="1" name="Expression">Player_Base.IID</param>
+                                                                    <param id="0" name="Object">Player</param>
+                                                                    <param id="1" name="Expression">Player.IID</param>
                                                                     <param id="2" name="Comparison">0</param>
                                                                     <param id="3" name="Value">player_mask.IID</param>
                                                                 </condition>
-                                                                <condition id="1" name="Is overlapping another object" sid="536225770565099" type="Player_Base">
+                                                                <condition id="1" name="Is overlapping another object" sid="536225770565099" type="Player">
                                                                     <param id="0" name="Object">LadderCollision</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action behavior="Platform" id="8" name="Set vector X" sid="240330021020569" type="Player_Base">
+                                                                <action behavior="Platform" id="8" name="Set vector X" sid="240330021020569" type="Player">
                                                                     <param id="0" name="Vector X">0</param>
                                                                 </action>
-                                                                <action behavior="Platform" id="9" name="Set vector Y" sid="220997557346524" type="Player_Base">
+                                                                <action behavior="Platform" id="9" name="Set vector Y" sid="220997557346524" type="Player">
                                                                     <param id="0" name="Vector Y">0</param>
                                                                 </action>
-                                                                <action behavior="Platform" id="11" name="Set enabled" sid="814735268454485" type="Player_Base">
+                                                                <action behavior="Platform" id="11" name="Set enabled" sid="814735268454485" type="Player">
                                                                     <param id="0" name="State">0</param>
                                                                 </action>
-                                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="120816707665969" type="Player_Base">
+                                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="120816707665969" type="Player">
                                                                     <param id="0" name="Input">0</param>
                                                                 </action>
-                                                                <action id="-1" name="Set X" sid="970630429751825" type="Player_Base">
+                                                                <action id="-1" name="Set X" sid="970630429751825" type="Player">
                                                                     <param id="0" name="X">LadderCollision.X + 8</param>
                                                                 </action>
                                                                 <action behavior="Solid" id="0" name="Set enabled" sid="643457195042617" type="LadderGround">
@@ -483,17 +483,17 @@
                                                         <event-block sid="649215995296187">
                                                             <conditions>
                                                                 <condition id="-33" name="Pick by comparison" sid="558221577354231" type="System">
-                                                                    <param id="0" name="Object">Player_Base</param>
-                                                                    <param id="1" name="Expression">Player_Base.IID</param>
+                                                                    <param id="0" name="Object">Player</param>
+                                                                    <param id="1" name="Expression">Player.IID</param>
                                                                     <param id="2" name="Comparison">0</param>
                                                                     <param id="3" name="Value">player_mask.IID</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action behavior="Platform" id="11" name="Set enabled" sid="655767170305842" type="Player_Base">
+                                                                <action behavior="Platform" id="11" name="Set enabled" sid="655767170305842" type="Player">
                                                                     <param id="0" name="State">1</param>
                                                                 </action>
-                                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="290434756828795" type="Player_Base">
+                                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="290434756828795" type="Player">
                                                                     <param id="0" name="Input">1</param>
                                                                 </action>
                                                             </actions>
@@ -699,8 +699,8 @@
                                 <event-block sid="286087849550719">
                                     <conditions>
                                         <condition id="-33" name="Pick by comparison" sid="984231823124736" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">0</param>
                                         </condition>
@@ -718,7 +718,7 @@
                                                 <condition id="4" name="On key code pressed" sid="400425517061997" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_ARTS&quot;))</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="406958026389618" type="Player_Base" />
+                                                <condition behavior="Platform" id="2" name="Is on floor" sid="406958026389618" type="Player" />
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="990017928189356" type="Player_Mask">
                                                     <param id="0" name="Instance variable">crouch</param>
                                                 </condition>
@@ -758,8 +758,8 @@
                                 <event-block sid="159703782734523">
                                     <conditions>
                                         <condition id="-33" name="Pick by comparison" sid="243807040248541" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">1</param>
                                         </condition>
@@ -777,7 +777,7 @@
                                                 <condition id="4" name="On key code pressed" sid="375387389539155" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_2_control_ARTS&quot;))</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="377913864850584" type="Player_Base" />
+                                                <condition behavior="Platform" id="2" name="Is on floor" sid="377913864850584" type="Player" />
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="281400740723466" type="Player_Mask">
                                                     <param id="0" name="Instance variable">crouch</param>
                                                 </condition>
@@ -817,7 +817,7 @@
                             <sub-events>
                                 <event-block sid="714173580626445">
                                     <conditions>
-                                        <condition behavior="Platform" id="9" name="On landed" sid="580257451089789" type="Player_Base" />
+                                        <condition behavior="Platform" id="9" name="On landed" sid="580257451089789" type="Player" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
@@ -827,7 +827,7 @@
                                                     <param id="0" name="Object">Player_Mask</param>
                                                     <param id="1" name="Expression">Player_Mask.IID</param>
                                                     <param id="2" name="Comparison">0</param>
-                                                    <param id="3" name="Value">Player_Base.IID</param>
+                                                    <param id="3" name="Value">Player.IID</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -842,8 +842,8 @@
                                 <event-block sid="250151662392707">
                                     <conditions>
                                         <condition id="-24" name="For Each (ordered)" sid="355046662316887" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">player_base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Order">0</param>
                                         </condition>
                                     </conditions>
@@ -851,7 +851,7 @@
                                     <sub-events>
                                         <event-block sid="600931357956510">
                                             <conditions>
-                                                <condition behavior="Platform" id="4" name="Is falling" sid="927569274395216" type="Player_Base" />
+                                                <condition behavior="Platform" id="4" name="Is falling" sid="927569274395216" type="Player" />
                                             </conditions>
                                             <actions />
                                             <sub-events>
@@ -861,14 +861,14 @@
                                                             <param id="0" name="Object">Player_Mask</param>
                                                             <param id="1" name="Expression">Player_Mask.IID</param>
                                                             <param id="2" name="Comparison">0</param>
-                                                            <param id="3" name="Value">Player_Base.IID</param>
+                                                            <param id="3" name="Value">Player.IID</param>
                                                         </condition>
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="459382939166544" type="Player_Mask">
                                                             <param id="0" name="Instance variable">initiatedJump</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="Platform" id="8" name="Set vector X" sid="365002195619305" type="Player_Base">
+                                                        <action behavior="Platform" id="8" name="Set vector X" sid="365002195619305" type="Player">
                                                             <param id="0" name="Vector X">0</param>
                                                         </action>
                                                     </actions>
@@ -892,8 +892,8 @@
                                         <event-block sid="522639261001535">
                                             <conditions>
                                                 <condition id="-33" name="Pick by comparison" sid="317152636953715" type="System">
-                                                    <param id="0" name="Object">Player_Base</param>
-                                                    <param id="1" name="Expression">Player_Base.IID</param>
+                                                    <param id="0" name="Object">Player</param>
+                                                    <param id="1" name="Expression">Player.IID</param>
                                                     <param id="2" name="Comparison">0</param>
                                                     <param id="3" name="Value">0</param>
                                                 </condition>
@@ -913,7 +913,7 @@
                                             <sub-events>
                                                 <event-block sid="475968410219692">
                                                     <conditions>
-                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="806924033551985" type="Player_Base" />
+                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="806924033551985" type="Player" />
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="612596701561181" type="Player_Mask">
                                                             <param id="0" name="Instance variable">crouch</param>
                                                         </condition>
@@ -951,8 +951,8 @@
                                         <event-block sid="523986746599539">
                                             <conditions>
                                                 <condition id="-33" name="Pick by comparison" sid="342612918371695" type="System">
-                                                    <param id="0" name="Object">Player_Base</param>
-                                                    <param id="1" name="Expression">Player_Base.IID</param>
+                                                    <param id="0" name="Object">Player</param>
+                                                    <param id="1" name="Expression">Player.IID</param>
                                                     <param id="2" name="Comparison">0</param>
                                                     <param id="3" name="Value">1</param>
                                                 </condition>
@@ -972,7 +972,7 @@
                                             <sub-events>
                                                 <event-block sid="972142095205503">
                                                     <conditions>
-                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="220409721663182" type="Player_Base" />
+                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="220409721663182" type="Player" />
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="189440007525176" type="Player_Mask">
                                                             <param id="0" name="Instance variable">crouch</param>
                                                         </condition>
@@ -1006,8 +1006,8 @@
                                             <param id="3" name="Value">0</param>
                                         </condition>
                                         <condition id="-33" name="Pick by comparison" sid="151106378726131" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">0</param>
                                         </condition>
@@ -1016,7 +1016,7 @@
                                     <sub-events>
                                         <event-block sid="232401788034234">
                                             <conditions>
-                                                <condition id="9" name="Is overlapping at offset" sid="227963768169672" type="Player_Base">
+                                                <condition id="9" name="Is overlapping at offset" sid="227963768169672" type="Player">
                                                     <param id="0" name="Object">LadderCollision</param>
                                                     <param id="1" name="Offset X">0</param>
                                                     <param id="2" name="Offset Y">35</param>
@@ -1042,7 +1042,7 @@
                                         </event-block>
                                         <event-block sid="139468713766169">
                                             <conditions>
-                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="466846125415004" type="Player_Base">
+                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="466846125415004" type="Player">
                                                     <param id="0" name="Object">LadderCollision</param>
                                                 </condition>
                                                 <condition id="-4" name="Trigger once while true" sid="989015880576219" type="System" />
@@ -1084,7 +1084,7 @@
                                                     <sub-events>
                                                         <event-block sid="524257152432600">
                                                             <conditions>
-                                                                <condition id="1" name="Is overlapping another object" sid="607371322797348" type="Player_Base">
+                                                                <condition id="1" name="Is overlapping another object" sid="607371322797348" type="Player">
                                                                     <param id="0" name="Object">LadderCollision</param>
                                                                 </condition>
                                                             </conditions>
@@ -1122,7 +1122,7 @@
                                                                         <condition id="-8" name="Is boolean instance variable set" sid="264683974229757" type="Player_Mask">
                                                                             <param id="0" name="Instance variable">hasLadderOnBottom</param>
                                                                         </condition>
-                                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="766446526766517" type="Player_Base" />
+                                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="766446526766517" type="Player" />
                                                                     </conditions>
                                                                     <actions />
                                                                     <sub-events>
@@ -1139,7 +1139,7 @@
                                                                                     <param id="0" name="Instance variable">ladders</param>
                                                                                     <param id="1" name="Value">1</param>
                                                                                 </action>
-                                                                                <action id="-2" name="Set Y" sid="409920325764081" type="Player_Base">
+                                                                                <action id="-2" name="Set Y" sid="409920325764081" type="Player">
                                                                                     <param id="0" name="Y">LadderCollision.Y + 38</param>
                                                                                 </action>
                                                                             </actions>
@@ -1206,8 +1206,8 @@
                                             <param id="3" name="Value">1</param>
                                         </condition>
                                         <condition id="-33" name="Pick by comparison" sid="812894992231987" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">1</param>
                                         </condition>
@@ -1216,7 +1216,7 @@
                                     <sub-events>
                                         <event-block sid="978850767347923">
                                             <conditions>
-                                                <condition id="9" name="Is overlapping at offset" sid="371545951764256" type="Player_Base">
+                                                <condition id="9" name="Is overlapping at offset" sid="371545951764256" type="Player">
                                                     <param id="0" name="Object">LadderCollision</param>
                                                     <param id="1" name="Offset X">0</param>
                                                     <param id="2" name="Offset Y">35</param>
@@ -1242,7 +1242,7 @@
                                         </event-block>
                                         <event-block sid="210948539976608">
                                             <conditions>
-                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="861583651866780" type="Player_Base">
+                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="861583651866780" type="Player">
                                                     <param id="0" name="Object">LadderCollision</param>
                                                 </condition>
                                                 <condition id="-4" name="Trigger once while true" sid="396882149804594" type="System" />
@@ -1284,7 +1284,7 @@
                                                     <sub-events>
                                                         <event-block sid="463135243394094">
                                                             <conditions>
-                                                                <condition id="1" name="Is overlapping another object" sid="747749721954252" type="Player_Base">
+                                                                <condition id="1" name="Is overlapping another object" sid="747749721954252" type="Player">
                                                                     <param id="0" name="Object">LadderCollision</param>
                                                                 </condition>
                                                             </conditions>
@@ -1322,7 +1322,7 @@
                                                                         <condition id="-8" name="Is boolean instance variable set" sid="661927636970608" type="Player_Mask">
                                                                             <param id="0" name="Instance variable">hasLadderOnBottom</param>
                                                                         </condition>
-                                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="977557323054105" type="Player_Base" />
+                                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="977557323054105" type="Player" />
                                                                     </conditions>
                                                                     <actions />
                                                                     <sub-events>
@@ -1339,7 +1339,7 @@
                                                                                     <param id="0" name="Instance variable">ladders</param>
                                                                                     <param id="1" name="Value">1</param>
                                                                                 </action>
-                                                                                <action id="-2" name="Set Y" sid="701039071453577" type="Player_Base">
+                                                                                <action id="-2" name="Set Y" sid="701039071453577" type="Player">
                                                                                     <param id="0" name="Y">LadderCollision.Y + 38</param>
                                                                                 </action>
                                                                             </actions>
@@ -1407,8 +1407,8 @@
                                             <param id="3" name="Value">0</param>
                                         </condition>
                                         <condition id="-33" name="Pick by comparison" sid="263616814368907" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">0</param>
                                         </condition>
@@ -1423,7 +1423,7 @@
                                                 <condition id="5" name="Key code is down" sid="245986257492315" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="620343358063578" type="Player_Base" />
+                                                <condition behavior="Platform" id="2" name="Is on floor" sid="620343358063578" type="Player" />
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="465419363391674" type="Function">
@@ -1447,8 +1447,8 @@
                                             <param id="3" name="Value">1</param>
                                         </condition>
                                         <condition id="-33" name="Pick by comparison" sid="582119036588468" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">1</param>
                                         </condition>
@@ -1463,7 +1463,7 @@
                                                 <condition id="5" name="Key code is down" sid="441090481464916" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_2_control_DOWN&quot;))</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="307813348011126" type="Player_Base" />
+                                                <condition behavior="Platform" id="2" name="Is on floor" sid="307813348011126" type="Player" />
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="845124686224949" type="Function">
@@ -1488,8 +1488,8 @@
                                             <param id="3" name="Value">0</param>
                                         </condition>
                                         <condition id="-33" name="Pick by comparison" sid="440252787500148" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">0</param>
                                         </condition>
@@ -1504,7 +1504,7 @@
                                                 <condition id="5" inverted="1" name="Key code is down" sid="575377051776335" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="811025387425646" type="Player_Base" />
+                                                <condition behavior="Platform" id="2" name="Is on floor" sid="811025387425646" type="Player" />
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="412632647346394" type="Function">
@@ -1520,10 +1520,10 @@
                                                 </condition>
                                                 <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="239134097228203" type="LadderCollision">
                                                     <param id="0" name="Which">0</param>
-                                                    <param id="1" name="X">Player_Base.X</param>
-                                                    <param id="2" name="Y">Player_Base.Y</param>
+                                                    <param id="1" name="X">Player.X</param>
+                                                    <param id="2" name="Y">Player.Y</param>
                                                 </condition>
-                                                <condition id="-2" name="Compare Y" sid="244549181941539" type="Player_Base">
+                                                <condition id="-2" name="Compare Y" sid="244549181941539" type="Player">
                                                     <param id="0" name="Comparison">5</param>
                                                     <param id="1" name="Y co-ordinate">LadderCollision.Y+LadderCollision.Height-3</param>
                                                 </condition>
@@ -1569,8 +1569,8 @@
                                             <param id="3" name="Value">1</param>
                                         </condition>
                                         <condition id="-33" name="Pick by comparison" sid="342966770730082" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">1</param>
                                         </condition>
@@ -1585,7 +1585,7 @@
                                                 <condition id="5" inverted="1" name="Key code is down" sid="957312499508792" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_2_control_UP&quot;))</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="879739103991266" type="Player_Base" />
+                                                <condition behavior="Platform" id="2" name="Is on floor" sid="879739103991266" type="Player" />
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="810786559517485" type="Function">
@@ -1601,10 +1601,10 @@
                                                 </condition>
                                                 <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="747514241841626" type="LadderCollision">
                                                     <param id="0" name="Which">0</param>
-                                                    <param id="1" name="X">Player_Base.X</param>
-                                                    <param id="2" name="Y">Player_Base.Y</param>
+                                                    <param id="1" name="X">Player.X</param>
+                                                    <param id="2" name="Y">Player.Y</param>
                                                 </condition>
-                                                <condition id="-2" name="Compare Y" sid="449714018161118" type="Player_Base">
+                                                <condition id="-2" name="Compare Y" sid="449714018161118" type="Player">
                                                     <param id="0" name="Comparison">5</param>
                                                     <param id="1" name="Y co-ordinate">LadderCollision.Y+LadderCollision.Height-3</param>
                                                 </condition>
@@ -1784,8 +1784,8 @@
                                             <param id="3" name="Value">0</param>
                                         </condition>
                                         <condition id="-33" name="Pick by comparison" sid="422885052137174" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">0</param>
                                         </condition>
@@ -1819,7 +1819,7 @@
                                                 <condition id="5" inverted="1" name="Key code is down" sid="255138106272242" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="329205016342117" type="Player_Base" />
+                                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="329205016342117" type="Player" />
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="801122970406014" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shoot</param>
                                                 </condition>
@@ -1861,7 +1861,7 @@
                                                 <condition id="-8" name="Is boolean instance variable set" sid="977675552261247" type="Player_Mask">
                                                     <param id="0" name="Instance variable">crouch</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="767568536218213" type="Player_Base" />
+                                                <condition behavior="Platform" id="2" name="Is on floor" sid="767568536218213" type="Player" />
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="570089929222497" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shoot</param>
                                                 </condition>
@@ -1888,8 +1888,8 @@
                                             <param id="3" name="Value">1</param>
                                         </condition>
                                         <condition id="-33" name="Pick by comparison" sid="285996832055361" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">1</param>
                                         </condition>
@@ -1920,7 +1920,7 @@
                                                 <condition id="5" inverted="1" name="Key code is down" sid="963691269000683" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_2_control_UP&quot;))</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="324512678856421" type="Player_Base" />
+                                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="324512678856421" type="Player" />
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="710027253111605" type="Function">
@@ -1956,7 +1956,7 @@
                                                 <condition id="-8" name="Is boolean instance variable set" sid="289162317887249" type="Player_Mask">
                                                     <param id="0" name="Instance variable">crouch</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="380073841832291" type="Player_Base" />
+                                                <condition behavior="Platform" id="2" name="Is on floor" sid="380073841832291" type="Player" />
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="371534679934376" type="Function">
@@ -1978,8 +1978,8 @@
                                 <event-block sid="395176893431719">
                                     <conditions>
                                         <condition id="-24" name="For Each (ordered)" sid="728470410111440" type="System">
-                                            <param id="0" name="Object">Player_Base</param>
-                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.IID</param>
                                             <param id="2" name="Order">0</param>
                                         </condition>
                                         <condition id="-33" name="Pick by comparison" sid="349179010847271" type="System">
@@ -2002,8 +2002,8 @@
                                         <event-block sid="879252848252557">
                                             <conditions>
                                                 <condition id="-33" name="Pick by comparison" sid="971635832581497" type="System">
-                                                    <param id="0" name="Object">Player_Base</param>
-                                                    <param id="1" name="Expression">Player_Base.IID</param>
+                                                    <param id="0" name="Object">Player</param>
+                                                    <param id="1" name="Expression">Player.IID</param>
                                                     <param id="2" name="Comparison">0</param>
                                                     <param id="3" name="Value">int(Function.Param(0))</param>
                                                 </condition>
@@ -2025,7 +2025,7 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="Platform" id="9" name="Set vector Y" sid="409585828330750" type="Player_Base">
+                                                        <action behavior="Platform" id="9" name="Set vector Y" sid="409585828330750" type="Player">
                                                             <param id="0" name="Vector Y">Player_Mask.p_jumpHeight</param>
                                                         </action>
                                                         <action id="0" name="Play" sid="263420000668309" type="Audio">
@@ -2157,14 +2157,14 @@
                                                             <param id="3" name="Value">int(Function.Param(1))</param>
                                                         </condition>
                                                         <condition id="-33" name="Pick by comparison" sid="706756954477397" type="System">
-                                                            <param id="0" name="Object">Player_Base</param>
-                                                            <param id="1" name="Expression">Player_Base.IID</param>
+                                                            <param id="0" name="Object">Player</param>
+                                                            <param id="1" name="Expression">Player.IID</param>
                                                             <param id="2" name="Comparison">0</param>
                                                             <param id="3" name="Value">int(Function.Param(1))</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="Platform" id="8" name="Set vector X" sid="789546189091583" type="Player_Base">
+                                                        <action behavior="Platform" id="8" name="Set vector X" sid="789546189091583" type="Player">
                                                             <param id="0" name="Vector X">0</param>
                                                         </action>
                                                         <action id="-13" name="Set boolean" sid="823211697357615" type="Player_Mask">
@@ -2425,14 +2425,14 @@
                                 </event-block>
                                 <event-block sid="327661633510671">
                                     <conditions>
-                                        <condition behavior="Platform" id="9" name="On landed" sid="924161824302994" type="Player_Base" />
+                                        <condition behavior="Platform" id="9" name="On landed" sid="924161824302994" type="Player" />
                                     </conditions>
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="797307582269502" type="Player_Mask">
                                             <param id="0" name="Instance variable">landing</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action behavior="Platform" disabled="1" id="8" name="Set vector X" sid="380456761470764" type="Player_Base">
+                                        <action behavior="Platform" disabled="1" id="8" name="Set vector X" sid="380456761470764" type="Player">
                                             <param id="0" name="Vector X">0</param>
                                         </action>
                                         <action id="0" name="Play" sid="671516556356230" type="Audio">
@@ -2481,7 +2481,7 @@
                         <comment>Ground Animations</comment>
                         <event-block sid="733438276989602">
                             <conditions>
-                                <condition behavior="Platform" id="2" name="Is on floor" sid="726908313650922" type="Player_Base" />
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="726908313650922" type="Player" />
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="580689826725373" type="Player_Mask">
                                     <param id="0" name="Instance variable">landing</param>
                                 </condition>
@@ -2501,7 +2501,7 @@
                             <sub-events>
                                 <event-block sid="290884103730209">
                                     <conditions>
-                                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="168870028249310" type="Player_Base" />
+                                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="168870028249310" type="Player" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
@@ -2673,8 +2673,8 @@
                                 <comment>Run</comment>
                                 <event-block sid="814354151981339">
                                     <conditions>
-                                        <condition behavior="Platform" id="0" name="Is moving" sid="144868742432248" type="Player_Base" />
-                                        <condition behavior="Platform" id="2" name="Is on floor" sid="108497830013767" type="Player_Base" />
+                                        <condition behavior="Platform" id="0" name="Is moving" sid="144868742432248" type="Player" />
+                                        <condition behavior="Platform" id="2" name="Is on floor" sid="108497830013767" type="Player" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
@@ -2714,7 +2714,7 @@
                                                     <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Normal&quot;</param>
                                                     <param id="1" name="From">1</param>
                                                 </action>
-                                                <action behavior="Platform" id="8" name="Set vector X" sid="633746725907973" type="Player_Base">
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="633746725907973" type="Player">
                                                     <param id="0" name="Vector X">0</param>
                                                 </action>
                                             </actions>
@@ -2754,7 +2754,7 @@
                                                     <param id="0" name="Animation">Self.equip&amp;&quot;_&quot;&amp;self.weapon&amp;&quot;_Up&quot;</param>
                                                     <param id="1" name="From">1</param>
                                                 </action>
-                                                <action behavior="Platform" id="8" name="Set vector X" sid="236743250038279" type="Player_Base">
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="236743250038279" type="Player">
                                                     <param id="0" name="Vector X">0</param>
                                                 </action>
                                             </actions>
@@ -2781,7 +2781,7 @@
                         <comment>In-Air Animations</comment>
                         <event-block sid="865461498857599">
                             <conditions>
-                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="652690659856170" type="Player_Base" />
+                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="652690659856170" type="Player" />
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="645012137642265" type="Player_Mask">
                                     <param id="0" name="Instance variable">ladders</param>
                                 </condition>
@@ -3052,7 +3052,7 @@
                                 </event-block>
                                 <event-block sid="406357526980967">
                                     <conditions>
-                                        <condition behavior="8Direction" id="0" name="Is moving" sid="688511089118108" type="Player_Base" />
+                                        <condition behavior="8Direction" id="0" name="Is moving" sid="688511089118108" type="Player" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
@@ -3070,7 +3070,7 @@
                                 </event-block>
                                 <event-block sid="908918595073323">
                                     <conditions>
-                                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="738960689944949" type="Player_Base" />
+                                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="738960689944949" type="Player" />
                                     </conditions>
                                     <actions>
                                         <action id="2" name="Stop" sid="195338403081888" type="Player_Mask" />
@@ -3184,7 +3184,7 @@
                                     </conditions>
                                     <actions>
                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="993626598158091" type="Player_Shield">
-                                            <param id="0" name="Angle">anglelerp(self.Bullet.AngleOfMotion,angle(self.X,self.Y,player_base.X,player_base.Y-32),20*dt)</param>
+                                            <param id="0" name="Angle">anglelerp(self.Bullet.AngleOfMotion,angle(self.X,self.Y,Player.X,Player.Y-32),20*dt)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3196,14 +3196,14 @@
                                     </conditions>
                                     <actions>
                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="665994980776575" type="Player_Shield">
-                                            <param id="0" name="Angle">angle(self.X,self.Y,player_base.X,player_base.Y)</param>
+                                            <param id="0" name="Angle">angle(self.X,self.Y,Player.X,Player.Y)</param>
                                         </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="152188321588758">
                                     <conditions>
                                         <condition id="1" name="Is overlapping another object" sid="240543382773530" type="Player_Shield">
-                                            <param id="0" name="Object">Player_Base</param>
+                                            <param id="0" name="Object">Player</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -3666,7 +3666,7 @@
                         <comment>Change calculations depending on defense</comment>
                         <event-block bookmark="1" sid="389388935827616">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="873068129613445" type="Player_Base">
+                                <condition id="1" name="Is overlapping another object" sid="873068129613445" type="Player">
                                     <param id="0" name="Object">Enemies</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="469971405295424" type="Player_Mask">
@@ -3678,7 +3678,7 @@
                                 <event-block sid="526780531628287">
                                     <conditions>
                                         <condition id="1" name="Is overlapping another object" sid="859787589681910" type="En_PET">
-                                            <param id="0" name="Object">Player_Base</param>
+                                            <param id="0" name="Object">Player</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -3702,7 +3702,7 @@
                         <comment>Hurt the player when touching an enemy projectile</comment>
                         <event-block sid="545335378744055">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="506978665911332" type="Player_Base">
+                                <condition id="1" name="Is overlapping another object" sid="506978665911332" type="Player">
                                     <param id="0" name="Object">WeaponsEtc</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="549826684534917" type="Player_Mask">
@@ -3735,7 +3735,7 @@
                                     <param id="3" name="Volume">-6</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
-                                <action behavior="Platform" id="0" name="Set ignoring input" sid="681201260265363" type="Player_Base">
+                                <action behavior="Platform" id="0" name="Set ignoring input" sid="681201260265363" type="Player">
                                     <param id="0" name="Input">1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="787621461080446" type="Function">
@@ -3776,16 +3776,16 @@
                                     <param id="1" name="&apos;Off&apos; time">0.05</param>
                                     <param id="2" name="Duration">Infinity</param>
                                 </action>
-                                <action behavior="Platform" disabled="1" id="8" name="Set vector X" sid="965927837203023" type="Player_Base">
+                                <action behavior="Platform" disabled="1" id="8" name="Set vector X" sid="965927837203023" type="Player">
                                     <param id="0" name="Vector X">0</param>
                                 </action>
-                                <action behavior="Platform" id="2" name="Set acceleration" sid="531059591245116" type="Player_Base">
+                                <action behavior="Platform" id="2" name="Set acceleration" sid="531059591245116" type="Player">
                                     <param id="0" name="Acceleration">0</param>
                                 </action>
-                                <action behavior="Platform" id="3" name="Set deceleration" sid="195107387710953" type="Player_Base">
+                                <action behavior="Platform" id="3" name="Set deceleration" sid="195107387710953" type="Player">
                                     <param id="0" name="Deceleration">0</param>
                                 </action>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="688431513344632" type="Player_Base">
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="688431513344632" type="Player">
                                     <param id="0" name="Vector Y">-100</param>
                                 </action>
                             </actions>
@@ -3799,7 +3799,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Platform" id="8" name="Set vector X" sid="481539972235175" type="Player_Base">
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="481539972235175" type="Player">
                                             <param id="0" name="Vector X">-400</param>
                                         </action>
                                     </actions>
@@ -3813,7 +3813,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Platform" id="8" name="Set vector X" sid="265876073372224" type="Player_Base">
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="265876073372224" type="Player">
                                             <param id="0" name="Vector X">400</param>
                                         </action>
                                     </actions>
@@ -3844,16 +3844,16 @@
                                         <condition id="-4" name="Trigger once while true" sid="211974158428151" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="Platform" id="2" name="Set acceleration" sid="793633793924112" type="Player_Base">
+                                        <action behavior="Platform" id="2" name="Set acceleration" sid="793633793924112" type="Player">
                                             <param id="0" name="Acceleration">1000</param>
                                         </action>
-                                        <action behavior="Platform" id="3" name="Set deceleration" sid="877631974231885" type="Player_Base">
+                                        <action behavior="Platform" id="3" name="Set deceleration" sid="877631974231885" type="Player">
                                             <param id="0" name="Deceleration">1500</param>
                                         </action>
-                                        <action behavior="Platform" id="8" name="Set vector X" sid="619735269732109" type="Player_Base">
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="619735269732109" type="Player">
                                             <param id="0" name="Vector X">0</param>
                                         </action>
-                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="372507722917192" type="Player_Base">
+                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="372507722917192" type="Player">
                                             <param id="0" name="Input">0</param>
                                         </action>
                                     </actions>
@@ -3909,7 +3909,7 @@
                                     <param id="0" name="Group name">&quot;Player Engine&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="378062510246731" type="Player_Base">
+                                <action behavior="Platform" id="11" name="Set enabled" sid="378062510246731" type="Player">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>

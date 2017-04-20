@@ -14,14 +14,370 @@
         <include>Enemies_ES</include>
         <event-group description="" sid="127030302326891" title="Camera">
             <sub-events>
-                <event-block sid="927467330655327">
+                <event-block disabled="1" sid="927467330655327">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="788120862609751" type="System" />
                     </conditions>
                     <actions>
                         <action id="-7" name="Scroll to position" sid="658951265814033" type="System">
-                            <param id="0" name="X">Player_Base.X</param>
-                            <param id="1" name="Y">Player_Base.Y - 48</param>
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y - 48</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>updateCamera(ForceGoToTarget 0 no,1 yes,2 x only)</comment>
+                <event-block sid="313988352513989">
+                    <conditions>
+                        <condition id="0" name="On function" sid="388214250913493" type="Function">
+                            <param id="0" name="Name">&quot;updateCamera&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="205207630020445">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="921146871946392" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="592375007749299" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X, Self.targetX, 1-(self.lerpFactorX^dt))</param>
+                                    <param id="1" name="Y">lerp(Self.Y, Self.targetY, 1-(Self.lerpFactorY^dt))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="351742294722487">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="876021042252223" type="System" />
+                                <condition id="-8" name="Compare two values" sid="536773531193744" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="1" name="Compare parameter" sid="282015098765988" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="947629584534922" type="Camera">
+                                    <param id="0" name="X">round(Self.targetX)</param>
+                                    <param id="1" name="Y">round(Self.targetY)</param>
+                                </action>
+                                <action id="-7" name="Scroll to position" sid="108775787895854" type="System">
+                                    <param id="0" name="X">Camera.X</param>
+                                    <param id="1" name="Y">Camera.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="256578594996997">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="574704069989967" type="System" />
+                                <condition id="-8" name="Compare two values" sid="201644747873219" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="1" name="Compare parameter" sid="809443937367707" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="329390886360969" type="Camera">
+                                    <param id="0" name="X">Self.targetX</param>
+                                    <param id="1" name="Y">lerp(Self.Y, Self.targetY, 1-(Self.lerpFactorY^dt))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>setCameraTarget(X, Y, playerMaxY, ForceGoToTarget)</comment>
+                <event-block sid="598298726553749">
+                    <conditions>
+                        <condition id="0" name="On function" sid="283558518367585" type="Function">
+                            <param id="0" name="Name">&quot;setCameraTarget&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="449094939772937" type="Camera">
+                            <param id="0" name="Instance variable">targetX</param>
+                            <param id="1" name="Value">(Function.Param(0))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="576108056425645" type="Camera">
+                            <param id="0" name="Instance variable">targetY</param>
+                            <param id="1" name="Value">ceil(Function.Param(1))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="493443128251751">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="351506180507126" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="358740511011738" type="Camera">
+                                    <param id="0" name="Instance variable">playerMaxY</param>
+                                    <param id="1" name="Value">ceil(Function.Param(2))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="327450198479838">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="725891384458547" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="973300944079525" type="Function">
+                                    <param id="0" name="Name">&quot;updateCamera&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>setCameraTargetToPlayer(Player.UID, ForceGoToTarget)</comment>
+                <event-block sid="106716814295332">
+                    <conditions>
+                        <condition id="0" name="On function" sid="524819906858603" type="Function">
+                            <param id="0" name="Name">&quot;setCameraTargetToPlayer&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="955647804637086">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="473023019829965" type="Player">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="679470354084026" type="Camera">
+                                    <param id="0" name="Instance variable">targetX</param>
+                                    <param id="1" name="Value">(Player.X)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="453575599945167" type="Camera">
+                                    <param id="0" name="Instance variable">targetY</param>
+                                    <param id="1" name="Value">ceil(Player.Y + Camera.targetDeltaY)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="200794393338754" type="Camera">
+                                    <param id="0" name="Instance variable">playerMaxY</param>
+                                    <param id="1" name="Value">ceil(Player.Y)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="487685167438668">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="428886649998389" type="System">
+                                            <param id="0" name="First value">Function.ParamCount</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="456610537976538" type="Function">
+                                            <param id="0" name="Name">&quot;updateCamera&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="850607172652355">
+                    <conditions>
+                        <condition id="0" name="On function" sid="621198569946794" type="Function">
+                            <param id="0" name="Name">&quot;enableCamera&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="806297208053880">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="605315319729500" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="1" name="Set enabled" sid="262847086723058" type="Camera">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="858154307138212">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="361590705588452" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="1" name="Set enabled" sid="439065106795313" type="Camera">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="791906525293660">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="550242476696090" type="Player">
+                            <param id="0" name="Instance variable">CameraAux01</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="795838610752410">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="213038728046853" type="Player">
+                                    <param id="0" name="Object">col_camera_limit</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="565043911306445" type="Function">
+                                    <param id="0" name="Name">&quot;setCameraTarget&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.X + 32{###}Player.Y - 48{###}Player.Y - 48</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="442492722241938">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="972139333704226" type="System" />
+                                <condition id="1" name="Is overlapping another object" sid="960876487690397" type="Player">
+                                    <param id="0" name="Object">col_camera_limit</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="167790096504136" type="col_camera_limit">
+                                    <param id="0" name="Instance variable">IsActive</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="674025263351188">
+                                    <conditions>
+                                        <condition behavior="Platform" id="4" name="Is falling" sid="215926717203154" type="Player" />
+                                        <condition id="-8" name="Compare two values" sid="146406251915306" type="System">
+                                            <param id="0" name="First value">Player.Y</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">Camera.playerMaxY+Camera.fallingYTreshold</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="209843621079952" type="Function">
+                                            <param id="0" name="Name">&quot;setCameraTarget&quot;</param>
+                                            <param id="1" name="Parameter {n}">col_camera_limit.CameraXFocus = &quot;left&quot;? col_camera_limit.ImagePointX(1) : (col_camera_limit.CameraXFocus = &quot;right&quot; ? col_camera_limit.ImagePointX(3) : col_camera_limit.ImagePointX(2)){###}Player.Y + camera.targetDeltaYFalling</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="620469773863817">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="440729631675578" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="196644179527501" type="Function">
+                                            <param id="0" name="Name">&quot;setCameraTarget&quot;</param>
+                                            <param id="1" name="Parameter {n}">col_camera_limit.CameraXFocus = &quot;left&quot;? col_camera_limit.ImagePointX(1) : (col_camera_limit.CameraXFocus = &quot;right&quot; ? col_camera_limit.ImagePointX(3) : col_camera_limit.ImagePointX(2)){###}player.CameraAux02 ? player.Y : camera.playerMaxY{###}player.CameraAux02? 0 : (col_camera_limit.ImmediateFocus ? (col_camera_limit.ImmediateFocusXOnly ? 2 : 1) : 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="439934318154112">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="780578294027682" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="831518342649962">
+                                    <conditions>
+                                        <condition behavior="Platform" id="4" name="Is falling" sid="819986834543211" type="Player" />
+                                        <condition id="-8" name="Compare two values" sid="466305169135167" type="System">
+                                            <param id="0" name="First value">Player.Y</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">Camera.playerMaxY+Camera.fallingYTreshold</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="537622202569120">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="472217443935348" type="System">
+                                                    <param id="0" name="First value">player.Platform.VectorX</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="687022493835107">
+                                                    <conditions>
+                                                        <condition id="7" name="Is mirrored" sid="432147033716041" type="Player" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="527469787933707" type="Function">
+                                                            <param id="0" name="Name">&quot;setCameraTarget&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.X - Camera.targetDeltaX{###}Player.Y + Camera.targetDeltaYFalling</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="813556380103578">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="282372607025713" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="686385060136876" type="Function">
+                                                            <param id="0" name="Name">&quot;setCameraTarget&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.X + Camera.targetDeltaX{###}Player.Y + camera.targetDeltaYFalling</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="626807956367851">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="855249810313556" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="887238272825421" type="Function">
+                                                    <param id="0" name="Name">&quot;setCameraTarget&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.X{###}Player.Y + camera.targetDeltaYFalling</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="921872182457452">
+                            <conditions>
+                                <condition behavior="Platform" id="9" name="On landed" sid="471421754916255" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="656745904670830" type="Function">
+                                    <param id="0" name="Name">&quot;setCameraTarget&quot;</param>
+                                    <param id="1" name="Parameter {n}">Camera.targetX{###}Player.Y + Camera.targetDeltaY{###}Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="447095962666421">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="726927548348412" type="Function">
+                            <param id="0" name="Name">&quot;updateCamera&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -310,6 +666,10 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">-6</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="577713995737123" type="Function">
+                            <param id="0" name="Name">&quot;enableCamera&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
