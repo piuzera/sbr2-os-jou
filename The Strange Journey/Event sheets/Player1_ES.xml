@@ -227,10 +227,8 @@
                                                         <condition id="5" name="Key code is down" sid="958332433283043" type="Keyboard">
                                                             <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
                                                         </condition>
-                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="428044516523660" type="Player_Mask">
-                                                            <param id="0" name="Instance variable">hurtTimer</param>
-                                                            <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">1.6</param>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="428044516523660" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">hurt</param>
                                                         </condition>
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="816336735787650" type="Player_Mask">
                                                             <param id="0" name="Instance variable">isUsingArts</param>
@@ -254,10 +252,8 @@
                                                         <condition id="5" name="Key code is down" sid="327446895258008" type="Keyboard">
                                                             <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_LEFT&quot;))</param>
                                                         </condition>
-                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="165496999408055" type="Player_Mask">
-                                                            <param id="0" name="Instance variable">hurtTimer</param>
-                                                            <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">1.6</param>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="639318536185836" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">hurt</param>
                                                         </condition>
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="237359059722704" type="Player_Mask">
                                                             <param id="0" name="Instance variable">isUsingArts</param>
@@ -2488,10 +2484,8 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="925264043270157" type="Player_Mask">
                                     <param id="0" name="Instance variable">ladders</param>
                                 </condition>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="807648452683938" type="Player_Mask">
-                                    <param id="0" name="Instance variable">hurtTimer</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">1.6</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="679135686168525" type="Player_Mask">
+                                    <param id="0" name="Instance variable">hurt</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="251254453938234" type="Player_Mask">
                                     <param id="0" name="Instance variable">isUsingArts</param>
@@ -2999,10 +2993,8 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="376530090106658" type="Player_Mask">
                                     <param id="0" name="Instance variable">isUsingArts</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="367882100437724" type="Player_Mask">
-                                    <param id="0" name="Instance variable">hurtTimer</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">1.6</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="455299558204976" type="Player_Mask">
+                                    <param id="0" name="Instance variable">hurt</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -3672,6 +3664,7 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="469971405295424" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurt</param>
                                 </condition>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="426881116414665" type="Player_Mask" />
                             </conditions>
                             <actions />
                             <sub-events>
@@ -3708,6 +3701,7 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="549826684534917" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurt</param>
                                 </condition>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="444155115806884" type="Player_Mask" />
                                 <condition id="-7" name="Compare instance variable" sid="574269659888728" type="WeaponsEtc">
                                     <param id="0" name="Instance variable">owner</param>
                                     <param id="1" name="Comparison">0</param>
@@ -3750,9 +3744,9 @@
                                     <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
                                     <param id="1" name="Parameter {n}">Function.Param(0)</param>
                                 </action>
-                                <action id="0" name="Call function" sid="631943315527610" type="Function">
-                                    <param id="0" name="Name">&quot;Object_Flash&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player_Mask.UID</param>
+                                <action id="-13" name="Set boolean" sid="783391015592372" type="Player_Mask">
+                                    <param id="0" name="Instance variable">shoot</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="382875935078796" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurt</param>
@@ -3766,19 +3760,11 @@
                                     <param id="0" name="Instance variable">spinjump</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="780109837734270" type="Player_Mask">
+                                <action id="-10" name="Set value" sid="691776082991411" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurtTimer</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="236683265119392" type="Player_Sword" />
-                                <action behavior="Flash" id="0" name="Flash" sid="992210539991126" type="Player_Mask">
-                                    <param id="0" name="&apos;On&apos; time">0.05</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.05</param>
-                                    <param id="2" name="Duration">Infinity</param>
-                                </action>
-                                <action behavior="Platform" disabled="1" id="8" name="Set vector X" sid="965927837203023" type="Player">
-                                    <param id="0" name="Vector X">0</param>
-                                </action>
                                 <action behavior="Platform" id="2" name="Set acceleration" sid="531059591245116" type="Player">
                                     <param id="0" name="Acceleration">0</param>
                                 </action>
@@ -3786,92 +3772,82 @@
                                     <param id="0" name="Deceleration">0</param>
                                 </action>
                                 <action behavior="Platform" id="9" name="Set vector Y" sid="688431513344632" type="Player">
-                                    <param id="0" name="Vector Y">-100</param>
+                                    <param id="0" name="Vector Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment></comment>
+                        <event-block sid="891320523005637">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="836380133763944" type="Player_Mask">
+                                    <param id="0" name="Instance variable">hurt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="751148974583735" type="Player_Mask">
+                                    <param id="0" name="Instance variable">hurtTimer</param>
+                                    <param id="1" name="Value">dt</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="693715647459353">
+                                <event-block sid="140871072889210">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="941223100266791" type="Player_Mask">
+                                        <condition id="-7" name="Compare instance variable" sid="282304972801817" type="Player_Mask">
                                             <param id="0" name="Instance variable">direction</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;right&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Platform" id="8" name="Set vector X" sid="481539972235175" type="Player">
-                                            <param id="0" name="Vector X">-400</param>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="656625194698302" type="Player">
+                                            <param id="0" name="Vector X">-600</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="709566816774233">
+                                <event-block sid="884303212182277">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="821332930927506" type="Player_Mask">
+                                        <condition id="-7" name="Compare instance variable" sid="338580477115870" type="Player_Mask">
                                             <param id="0" name="Instance variable">direction</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;left&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Platform" id="8" name="Set vector X" sid="265876073372224" type="Player">
-                                            <param id="0" name="Vector X">400</param>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="708128925805146" type="Player">
+                                            <param id="0" name="Vector X">600</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment></comment>
-                        <event-block sid="493284369293970">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="223170310960189" type="Player_Mask">
-                                    <param id="0" name="Instance variable">hurt</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="801172125270213" type="Player_Mask">
-                                    <param id="0" name="Instance variable">hurtTimer</param>
-                                    <param id="1" name="Value">dt</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="512457079835813">
+                                <event-block sid="394409449604999">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="253935692654033" type="Player_Mask">
-                                            <param id="0" name="Instance variable">hurtTimer</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Value">1.6</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="211974158428151" type="System" />
+                                        <condition behavior="Platform" id="9" name="On landed" sid="885039763884920" type="Player" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="Platform" id="2" name="Set acceleration" sid="793633793924112" type="Player">
+                                        <action behavior="Flash" id="0" name="Flash" sid="992210539991126" type="Player_Mask">
+                                            <param id="0" name="&apos;On&apos; time">0.05</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.05</param>
+                                            <param id="2" name="Duration">1.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="631943315527610" type="Function">
+                                            <param id="0" name="Name">&quot;Object_Flash&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player_Mask.UID</param>
+                                        </action>
+                                        <action behavior="Platform" id="2" name="Set acceleration" sid="794391475796949" type="Player">
                                             <param id="0" name="Acceleration">1000</param>
                                         </action>
-                                        <action behavior="Platform" id="3" name="Set deceleration" sid="877631974231885" type="Player">
+                                        <action behavior="Platform" id="3" name="Set deceleration" sid="806425847101773" type="Player">
                                             <param id="0" name="Deceleration">1500</param>
                                         </action>
-                                        <action behavior="Platform" id="8" name="Set vector X" sid="619735269732109" type="Player">
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="746026626019423" type="Player">
                                             <param id="0" name="Vector X">0</param>
                                         </action>
-                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="372507722917192" type="Player">
+                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="455119345228045" type="Player">
                                             <param id="0" name="Input">0</param>
                                         </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="976761344479438">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="622260098356975" type="Player_Mask">
-                                            <param id="0" name="Instance variable">hurtTimer</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="146441183560617" type="Player_Mask">
+                                        <action id="-13" name="Set boolean" sid="722381717574701" type="Player_Mask">
                                             <param id="0" name="Instance variable">hurt</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action behavior="Flash" id="1" name="Stop flashing" sid="655002997448300" type="Player_Mask" />
                                     </actions>
                                 </event-block>
                             </sub-events>

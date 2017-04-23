@@ -248,7 +248,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="565043911306445" type="Function">
                                     <param id="0" name="Name">&quot;setCameraTarget&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player.X + 32{###}Player.Y - 48{###}Player.Y - 48</param>
+                                    <param id="1" name="Parameter {n}">Player.X + 16{###}Player.Y - 48{###}Player.Y - 48</param>
                                 </action>
                             </actions>
                         </event-block>

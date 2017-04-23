@@ -341,7 +341,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <health>1</health>
+                        <health>3</health>
                         <power>25</power>
                         <points>150</points>
                         <active>true</active>
@@ -1406,7 +1406,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <health>1</health>
+                        <health>3</health>
                         <power>25</power>
                         <points>150</points>
                         <active>true</active>
@@ -1508,7 +1508,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <health>1</health>
+                        <health>5</health>
                         <power>25</power>
                         <points>150</points>
                         <active>true</active>
