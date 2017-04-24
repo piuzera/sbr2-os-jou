@@ -275,10 +275,8 @@
                                                 <event-block sid="137423510159616">
                                                     <conditions>
                                                         <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="509920412821793" type="Player" />
-                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="864591518271905" type="Player_Mask">
-                                                            <param id="0" name="Instance variable">hurtTimer</param>
-                                                            <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">1.6</param>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="846860521997904" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">hurt</param>
                                                         </condition>
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="144857438231353" type="Player_Mask">
                                                             <param id="0" name="Instance variable">isUsingArts</param>
@@ -1657,10 +1655,8 @@
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="292011956168754" type="Player_Mask">
                                                     <param id="0" name="Instance variable">ladders</param>
                                                 </condition>
-                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="840559884376246" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">hurtTimer</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">1.6</param>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="840559884376246" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">hurt</param>
                                                 </condition>
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="583495529660165" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shoot</param>
@@ -1678,13 +1674,11 @@
                                                 <condition id="4" name="On key code pressed" sid="156309002656429" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_SUBWP&quot;))</param>
                                                 </condition>
-                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="623065915707568" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">hurtTimer</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">1.6</param>
-                                                </condition>
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="165472355041103" type="Player_Mask">
                                                     <param id="0" name="Instance variable">ladders</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="849654172277442" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">hurt</param>
                                                 </condition>
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="929013939946467" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shoot</param>
