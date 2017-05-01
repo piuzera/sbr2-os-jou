@@ -420,11 +420,11 @@
             </effects>
             <animation-folder>
                 <animation-folder name="Default">
-                    <animation framecount="2" loop="0" name="Default_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="410207182997283" speed="5">
+                    <animation framecount="2" loop="0" name="Hi_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="410207182997283" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="6" loop="1" name="Default_Run" pingpong="0" repeatcount="1" repeatto="0" sid="105613986055919" speed="10">
+                    <animation framecount="6" loop="1" name="Hi_Run" pingpong="0" repeatcount="1" repeatto="0" sid="105613986055919" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -432,16 +432,16 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Default_Jump" pingpong="0" repeatcount="1" repeatto="0" sid="582737055713886" speed="5">
+                    <animation framecount="1" loop="0" name="Hi_Jump" pingpong="0" repeatcount="1" repeatto="0" sid="582737055713886" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="1" loop="1" name="Default_ForwardJump" pingpong="0" repeatcount="1" repeatto="0" sid="848683280095593" speed="20">
+                    <animation framecount="1" loop="1" name="Hi_ForwardJump" pingpong="0" repeatcount="1" repeatto="0" sid="848683280095593" speed="20">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Default_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="143482970654029" speed="5">
+                    <animation framecount="1" loop="0" name="Hi_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="143482970654029" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Main_Normal" pingpong="0" repeatcount="1" repeatto="0" sid="664320455935313" speed="13">
+                    <animation framecount="2" loop="0" name="Hi_Main_Normal" pingpong="0" repeatcount="1" repeatto="0" sid="664320455935313" speed="13">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.333333" y="0.166667" />
                         </frame>
@@ -449,7 +449,7 @@
                             <image-point name="Imagepoint 1" x="0.333333" y="0.166667" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Sub_Normal" pingpong="0" repeatcount="1" repeatto="0" sid="110664456484582" speed="13">
+                    <animation framecount="2" loop="0" name="Hi_Sub_Normal" pingpong="0" repeatcount="1" repeatto="0" sid="110664456484582" speed="13">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
@@ -457,7 +457,7 @@
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Main_Normal_Air" pingpong="0" repeatcount="1" repeatto="0" sid="442607405633409" speed="13">
+                    <animation framecount="2" loop="0" name="Hi_Main_Normal_Air" pingpong="0" repeatcount="1" repeatto="0" sid="442607405633409" speed="13">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.333333" y="0.1875" />
                         </frame>
@@ -465,7 +465,7 @@
                             <image-point name="Imagepoint 1" x="0.333333" y="0.1875" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Sub_Normal_Air" pingpong="0" repeatcount="1" repeatto="0" sid="388394632977787" speed="13">
+                    <animation framecount="2" loop="0" name="Hi_Sub_Normal_Air" pingpong="0" repeatcount="1" repeatto="0" sid="388394632977787" speed="13">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
@@ -473,20 +473,20 @@
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Main_Up" pingpong="0" repeatcount="1" repeatto="0" sid="730873519069328" speed="15">
+                    <animation framecount="2" loop="0" name="Hi_Main_Up" pingpong="0" repeatcount="1" repeatto="0" sid="730873519069328" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                             <image-point name="Imagepoint 2" x="0.5" y="0.5" />
                         </frame>
                         <frame duration="3.3" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Sub_Up" pingpong="0" repeatcount="1" repeatto="0" sid="448934582982264" speed="15">
+                    <animation framecount="2" loop="0" name="Hi_Sub_Up" pingpong="0" repeatcount="1" repeatto="0" sid="448934582982264" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
                         <frame duration="60" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Main_Up_Air" pingpong="0" repeatcount="1" repeatto="0" sid="343484953519915" speed="15">
+                    <animation framecount="2" loop="0" name="Hi_Main_Up_Air" pingpong="0" repeatcount="1" repeatto="0" sid="343484953519915" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
@@ -494,7 +494,7 @@
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Sub_Up_Air" pingpong="0" repeatcount="1" repeatto="0" sid="296429462449211" speed="15">
+                    <animation framecount="2" loop="0" name="Hi_Sub_Up_Air" pingpong="0" repeatcount="1" repeatto="0" sid="296429462449211" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
@@ -502,11 +502,11 @@
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Main_Down_Air" pingpong="0" repeatcount="1" repeatto="0" sid="617197467693475" speed="15">
+                    <animation framecount="2" loop="0" name="Hi_Main_Down_Air" pingpong="0" repeatcount="1" repeatto="0" sid="617197467693475" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="3.3" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Sub_Down_Air" pingpong="0" repeatcount="1" repeatto="0" sid="298080282637893" speed="15">
+                    <animation framecount="2" loop="0" name="Hi_Sub_Down_Air" pingpong="0" repeatcount="1" repeatto="0" sid="298080282637893" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
@@ -514,7 +514,7 @@
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Main_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="100430901751874" speed="15">
+                    <animation framecount="2" loop="0" name="Hi_Main_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="100430901751874" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.333333" y="0.166667" />
                         </frame>
@@ -522,7 +522,7 @@
                             <image-point name="Imagepoint 1" x="0.333333" y="0.166667" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Sub_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="230892846294482" speed="15">
+                    <animation framecount="2" loop="0" name="Hi_Sub_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="230892846294482" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
@@ -530,21 +530,21 @@
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="4" loop="1" name="Default_Climb" pingpong="0" repeatcount="1" repeatto="0" sid="229090534133927" speed="15">
+                    <animation framecount="4" loop="1" name="Hi_Climb" pingpong="0" repeatcount="1" repeatto="0" sid="229090534133927" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Climb_Top" pingpong="0" repeatcount="1" repeatto="0" sid="653860242765718" speed="7">
+                    <animation framecount="2" loop="0" name="Hi_Climb_Top" pingpong="0" repeatcount="1" repeatto="0" sid="653860242765718" speed="7">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="2" loop="0" name="Default_Climb_Bottom" pingpong="0" repeatcount="1" repeatto="0" sid="473177595452331" speed="15">
+                    <animation framecount="2" loop="0" name="Hi_Climb_Bottom" pingpong="0" repeatcount="1" repeatto="0" sid="473177595452331" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Default_Use_Arts" pingpong="0" repeatcount="1" repeatto="0" sid="627151552476748" speed="5">
+                    <animation framecount="1" loop="0" name="Hi_Use_Arts" pingpong="0" repeatcount="1" repeatto="0" sid="627151552476748" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <collision-poly>
                                 <point x="1" y="1" />
@@ -554,10 +554,152 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="Default_Hurt" pingpong="0" repeatcount="1" repeatto="0" sid="871570336872789" speed="5">
+                    <animation framecount="1" loop="0" name="Hi_Hurt" pingpong="0" repeatcount="1" repeatto="0" sid="871570336872789" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Default_Win" pingpong="0" repeatcount="1" repeatto="0" sid="425615856969771" speed="5">
+                    <animation framecount="1" loop="0" name="Hi_Win" pingpong="0" repeatcount="1" repeatto="0" sid="425615856969771" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+                <animation-folder name="Egyptian">
+                    <animation framecount="2" loop="0" name="Eg_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="151421763696806" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="6" loop="1" name="Eg_Run" pingpong="0" repeatcount="1" repeatto="0" sid="666466619378379" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Eg_Jump" pingpong="0" repeatcount="1" repeatto="0" sid="561239342638316" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="1" loop="1" name="Eg_ForwardJump" pingpong="0" repeatcount="1" repeatto="0" sid="727900644984884" speed="20">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Eg_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="712915862873685" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Main_Normal" pingpong="0" repeatcount="1" repeatto="0" sid="881318693876703" speed="13">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.333333" y="0.166667" />
+                        </frame>
+                        <frame duration="3.3" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.333333" y="0.166667" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Sub_Normal" pingpong="0" repeatcount="1" repeatto="0" sid="550850956116266" speed="13">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="60" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Main_Normal_Air" pingpong="0" repeatcount="1" repeatto="0" sid="669771967535780" speed="13">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.333333" y="0.1875" />
+                        </frame>
+                        <frame duration="3.3" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.333333" y="0.1875" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Sub_Normal_Air" pingpong="0" repeatcount="1" repeatto="0" sid="840461726188950" speed="13">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="60" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Main_Up" pingpong="0" repeatcount="1" repeatto="0" sid="223729833170052" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="3.3" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Sub_Up" pingpong="0" repeatcount="1" repeatto="0" sid="264411396130714" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="60" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Main_Up_Air" pingpong="0" repeatcount="1" repeatto="0" sid="181512031137928" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="3.3" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Sub_Up_Air" pingpong="0" repeatcount="1" repeatto="0" sid="911490114061656" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="60" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Main_Down_Air" pingpong="0" repeatcount="1" repeatto="0" sid="140294873439880" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="3.3" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Sub_Down_Air" pingpong="0" repeatcount="1" repeatto="0" sid="894138294975384" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="60" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Main_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="257751660118878" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.333333" y="0.166667" />
+                        </frame>
+                        <frame duration="3.3" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.333333" y="0.166667" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Sub_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="628288065146296" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="60" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="Eg_Climb" pingpong="0" repeatcount="1" repeatto="0" sid="718049909396783" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Climb_Top" pingpong="0" repeatcount="1" repeatto="0" sid="163186449104575" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Eg_Climb_Bottom" pingpong="0" repeatcount="1" repeatto="0" sid="782968968150290" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Eg_Use_Arts" pingpong="0" repeatcount="1" repeatto="0" sid="358117516095765" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Eg_Hurt" pingpong="0" repeatcount="1" repeatto="0" sid="900968610123767" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Eg_Win" pingpong="0" repeatcount="1" repeatto="0" sid="227943341958792" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
@@ -2863,6 +3005,9 @@
                 <behavior-type name="EaseTween" sid="123869304883800">
                     <behavior id="lunarray_Tween" />
                 </behavior-type>
+                <behavior-type name="Flash" sid="139391731730589">
+                    <behavior id="Flash" />
+                </behavior-type>
             </behaviors>
             <texture original-source="E:\Dropbox\Copy Girl\Assets\UI\font_normal.png" />
         </object-type>
@@ -2890,6 +3035,9 @@
         </object-type>
         <object-type name="char_select_bg3" sid="791490255114771">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="canSelect" sid="654500140808420" type="boolean" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="highlander" pingpong="0" repeatcount="1" repeatto="0" sid="308020816875768" speed="5">
                     <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="D:\Dropbox\JITEC\Game Screens\4_Character_Select.png">
@@ -2971,17 +3119,17 @@
             </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="136693860110219" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\repos\sbr2-os-jou\The Strange Journey\Animations\Player_Mask\Eg_Jump\000.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="Landed" pingpong="0" repeatcount="1" repeatto="0" sid="443382187946753" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\repos\sbr2-os-jou\The Strange Journey\Animations\Player_Mask\Eg_Crouch\000.png" />
                 </animation>
                 <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="507323576707074" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\repos\sbr2-os-jou\The Strange Journey\Animations\Player_Mask\Eg_Idle\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\repos\sbr2-os-jou\The Strange Journey\Animations\Player_Mask\Eg_Idle\001.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="980388049549887" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\repos\sbr2-os-jou\The Strange Journey\Animations\Player_Mask\Eg_Win\000.png" />
                 </animation>
             </animation-folder>
         </object-type>

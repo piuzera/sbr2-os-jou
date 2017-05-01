@@ -7,208 +7,231 @@
         <variable constant="0" name="menu_charselect" sid="414414041147407" static="0" type="number">0</variable>
         <event-group description="" inactive="1" sid="483587471215138" title="CharSelect">
             <sub-events>
-                <event-block sid="492072142554682">
+                <event-block sid="501927407797292">
                     <conditions>
-                        <condition id="5" name="Key code is down" sid="987419489322131" type="Keyboard">
-                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_LEFT&quot;))</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="532304578772577" type="char_select_bg3">
+                            <param id="0" name="Instance variable">canSelect</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="861644975483059">
+                        <event-block sid="492072142554682">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="527267648458808" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="337672681433910" type="System">
-                                    <param id="0" name="Variable">menu_charselect</param>
-                                    <param id="1" name="Value">clamp(menu_charselect-1,0,char_select_bg2.Count-1)</param>
-                                </action>
-                                <action id="0" name="Call function" sid="646180811927785" type="Function">
-                                    <param id="0" name="Name">&quot;change_title&quot;</param>
-                                    <param id="1" name="Parameter {n}">menu_charselect</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="607424899112980">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="167468969129382" type="System">
-                                            <param id="0" name="Object">char_select_bg2</param>
-                                            <param id="1" name="Expression">char_select_bg2.char_pick</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">menu_charselect</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-1" name="Set X" sid="644729196247086" type="char_select_bg3">
-                                            <param id="0" name="X">112</param>
-                                        </action>
-                                        <action id="-2" name="Set Y" sid="381549874725125" type="char_select_bg3">
-                                            <param id="0" name="Y">368</param>
-                                        </action>
-                                        <action id="-28" name="Set effect parameter" sid="329291216542022" type="CharSelect_Highlander">
-                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                                            <param id="1" name="Parameter index">0</param>
-                                            <param id="2" name="Value">100</param>
-                                        </action>
-                                        <action id="-28" name="Set effect parameter" sid="715940767246074" type="CharSelect_Egyptian">
-                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                                            <param id="1" name="Parameter index">0</param>
-                                            <param id="2" name="Value">75</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="877003347236499">
-                    <conditions>
-                        <condition id="5" name="Key code is down" sid="755088095939230" type="Keyboard">
-                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_RIGHT&quot;))</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="644672539553181">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="696623505773927" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="222975140217319" type="System">
-                                    <param id="0" name="Variable">menu_charselect</param>
-                                    <param id="1" name="Value">clamp(menu_charselect+1,0,char_select_bg2.Count-1)</param>
-                                </action>
-                                <action id="0" name="Call function" sid="858243471982257" type="Function">
-                                    <param id="0" name="Name">&quot;change_title&quot;</param>
-                                    <param id="1" name="Parameter {n}">menu_charselect</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="905625238300595">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="854841249370539" type="System">
-                                            <param id="0" name="Object">char_select_bg2</param>
-                                            <param id="1" name="Expression">char_select_bg2.char_pick</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">menu_charselect</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-1" name="Set X" sid="931066077740022" type="char_select_bg3">
-                                            <param id="0" name="X">208</param>
-                                        </action>
-                                        <action id="-2" name="Set Y" sid="910144961527703" type="char_select_bg3">
-                                            <param id="0" name="Y">368</param>
-                                        </action>
-                                        <action id="-28" name="Set effect parameter" sid="257144028354946" type="CharSelect_Highlander">
-                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                                            <param id="1" name="Parameter index">0</param>
-                                            <param id="2" name="Value">75</param>
-                                        </action>
-                                        <action id="-28" name="Set effect parameter" sid="944223871114615" type="CharSelect_Egyptian">
-                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                                            <param id="1" name="Parameter index">0</param>
-                                            <param id="2" name="Value">100</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="843206056726021">
-                    <conditions>
-                        <condition id="5" name="Key code is down" sid="221854322124709" type="Keyboard">
-                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_JUMP&quot;))</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="540682570264625">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="847367339440267" type="System" />
+                                <condition id="5" name="Key code is down" sid="987419489322131" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_LEFT&quot;))</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="321546259079901">
+                                <event-block sid="861644975483059">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="171261340900989" type="System">
-                                            <param id="0" name="Variable">menu_waitInput</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">5</param>
-                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="527267648458808" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="632370285285351" type="System">
-                                            <param id="0" name="Variable">menu_waitInput</param>
+                                        <action id="-9" name="Set value" sid="337672681433910" type="System">
+                                            <param id="0" name="Variable">menu_charselect</param>
+                                            <param id="1" name="Value">clamp(menu_charselect-1,0,char_select_bg2.Count-1)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="646180811927785" type="Function">
+                                            <param id="0" name="Name">&quot;change_title&quot;</param>
+                                            <param id="1" name="Parameter {n}">menu_charselect</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="607424899112980">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="167468969129382" type="System">
+                                                    <param id="0" name="Object">char_select_bg2</param>
+                                                    <param id="1" name="Expression">char_select_bg2.char_pick</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">menu_charselect</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="644729196247086" type="char_select_bg3">
+                                                    <param id="0" name="X">112</param>
+                                                </action>
+                                                <action id="-2" name="Set Y" sid="381549874725125" type="char_select_bg3">
+                                                    <param id="0" name="Y">368</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="329291216542022" type="CharSelect_Highlander">
+                                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">100</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="715940767246074" type="CharSelect_Egyptian">
+                                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">75</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="877003347236499">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="755088095939230" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_RIGHT&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="644672539553181">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="696623505773927" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="222975140217319" type="System">
+                                            <param id="0" name="Variable">menu_charselect</param>
+                                            <param id="1" name="Value">clamp(menu_charselect+1,0,char_select_bg2.Count-1)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="858243471982257" type="Function">
+                                            <param id="0" name="Name">&quot;change_title&quot;</param>
+                                            <param id="1" name="Parameter {n}">menu_charselect</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="905625238300595">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="854841249370539" type="System">
+                                                    <param id="0" name="Object">char_select_bg2</param>
+                                                    <param id="1" name="Expression">char_select_bg2.char_pick</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">menu_charselect</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="931066077740022" type="char_select_bg3">
+                                                    <param id="0" name="X">208</param>
+                                                </action>
+                                                <action id="-2" name="Set Y" sid="910144961527703" type="char_select_bg3">
+                                                    <param id="0" name="Y">368</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="257144028354946" type="CharSelect_Highlander">
+                                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">75</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="944223871114615" type="CharSelect_Egyptian">
+                                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="843206056726021">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="221854322124709" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_JUMP&quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="540682570264625">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="847367339440267" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="556697962412756" type="char_select_bg3">
+                                            <param id="0" name="Instance variable">canSelect</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="302639130347914">
+                                        <event-block sid="321546259079901">
                                             <conditions>
-                                                <condition id="-14" name="Compare variable" sid="815286748253359" type="System">
-                                                    <param id="0" name="Variable">menu_charselect</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
+                                                <condition id="-14" name="Compare variable" sid="171261340900989" type="System">
+                                                    <param id="0" name="Variable">menu_waitInput</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">5</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="4" name="Set animation" sid="513949888311891" type="CharSelect_Highlander">
-                                                    <param id="0" name="Animation">&quot;Selected&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="774824491441261" type="System">
-                                                    <param id="0" name="Seconds">1.5</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="410567159790412" type="Function">
-                                                    <param id="0" name="Name">&quot;Fade&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="219442509017382" type="Function">
-                                                    <param id="0" name="Name">&quot;Pixellate&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="658078059153902" type="System">
-                                                    <param id="0" name="Seconds">1</param>
-                                                </action>
-                                                <action id="-2" name="Go to layout" sid="626160618912962" type="System">
-                                                    <param id="0" name="Layout">Map</param>
+                                                <action id="-9" name="Set value" sid="632370285285351" type="System">
+                                                    <param id="0" name="Variable">menu_waitInput</param>
+                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
-                                        </event-block>
-                                        <event-block sid="720515556901229">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="979017239124692" type="System">
-                                                    <param id="0" name="Variable">menu_charselect</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="774371370614672" type="CharSelect_Egyptian">
-                                                    <param id="0" name="Animation">&quot;Selected&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="867265514931413" type="System">
-                                                    <param id="0" name="Seconds">1.5</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="817563853606092" type="Function">
-                                                    <param id="0" name="Name">&quot;Fade&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="644791842638161" type="Function">
-                                                    <param id="0" name="Name">&quot;Pixellate&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="173339606069257" type="System">
-                                                    <param id="0" name="Seconds">1</param>
-                                                </action>
-                                                <action id="-2" name="Go to layout" sid="878815481924834" type="System">
-                                                    <param id="0" name="Layout">Map</param>
-                                                </action>
-                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="302639130347914">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="815286748253359" type="System">
+                                                            <param id="0" name="Variable">menu_charselect</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="513949888311891" type="CharSelect_Highlander">
+                                                            <param id="0" name="Animation">&quot;Selected&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="198713509872196" type="System">
+                                                            <param id="0" name="Variable">playerChosen</param>
+                                                            <param id="1" name="Value">&quot;Hi&quot;</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="774824491441261" type="System">
+                                                            <param id="0" name="Seconds">1.5</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="410567159790412" type="Function">
+                                                            <param id="0" name="Name">&quot;Fade&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="219442509017382" type="Function">
+                                                            <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="658078059153902" type="System">
+                                                            <param id="0" name="Seconds">1</param>
+                                                        </action>
+                                                        <action id="-2" name="Go to layout" sid="626160618912962" type="System">
+                                                            <param id="0" name="Layout">Map</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="720515556901229">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="979017239124692" type="System">
+                                                            <param id="0" name="Variable">menu_charselect</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="774371370614672" type="CharSelect_Egyptian">
+                                                            <param id="0" name="Animation">&quot;Selected&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="771064421990588" type="System">
+                                                            <param id="0" name="Variable">playerChosen</param>
+                                                            <param id="1" name="Value">&quot;Eg&quot;</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="867265514931413" type="System">
+                                                            <param id="0" name="Seconds">1.5</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="817563853606092" type="Function">
+                                                            <param id="0" name="Name">&quot;Fade&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="644791842638161" type="Function">
+                                                            <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="173339606069257" type="System">
+                                                            <param id="0" name="Seconds">1</param>
+                                                        </action>
+                                                        <action id="-2" name="Go to layout" sid="878815481924834" type="System">
+                                                            <param id="0" name="Layout">Map</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>

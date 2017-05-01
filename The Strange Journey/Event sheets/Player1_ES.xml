@@ -3,6 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player1_ES</name>
     <events>
+        <variable constant="0" name="playerChosen" sid="998865438430962" static="0" type="text">hi</variable>
+        <event-block sid="193616386465418">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="798448892020463" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="200445876365204" type="Player_Mask">
+                    <param id="0" name="Instance variable">equip</param>
+                    <param id="1" name="Value">playerChosen</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="444123292717814" title="Player 1 Passive">
             <sub-events>
                 <comment>Position mask to base</comment>
@@ -3221,7 +3233,7 @@
                                         <condition id="-7" name="Compare instance variable" sid="147315100993950" type="Player_Mask">
                                             <param id="0" name="Instance variable">equip</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Default&quot;</param>
+                                            <param id="2" name="Value">&quot;Hi&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions />
