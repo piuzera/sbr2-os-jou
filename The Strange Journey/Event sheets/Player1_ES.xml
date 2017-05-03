@@ -4717,6 +4717,7 @@
                             <param id="0" name="Animation">self.equip&amp;&quot;_Death&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action behavior="Flash" id="1" name="Stop flashing" sid="408334869981448" type="Player_Mask" />
                     </actions>
                 </event-block>
                 <event-block sid="816081859381424">

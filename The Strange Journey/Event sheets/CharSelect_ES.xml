@@ -10,6 +10,10 @@
                 <condition id="-2" name="On start of layout" sid="320495738294403" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="824912294956326" type="System">
+                    <param id="0" name="Variable">menuPick</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="-13" name="Set boolean" sid="868695206312684" type="char_select_bg3">
                     <param id="0" name="Instance variable">canSelect</param>
                     <param id="1" name="Value">0</param>
@@ -41,7 +45,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="337672681433910" type="System">
                                             <param id="0" name="Variable">menu_charselect</param>
-                                            <param id="1" name="Value">clamp(menu_charselect-1,0,char_select_bg2.Count-1)</param>
+                                            <param id="1" name="Value">clamp(menu_charselect-1,0,1)</param>
                                         </action>
                                         <action id="0" name="Call function" sid="646180811927785" type="Function">
                                             <param id="0" name="Name">&quot;change_title&quot;</param>
@@ -96,7 +100,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="222975140217319" type="System">
                                             <param id="0" name="Variable">menu_charselect</param>
-                                            <param id="1" name="Value">clamp(menu_charselect+1,0,char_select_bg2.Count-1)</param>
+                                            <param id="1" name="Value">clamp(menu_charselect+1,0,1)</param>
                                         </action>
                                         <action id="0" name="Call function" sid="858243471982257" type="Function">
                                             <param id="0" name="Name">&quot;change_title&quot;</param>
