@@ -560,6 +560,9 @@
                     <animation framecount="1" loop="0" name="Hi_Win" pingpong="0" repeatcount="1" repeatto="0" sid="425615856969771" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
+                    <animation framecount="1" loop="0" name="Hi_Death" pingpong="0" repeatcount="1" repeatto="0" sid="955619177985613" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.708333" />
+                    </animation>
                 </animation-folder>
                 <animation-folder name="Egyptian">
                     <animation framecount="2" loop="0" name="Eg_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="151421763696806" speed="5">
@@ -697,6 +700,9 @@
                     </animation>
                     <animation framecount="1" loop="0" name="Eg_Win" pingpong="0" repeatcount="1" repeatto="0" sid="227943341958792" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Eg_Death" pingpong="0" repeatcount="1" repeatto="0" sid="455153806623502" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.708333" />
                     </animation>
                 </animation-folder>
                 <animation-folder name="Armor">

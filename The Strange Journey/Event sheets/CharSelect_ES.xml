@@ -5,6 +5,17 @@
     <events>
         <include>Init_ES</include>
         <variable constant="0" name="menu_charselect" sid="414414041147407" static="0" type="number">0</variable>
+        <event-block sid="459072040979441">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="320495738294403" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="868695206312684" type="char_select_bg3">
+                    <param id="0" name="Instance variable">canSelect</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" inactive="1" sid="483587471215138" title="CharSelect">
             <sub-events>
                 <event-block sid="501927407797292">
@@ -141,6 +152,10 @@
                                         <action id="-13" name="Set boolean" sid="556697962412756" type="char_select_bg3">
                                             <param id="0" name="Instance variable">canSelect</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="656195857640309" type="System">
+                                            <param id="0" name="Group name">&quot;CharSelect&quot;</param>
+                                            <param id="1" name="State">0</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -402,6 +417,10 @@
                             <param id="0" name="Effect">&quot;Brightness&quot;</param>
                             <param id="1" name="Parameter index">0</param>
                             <param id="2" name="Value">75</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="313997902864303" type="char_select_bg3">
+                            <param id="0" name="Instance variable">canSelect</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
