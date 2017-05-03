@@ -63,11 +63,11 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-1" name="Set X" sid="644729196247086" type="char_select_bg3">
-                                                    <param id="0" name="X">112</param>
-                                                </action>
                                                 <action id="-2" name="Set Y" sid="381549874725125" type="char_select_bg3">
                                                     <param id="0" name="Y">368</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="644729196247086" type="char_select_bg3">
+                                                    <param id="0" name="X">112</param>
                                                 </action>
                                                 <action id="-28" name="Set effect parameter" sid="329291216542022" type="CharSelect_Highlander">
                                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
@@ -118,11 +118,11 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-1" name="Set X" sid="931066077740022" type="char_select_bg3">
-                                                    <param id="0" name="X">208</param>
-                                                </action>
                                                 <action id="-2" name="Set Y" sid="910144961527703" type="char_select_bg3">
                                                     <param id="0" name="Y">368</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="931066077740022" type="char_select_bg3">
+                                                    <param id="0" name="X">208</param>
                                                 </action>
                                                 <action id="-28" name="Set effect parameter" sid="257144028354946" type="CharSelect_Highlander">
                                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
