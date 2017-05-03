@@ -45,7 +45,7 @@
                                 <initial>current</initial>
                                 <target>208,64</target>
                                 <duration>1.5</duration>
-                                <wait>0,0</wait>
+                                <wait>1.5</wait>
                                 <playback-mode>Play Once</playback-mode>
                                 <value>0</value>
                                 <coordinate-mode>Absolute</coordinate-mode>

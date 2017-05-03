@@ -626,7 +626,7 @@
                         <text>HIGHLANDER</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
@@ -1000,7 +1000,8 @@
                     <instance-variables>
                         <whichWeapon>0</whichWeapon>
                         <whichPlayer>1</whichPlayer>
-                        <type>main</type>
+                        <type>portrait</type>
+                        <char>hi</char>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="Tint">

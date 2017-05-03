@@ -374,14 +374,14 @@
                         </action>
                         <action behavior="EaseTween" id="10" name="Start" sid="795847991399520" type="CharSelect_Camera" />
                         <action id="-16" name="Wait" sid="942364088364969" type="System">
-                            <param id="0" name="Seconds">2.75</param>
+                            <param id="0" name="Seconds">1.75</param>
                         </action>
                         <action behavior="EaseTween" id="10" name="Start" sid="763000973924375" type="SpriteFont_Menus" />
                         <action id="-15" name="Set visible" sid="895668514111916" type="SpriteFont_Menus">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="173325821817598" type="System">
-                            <param id="0" name="Seconds">1.10</param>
+                            <param id="0" name="Seconds">0.65</param>
                         </action>
                         <action id="-15" name="Set visible" sid="508472891741331" type="char_select_bg3">
                             <param id="0" name="Visibility">1</param>

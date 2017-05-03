@@ -4,62 +4,92 @@
     <name>Map_ES</name>
     <events>
         <include>Init_ES</include>
-        <event-block sid="323013110539408">
+        <event-block sid="530803981601058">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="799447553698425" type="System" />
+                <condition id="-2" name="On start of layout" sid="646018629376856" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Play" sid="439089340311007" type="Audio">
-                    <param id="0" name="Audio file">CHOMAKAI_00021</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-10</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                <action id="-12" name="Set group active" sid="494655029523364" type="System">
+                    <param id="0" name="Group name">&quot;Map Init&quot;</param>
+                    <param id="1" name="State">1</param>
                 </action>
-                <action id="-31" name="Set layout effect parameter" sid="715015150475454" type="System">
-                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                    <param id="1" name="Parameter index">0</param>
-                    <param id="2" name="Value">0</param>
-                </action>
-                <action id="0" name="Call function" sid="144870824414398" type="Function">
-                    <param id="0" name="Name">&quot;Fade&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;In&quot;</param>
-                </action>
-                <action id="-16" name="Wait" sid="968352923478234" type="System">
-                    <param id="0" name="Seconds">1.5</param>
-                </action>
-                <action behavior="EaseTween" id="10" name="Start" sid="370337019696359" type="Map_Sprite" />
-                <action id="-16" name="Wait" sid="646949136591349" type="System">
-                    <param id="0" name="Seconds">4</param>
-                </action>
-                <action id="0" name="Call function" sid="568590156489891" type="Function">
-                    <param id="0" name="Name">&quot;Pixellate&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
-                </action>
-                <action id="0" name="Call function" sid="251512104493289" type="Function">
-                    <param id="0" name="Name">&quot;Fade&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
-                </action>
-                <action id="-16" name="Wait" sid="569950600046469" type="System">
-                    <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="937804167661772" type="System">
-                    <param id="0" name="Layout">Level 1</param>
+                <action id="0" name="Call function" sid="281985365303330" type="Function">
+                    <param id="0" name="Name">&quot;Init&quot;</param>
+                    <param id="1" name="Parameter {n}">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="609979060007011" title="Map Effects">
+        <event-group description="" sid="720087292451212" title="Map Init">
             <sub-events>
-                <event-block sid="241270300993611">
+                <event-block sid="919140099840197">
                     <conditions>
-                        <condition id="0" name="On function" sid="389570203824124" type="Function">
+                        <condition id="0" name="On function" sid="544318890159681" type="Function">
+                            <param id="0" name="Name">&quot;Init&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="881906688488658">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="100094978122124" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="574619572027697" type="Audio">
+                                    <param id="0" name="Audio file">CHOMAKAI_00021</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="889095882477501" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="928880842141922" type="Function">
+                                    <param id="0" name="Name">&quot;Fade&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;In&quot;</param>
+                                </action>
+                                <action behavior="EaseTween" id="10" name="Start" sid="434569182596612" type="Map_Sprite" />
+                                <action id="-16" name="Wait" sid="175177355552075" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Call function" sid="504636144289436" type="Function">
+                                    <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="289640773701533" type="Function">
+                                    <param id="0" name="Name">&quot;Fade&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="100966337283495" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="741057258925570" type="System">
+                                    <param id="0" name="Layout">Level 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="914493700878959" title="Map Effects">
+            <sub-events>
+                <event-block sid="748808785668884">
+                    <conditions>
+                        <condition id="0" name="On function" sid="481698215531013" type="Function">
                             <param id="0" name="Name">&quot;Pixellate&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="281710836140202">
+                        <event-block sid="961504674121757">
                             <conditions>
-                                <condition id="1" name="Compare parameter" sid="922331223252095" type="Function">
+                                <condition id="1" name="Compare parameter" sid="935473523911065" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Normalize&quot;</param>
@@ -67,72 +97,72 @@
                             </conditions>
                             <actions />
                         </event-block>
-                        <event-block sid="922849258576235">
+                        <event-block sid="473003881433302">
                             <conditions>
-                                <condition id="1" name="Compare parameter" sid="155550459458127" type="Function">
+                                <condition id="1" name="Compare parameter" sid="907199348443442" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Pixellate&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-31" name="Set layout effect parameter" sid="114352801533833" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="545850190172522" type="System">
                                     <param id="0" name="Effect">&quot;Pixellate&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">2</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="517496808687352" type="System">
+                                <action id="-16" name="Wait" sid="297549905827677" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="427687752705129" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="189146431822139" type="System">
                                     <param id="0" name="Effect">&quot;Pixellate&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">4</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="738911443447320" type="System">
+                                <action id="-16" name="Wait" sid="982113288345971" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="669898822431297" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="244498265827362" type="System">
                                     <param id="0" name="Effect">&quot;Pixellate&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">6</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="781842298972528" type="System">
+                                <action id="-16" name="Wait" sid="104625394122730" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="733950061717068" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="429192368430833" type="System">
                                     <param id="0" name="Effect">&quot;Pixellate&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">8</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="100356580959108" type="System">
+                                <action id="-16" name="Wait" sid="889317023985977" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="889554815351089" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="367512929705215" type="System">
                                     <param id="0" name="Effect">&quot;Pixellate&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">10</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="662996379046465" type="System">
+                                <action id="-16" name="Wait" sid="631427234013780" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="511743716240685" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="653584168645558" type="System">
                                     <param id="0" name="Effect">&quot;Pixellate&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">12</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="838555709992034" type="System">
+                                <action id="-16" name="Wait" sid="503878689956222" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="698322154604329" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="738817623793170" type="System">
                                     <param id="0" name="Effect">&quot;Pixellate&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">14</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="843655341984199" type="System">
+                                <action id="-16" name="Wait" sid="394602916702050" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="257054354242928" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="905615814842860" type="System">
                                     <param id="0" name="Effect">&quot;Pixellate&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">16</param>
@@ -141,152 +171,152 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="565192329321632">
+                <event-block sid="739184312374032">
                     <conditions>
-                        <condition id="0" name="On function" sid="507385194672382" type="Function">
+                        <condition id="0" name="On function" sid="865794987025630" type="Function">
                             <param id="0" name="Name">&quot;Fade&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="817149466391070">
+                        <event-block sid="358470337343566">
                             <conditions>
-                                <condition id="1" name="Compare parameter" sid="252608946269621" type="Function">
+                                <condition id="1" name="Compare parameter" sid="263723367350941" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;In&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-31" name="Set layout effect parameter" sid="724298361033189" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="815605447771720" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">12.5</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="275104836849367" type="System">
+                                <action id="-16" name="Wait" sid="574495219346516" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="803212338252153" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="620382266052041" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">25</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="368162214789664" type="System">
+                                <action id="-16" name="Wait" sid="285271027080710" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="957269980743914" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="312851140195791" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">37.5</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="581603004396561" type="System">
+                                <action id="-16" name="Wait" sid="706771749879509" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="716775967282942" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="491968544999950" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">50</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="306204315023392" type="System">
+                                <action id="-16" name="Wait" sid="293269963371547" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="339745674263196" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="563550223850871" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">62.5</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="918144394797778" type="System">
+                                <action id="-16" name="Wait" sid="609545552750600" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="448137767412415" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="428033884438313" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">75</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="104441689636114" type="System">
+                                <action id="-16" name="Wait" sid="522043943992500" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="295010980322013" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="872979368053498" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">87.5</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="981381637907643" type="System">
+                                <action id="-16" name="Wait" sid="249929859335488" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="256534841704089" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="108878403239273" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">100</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="747444344066426">
+                        <event-block sid="839714075301770">
                             <conditions>
-                                <condition id="1" name="Compare parameter" sid="179774672015207" type="Function">
+                                <condition id="1" name="Compare parameter" sid="671847736558448" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Out&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-31" name="Set layout effect parameter" sid="146638902315439" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="644621150919062" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">87.5</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="516463375638219" type="System">
+                                <action id="-16" name="Wait" sid="453016432990860" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="380670392145971" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="735535627120356" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">75</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="674371381653176" type="System">
+                                <action id="-16" name="Wait" sid="812518660385897" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="683853716327558" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="796738107232445" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">62.5</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="165277347893441" type="System">
+                                <action id="-16" name="Wait" sid="751065292097092" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="264408645869460" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="500167479384296" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">50</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="359816420180329" type="System">
+                                <action id="-16" name="Wait" sid="259402617509676" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="266694288513729" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="589547117816002" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">37.5</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="365861857875247" type="System">
+                                <action id="-16" name="Wait" sid="444523235969679" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="734899775305387" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="620735111022818" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">25</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="569227538681315" type="System">
+                                <action id="-16" name="Wait" sid="968722359949074" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="312218007081964" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="377203028566832" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">12.5</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="448066188257389" type="System">
+                                <action id="-16" name="Wait" sid="578387919058201" type="System">
                                     <param id="0" name="Seconds">0.025</param>
                                 </action>
-                                <action id="-31" name="Set layout effect parameter" sid="298424672446275" type="System">
+                                <action id="-31" name="Set layout effect parameter" sid="963096385365488" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">0</param>
@@ -294,6 +324,31 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="365353123149067">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="582035389014631" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="927063997930435" type="System">
+                            <param id="0" name="Group name">&quot;Map Init&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="912421173033368" type="Function">
+                            <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="631838155576708" type="Function">
+                            <param id="0" name="Name">&quot;Fade&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="957908664033885" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="192281508035159" type="System">
+                            <param id="0" name="Layout">Level 1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

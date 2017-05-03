@@ -14,6 +14,38 @@
                     <param id="1" name="Value">playerChosen</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="918926152294917">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="434032547730903" type="System">
+                            <param id="0" name="Variable">playerChosen</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hi&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="789215564089794" type="HUD_player_weapon">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Value">&quot;hi&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="273934701401114">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="900816984820224" type="System">
+                            <param id="0" name="Variable">playerChosen</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;eg&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="634685366937246" type="HUD_player_weapon">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Value">&quot;eg&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="444123292717814" title="Player 1 Passive">
             <sub-events>
@@ -46,9 +78,65 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="564886168938239">
+                        <event-block sid="915259120251491">
                             <conditions>
-                                <condition id="-33" name="Pick by comparison" sid="202726240298362" type="System">
+                                <condition id="-14" name="Compare variable" sid="798066404407577" type="System">
+                                    <param id="0" name="Variable">playerChosen</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Hi&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="661738033452851" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="825143474777087" type="Player_Mask">
+                                    <param id="0" name="Instance variable">p_defense</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="769566554128622" type="Player_Mask">
+                                    <param id="0" name="Instance variable">p_maxSpeed</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="363538669786853" type="Player_Mask">
+                                    <param id="0" name="Instance variable">p_jumpHeight</param>
+                                    <param id="1" name="Value">-230</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="811382782879532" type="Player_Mask">
+                                    <param id="0" name="Instance variable">p_fallSpeed</param>
+                                    <param id="1" name="Value">625</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="816819952907907">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="243026076527039" type="System">
+                                    <param id="0" name="Variable">playerChosen</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Eg&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="735842231326989" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="728235301372270" type="Player_Mask">
+                                    <param id="0" name="Instance variable">p_defense</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="990811903556633" type="Player_Mask">
+                                    <param id="0" name="Instance variable">p_maxSpeed</param>
+                                    <param id="1" name="Value">125</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="563270122860102" type="Player_Mask">
+                                    <param id="0" name="Instance variable">p_jumpHeight</param>
+                                    <param id="1" name="Value">-250</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="288312277581699" type="Player_Mask">
+                                    <param id="0" name="Instance variable">p_fallSpeed</param>
+                                    <param id="1" name="Value">600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="375670130141380">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="213070600454545" type="System">
                                     <param id="0" name="Object">Player_Mask</param>
                                     <param id="1" name="Expression">Player_Mask.IID</param>
                                     <param id="2" name="Comparison">0</param>
@@ -56,7 +144,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-28" name="Set effect parameter" sid="648145444839476" type="Player_Mask">
+                                <action id="-28" name="Set effect parameter" sid="828574322529236" type="Player_Mask">
                                     <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">90</param>
@@ -526,7 +614,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="124937793048332" type="Player_Mask">
                                             <param id="0" name="Instance variable">p_defense</param>
-                                            <param id="1" name="Value">2</param>
+                                            <param id="1" name="Value">3</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="994055679021167" type="HUD_Super_Arts_Icon">
                                             <param id="0" name="Visibility">1</param>
@@ -665,7 +753,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="415946071337684" type="Player_Mask">
                                             <param id="0" name="Instance variable">p_defense</param>
-                                            <param id="1" name="Value">1</param>
+                                            <param id="1" name="Value">2</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="634478083711795" type="HUD_Super_Arts_Icon">
                                             <param id="0" name="Visibility">0</param>
@@ -2082,7 +2170,7 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="921622258047740" type="Player_Mask">
                                             <param id="0" name="Instance variable">superArtsCounter</param>
-                                            <param id="1" name="Value">26</param>
+                                            <param id="1" name="Value">15</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -2166,6 +2254,10 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
+                                                        <action id="-7" name="Set size" sid="570510125062926" type="Player">
+                                                            <param id="0" name="Width">14</param>
+                                                            <param id="1" name="Height">22</param>
+                                                        </action>
                                                         <action behavior="Platform" id="8" name="Set vector X" sid="789546189091583" type="Player">
                                                             <param id="0" name="Vector X">0</param>
                                                         </action>
@@ -2197,6 +2289,10 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
+                                                        <action id="-7" name="Set size" sid="294641338080331" type="Player">
+                                                            <param id="0" name="Width">14</param>
+                                                            <param id="1" name="Height">32</param>
+                                                        </action>
                                                         <action id="-13" name="Set boolean" sid="255428066449985" type="Player_Mask">
                                                             <param id="0" name="Instance variable">crouch</param>
                                                             <param id="1" name="Value">0</param>
@@ -3153,6 +3249,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="121193330398232" type="Player_Sword" />
+                                <action id="-9" name="Destroy" sid="640006890311011" type="Player_Wand" />
                             </actions>
                         </event-block>
                         <event-block sid="454840768762146">
@@ -3654,6 +3751,713 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="448344311351971">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="762266686337674" type="Player_Mask">
+                                            <param id="0" name="Instance variable">equip</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Eg&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="679417708955432">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="694532559622180" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">weapon</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Main&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="305917062877503">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="962220882141906" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="583595534042012" type="System">
+                                                            <param id="0" name="Object to create">Player_Wand</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                            <param id="2" name="X">0</param>
+                                                            <param id="3" name="Y">0</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="607158738560390" type="Audio">
+                                                            <param id="0" name="Audio file">sfx_weapon_singleshot1</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-6</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="906232328861218">
+                                                            <conditions>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="407130562738258" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">crouch</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="138621914775932">
+                                                                    <conditions>
+                                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="261852843086248" type="Player_Mask" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="246558346279220">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="600902901618306" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">0</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="162972094753517" type="Player_Wand">
+                                                                                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="333925115670918" type="Player_Wand">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="205100135422182">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="587910488768640" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">180</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="7" name="Set mirrored" sid="451186285225522" type="Player_Wand">
+                                                                                    <param id="0" name="State">0</param>
+                                                                                </action>
+                                                                                <action id="4" name="Set animation" sid="752494626010044" type="Player_Wand">
+                                                                                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="844981133389553" type="Player_Wand">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="777717799298206">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="737124326787062" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">270</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="213288676325809">
+                                                                                    <conditions>
+                                                                                        <condition id="7" name="Is mirrored" sid="508394151611327" type="Player_Mask" />
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="7" name="Set mirrored" sid="604023364923882" type="Player_Wand">
+                                                                                            <param id="0" name="State">0</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="371454879897768">
+                                                                                    <conditions />
+                                                                                    <actions>
+                                                                                        <action id="4" name="Set animation" sid="502291486435579" type="Player_Wand">
+                                                                                            <param id="0" name="Animation">&quot;UpAir&quot;</param>
+                                                                                            <param id="1" name="From">1</param>
+                                                                                        </action>
+                                                                                        <action id="-3" name="Set position" sid="522852621500081" type="Player_Wand">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="114726603311604">
+                                                                    <conditions>
+                                                                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="284020091456151" type="Player_Mask" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="935085025827562">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="919335399091670" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">0</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="992144523356626" type="Player_Wand">
+                                                                                    <param id="0" name="Animation">&quot;NeutralAir&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="105520574759143" type="Player_Wand">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="432015015424474">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="723475347908468" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">90</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="416377284729706">
+                                                                                    <conditions>
+                                                                                        <condition id="7" name="Is mirrored" sid="676311146117301" type="Player_Mask" />
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="7" name="Set mirrored" sid="687190135900219" type="Player_Wand">
+                                                                                            <param id="0" name="State">0</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="776872695927556">
+                                                                                    <conditions />
+                                                                                    <actions>
+                                                                                        <action id="4" name="Set animation" sid="651286616489418" type="Player_Wand">
+                                                                                            <param id="0" name="Animation">&quot;DownAir&quot;</param>
+                                                                                            <param id="1" name="From">1</param>
+                                                                                        </action>
+                                                                                        <action id="-3" name="Set position" sid="877297020249388" type="Player_Wand">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                        <event-block sid="357172863492018">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="247921310141273" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">180</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="7" name="Set mirrored" sid="247177843164690" type="Player_Wand">
+                                                                                    <param id="0" name="State">0</param>
+                                                                                </action>
+                                                                                <action id="4" name="Set animation" sid="897230977310003" type="Player_Wand">
+                                                                                    <param id="0" name="Animation">&quot;NeutralAir&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="768591549057433" type="Player_Wand">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="241473508019588">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="302214237688224" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">270</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="379172923290389">
+                                                                                    <conditions>
+                                                                                        <condition id="7" name="Is mirrored" sid="651714476253646" type="Player_Mask" />
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="7" name="Set mirrored" sid="151086881551022" type="Player_Wand">
+                                                                                            <param id="0" name="State">0</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="356588514015569">
+                                                                                    <conditions />
+                                                                                    <actions>
+                                                                                        <action id="4" name="Set animation" sid="538028717928362" type="Player_Wand">
+                                                                                            <param id="0" name="Animation">&quot;UpAir&quot;</param>
+                                                                                            <param id="1" name="From">1</param>
+                                                                                        </action>
+                                                                                        <action id="-3" name="Set position" sid="877077802192817" type="Player_Wand">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="432175715819982">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="459314571192577" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">crouch</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="933750284222880" type="Player_Wand">
+                                                                    <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="742101136077890">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="675977329178198" type="Player_Mask">
+                                                                            <param id="0" name="Instance variable">shootAngle</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">0</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="666453710787958" type="Player_Wand">
+                                                                            <param id="0" name="Animation">&quot;Crouching&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="763057480984849">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="979293227719500" type="Player_Mask">
+                                                                            <param id="0" name="Instance variable">shootAngle</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">180</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="7" name="Set mirrored" sid="492710907317516" type="Player_Wand">
+                                                                            <param id="0" name="State">0</param>
+                                                                        </action>
+                                                                        <action id="4" name="Set animation" sid="555653820268084" type="Player_Wand">
+                                                                            <param id="0" name="Animation">&quot;Crouching&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="257841211969038">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action behavior="Pin" id="0" name="Pin to object" sid="992045362297715" type="Player_Wand">
+                                                                    <param id="0" name="Pin to">Player_Mask</param>
+                                                                    <param id="1" name="Mode">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="710528805101140">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="275083673983484" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">weapon</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Sub&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="774706925213089">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="682406042460608" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="268276111131414" type="System">
+                                                            <param id="0" name="Object to create">Player_Wand</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                            <param id="2" name="X">0</param>
+                                                            <param id="3" name="Y">0</param>
+                                                        </action>
+                                                        <action id="-3" name="Create object" sid="622864801167580" type="System">
+                                                            <param id="0" name="Object to create">Player_Kahn</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                            <param id="2" name="X">0</param>
+                                                            <param id="3" name="Y">0</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="719400019907749" type="Audio">
+                                                            <param id="0" name="Audio file">sfx_wpn_cannon4</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-6</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="253717663791871">
+                                                            <conditions>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="874820978407626" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">crouch</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="686933766610360">
+                                                                    <conditions>
+                                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="665461827858892" type="Player_Mask" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="874656126993292">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="939565118860334" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">0</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="767946160965643" type="Player_Wand">
+                                                                                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="892081778192654" type="Player_Wand">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="431278986684568" type="Player_Kahn">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="843118809693877" type="Player_Kahn">
+                                                                                    <param id="0" name="Angle">0</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="908184813329677">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="821542103166966" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">180</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="7" name="Set mirrored" sid="728166402939741" type="Player_Wand">
+                                                                                    <param id="0" name="State">0</param>
+                                                                                </action>
+                                                                                <action id="4" name="Set animation" sid="679434152531185" type="Player_Wand">
+                                                                                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="425178932713419" type="Player_Wand">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="950462987648236" type="Player_Kahn">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="375920343457239" type="Player_Kahn">
+                                                                                    <param id="0" name="Angle">180</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="887623223707310">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="767274266698112" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">270</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="693718464685697">
+                                                                                    <conditions>
+                                                                                        <condition id="7" name="Is mirrored" sid="443153263906696" type="Player_Mask" />
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="7" name="Set mirrored" sid="332936568944503" type="Player_Wand">
+                                                                                            <param id="0" name="State">0</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="715053711918252">
+                                                                                    <conditions />
+                                                                                    <actions>
+                                                                                        <action id="4" name="Set animation" sid="635299795602784" type="Player_Wand">
+                                                                                            <param id="0" name="Animation">&quot;UpAir&quot;</param>
+                                                                                            <param id="1" name="From">1</param>
+                                                                                        </action>
+                                                                                        <action id="-3" name="Set position" sid="994456972607455" type="Player_Wand">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        </action>
+                                                                                        <action id="-3" name="Set position" sid="197199669436724" type="Player_Kahn">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        </action>
+                                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="170083795141342" type="Player_Kahn">
+                                                                                            <param id="0" name="Angle">270</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="913739171292930">
+                                                                    <conditions>
+                                                                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="762056708313713" type="Player_Mask" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="791055578173167">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="923909426824332" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">0</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="724034895617254" type="Player_Wand">
+                                                                                    <param id="0" name="Animation">&quot;NeutralAir&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="545893208727715" type="Player_Wand">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="755207628380399" type="Player_Kahn">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="110239730842122" type="Player_Kahn">
+                                                                                    <param id="0" name="Angle">0</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="197596587942944">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="383618224215903" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">90</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="515682049008912">
+                                                                                    <conditions>
+                                                                                        <condition id="7" name="Is mirrored" sid="555085308702166" type="Player_Mask" />
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="7" name="Set mirrored" sid="789988068695728" type="Player_Wand">
+                                                                                            <param id="0" name="State">0</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="412033624594311">
+                                                                                    <conditions />
+                                                                                    <actions>
+                                                                                        <action id="4" name="Set animation" sid="135904059004817" type="Player_Wand">
+                                                                                            <param id="0" name="Animation">&quot;DownAir&quot;</param>
+                                                                                            <param id="1" name="From">1</param>
+                                                                                        </action>
+                                                                                        <action id="-3" name="Set position" sid="562222115209627" type="Player_Wand">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        </action>
+                                                                                        <action id="-3" name="Set position" sid="501191635887552" type="Player_Kahn">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        </action>
+                                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="705466867082512" type="Player_Kahn">
+                                                                                            <param id="0" name="Angle">90</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                        <event-block sid="731404431982258">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="645670081341937" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">180</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="7" name="Set mirrored" sid="800060357782963" type="Player_Wand">
+                                                                                    <param id="0" name="State">0</param>
+                                                                                </action>
+                                                                                <action id="4" name="Set animation" sid="912486865035264" type="Player_Wand">
+                                                                                    <param id="0" name="Animation">&quot;NeutralAir&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="564963223781389" type="Player_Wand">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Set position" sid="104944358371646" type="Player_Kahn">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                </action>
+                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="823363596412965" type="Player_Kahn">
+                                                                                    <param id="0" name="Angle">180</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="973807137633986">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="528956642645779" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">270</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="968228521885198">
+                                                                                    <conditions>
+                                                                                        <condition id="7" name="Is mirrored" sid="805093235408652" type="Player_Mask" />
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="7" name="Set mirrored" sid="782333102196111" type="Player_Wand">
+                                                                                            <param id="0" name="State">0</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="808113630028380">
+                                                                                    <conditions />
+                                                                                    <actions>
+                                                                                        <action id="4" name="Set animation" sid="842611997022539" type="Player_Wand">
+                                                                                            <param id="0" name="Animation">&quot;UpAir&quot;</param>
+                                                                                            <param id="1" name="From">1</param>
+                                                                                        </action>
+                                                                                        <action id="-3" name="Set position" sid="598005002146602" type="Player_Wand">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        </action>
+                                                                                        <action id="-3" name="Set position" sid="337677112876700" type="Player_Kahn">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        </action>
+                                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="326358982426017" type="Player_Kahn">
+                                                                                            <param id="0" name="Angle">270</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="345762871349131">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="729503980469812" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">crouch</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="446391692766387" type="Player_Wand">
+                                                                    <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="252545885360924">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="903340795193674" type="Player_Mask">
+                                                                            <param id="0" name="Instance variable">shootAngle</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">0</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="666732593684950" type="Player_Wand">
+                                                                            <param id="0" name="Animation">&quot;Crouching&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                        <action id="-3" name="Set position" sid="764672654880819" type="Player_Kahn">
+                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="269835864925283" type="Player_Kahn">
+                                                                            <param id="0" name="Angle">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="987074512986766">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="412713661561768" type="Player_Mask">
+                                                                            <param id="0" name="Instance variable">shootAngle</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">180</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="7" name="Set mirrored" sid="553784347636407" type="Player_Wand">
+                                                                            <param id="0" name="State">0</param>
+                                                                        </action>
+                                                                        <action id="4" name="Set animation" sid="464712613020739" type="Player_Wand">
+                                                                            <param id="0" name="Animation">&quot;Crouching&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                        <action id="-3" name="Set position" sid="190421773666554" type="Player_Kahn">
+                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
+                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="630690528032039" type="Player_Kahn">
+                                                                            <param id="0" name="Angle">180</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="285802563289007">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action behavior="Pin" id="0" name="Pin to object" sid="990445776088872" type="Player_Wand">
+                                                                    <param id="0" name="Pin to">Player_Mask</param>
+                                                                    <param id="1" name="Mode">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="105752358667555">
+                                                            <conditions>
+                                                                <condition id="-33" name="Pick by comparison" sid="920535981253240" type="System">
+                                                                    <param id="0" name="Object">HUD_subammo</param>
+                                                                    <param id="1" name="Expression">HUD_subammo.type</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Value">&quot;p1ammo&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-12" name="Subtract from" sid="552256280321473" type="HUD_subammo">
+                                                                    <param id="0" name="Instance variable">ammo</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="269889477426164" type="Function">
+                                                                    <param id="0" name="Name">&quot;p1updateammo&quot;</param>
+                                                                    <param id="1" name="Parameter {n}"></param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
@@ -3771,6 +4575,7 @@
                                     <param id="1" name="Value">2</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="236683265119392" type="Player_Sword" />
+                                <action id="-9" name="Destroy" sid="797827115818403" type="Player_Wand" />
                                 <action behavior="Platform" id="2" name="Set acceleration" sid="531059591245116" type="Player">
                                     <param id="0" name="Acceleration">0</param>
                                 </action>

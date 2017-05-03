@@ -108,16 +108,6 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="986198214140843">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="569930362684437" type="System">
-                                            <param id="0" name="First value">Player_Mask.IID</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                </event-block>
                                 <event-block sid="603066259731769">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="905033595064977" type="HUD_special_arts_bar">
@@ -362,6 +352,139 @@
                             <actions>
                                 <action id="0" name="Set text" sid="406420508430279" type="HUD_subammo">
                                     <param id="0" name="Text">str(self.ammo)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="353784713186256" title="Character Specific">
+            <sub-events>
+                <event-block sid="576210918031760">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="246577810417400" type="SpriteFont">
+                            <param id="0" name="Instance variable">category</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HUD&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="653512722744560">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="539445205871514" type="SpriteFont">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;p1charname&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="642670025635717">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="317152655994953" type="System">
+                                            <param id="0" name="Variable">playerChosen</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Hi&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="944970825995809" type="SpriteFont">
+                                            <param id="0" name="Text">&quot;HIGHLANDER&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="309032862378233">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="862819472968067" type="System">
+                                            <param id="0" name="Variable">playerChosen</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Eg&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="446300493441049" type="SpriteFont">
+                                            <param id="0" name="Text">&quot;EGYPTIAN&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="257275007623591">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="481682462579302" type="HUD_player_icon">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;portrait&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="406016274513233" type="HUD_player_icon">
+                            <param id="0" name="Animation">playerChosen</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="995185917401055">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="335551352628095" type="HUD_player_weapon">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;main&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="642811561266873" type="HUD_player_weapon">
+                            <param id="0" name="Animation">playerChosen</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="794268265482651">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="456294569646039" type="HUD_player_weapon">
+                                    <param id="0" name="Instance variable">whichWeapon</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="329772506816863" type="HUD_player_weapon">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="710472814994346">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="820029061287353" type="HUD_player_weapon">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;sub&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="569858975593670" type="HUD_player_weapon">
+                            <param id="0" name="Animation">playerChosen</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="716677627750387">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="505825385659073" type="HUD_player_weapon">
+                                    <param id="0" name="Instance variable">whichWeapon</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="533651468904433" type="HUD_player_weapon">
+                                    <param id="0" name="Frame number">1</param>
                                 </action>
                             </actions>
                         </event-block>
