@@ -4646,33 +4646,50 @@
                                     <conditions>
                                         <condition behavior="Platform" id="9" name="On landed" sid="885039763884920" type="Player" />
                                     </conditions>
-                                    <actions>
-                                        <action behavior="Flash" id="0" name="Flash" sid="992210539991126" type="Player_Mask">
-                                            <param id="0" name="&apos;On&apos; time">0.05</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.05</param>
-                                            <param id="2" name="Duration">1.5</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="631943315527610" type="Function">
-                                            <param id="0" name="Name">&quot;Object_Flash&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player_Mask.UID</param>
-                                        </action>
-                                        <action behavior="Platform" id="2" name="Set acceleration" sid="794391475796949" type="Player">
-                                            <param id="0" name="Acceleration">1000</param>
-                                        </action>
-                                        <action behavior="Platform" id="3" name="Set deceleration" sid="806425847101773" type="Player">
-                                            <param id="0" name="Deceleration">1500</param>
-                                        </action>
-                                        <action behavior="Platform" id="8" name="Set vector X" sid="746026626019423" type="Player">
-                                            <param id="0" name="Vector X">0</param>
-                                        </action>
-                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="455119345228045" type="Player">
-                                            <param id="0" name="Input">0</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="722381717574701" type="Player_Mask">
-                                            <param id="0" name="Instance variable">hurt</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="447588706350532">
+                                            <conditions>
+                                                <condition id="0" name="Compare value" sid="677854891394836" type="Data_Players">
+                                                    <param id="0" name="Key">&quot;Energy&quot;</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Flash" id="0" name="Flash" sid="992210539991126" type="Player_Mask">
+                                                    <param id="0" name="&apos;On&apos; time">0.05</param>
+                                                    <param id="1" name="&apos;Off&apos; time">0.05</param>
+                                                    <param id="2" name="Duration">1.5</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="631943315527610" type="Function">
+                                                    <param id="0" name="Name">&quot;Object_Flash&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player_Mask.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="502278583730701">
+                                            <conditions />
+                                            <actions>
+                                                <action behavior="Platform" id="2" name="Set acceleration" sid="794391475796949" type="Player">
+                                                    <param id="0" name="Acceleration">1000</param>
+                                                </action>
+                                                <action behavior="Platform" id="3" name="Set deceleration" sid="806425847101773" type="Player">
+                                                    <param id="0" name="Deceleration">1500</param>
+                                                </action>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="746026626019423" type="Player">
+                                                    <param id="0" name="Vector X">0</param>
+                                                </action>
+                                                <action behavior="Platform" id="0" name="Set ignoring input" sid="455119345228045" type="Player">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="722381717574701" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">hurt</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -4725,8 +4742,15 @@
                         <action behavior="Platform" id="11" name="Set enabled" sid="265865960722489" type="Player">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="-16" name="Wait" sid="652599556154292" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="421792315662522" type="Function">
+                            <param id="0" name="Name">&quot;Fade&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
+                        </action>
                         <action id="-16" name="Wait" sid="697731115246724" type="System">
-                            <param id="0" name="Seconds">4</param>
+                            <param id="0" name="Seconds">2</param>
                         </action>
                         <action id="-26" name="Restart layout" sid="284766315725845" type="System" />
                     </actions>
