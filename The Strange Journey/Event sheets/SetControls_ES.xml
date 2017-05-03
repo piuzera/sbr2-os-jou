@@ -8,13 +8,13 @@
         <variable constant="0" name="mode" sid="601482324260019" static="0" type="number">0</variable>
         <variable constant="0" name="curPlayer" sid="453483573786655" static="0" type="number">0</variable>
         <variable constant="0" name="pressKey" sid="419717903648594" static="0" type="number">0</variable>
-        <variable constant="0" name="keyOrder" sid="853942901154565" static="0" type="text">UP,DOWN,LEFT,RIGHT,JUMP,MAINWP,SUBWP,ARTS,CHANGE_MAINWP,CHANGE_SUBWP</variable>
+        <variable constant="0" name="keyOrder" sid="853942901154565" static="0" type="text">UP,DOWN,LEFT,RIGHT,JUMP,MAINWP,SUBWP,ARTS</variable>
         <event-block sid="809320077804048">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="128608728782072" type="System">
                     <param id="0" name="Variable">pressKey</param>
                     <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">11</param>
+                    <param id="2" name="Value">9</param>
                 </condition>
             </conditions>
             <actions>
@@ -65,7 +65,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="369029502245711" type="Spritefonts">
-                    <param id="0" name="Text">&quot;PLAYER 1&quot;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;UP: &quot;&amp;Data_Players.Get(&quot;player_1_control_UP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;DOWN: &quot;&amp;Data_Players.Get(&quot;player_1_control_DOWN&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;LEFT: &quot;&amp;Data_Players.Get(&quot;player_1_control_LEFT&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;RIGHT: &quot;&amp;Data_Players.Get(&quot;player_1_control_RIGHT&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;JUMP: &quot;&amp;Data_Players.Get(&quot;player_1_control_JUMP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE MAIN WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_MAINWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE SUB WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_SUBWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE SUPER ART: &quot;&amp;Data_Players.Get(&quot;player_1_control_ARTS&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;SWITCH MAIN WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_CHANGE_MAINWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;SWITCH SUB WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_CHANGE_SUBWP&quot;)&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;PRESS ENTER TO REMAP KEYS&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;PRESS ESC TO GO BACK&quot;</param>
+                    <param id="0" name="Text">&quot;PLAYER 1&quot;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;UP: &quot;&amp;Data_Players.Get(&quot;player_1_control_UP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;DOWN: &quot;&amp;Data_Players.Get(&quot;player_1_control_DOWN&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;LEFT: &quot;&amp;Data_Players.Get(&quot;player_1_control_LEFT&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;RIGHT: &quot;&amp;Data_Players.Get(&quot;player_1_control_RIGHT&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;JUMP: &quot;&amp;Data_Players.Get(&quot;player_1_control_JUMP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE MAIN WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_MAINWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE SUB WEAPON: &quot;&amp;Data_Players.Get(&quot;player_1_control_SUBWP&quot;)&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;USE SUPER ART: &quot;&amp;Data_Players.Get(&quot;player_1_control_ARTS&quot;)&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;PRESS ENTER TO REMAP KEYS&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;PRESS ESC TO GO BACK&quot;</param>
                 </action>
             </actions>
             <sub-events>

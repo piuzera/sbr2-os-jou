@@ -16,10 +16,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="4">Map</layout>
         <layout order="5">TitleScreen</layout>
         <layout order="7">HUD</layout>
+        <layout order="13">Options</layout>
         <event-sheet order="1">Player1_ES</event-sheet>
         <event-sheet order="6">Main_ES</event-sheet>
-        <event-sheet active="1" order="8">CharSelect_ES</event-sheet>
-        <event-sheet order="9">TitleScreen_ES</event-sheet>
+        <event-sheet order="8">CharSelect_ES</event-sheet>
+        <event-sheet active="1" order="9">TitleScreen_ES</event-sheet>
         <event-sheet order="10">SetControls_ES</event-sheet>
         <event-sheet order="11">Map_ES</event-sheet>
         <event-sheet order="12">HUD_ES</event-sheet>

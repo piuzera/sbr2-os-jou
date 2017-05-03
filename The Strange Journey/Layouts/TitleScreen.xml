@@ -56,7 +56,7 @@
                         <character-width>8</character-width>
                         <character-height>8</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
-                        <text>ARCADE MODE</text>
+                        <text>START DEMO</text>
                         <scale>1.5</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -92,7 +92,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>128</y>
+                        <y>140</y>
                         <z>0</z>
                         <width>240</width>
                         <height>32</height>
@@ -103,12 +103,12 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpriteFont_Menus" uid="59">
+                <instance type="SpriteFont_Menus" uid="61">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
-                        <text>NORMAL MODE</text>
+                        <text>OPTIONS</text>
                         <scale>1.5</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -144,7 +144,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>148</y>
+                        <y>160</y>
                         <z>0</z>
                         <width>240</width>
                         <height>32</height>
@@ -155,12 +155,12 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpriteFont_Menus" uid="61">
+                <instance type="SpriteFont_Menus" uid="64">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
-                        <text>OPTIONS</text>
+                        <text>QUIT</text>
                         <scale>1.5</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -196,59 +196,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>168</y>
-                        <z>0</z>
-                        <width>240</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpriteFont_Menus" uid="64">
-                    <properties>
-                        <character-width>8</character-width>
-                        <character-height>8</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
-                        <text>QUIT</text>
-                        <scale>1.5</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <option_num>3</option_num>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="EaseTween">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <tweened-property>Position</tweened-property>
-                                <function>EaseOutBounce</function>
-                                <initial>current</initial>
-                                <target>100, 100</target>
-                                <duration>2.5</duration>
-                                <wait>0,0</wait>
-                                <playback-mode>Play Once</playback-mode>
-                                <value>0</value>
-                                <coordinate-mode>Relative</coordinate-mode>
-                                <force-initial-on-start>No</force-initial-on-start>
-                                <tween-group></tween-group>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>160</x>
-                        <y>188</y>
+                        <y>180</y>
                         <z>0</z>
                         <width>240</width>
                         <height>32</height>

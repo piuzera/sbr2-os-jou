@@ -119,7 +119,7 @@
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
-                                                        <comment>arcade mode</comment>
+                                                        <comment>start demo</comment>
                                                         <event-block sid="858358332191968">
                                                             <conditions>
                                                                 <condition id="-14" name="Compare variable" sid="330035559297550" type="System">
@@ -136,7 +136,7 @@
                                                             </actions>
                                                         </event-block>
                                                         <comment>normal mode</comment>
-                                                        <event-block sid="424327610192799">
+                                                        <event-block disabled="1" sid="424327610192799">
                                                             <conditions>
                                                                 <condition id="-14" name="Compare variable" sid="166550008149476" type="System">
                                                                     <param id="0" name="Variable">menuPick</param>
@@ -157,7 +157,7 @@
                                                                 <condition id="-14" name="Compare variable" sid="299369126761338" type="System">
                                                                     <param id="0" name="Variable">menuPick</param>
                                                                     <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">2</param>
+                                                                    <param id="2" name="Value">1</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
@@ -173,7 +173,7 @@
                                                                 <condition id="-14" name="Compare variable" sid="355132828312119" type="System">
                                                                     <param id="0" name="Variable">menuPick</param>
                                                                     <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">3</param>
+                                                                    <param id="2" name="Value">2</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
