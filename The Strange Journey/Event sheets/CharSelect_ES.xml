@@ -54,14 +54,7 @@
                                     </actions>
                                     <sub-events>
                                         <event-block sid="607424899112980">
-                                            <conditions>
-                                                <condition id="-33" name="Pick by comparison" sid="167468969129382" type="System">
-                                                    <param id="0" name="Object">char_select_bg2</param>
-                                                    <param id="1" name="Expression">char_select_bg2.char_pick</param>
-                                                    <param id="2" name="Comparison">0</param>
-                                                    <param id="3" name="Value">menu_charselect</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
                                                 <action id="-2" name="Set Y" sid="381549874725125" type="char_select_bg3">
                                                     <param id="0" name="Y">368</param>
@@ -109,14 +102,7 @@
                                     </actions>
                                     <sub-events>
                                         <event-block sid="905625238300595">
-                                            <conditions>
-                                                <condition id="-33" name="Pick by comparison" sid="854841249370539" type="System">
-                                                    <param id="0" name="Object">char_select_bg2</param>
-                                                    <param id="1" name="Expression">char_select_bg2.char_pick</param>
-                                                    <param id="2" name="Comparison">0</param>
-                                                    <param id="3" name="Value">menu_charselect</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
                                                 <action id="-2" name="Set Y" sid="910144961527703" type="char_select_bg3">
                                                     <param id="0" name="Y">368</param>

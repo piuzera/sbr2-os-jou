@@ -10,20 +10,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Level 1</layout>
+        <layout active="1" order="0">Level 1</layout>
         <layout order="2">Object Bank</layout>
         <layout order="3">CharSelect</layout>
-        <layout order="4">Map</layout>
-        <layout order="5">TitleScreen</layout>
-        <layout order="7">HUD</layout>
-        <layout order="13">Options</layout>
+        <layout order="4">TitleScreen</layout>
         <event-sheet order="1">Player1_ES</event-sheet>
-        <event-sheet order="6">Main_ES</event-sheet>
-        <event-sheet order="8">CharSelect_ES</event-sheet>
-        <event-sheet active="1" order="9">TitleScreen_ES</event-sheet>
-        <event-sheet order="10">SetControls_ES</event-sheet>
-        <event-sheet order="11">Map_ES</event-sheet>
-        <event-sheet order="12">HUD_ES</event-sheet>
+        <event-sheet order="5">CharSelect_ES</event-sheet>
+        <event-sheet order="6">Map_ES</event-sheet>
+        <event-sheet order="7">Enemies_ES</event-sheet>
+        <event-sheet order="8">Main_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -33,7 +28,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1">
         <family expanded="0" name="Behaviors" />
-        <family expanded="0" name="WeaponsEtc" />
+        <family expanded="1" name="WeaponsEtc" />
         <family expanded="0" name="Enemies" />
         <family expanded="0" name="Spritefonts" />
         <family expanded="0" name="Solids" />
@@ -54,7 +49,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Player_Mask/Egyptian/" />
         <folder expanded="1" path="animation-folder/Player_Mask/Armor/" />
         <folder expanded="1" path="animation-folder/Player_Lance/" />
-        <folder expanded="1" path="animation-folder/Camera02/" />
         <folder expanded="1" path="animation-folder/En_Pig/" />
         <folder expanded="1" path="animation-folder/Player_Sword/" />
         <folder expanded="1" path="animation-folder/HUD_EnergyTab/" />
@@ -64,7 +58,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Items/" />
         <folder expanded="1" path="animation-folder/Pickups/" />
         <folder expanded="1" path="animation-folder/Block/" />
-        <folder expanded="1" path="animation-folder/Camera_Boundary/" />
         <folder expanded="1" path="animation-folder/En_Dragonfly/" />
         <folder expanded="1" path="animation-folder/En_GreenDragonfly/" />
         <folder expanded="1" path="animation-folder/En_SeedBomber/" />
@@ -95,8 +88,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/HUD_player_icon/" />
         <folder expanded="1" path="animation-folder/HUD_special_arts_bar/" />
         <folder expanded="1" path="animation-folder/TitleScreen_BG/" />
-        <folder expanded="1" path="animation-folder/char_select_bg/" />
-        <folder expanded="1" path="animation-folder/char_select_bg2/" />
         <folder expanded="1" path="animation-folder/char_select_bg3/" />
         <folder expanded="1" path="animation-folder/CharSelect_Highlander/" />
         <folder expanded="1" path="animation-folder/CharSelect_Camera/" />
@@ -106,5 +97,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/col_camera_limit/" />
         <folder expanded="1" path="animation-folder/Player_Wand/" />
         <folder expanded="1" path="animation-folder/Player_Kahn/" />
+        <folder expanded="1" path="animation-folder/Boss_Anubis/" />
+        <folder expanded="1" path="animation-folder/Boss_Anubis_TeleportLocation/" />
+        <folder expanded="1" path="animation-folder/Boss_Anubis_Beam/" />
+        <folder expanded="1" path="animation-folder/Boss_Anubis_Projectile/" />
+        <folder expanded="1" path="animation-folder/Boss_DestroyExplosion/" />
     </folders-expanded>
 </c2uistate>

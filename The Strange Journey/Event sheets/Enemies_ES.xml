@@ -1342,38 +1342,62 @@
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="530910171554964" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="784615659239291" type="Audio">
-                            <param id="0" name="Audio file">sfx_sounds_impact11</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-6</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="593465011680653" type="Enemies">
-                            <param id="0" name="Object">Par_Explosion</param>
-                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="493865478434998" type="System">
-                            <param id="0" name="Variable">Total_Score</param>
-                            <param id="1" name="Value">Enemies.points</param>
-                        </action>
-                        <action id="-11" name="Add to" sid="716376125180874" type="HUD_special_arts_bar">
-                            <param id="0" name="Instance variable">bar_points</param>
-                            <param id="1" name="Value">enemies.points</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="276833483460865" type="Enemies" />
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="651395078392765">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="571134084165667" type="Enemies">
+                                    <param id="0" name="Instance variable">boss</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="516314350225819" type="Enemies">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="377165900742071" type="Enemies">
+                                    <param id="0" name="Animation">&quot;Hurt&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="299704939241433" type="Function">
+                                    <param id="0" name="Name">&quot;Object_Flash_Boss&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Drop a pickup</comment>
                         <variable constant="0" name="ItemDrop" sid="174898673927425" static="0" type="number">0</variable>
                         <event-block sid="162919658671337">
-                            <conditions />
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="787097778542073" type="Enemies">
+                                    <param id="0" name="Instance variable">boss</param>
+                                </condition>
+                            </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="519612334297765" type="System">
                                     <param id="0" name="Variable">ItemDrop</param>
                                     <param id="1" name="Value">random(10)</param>
                                 </action>
+                                <action id="0" name="Play" sid="784615659239291" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_impact11</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="593465011680653" type="Enemies">
+                                    <param id="0" name="Object">Par_Explosion</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="493865478434998" type="System">
+                                    <param id="0" name="Variable">Total_Score</param>
+                                    <param id="1" name="Value">Enemies.points</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="716376125180874" type="HUD_special_arts_bar">
+                                    <param id="0" name="Instance variable">bar_points</param>
+                                    <param id="1" name="Value">enemies.points</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="276833483460865" type="Enemies" />
                             </actions>
                             <sub-events>
                                 <event-block sid="105350370222512">
@@ -1688,6 +1712,775 @@
                                 </action>
                             </actions>
                         </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="547597068227291" title="Boss - Anubis">
+            <sub-events>
+                <event-block sid="935863396922534">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="541782126665178" type="Boss_Anubis">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="670054808306212" type="Enemies">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-group description="" sid="511391892414889" title="Anubis Passive">
+                            <sub-events>
+                                <event-block sid="695894368466813">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="933620807521504" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Idle&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="654430358603699" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="338272001868364" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern_active</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="189985416458168">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="471470010893214" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="387953443021851" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern_count</param>
+                                                    <param id="1" name="Value">4</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="317875294790564" title="Teleport Move">
+                            <sub-events>
+                                <event-block sid="648268584613449">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="831215574450516" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TeleportOut&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="468871972929347" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern_active</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="163594253431511" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="882305753701368">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="756894563393720" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="606061521409469" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TeleportOut&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="500108024627457">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="380351112721025" type="Boss_Anubis_TeleportLocation">
+                                                    <param id="0" name="Instance variable">index</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">choose(0,1,2,3,4,5)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="521179830383708" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern</param>
+                                                    <param id="1" name="Value">&quot;TeleportIn&quot;</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="681920687895072" type="Boss_Anubis">
+                                                    <param id="0" name="Animation">&quot;TeleportIn&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-4" name="Set position to another object" sid="154830700119489" type="Boss_Anubis">
+                                                    <param id="0" name="Object">Boss_Anubis_TeleportLocation</param>
+                                                    <param id="1" name="Image point (optional)">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="115028105531457">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="237516152787548" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;TeleportIn&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="189500712952573" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Value">&quot;Idle&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="217837064571633" title="Dive Move">
+                            <sub-events>
+                                <event-block sid="917267861277704">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="562347776568063" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TeleportDive&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="785916499023474" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern_active</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="741298164729570" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="677193218883792">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="299973202127079" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="152121368074387" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TeleportDive&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="750093811646660" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern_time</param>
+                                            <param id="1" name="Value">30</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="216104676632776" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern_count</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="931285604843708">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="286179126514054" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern_count</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="603737050204377">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="376632577254637" type="Boss_Anubis_TeleportLocation">
+                                                            <param id="0" name="Instance variable">index</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">choose(6,7,8,9)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="821137612143283" type="Boss_Anubis">
+                                                            <param id="0" name="Instance variable">pattern</param>
+                                                            <param id="1" name="Value">&quot;Dive&quot;</param>
+                                                        </action>
+                                                        <action behavior="8Direction" id="8" name="Set enabled" sid="984468085832059" type="Boss_Anubis">
+                                                            <param id="0" name="State">0</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="887933257163321" type="Boss_Anubis">
+                                                            <param id="0" name="Animation">&quot;Dive&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-4" name="Set position to another object" sid="243623697679370" type="Boss_Anubis">
+                                                            <param id="0" name="Object">Boss_Anubis_TeleportLocation</param>
+                                                            <param id="1" name="Image point (optional)">0</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="537819783744672" type="Boss_Anubis">
+                                                            <param id="0" name="Angle">angle(Boss_Anubis.X,Boss_Anubis.Y,Player.X,Player.Y)</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="261512350199406" type="Boss_Anubis">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="935805647555907">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="719278470519914" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern_count</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="663442488758749">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="507046424893918" type="Boss_Anubis_TeleportLocation">
+                                                            <param id="0" name="Instance variable">index</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">choose(0,1,2,3,4,5)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="882189676329646" type="Boss_Anubis">
+                                                            <param id="0" name="Animation">&quot;TeleportIn&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="383234435441391" type="Boss_Anubis">
+                                                            <param id="0" name="Instance variable">pattern</param>
+                                                            <param id="1" name="Value">&quot;TeleportIn&quot;</param>
+                                                        </action>
+                                                        <action id="-4" name="Set position to another object" sid="867241788121156" type="Boss_Anubis">
+                                                            <param id="0" name="Object">Boss_Anubis_TeleportLocation</param>
+                                                            <param id="1" name="Image point (optional)">0</param>
+                                                        </action>
+                                                        <action behavior="8Direction" id="8" name="Set enabled" sid="230085929410886" type="Boss_Anubis">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="388689910859677" type="Boss_Anubis">
+                                                            <param id="0" name="State">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="750242559685925">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="972040979263114" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Dive&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="130747391948484">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="361209588597805" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="906084702935237" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern_time</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="501184873623636">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="676404120838597" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern_time</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="361654955457709" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="103796853702147" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern</param>
+                                                    <param id="1" name="Value">&quot;TeleportDive&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="118727340312519" title="Projectile Move">
+                            <sub-events>
+                                <event-block sid="464265141595503">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="575374360613550" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TeleportProj&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="382808895415056" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern_active</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="978655453460389" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="333670958515067">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="343341186591201" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="447515583216547" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TeleportProj&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="544512700553914">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="809532941901578" type="Boss_Anubis_TeleportLocation">
+                                                    <param id="0" name="Instance variable">index</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">choose(0,1,2)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-4" name="Set position to another object" sid="241108334220987" type="Boss_Anubis">
+                                                    <param id="0" name="Object">Boss_Anubis_TeleportLocation</param>
+                                                    <param id="1" name="Image point (optional)">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="585299346776796" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern</param>
+                                                    <param id="1" name="Value">&quot;Projectile&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="368923957783814">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="219586855361803" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Projectile&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="138878885248457" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;Projectile&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="613997682441483">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="485652464903954" type="Boss_Anubis">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">5</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="647569463734029" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="720319892833523" type="System">
+                                                    <param id="0" name="Object to create">Boss_Anubis_Projectile</param>
+                                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                                    <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
+                                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="743448314517390" type="Boss_Anubis_Projectile">
+                                                    <param id="0" name="Angle">angle(Boss_Anubis.X,Boss_Anubis.Y,Player.X,Player.Y) + choose(0,5,10,15)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="393010398486729">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="304244078509185" type="Boss_Anubis">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">7</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="130958866278925" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="105042657446497" type="System">
+                                                    <param id="0" name="Object to create">Boss_Anubis_Projectile</param>
+                                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                                    <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
+                                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="359096158253399" type="Boss_Anubis_Projectile">
+                                                    <param id="0" name="Angle">angle(Boss_Anubis.X,Boss_Anubis.Y,Player.X,Player.Y) + choose(0,5,10,15)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="561385380897672">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="922844224687950" type="Boss_Anubis">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">9</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="294397434035279" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="838224345216259" type="System">
+                                                    <param id="0" name="Object to create">Boss_Anubis_Projectile</param>
+                                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                                    <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
+                                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="671921793768319" type="Boss_Anubis_Projectile">
+                                                    <param id="0" name="Angle">angle(Boss_Anubis.X,Boss_Anubis.Y,Player.X,Player.Y) + choose(0,5,10,15)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="806923287410421">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="191019441399047" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;Projectile&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="725064263489280" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Value">&quot;Idle&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="312361104603655" title="Beam Move">
+                            <sub-events>
+                                <event-block sid="976983191364295">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="823874410205721" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TeleportBeam&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="458478667821899" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern_active</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="345892482452342" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="471613658164717">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="885445633305763" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="724032056634866" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;TeleportBeam&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="475971031790638">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="794560259288240" type="Boss_Anubis_TeleportLocation">
+                                                    <param id="0" name="Instance variable">index</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">choose(3,5)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-4" name="Set position to another object" sid="315838545803898" type="Boss_Anubis">
+                                                    <param id="0" name="Object">Boss_Anubis_TeleportLocation</param>
+                                                    <param id="1" name="Image point (optional)">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="886376168613291" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern</param>
+                                                    <param id="1" name="Value">&quot;Beam&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="499515777590297">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="542867107742756" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Beam&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="103005310592175" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;Beam&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="112170246362710">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="161841255172610" type="Boss_Anubis">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">5</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="830691045169572" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="443218360386453" type="System">
+                                                    <param id="0" name="Object to create">Boss_Anubis_Beam</param>
+                                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                                    <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
+                                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="750602471404719">
+                                                    <conditions>
+                                                        <condition id="-1" name="Compare X" sid="945491636087906" type="Boss_Anubis">
+                                                            <param id="0" name="Comparison">4</param>
+                                                            <param id="1" name="X co-ordinate">Player.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="398912533629716" type="Boss_Anubis_Beam">
+                                                            <param id="0" name="Angle">0</param>
+                                                        </action>
+                                                        <action id="7" name="Set mirrored" sid="379342471390207" type="Boss_Anubis_Beam">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="686419593834313">
+                                                    <conditions>
+                                                        <condition id="-1" name="Compare X" sid="122879587232989" type="Boss_Anubis">
+                                                            <param id="0" name="Comparison">2</param>
+                                                            <param id="1" name="X co-ordinate">Player.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="602992522445688" type="Boss_Anubis_Beam">
+                                                            <param id="0" name="Angle">270</param>
+                                                        </action>
+                                                        <action id="7" name="Set mirrored" sid="644233601741343" type="Boss_Anubis_Beam">
+                                                            <param id="0" name="State">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="493297965385236">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="257415815992268" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;Beam&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="499874723126345" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Value">&quot;Idle&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="280795694147873" title="Patterns and Health">
+                            <sub-events>
+                                <event-block sid="326073280114414">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="437886527517567" type="System">
+                                            <param id="0" name="Value">Boss_Anubis.health</param>
+                                            <param id="1" name="Lower bound">80</param>
+                                            <param id="2" name="Upper bound">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="598598252432589">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="322281393275741" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern_active</param>
+                                                </condition>
+                                                <condition id="-6" name="Every X seconds" sid="219632389876024" type="System">
+                                                    <param id="0" name="Interval (seconds)">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="361015596789403" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern</param>
+                                                    <param id="1" name="Value">choose(&quot;TeleportProj&quot;,&quot;TeleportOut&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="702507571492956">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="612170761586171" type="System">
+                                            <param id="0" name="Value">Boss_Anubis.health</param>
+                                            <param id="1" name="Lower bound">50</param>
+                                            <param id="2" name="Upper bound">80</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="972252991027880">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="149248606122275" type="System">
+                                                    <param id="0" name="Interval (seconds)">3</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="159665995733333" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern_active</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="270329044014096" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern</param>
+                                                    <param id="1" name="Value">choose(&quot;TeleportBeam&quot;,&quot;TeleportProj&quot;,&quot;TeleportOut&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="368700928369504">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="213511778504261" type="System">
+                                            <param id="0" name="Value">Boss_Anubis.health</param>
+                                            <param id="1" name="Lower bound">0</param>
+                                            <param id="2" name="Upper bound">50</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="702698244546713">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="696096211567881" type="System">
+                                                    <param id="0" name="Interval (seconds)">2</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="236359888441645" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern_active</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="532835156394114" type="Boss_Anubis">
+                                                    <param id="0" name="Instance variable">pattern</param>
+                                                    <param id="1" name="Value">choose(&quot;TeleportBeam&quot;,&quot;TeleportProj&quot;,&quot;TeleportOut&quot;,&quot;TeleportDive&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="514409196993277">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="508451881954622" type="Boss_Anubis">
+                                            <param id="0" name="Object">Boss_Anubis_TeleportLocation</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="202960390075842">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="136940602708296" type="Boss_Anubis_TeleportLocation">
+                                                    <param id="0" name="Instance variable">index</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="379349078169113" type="Boss_Anubis">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="911381810894336">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="164516396071461" type="Boss_Anubis_TeleportLocation">
+                                                    <param id="0" name="Instance variable">index</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="594719285363651" type="Boss_Anubis">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="610183515998468">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="275139696742639" type="Boss_Anubis_TeleportLocation">
+                                                    <param id="0" name="Instance variable">index</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="202144233378464" type="Boss_Anubis">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="981943744193520">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="992206883436514" type="Boss_Anubis_TeleportLocation">
+                                                    <param id="0" name="Instance variable">index</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="775638832489956" type="Boss_Anubis">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="324862187494335">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="279118760423912" type="Boss_Anubis_TeleportLocation">
+                                                    <param id="0" name="Instance variable">index</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="296449601629227" type="Boss_Anubis">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="347675694302378">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="815758926810809" type="Boss_Anubis_TeleportLocation">
+                                                    <param id="0" name="Instance variable">index</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="749776703811214" type="Boss_Anubis">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-block>
             </sub-events>

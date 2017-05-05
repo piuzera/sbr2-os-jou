@@ -9,22 +9,10 @@
         <include>Globals_ES</include>
         <include>HUD_ES</include>
         <include>Projectiles_ES</include>
-        <include>FX_ES</include>
         <include>Player1_ES</include>
         <include>Enemies_ES</include>
         <event-group description="" sid="127030302326891" title="Camera">
             <sub-events>
-                <event-block disabled="1" sid="927467330655327">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="788120862609751" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-7" name="Scroll to position" sid="658951265814033" type="System">
-                            <param id="0" name="X">Player.X</param>
-                            <param id="1" name="Y">Player.Y - 48</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>updateCamera(ForceGoToTarget 0 no,1 yes,2 x only)</comment>
                 <event-block sid="313988352513989">
                     <conditions>
@@ -262,7 +250,12 @@
                                     <param id="0" name="Instance variable">IsActive</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Call function" sid="366794846821711" type="Function">
+                                    <param id="0" name="Name">&quot;enableCamera&quot;</param>
+                                    <param id="1" name="Parameter {n}">1</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="674025263351188">
                                     <conditions>
@@ -635,22 +628,752 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="953700583492422">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="344445185134280" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;WhiteIn&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-31" name="Set layout effect parameter" sid="765779923783366" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">112.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="114729840430679" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="569934812883617" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">125</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="533307567666770" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="369831612329157" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">137.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="323032133795841" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="703870892239267" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">150</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="467845939634005" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="868704337955898" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">162.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="515211252083142" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="198493351559386" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">175</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="131587765043208" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="610915853496370" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">187.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="371372114042034" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="816917652350161" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="692616652607247">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="763510563031831" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;WhiteOut&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-31" name="Set layout effect parameter" sid="907688669335252" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">187.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="971175855879809" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="907510770931125" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">175</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="759983991540640" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="429986279121125" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">162.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="307577462252192" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="548683171158578" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">150</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="913961534315799" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="280013833086313" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">137.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="570965724031998" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="153007230762065" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">125</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="744137726072398" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="833115598984618" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">112.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="721903429386113" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="865998373778731" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="761450958336598">
+                <comment>Flash an object white</comment>
+                <event-block sid="108297606440544">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="849525248637969" type="System" />
+                        <condition id="0" name="On function" sid="101128327867070" type="Function">
+                            <param id="0" name="Name">&quot;Object_Flash&quot;</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="387969154708661" type="Function">
-                            <param id="0" name="Name">&quot;Fade&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;In&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="992740319073155" type="Function">
-                            <param id="0" name="Name">&quot;Pixellate&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Normalize&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="498053514139889">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="883874787495756" type="Behaviors">
+                                    <param id="0" name="Unique ID">function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="332630831054542" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="808359414832421" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="157977768214174" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Flash boss on kill</comment>
+                <event-block sid="858892837587999">
+                    <conditions>
+                        <condition id="0" name="On function" sid="548909901723582" type="Function">
+                            <param id="0" name="Name">&quot;Object_Flash_Boss&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="900831735431832">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="506751868926296" type="Behaviors">
+                                    <param id="0" name="Unique ID">function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="318199085671440" type="Function">
+                                    <param id="0" name="Name">&quot;LevelEnd&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Init&quot;</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="718075325941548" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="322823029141150" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="259276052583277" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="138767528879928" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="700720531946766" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="533599779999360" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="325672456040932" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="534175559585833" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="774681594184263" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="253896966106290" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="430551660245825" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="448023080195006" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="434306010432314" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="160548579727626" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="235363170669841" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="398400625051969" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="322585554188519" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="779519698070206" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="853460745616357" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="149536482464884" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="740490359872901" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="633095626470611" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="813220284252992" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="596047371293973" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="373842142564856" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="396738887494885" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="560149765124651" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="373048251448176" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="236303957300678" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="225532491669005" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="729959854541193" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="353755628424707" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="653995056986488" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="654482871687383" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="901806873674185" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="900157585276436" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="146060196091677" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="164025112419615" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="277313426203249" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="932241519560309" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="402214015345016" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="988785285437892" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="290985420350284" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="585156409480508" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="438224952275342" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="162121520007075" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="666406989626768" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="762534809633157" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="288579395781890" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="841966840383486" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="465182333918720" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="236687033132156" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="907311485303918" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="412059965915843" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="820945217602222" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="215799559005194" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="504234858761193" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="562054010235759" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="675382460199842" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="857917011450113" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="204139190535182" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="373113762313553" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="558592407002701" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="393581816497280" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="358247526244114" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="817923534297420" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="224561412627343" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="951654076196152" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="888201270371292" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="301191242980421" type="Function">
+                                    <param id="0" name="Name">&quot;Fade&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;WhiteIn&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="409048501368226" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="561226096734095" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="205187083477476" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="273236579527810" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">200</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="886837242233251" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="736908401993940" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="182294045152476" type="Behaviors">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="363951301935465" type="System">
+                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
+                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="922523375833961" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="115633949586463" type="Function">
+                                    <param id="0" name="Name">&quot;LevelEnd&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;End&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="563995655023412" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="313004223617662" type="Function">
+                                    <param id="0" name="Name">&quot;Fade&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;WhiteOut&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="858216110063426" type="Enemies">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="307431872480878" type="System">
+                                    <param id="0" name="Variable">Total_Score</param>
+                                    <param id="1" name="Value">Enemies.points</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="447860487263533" type="HUD_special_arts_bar">
+                                    <param id="0" name="Instance variable">bar_points</param>
+                                    <param id="1" name="Value">enemies.points</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="436066134331796" type="Enemies" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="188218978037003">
+                    <conditions>
+                        <condition id="0" name="On function" sid="615823237183376" type="Function">
+                            <param id="0" name="Name">&quot;LevelEnd&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="697428363358740">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="563408754877380" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Init&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="467823829806452" type="System">
+                                    <param id="0" name="Group name">&quot;Player Engine&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-14" name="Set object time scale" sid="178143068200459" type="System">
+                                    <param id="0" name="Object">Player_Mask</param>
+                                    <param id="1" name="Time scale">0</param>
+                                </action>
+                                <action id="-14" name="Set object time scale" sid="553614040957844" type="System">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Time scale">0</param>
+                                </action>
+                                <action id="-14" name="Set object time scale" sid="334975693531462" type="System">
+                                    <param id="0" name="Object">WeaponsEtc</param>
+                                    <param id="1" name="Time scale">0</param>
+                                </action>
+                                <action behavior="Flash" id="1" name="Stop flashing" sid="140303033234776" type="Player_Mask" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="468928349377112">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="605421781578354" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;End&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="515469164519485" type="WeaponsEtc" />
+                                <action id="-14" name="Set object time scale" sid="221683822037150" type="System">
+                                    <param id="0" name="Object">Player_Mask</param>
+                                    <param id="1" name="Time scale">1</param>
+                                </action>
+                                <action id="-14" name="Set object time scale" sid="586126362367767" type="System">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Time scale">1</param>
+                                </action>
+                                <action id="-14" name="Set object time scale" sid="139461967175123" type="System">
+                                    <param id="0" name="Object">WeaponsEtc</param>
+                                    <param id="1" name="Time scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="236609245029413" type="Player_Mask">
+                                    <param id="0" name="Instance variable">cutsceneControl</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="949831584577774" type="Player_Mask">
+                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
+                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="179822456786227" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="383928632274547" type="Player_Mask">
+                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
+                                    <param id="1" name="Value">&quot;no&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="219438549843014" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action behavior="ScrollTo" id="1" name="Set enabled" sid="375879977225743" type="Player_Camera">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="565321266392747" type="Player_Mask">
+                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
+                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="690282122736404" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="224810696101787" type="Function">
+                                    <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="874235805613564" type="Function">
+                                    <param id="0" name="Name">&quot;Fade&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
+                                </action>
+                                <action disabled="1" id="-12" name="Set group active" sid="991326187791772" type="System">
+                                    <param id="0" name="Group name">&quot;Player Engine&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action disabled="1" id="-13" name="Set boolean" sid="625560928695520" type="Player_Mask">
+                                    <param id="0" name="Instance variable">cutsceneControl</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="ScrollTo" disabled="1" id="1" name="Set enabled" sid="438070167109935" type="Player_Camera">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="854270233877410">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="172259529424861" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="978479783231539">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="867028171790686" type="Player_Mask">
+                                    <param id="0" name="Instance variable">cutsceneControl</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="874241719864346" type="Player_Mask">
+                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;no&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="228436198745498" type="Player_Mask">
+                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Win&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="447255420558522">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="825651553121628" type="Player_Mask">
+                                    <param id="0" name="Instance variable">cutsceneControl</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="514363586419026" type="Player_Mask">
+                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="637075390963886" type="Player_Mask">
+                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Idle&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="767647621577025">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="942160577855655" type="Player_Mask">
+                                    <param id="0" name="Instance variable">cutsceneControl</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="587239139457977" type="Player_Mask">
+                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="835490238414999" type="Player">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="818167179097800" type="Player_Mask">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="271864149713111" type="Player_Mask">
+                                    <param id="0" name="Animation">Self.equip&amp;&quot;_Run&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -670,6 +1393,14 @@
                         <action id="0" name="Call function" sid="577713995737123" type="Function">
                             <param id="0" name="Name">&quot;enableCamera&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="387969154708661" type="Function">
+                            <param id="0" name="Name">&quot;Fade&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;In&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="992740319073155" type="Function">
+                            <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Normalize&quot;</param>
                         </action>
                     </actions>
                 </event-block>
