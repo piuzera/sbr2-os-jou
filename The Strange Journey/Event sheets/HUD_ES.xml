@@ -115,6 +115,9 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">Player_Mask.IID</param>
                                         </condition>
+                                        <condition id="2" name="Is playing" sid="989827822900009" type="HUD_special_arts_bar">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="5" name="Set frame" sid="721297614071938" type="HUD_special_arts_bar">
@@ -129,12 +132,12 @@
                 <event-block sid="948327398804285">
                     <conditions>
                         <condition id="3" name="Compare frame" sid="628060635809115" type="HUD_special_arts_bar">
-                            <param id="0" name="Comparison">0</param>
+                            <param id="0" name="Comparison">5</param>
                             <param id="1" name="Number">7</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="244534196635888" type="HUD_special_arts_bar">
+                        <action id="4" name="Set animation" sid="343833953025298" type="HUD_special_arts_bar">
                             <param id="0" name="Animation">&quot;Super&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>

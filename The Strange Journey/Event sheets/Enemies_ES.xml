@@ -1500,28 +1500,53 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="812692558917606">
+                <event-block sid="393576860599525">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="942829784883571" type="Enemy_Respawner">
-                            <param id="0" name="Instance variable">stallingSpawn</param>
+                        <condition id="-11" name="For Each" sid="446706609979289" type="System">
+                            <param id="0" name="Object">Enemy_Respawner</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="581692696935657" type="Enemy_Respawner">
-                            <param id="0" name="Instance variable">stallTime</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-3" name="Is on-screen" sid="659090210642251" type="Player" />
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="708256412882846" type="Enemy_Respawner">
-                            <param id="0" name="Instance variable">stallTime</param>
-                            <param id="1" name="Value">random(300,600)</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="563926655536997" type="Enemy_Respawner">
-                            <param id="0" name="Instance variable">active</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="812692558917606">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="942829784883571" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">stallingSpawn</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="581692696935657" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">stallTime</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="659090210642251" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="708256412882846" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">stallTime</param>
+                                    <param id="1" name="Value">random(300,600)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="563926655536997" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="436111063252962">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="218097127534210" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">stallTime</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">650</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="576722551715722" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">stallTime</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="858817030780320">
                     <conditions>
@@ -1534,21 +1559,6 @@
                     <actions>
                         <action id="-11" name="Add to" sid="610779620569009" type="Enemy_Respawner">
                             <param id="0" name="Instance variable">time</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="436111063252962">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="218097127534210" type="Enemy_Respawner">
-                            <param id="0" name="Instance variable">stallTime</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">650</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="576722551715722" type="Enemy_Respawner">
-                            <param id="0" name="Instance variable">stallTime</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
