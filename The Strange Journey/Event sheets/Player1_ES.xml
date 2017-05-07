@@ -111,7 +111,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="363538669786853" type="Player_Mask">
                                     <param id="0" name="Instance variable">p_jumpHeight</param>
-                                    <param id="1" name="Value">-230</param>
+                                    <param id="1" name="Value">-240</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="811382782879532" type="Player_Mask">
                                     <param id="0" name="Instance variable">p_fallSpeed</param>
@@ -139,7 +139,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="563270122860102" type="Player_Mask">
                                     <param id="0" name="Instance variable">p_jumpHeight</param>
-                                    <param id="1" name="Value">-250</param>
+                                    <param id="1" name="Value">-255</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="288312277581699" type="Player_Mask">
                                     <param id="0" name="Instance variable">p_fallSpeed</param>
@@ -3211,122 +3211,6 @@
                 </event-group>
                 <event-group description="" sid="979050037512421" title="Player 1 Shoot">
                     <sub-events>
-                        <event-block sid="962073136167113">
-                            <conditions>
-                                <condition id="-6" name="Every X seconds" sid="580838376298899" type="System">
-                                    <param id="0" name="Interval (seconds)">0.075</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="989496281817669" type="Player_Shield">
-                                    <param id="0" name="Object">Player_shield_Particle</param>
-                                    <param id="1" name="Layer">self.LayerName</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-29" name="Move to object" sid="459055087945441" type="Player_shield_Particle">
-                                    <param id="0" name="Where">1</param>
-                                    <param id="1" name="Object">Player_Shield</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="317710211054763">
-                            <conditions />
-                            <actions>
-                                <action id="-7" name="Set size" sid="590627748947113" type="Player_shield_Particle">
-                                    <param id="0" name="Width">self.Width-1</param>
-                                    <param id="1" name="Height">self.Height-1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="662841108879395">
-                            <conditions>
-                                <condition id="-3" name="Is on-screen" sid="512691471507822" type="Player_Shield" />
-                                <condition id="-6" name="Every X seconds" sid="789887751188505" type="System">
-                                    <param id="0" name="Interval (seconds)">0.12</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="690258727775916" type="Audio">
-                                    <param id="0" name="Audio file">sfx_wpn_sword2</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="477332530000882">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="487056496887899" type="Player_Mask">
-                                    <param id="0" name="Instance variable">shoot</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="121193330398232" type="Player_Sword" />
-                                <action id="-9" name="Destroy" sid="640006890311011" type="Player_Wand" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="454840768762146">
-                            <conditions>
-                                <condition id="-5" name="Compare width" sid="318274660356667" type="Player_shield_Particle">
-                                    <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="Width">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="635580519484153" type="Player_shield_Particle" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="603872947769993">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="424900227438792" type="Player_Shield">
-                                    <param id="0" name="Instance variable">comeBack</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="149641418247961">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="692955225428277" type="Player_Shield">
-                                            <param id="0" name="Instance variable">arc</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="993626598158091" type="Player_Shield">
-                                            <param id="0" name="Angle">anglelerp(self.Bullet.AngleOfMotion,angle(self.X,self.Y,Player.X,Player.Y-32),20*dt)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="985766875802658">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="930147807437746" type="Player_Shield">
-                                            <param id="0" name="Instance variable">arc</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="665994980776575" type="Player_Shield">
-                                            <param id="0" name="Angle">angle(self.X,self.Y,Player.X,Player.Y)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="152188321588758">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="240543382773530" type="Player_Shield">
-                                            <param id="0" name="Object">Player</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Wait" sid="588974668746905" type="System">
-                                            <param id="0" name="Seconds">0.04</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="353722907327273" type="Player_Mask">
-                                            <param id="0" name="Instance variable">shoot</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="290490170530082" type="Player_Shield" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
                         <event-block sid="190416995934255">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="116946970513388" type="Player_Mask">
@@ -4099,10 +3983,18 @@
                                                             <param id="3" name="Y">0</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="622864801167580" type="System">
-                                                            <param id="0" name="Object to create">Player_Kahn</param>
+                                                            <param id="0" name="Object to create">Player_Ankh</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">0</param>
                                                             <param id="3" name="Y">0</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="691721763431764" type="Player_Ankh">
+                                                            <param id="0" name="Animation">&quot;Default_&quot;&amp;Player_Mask.shootAngle</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="754084808006275" type="Player_Ankh_Particle">
+                                                            <param id="0" name="Animation">&quot;Default_&quot;&amp;Player_Mask.shootAngle</param>
+                                                            <param id="1" name="From">1</param>
                                                         </action>
                                                         <action id="0" name="Play" sid="719400019907749" type="Audio">
                                                             <param id="0" name="Audio file">sfx_wpn_cannon4</param>
@@ -4143,11 +4035,11 @@
                                                                                     <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
                                                                                     <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
                                                                                 </action>
-                                                                                <action id="-3" name="Set position" sid="431278986684568" type="Player_Kahn">
-                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                <action id="-3" name="Set position" sid="431278986684568" type="Player_Ankh">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
                                                                                 </action>
-                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="843118809693877" type="Player_Kahn">
+                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="843118809693877" type="Player_Ankh">
                                                                                     <param id="0" name="Angle">0</param>
                                                                                 </action>
                                                                             </actions>
@@ -4164,6 +4056,9 @@
                                                                                 <action id="7" name="Set mirrored" sid="728166402939741" type="Player_Wand">
                                                                                     <param id="0" name="State">0</param>
                                                                                 </action>
+                                                                                <action id="7" name="Set mirrored" sid="440141786410094" type="Player_Ankh">
+                                                                                    <param id="0" name="State">0</param>
+                                                                                </action>
                                                                                 <action id="4" name="Set animation" sid="679434152531185" type="Player_Wand">
                                                                                     <param id="0" name="Animation">&quot;Standing&quot;</param>
                                                                                     <param id="1" name="From">1</param>
@@ -4172,11 +4067,11 @@
                                                                                     <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
                                                                                     <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
                                                                                 </action>
-                                                                                <action id="-3" name="Set position" sid="950462987648236" type="Player_Kahn">
-                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                <action id="-3" name="Set position" sid="950462987648236" type="Player_Ankh">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
                                                                                 </action>
-                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="375920343457239" type="Player_Kahn">
+                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="375920343457239" type="Player_Ankh">
                                                                                     <param id="0" name="Angle">180</param>
                                                                                 </action>
                                                                             </actions>
@@ -4199,6 +4094,9 @@
                                                                                         <action id="7" name="Set mirrored" sid="332936568944503" type="Player_Wand">
                                                                                             <param id="0" name="State">0</param>
                                                                                         </action>
+                                                                                        <action id="7" name="Set mirrored" sid="541537581330624" type="Player_Ankh">
+                                                                                            <param id="0" name="State">0</param>
+                                                                                        </action>
                                                                                     </actions>
                                                                                 </event-block>
                                                                                 <event-block sid="715053711918252">
@@ -4212,11 +4110,11 @@
                                                                                             <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
                                                                                             <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
                                                                                         </action>
-                                                                                        <action id="-3" name="Set position" sid="197199669436724" type="Player_Kahn">
-                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        <action id="-3" name="Set position" sid="197199669436724" type="Player_Ankh">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
                                                                                         </action>
-                                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="170083795141342" type="Player_Kahn">
+                                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="170083795141342" type="Player_Ankh">
                                                                                             <param id="0" name="Angle">270</param>
                                                                                         </action>
                                                                                     </actions>
@@ -4248,11 +4146,11 @@
                                                                                     <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
                                                                                     <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
                                                                                 </action>
-                                                                                <action id="-3" name="Set position" sid="755207628380399" type="Player_Kahn">
-                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                <action id="-3" name="Set position" sid="755207628380399" type="Player_Ankh">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
                                                                                 </action>
-                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="110239730842122" type="Player_Kahn">
+                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="110239730842122" type="Player_Ankh">
                                                                                     <param id="0" name="Angle">0</param>
                                                                                 </action>
                                                                             </actions>
@@ -4275,6 +4173,9 @@
                                                                                         <action id="7" name="Set mirrored" sid="789988068695728" type="Player_Wand">
                                                                                             <param id="0" name="State">0</param>
                                                                                         </action>
+                                                                                        <action id="7" name="Set mirrored" sid="608253357288179" type="Player_Ankh">
+                                                                                            <param id="0" name="State">0</param>
+                                                                                        </action>
                                                                                     </actions>
                                                                                 </event-block>
                                                                                 <event-block sid="412033624594311">
@@ -4288,11 +4189,11 @@
                                                                                             <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
                                                                                             <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
                                                                                         </action>
-                                                                                        <action id="-3" name="Set position" sid="501191635887552" type="Player_Kahn">
-                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        <action id="-3" name="Set position" sid="501191635887552" type="Player_Ankh">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
                                                                                         </action>
-                                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="705466867082512" type="Player_Kahn">
+                                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="705466867082512" type="Player_Ankh">
                                                                                             <param id="0" name="Angle">90</param>
                                                                                         </action>
                                                                                     </actions>
@@ -4311,6 +4212,9 @@
                                                                                 <action id="7" name="Set mirrored" sid="800060357782963" type="Player_Wand">
                                                                                     <param id="0" name="State">0</param>
                                                                                 </action>
+                                                                                <action id="7" name="Set mirrored" sid="916311107177921" type="Player_Ankh">
+                                                                                    <param id="0" name="State">0</param>
+                                                                                </action>
                                                                                 <action id="4" name="Set animation" sid="912486865035264" type="Player_Wand">
                                                                                     <param id="0" name="Animation">&quot;NeutralAir&quot;</param>
                                                                                     <param id="1" name="From">1</param>
@@ -4319,11 +4223,11 @@
                                                                                     <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
                                                                                     <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
                                                                                 </action>
-                                                                                <action id="-3" name="Set position" sid="104944358371646" type="Player_Kahn">
-                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                <action id="-3" name="Set position" sid="104944358371646" type="Player_Ankh">
+                                                                                    <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
                                                                                 </action>
-                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="823363596412965" type="Player_Kahn">
+                                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="823363596412965" type="Player_Ankh">
                                                                                     <param id="0" name="Angle">180</param>
                                                                                 </action>
                                                                             </actions>
@@ -4346,6 +4250,9 @@
                                                                                         <action id="7" name="Set mirrored" sid="782333102196111" type="Player_Wand">
                                                                                             <param id="0" name="State">0</param>
                                                                                         </action>
+                                                                                        <action id="7" name="Set mirrored" sid="856661303805031" type="Player_Ankh">
+                                                                                            <param id="0" name="State">0</param>
+                                                                                        </action>
                                                                                     </actions>
                                                                                 </event-block>
                                                                                 <event-block sid="808113630028380">
@@ -4359,11 +4266,11 @@
                                                                                             <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
                                                                                             <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
                                                                                         </action>
-                                                                                        <action id="-3" name="Set position" sid="337677112876700" type="Player_Kahn">
-                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                                        <action id="-3" name="Set position" sid="337677112876700" type="Player_Ankh">
+                                                                                            <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
                                                                                         </action>
-                                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="326358982426017" type="Player_Kahn">
+                                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="326358982426017" type="Player_Ankh">
                                                                                             <param id="0" name="Angle">270</param>
                                                                                         </action>
                                                                                     </actions>
@@ -4382,8 +4289,8 @@
                                                             </conditions>
                                                             <actions>
                                                                 <action id="-3" name="Set position" sid="446391692766387" type="Player_Wand">
-                                                                    <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
-                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
+                                                                    <param id="0" name="X">Player_Mask.ImagepointX(0)</param>
+                                                                    <param id="1" name="Y">Player_Mask.ImagepointY(0)</param>
                                                                 </action>
                                                             </actions>
                                                             <sub-events>
@@ -4400,11 +4307,11 @@
                                                                             <param id="0" name="Animation">&quot;Crouching&quot;</param>
                                                                             <param id="1" name="From">1</param>
                                                                         </action>
-                                                                        <action id="-3" name="Set position" sid="764672654880819" type="Player_Kahn">
-                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                        <action id="-3" name="Set position" sid="764672654880819" type="Player_Ankh">
+                                                                            <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
                                                                         </action>
-                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="269835864925283" type="Player_Kahn">
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="269835864925283" type="Player_Ankh">
                                                                             <param id="0" name="Angle">0</param>
                                                                         </action>
                                                                     </actions>
@@ -4421,15 +4328,18 @@
                                                                         <action id="7" name="Set mirrored" sid="553784347636407" type="Player_Wand">
                                                                             <param id="0" name="State">0</param>
                                                                         </action>
+                                                                        <action id="7" name="Set mirrored" sid="230613558644655" type="Player_Ankh">
+                                                                            <param id="0" name="State">0</param>
+                                                                        </action>
                                                                         <action id="4" name="Set animation" sid="464712613020739" type="Player_Wand">
                                                                             <param id="0" name="Animation">&quot;Crouching&quot;</param>
                                                                             <param id="1" name="From">1</param>
                                                                         </action>
-                                                                        <action id="-3" name="Set position" sid="190421773666554" type="Player_Kahn">
-                                                                            <param id="0" name="X">Player_Mask.ImagepointX(1)</param>
-                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(1)</param>
+                                                                        <action id="-3" name="Set position" sid="190421773666554" type="Player_Ankh">
+                                                                            <param id="0" name="X">Player_Mask.ImagepointX(2)</param>
+                                                                            <param id="1" name="Y">Player_Mask.ImagepointY(2)</param>
                                                                         </action>
-                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="630690528032039" type="Player_Kahn">
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="630690528032039" type="Player_Ankh">
                                                                             <param id="0" name="Angle">180</param>
                                                                         </action>
                                                                     </actions>
@@ -4473,6 +4383,194 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="164513619753490">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="471927211854029" type="Player_Mask">
+                                    <param id="0" name="Instance variable">shoot</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="351364264907298" type="Player_Sword" />
+                                <action id="-9" name="Destroy" sid="200627513386715" type="Player_Wand" />
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="309625859687217" title="Highlander - Targe Slash">
+                            <sub-events>
+                                <event-block sid="945810689089217">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="543608742579817" type="System">
+                                            <param id="0" name="Interval (seconds)">0.075</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="343967254804700" type="Player_Shield">
+                                            <param id="0" name="Object">Player_Shield_Particle</param>
+                                            <param id="1" name="Layer">self.LayerName</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="776439500831260" type="Player_Shield_Particle">
+                                            <param id="0" name="Where">1</param>
+                                            <param id="1" name="Object">Player_Shield</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="875415191845908">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="923186371817532" type="Player_Shield_Particle">
+                                            <param id="0" name="Width">self.Width-1</param>
+                                            <param id="1" name="Height">self.Height-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="583755392689727">
+                                    <conditions>
+                                        <condition id="-5" name="Compare width" sid="845769906482536" type="Player_Shield_Particle">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Width">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="590892243373799" type="Player_Shield_Particle" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="350230581037687">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="471332383085456" type="Player_Shield" />
+                                        <condition id="-6" name="Every X seconds" sid="634960470873643" type="System">
+                                            <param id="0" name="Interval (seconds)">0.12</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="434927741330079" type="Audio">
+                                            <param id="0" name="Audio file">sfx_wpn_sword2</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="339142490990720">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="234717648842410" type="Player_Shield">
+                                            <param id="0" name="Instance variable">comeBack</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="742000264497013">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="563951194391724" type="Player_Shield">
+                                                    <param id="0" name="Instance variable">arc</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="975368247806331" type="Player_Shield">
+                                                    <param id="0" name="Angle">anglelerp(self.Bullet.AngleOfMotion,angle(self.X,self.Y,Player.X,Player.Y-32),20*dt)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="958032245190949">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="256910460642420" type="Player_Shield">
+                                                    <param id="0" name="Instance variable">arc</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="812146209509680" type="Player_Shield">
+                                                    <param id="0" name="Angle">angle(self.X,self.Y,Player.X,Player.Y)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="210166929564813">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="819521868104772" type="Player_Shield">
+                                                    <param id="0" name="Object">Player</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="303731326386440" type="System">
+                                                    <param id="0" name="Seconds">0.04</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="166459462361476" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shoot</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="885533421092719" type="Player_Shield" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="331321264833105" title="Egyptian - Ankh">
+                            <sub-events>
+                                <event-block sid="382204708283773">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="689654965550692" type="System">
+                                            <param id="0" name="Interval (seconds)">0.075</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="986159532395098" type="Player_Ankh">
+                                            <param id="0" name="Object">Player_Ankh_Particle</param>
+                                            <param id="1" name="Layer">self.LayerName</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="472341772241795" type="Player_Ankh_Particle">
+                                            <param id="0" name="Animation">&quot;Default_&quot;&amp;Player_Mask.shootAngle</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="858350164228545" type="Player_Ankh_Particle">
+                                            <param id="0" name="Where">1</param>
+                                            <param id="1" name="Object">Player_Ankh</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="519927864171975">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="623983249280966" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">90</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="890681550697633" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">shootAngle</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">270</param>
+                                                </condition>
+                                                <condition id="7" name="Is mirrored" sid="190430500572893" type="Player_Mask" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="499701855674850" type="Player_Ankh_Particle">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="427698245835966">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="978487467573338" type="Player_Ankh_Particle">
+                                            <param id="0" name="Width">self.Width-1</param>
+                                            <param id="1" name="Height">self.Height-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="668909134231027">
+                                    <conditions>
+                                        <condition id="-5" name="Compare width" sid="197511621834831" type="Player_Ankh_Particle">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Width">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="537686093655535" type="Player_Ankh_Particle" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="738078293449884" title="Player 1 Hurt">

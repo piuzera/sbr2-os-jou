@@ -1334,13 +1334,18 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_shield_Particle" uid="104">
+                <instance type="Player_Shield_Particle" uid="104">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <power>0</power>
+                        <destroy>false</destroy>
+                        <owner>player</owner>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1943,13 +1948,13 @@
                         <width>128</width>
                         <height>160</height>
                         <depth>0</depth>
-                        <hotspotX>0.3984375</hotspotX>
+                        <hotspotX>0.375</hotspotX>
                         <hotspotY>0.543749988</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_Kahn" uid="111">
+                <instance type="Player_Ankh" uid="111">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1957,7 +1962,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <power>2</power>
+                        <power>1</power>
                         <destroy>false</destroy>
                         <owner>player</owner>
                         <comeBack>false</comeBack>
@@ -1980,7 +1985,7 @@
                         </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>292</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -2029,8 +2034,8 @@
                         <x>616.497924805</x>
                         <y>168.040802002</y>
                         <z>0</z>
-                        <width>22</width>
-                        <height>22</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2358,6 +2363,33 @@
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player_Ankh_Particle" uid="115">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <power>0.4</power>
+                        <destroy>false</destroy>
+                        <owner>player</owner>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>651.720947266</x>
+                        <y>167.690032959</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

@@ -886,6 +886,12 @@
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
                                 </action>
+                                <action id="0" name="Play" sid="980202322218011" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="235363170669841" type="System">
                                     <param id="0" name="Seconds">0.05</param>
                                 </action>
@@ -907,6 +913,12 @@
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="0" name="Play" sid="466866669121689" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="149536482464884" type="System">
                                     <param id="0" name="Seconds">0.05</param>
@@ -930,6 +942,12 @@
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
                                 </action>
+                                <action id="0" name="Play" sid="114678185091974" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="373842142564856" type="System">
                                     <param id="0" name="Seconds">0.05</param>
                                 </action>
@@ -951,6 +969,12 @@
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="0" name="Play" sid="319153397725897" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="225532491669005" type="System">
                                     <param id="0" name="Seconds">0.05</param>
@@ -974,6 +998,12 @@
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
                                 </action>
+                                <action id="0" name="Play" sid="173942558655817" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="901806873674185" type="System">
                                     <param id="0" name="Seconds">0.05</param>
                                 </action>
@@ -995,6 +1025,12 @@
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="0" name="Play" sid="507086260288855" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="932241519560309" type="System">
                                     <param id="0" name="Seconds">0.05</param>
@@ -1018,6 +1054,12 @@
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
                                 </action>
+                                <action id="0" name="Play" sid="892144248077315" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="438224952275342" type="System">
                                     <param id="0" name="Seconds">0.05</param>
                                 </action>
@@ -1039,6 +1081,12 @@
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="0" name="Play" sid="487789232831997" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="841966840383486" type="System">
                                     <param id="0" name="Seconds">0.05</param>
@@ -1062,6 +1110,12 @@
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
                                 </action>
+                                <action id="0" name="Play" sid="374448096660702" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="820945217602222" type="System">
                                     <param id="0" name="Seconds">0.05</param>
                                 </action>
@@ -1083,6 +1137,12 @@
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="0" name="Play" sid="515091105390440" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="857917011450113" type="System">
                                     <param id="0" name="Seconds">0.05</param>
@@ -1106,6 +1166,12 @@
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
                                 </action>
+                                <action id="0" name="Play" sid="800347311564995" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="358247526244114" type="System">
                                     <param id="0" name="Seconds">0.05</param>
                                 </action>
@@ -1127,6 +1193,12 @@
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
+                                </action>
+                                <action id="0" name="Play" sid="372845434592044" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="301191242980421" type="Function">
                                     <param id="0" name="Name">&quot;Fade&quot;</param>
@@ -1154,6 +1226,12 @@
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
                                 </action>
+                                <action id="0" name="Play" sid="799837149686497" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="736908401993940" type="System">
                                     <param id="0" name="Seconds">0.05</param>
                                 </action>
@@ -1168,6 +1246,171 @@
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
                                 </action>
+                                <action id="0" name="Play" sid="271372469369843" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_long2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="179597593398169" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="924701983062448" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="636863265019069" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="454154567810375" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="414565567081359" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="749840680152577" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="138985879724751" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="100530677210732" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="542363710556144" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="841930321859397" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="193068111266710" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="642110291408181" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="622356034754309" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="132422447501550" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="740813146628660" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="444591871400370" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="444331213646589" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="584001416889132" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="325584706134939" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="722104612494751" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="975521821438610" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="931536901078682" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="617354047472471" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="389918952587226" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="325872581557697" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="414548285860094" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="323517046350215" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="577890520789257" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="468736627962766" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="914720707507521" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="256090071893764" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="763082651209223" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="403098917809443" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="332664278439557" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="0" name="Play" sid="623403394212985" type="Audio">
+                                    <param id="0" name="Audio file">sfx_exp_shortest_hard5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="922523375833961" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
@@ -1176,7 +1419,7 @@
                                     <param id="1" name="Parameter {n}">&quot;End&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="563995655023412" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
+                                    <param id="0" name="Seconds">1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="313004223617662" type="Function">
                                     <param id="0" name="Name">&quot;Fade&quot;</param>
@@ -1215,6 +1458,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="6" name="Stop" sid="101507450636045" type="Audio">
+                                    <param id="0" name="Tag">&quot;Stage01&quot;</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="467823829806452" type="System">
                                     <param id="0" name="Group name">&quot;Player Engine&quot;</param>
                                     <param id="1" name="State">0</param>
@@ -1265,7 +1511,7 @@
                                     <param id="1" name="Value">&quot;left&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="179822456786227" type="System">
-                                    <param id="0" name="Seconds">4</param>
+                                    <param id="0" name="Seconds">3</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="383928632274547" type="Player_Mask">
                                     <param id="0" name="Instance variable">wasMovingBeforeJump</param>
@@ -1291,17 +1537,6 @@
                                 <action id="0" name="Call function" sid="874235805613564" type="Function">
                                     <param id="0" name="Name">&quot;Fade&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
-                                </action>
-                                <action disabled="1" id="-12" name="Set group active" sid="991326187791772" type="System">
-                                    <param id="0" name="Group name">&quot;Player Engine&quot;</param>
-                                    <param id="1" name="State">1</param>
-                                </action>
-                                <action disabled="1" id="-13" name="Set boolean" sid="625560928695520" type="Player_Mask">
-                                    <param id="0" name="Instance variable">cutsceneControl</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action behavior="ScrollTo" disabled="1" id="1" name="Set enabled" sid="438070167109935" type="Player_Camera">
-                                    <param id="0" name="State">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1388,7 +1623,7 @@
                             <param id="0" name="Audio file">02 World Nap</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">-6</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;Stage01&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="577713995737123" type="Function">
                             <param id="0" name="Name">&quot;enableCamera&quot;</param>
@@ -1401,6 +1636,17 @@
                         <action id="0" name="Call function" sid="992740319073155" type="Function">
                             <param id="0" name="Name">&quot;Pixellate&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Normalize&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="705456049052420" type="System">
+                            <param id="0" name="Group name">&quot;Player Engine&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="131246072192958" type="Player_Mask">
+                            <param id="0" name="Instance variable">cutsceneControl</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="443558135760201" type="Player_Camera">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>

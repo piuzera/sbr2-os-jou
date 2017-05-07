@@ -49,31 +49,67 @@
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
+                                <action behavior="EaseTween" id="10" name="Start" sid="434569182596612" type="Map_Sprite" />
                                 <action id="0" name="Call function" sid="928880842141922" type="Function">
                                     <param id="0" name="Name">&quot;Fade&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;In&quot;</param>
                                 </action>
-                                <action behavior="EaseTween" id="10" name="Start" sid="434569182596612" type="Map_Sprite" />
-                                <action id="-16" name="Wait" sid="175177355552075" type="System">
-                                    <param id="0" name="Seconds">4</param>
-                                </action>
-                                <action id="0" name="Call function" sid="504636144289436" type="Function">
-                                    <param id="0" name="Name">&quot;Pixellate&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="289640773701533" type="Function">
-                                    <param id="0" name="Name">&quot;Fade&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="100966337283495" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-2" name="Go to layout" sid="741057258925570" type="System">
-                                    <param id="0" name="Layout">Level 1</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="886099172238335">
+                    <conditions>
+                        <condition behavior="EaseTween" id="4" name="On tween end" sid="115019710636795" type="Map_Sprite" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="682143112742676" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="504636144289436" type="Function">
+                            <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="289640773701533" type="Function">
+                            <param id="0" name="Name">&quot;Fade&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="145228615984546" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="741057258925570" type="System">
+                            <param id="0" name="Layout">Level 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="113873434132139">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="165798216363671" type="Keyboard" />
+                        <condition behavior="EaseTween" id="1" inverted="1" name="Compare progress" sid="310325305279819" type="Map_Sprite">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="560843079302657" type="System">
+                            <param id="0" name="Group name">&quot;Map Init&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="768463469565350" type="Function">
+                            <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="107061545887841" type="Function">
+                            <param id="0" name="Name">&quot;Fade&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="635933406188882" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="351622914584627" type="System">
+                            <param id="0" name="Layout">Level 1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -324,31 +360,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="365353123149067">
-                    <conditions>
-                        <condition id="1" name="On any key pressed" sid="582035389014631" type="Keyboard" />
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Set group active" sid="927063997930435" type="System">
-                            <param id="0" name="Group name">&quot;Map Init&quot;</param>
-                            <param id="1" name="State">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="912421173033368" type="Function">
-                            <param id="0" name="Name">&quot;Pixellate&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="631838155576708" type="Function">
-                            <param id="0" name="Name">&quot;Fade&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="957908664033885" type="System">
-                            <param id="0" name="Seconds">2.5</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="192281508035159" type="System">
-                            <param id="0" name="Layout">Level 1</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
