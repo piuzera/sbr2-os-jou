@@ -1416,7 +1416,7 @@
                                             <param id="3" name="Y">Enemies.Y - Enemies.Height / 2</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="669278058656633" type="Pickups">
-                                            <param id="0" name="Animation">choose(&quot;Energy&quot;,&quot;Missiles&quot;)</param>
+                                            <param id="0" name="Animation">&quot;Screw&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
