@@ -422,8 +422,12 @@
             <animation-folder>
                 <animation-folder name="Highlander">
                     <animation framecount="2" loop="0" name="Hi_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="410207182997283" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
                     </animation>
                     <animation framecount="6" loop="1" name="Hi_Run" pingpong="0" repeatcount="1" repeatto="0" sid="105613986055919" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -567,8 +571,12 @@
                 </animation-folder>
                 <animation-folder name="Egyptian">
                     <animation framecount="2" loop="0" name="Eg_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="151421763696806" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
                     </animation>
                     <animation framecount="6" loop="1" name="Eg_Run" pingpong="0" repeatcount="1" repeatto="0" sid="561239342638316" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />

@@ -1393,13 +1393,24 @@
                                     <param id="0" name="Variable">Total_Score</param>
                                     <param id="1" name="Value">Enemies.points</param>
                                 </action>
-                                <action id="-11" name="Add to" sid="716376125180874" type="HUD_special_arts_bar">
-                                    <param id="0" name="Instance variable">bar_points</param>
-                                    <param id="1" name="Value">enemies.points</param>
-                                </action>
                                 <action id="-9" name="Destroy" sid="276833483460865" type="Enemies" />
                             </actions>
                             <sub-events>
+                                <event-block sid="514670993871852">
+                                    <conditions>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="550164303493636" type="Player_Mask">
+                                            <param id="0" name="Instance variable">superArtsCounter</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="716376125180874" type="HUD_special_arts_bar">
+                                            <param id="0" name="Instance variable">bar_points</param>
+                                            <param id="1" name="Value">enemies.points</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="105350370222512">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="572101605741025" type="System">

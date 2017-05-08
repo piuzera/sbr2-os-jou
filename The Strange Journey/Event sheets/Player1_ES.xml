@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player1_ES</name>
     <events>
+        <comment>Player list: Hi / Eg</comment>
         <variable constant="0" name="playerChosen" sid="998865438430962" static="0" type="text">Hi</variable>
         <event-block sid="193616386465418">
             <conditions>
@@ -1831,6 +1832,7 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
+                                                <comment>Check if there are no projecticles on screen</comment>
                                                 <event-block sid="926638729262685">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="234157375862463" type="HUD_subammo">
@@ -1839,12 +1841,63 @@
                                                             <param id="2" name="Value">0</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="310020002315740" type="Function">
-                                                            <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
-                                                            <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="464073113523446">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="649584712412026" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">equip</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Hi&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="930423776486175">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="818790082837969" type="System">
+                                                                            <param id="0" name="First value">Player_Shield.count</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">0</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="310020002315740" type="Function">
+                                                                            <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="465555819392618">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="904453690959351" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">equip</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Eg&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="706806324332333">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="882307643026199" type="System">
+                                                                            <param id="0" name="First value">Player_Ankh.Count</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">0</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="599854360237537" type="Function">
+                                                                            <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -3601,9 +3654,8 @@
                                                         <condition id="-4" name="Trigger once while true" sid="268654587598804" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="Pin" id="0" name="Pin to object" sid="960274800124415" type="Player_Shield">
-                                                            <param id="0" name="Pin to">Player_Mask</param>
-                                                            <param id="1" name="Mode">0</param>
+                                                        <action id="-16" name="Wait" sid="880251274788961" type="System">
+                                                            <param id="0" name="Seconds">0.15</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="364420697838939" type="System">
                                                             <param id="0" name="Object to create">Player_Shield</param>
@@ -4027,6 +4079,9 @@
                                                         <condition id="-4" name="Trigger once while true" sid="682406042460608" type="System" />
                                                     </conditions>
                                                     <actions>
+                                                        <action id="-16" name="Wait" sid="549739339253222" type="System">
+                                                            <param id="0" name="Seconds">0.15</param>
+                                                        </action>
                                                         <action id="-3" name="Create object" sid="268276111131414" type="System">
                                                             <param id="0" name="Object to create">Player_Wand</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
@@ -4556,6 +4611,15 @@
                         </event-group>
                         <event-group description="" sid="331321264833105" title="Egyptian - Ankh">
                             <sub-events>
+                                <comment>Destroy ankh if it leaves screen</comment>
+                                <event-block sid="971900444970136">
+                                    <conditions>
+                                        <condition id="-3" inverted="1" name="Is on-screen" sid="672910855433565" type="Player_Ankh" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="336271014279847" type="Player_Ankh" />
+                                    </actions>
+                                </event-block>
                                 <event-block sid="382204708283773">
                                     <conditions>
                                         <condition id="-6" name="Every X seconds" sid="689654965550692" type="System">
@@ -4936,6 +5000,40 @@
                         <action id="-11" name="Add to" sid="888483973684134" type="HUD_special_arts_bar">
                             <param id="0" name="Instance variable">bar_points</param>
                             <param id="1" name="Value">150</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="246219610280256">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="144810116754337" type="Keyboard">
+                            <param id="0" name="Key">49 (1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="351087317807955" type="System">
+                            <param id="0" name="Variable">playerChosen</param>
+                            <param id="1" name="Value">&quot;Hi&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="961590462553462" type="Player_Mask">
+                            <param id="0" name="Instance variable">equip</param>
+                            <param id="1" name="Value">playerChosen</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="643235164681166">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="985258660707271" type="Keyboard">
+                            <param id="0" name="Key">50 (2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="350865612864729" type="System">
+                            <param id="0" name="Variable">playerChosen</param>
+                            <param id="1" name="Value">&quot;Eg&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="619949949412167" type="Player_Mask">
+                            <param id="0" name="Instance variable">equip</param>
+                            <param id="1" name="Value">playerChosen</param>
                         </action>
                     </actions>
                 </event-block>
