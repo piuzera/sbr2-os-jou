@@ -2915,7 +2915,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="5" loop="0" name="Super" pingpong="0" repeatcount="1" repeatto="0" sid="867903463694399" speed="8">
+                <animation framecount="5" loop="1" name="Super" pingpong="0" repeatcount="1" repeatto="0" sid="867903463694399" speed="8">
                     <frame duration="1" hotspotX="1.0625" hotspotY="1" />
                     <frame duration="1" hotspotX="1.0625" hotspotY="1" />
                     <frame duration="1" hotspotX="1.0625" hotspotY="1" />
