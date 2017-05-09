@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player1_ES</name>
     <events>
+        <variable constant="0" name="controlType" sid="306797489847138" static="0" type="text">keyboard</variable>
+        <variable constant="0" name="joyDeadzone" sid="967961621508216" static="0" type="number">50</variable>
         <comment>Player list: Hi / Eg</comment>
         <variable constant="0" name="playerChosen" sid="998865438430962" static="0" type="text">Hi</variable>
         <event-block sid="193616386465418">
@@ -33,6 +35,69 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="513085891405960" title="Keyboard/Joystick">
+            <sub-events>
+                <comment>Change control type if keyboard is used or gamepad is used</comment>
+                <event-block sid="955647462928495">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="275753527514849" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="129751760790240" type="System">
+                            <param id="0" name="Variable">controlType</param>
+                            <param id="1" name="Value">&quot;keyboard&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="941081878694197">
+                    <conditions>
+                        <condition id="8" name="On any button pressed" sid="405921501846111" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="135303434132313" type="System">
+                            <param id="0" name="Variable">controlType</param>
+                            <param id="1" name="Value">&quot;joystick&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="450742570611557">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="603096737097715" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">joyDeadzone*-1</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="967623783145054" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">joyDeadzone</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="587626092496490" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">joyDeadzone</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="140057645777466" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">joyDeadzone*-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="162710854628816" type="System">
+                            <param id="0" name="Variable">controlType</param>
+                            <param id="1" name="Value">&quot;joystick&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="444123292717814" title="Player 1 Passive">
             <sub-events>
                 <comment>Position mask to base</comment>
@@ -227,95 +292,213 @@
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
-                                                        <event-block sid="502147353588726">
+                                                        <event-block sid="798093815835021">
                                                             <conditions>
-                                                                <condition id="5" name="Key code is down" sid="242652804350552" type="Keyboard">
-                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
-                                                                </condition>
-                                                                <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="814697496692818" type="Player">
-                                                                    <param id="0" name="Side">1</param>
+                                                                <condition id="-14" name="Compare variable" sid="771898740143380" type="System">
+                                                                    <param id="0" name="Variable">controlType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;keyboard&quot;</param>
                                                                 </condition>
                                                             </conditions>
-                                                            <actions>
-                                                                <action behavior="Platform" id="7" name="Simulate control" sid="748631684488581" type="Player">
-                                                                    <param id="0" name="Control">1</param>
-                                                                </action>
-                                                            </actions>
+                                                            <actions />
                                                             <sub-events>
-                                                                <event-block sid="516518591832880">
+                                                                <event-block any="1" sid="502147353588726">
                                                                     <conditions>
-                                                                        <condition id="-4" name="Trigger once while true" sid="618055788341155" type="System" />
+                                                                        <condition id="5" name="Key code is down" sid="242652804350552" type="Keyboard">
+                                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
+                                                                        </condition>
                                                                     </conditions>
                                                                     <actions>
-                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="177002849661940" type="Player">
-                                                                            <param id="0" name="Vector X">100</param>
+                                                                        <action behavior="Platform" id="7" name="Simulate control" sid="748631684488581" type="Player">
+                                                                            <param id="0" name="Control">1</param>
                                                                         </action>
-                                                                        <action id="-10" name="Set value" sid="605263429402882" type="Player_Mask">
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="516518591832880">
+                                                                            <conditions>
+                                                                                <condition id="-4" name="Trigger once while true" sid="618055788341155" type="System" />
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action behavior="Platform" id="8" name="Set vector X" sid="177002849661940" type="Player">
+                                                                                    <param id="0" name="Vector X">100</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="605263429402882" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
+                                                                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="165961490895397">
+                                                                    <conditions>
+                                                                        <condition id="5" name="Key code is down" sid="743541274105112" type="Keyboard">
+                                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_LEFT&quot;))</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="Platform" id="7" name="Simulate control" sid="549155453521910" type="Player">
+                                                                            <param id="0" name="Control">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="625987643019201">
+                                                                            <conditions>
+                                                                                <condition id="-4" name="Trigger once while true" sid="768026456494344" type="System" />
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action behavior="Platform" id="8" name="Set vector X" sid="589616670104220" type="Player">
+                                                                                    <param id="0" name="Vector X">-100</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="788585629368201" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
+                                                                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="172598919612441">
+                                                                    <conditions>
+                                                                        <condition id="5" inverted="1" name="Key code is down" sid="712482814209145" type="Keyboard">
+                                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
+                                                                        </condition>
+                                                                        <condition id="5" inverted="1" name="Key code is down" sid="867603538683789" type="Keyboard">
+                                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_LEFT&quot;))</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="427175467660711" type="Player">
+                                                                            <param id="0" name="Vector X">0</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="709431234256042" type="Player_Mask">
                                                                             <param id="0" name="Instance variable">wasMovingBeforeJump</param>
-                                                                            <param id="1" name="Value">&quot;right&quot;</param>
+                                                                            <param id="1" name="Value">&quot;no&quot;</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
                                                             </sub-events>
                                                         </event-block>
-                                                        <event-block sid="165961490895397">
+                                                        <event-block sid="869747054913163">
                                                             <conditions>
-                                                                <condition id="5" name="Key code is down" sid="743541274105112" type="Keyboard">
-                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_LEFT&quot;))</param>
-                                                                </condition>
-                                                                <condition behavior="Platform" disabled="1" id="10" inverted="1" name="Is by wall" sid="491972773698031" type="Player">
-                                                                    <param id="0" name="Side">0</param>
+                                                                <condition id="-14" name="Compare variable" sid="430599632691740" type="System">
+                                                                    <param id="0" name="Variable">controlType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;joystick&quot;</param>
                                                                 </condition>
                                                             </conditions>
-                                                            <actions>
-                                                                <action behavior="Platform" id="7" name="Simulate control" sid="549155453521910" type="Player">
-                                                                    <param id="0" name="Control">0</param>
-                                                                </action>
-                                                            </actions>
+                                                            <actions />
                                                             <sub-events>
-                                                                <event-block sid="625987643019201">
+                                                                <event-block any="1" sid="823694298731674">
                                                                     <conditions>
-                                                                        <condition id="-4" name="Trigger once while true" sid="768026456494344" type="System" />
+                                                                        <condition id="5" name="Compare axis" sid="537190797142327" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Axis">0</param>
+                                                                            <param id="2" name="Comparison">4</param>
+                                                                            <param id="3" name="Value">joyDeadzone</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="384199166125998" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Button">15</param>
+                                                                        </condition>
                                                                     </conditions>
                                                                     <actions>
-                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="589616670104220" type="Player">
-                                                                            <param id="0" name="Vector X">-100</param>
+                                                                        <action behavior="Platform" id="7" name="Simulate control" sid="264939837879429" type="Player">
+                                                                            <param id="0" name="Control">1</param>
                                                                         </action>
-                                                                        <action id="-10" name="Set value" sid="788585629368201" type="Player_Mask">
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="271540768693857">
+                                                                            <conditions>
+                                                                                <condition id="-4" name="Trigger once while true" sid="396533360189275" type="System" />
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action behavior="Platform" id="8" name="Set vector X" sid="827953481375784" type="Player">
+                                                                                    <param id="0" name="Vector X">100</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="380550602841867" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
+                                                                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block any="1" sid="705875758682260">
+                                                                    <conditions>
+                                                                        <condition id="5" name="Compare axis" sid="896636365912985" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Axis">0</param>
+                                                                            <param id="2" name="Comparison">2</param>
+                                                                            <param id="3" name="Value">joyDeadzone*-1</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="262220713758508" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Button">14</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="Platform" id="7" name="Simulate control" sid="198929187297986" type="Player">
+                                                                            <param id="0" name="Control">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="881731956242957">
+                                                                            <conditions>
+                                                                                <condition id="-4" name="Trigger once while true" sid="267563531952037" type="System" />
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action behavior="Platform" id="8" name="Set vector X" sid="706125064895081" type="Player">
+                                                                                    <param id="0" name="Vector X">-100</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="228232158524351" type="Player_Mask">
+                                                                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
+                                                                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="608515415064222">
+                                                                    <conditions>
+                                                                        <condition id="5" name="Compare axis" sid="199598124850690" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Axis">0</param>
+                                                                            <param id="2" name="Comparison">2</param>
+                                                                            <param id="3" name="Value">joyDeadzone</param>
+                                                                        </condition>
+                                                                        <condition id="5" name="Compare axis" sid="900491889506800" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Axis">0</param>
+                                                                            <param id="2" name="Comparison">4</param>
+                                                                            <param id="3" name="Value">joyDeadzone*-1</param>
+                                                                        </condition>
+                                                                        <condition id="3" inverted="1" name="Is button down" sid="806360892262110" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Button">15</param>
+                                                                        </condition>
+                                                                        <condition id="3" inverted="1" name="Is button down" sid="714520308658451" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Button">14</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="Platform" id="8" name="Set vector X" sid="221379822335696" type="Player">
+                                                                            <param id="0" name="Vector X">0</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="494493013936194" type="Player_Mask">
                                                                             <param id="0" name="Instance variable">wasMovingBeforeJump</param>
-                                                                            <param id="1" name="Value">&quot;left&quot;</param>
+                                                                            <param id="1" name="Value">&quot;no&quot;</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
                                                             </sub-events>
-                                                        </event-block>
-                                                        <event-block sid="172598919612441">
-                                                            <conditions>
-                                                                <condition id="5" inverted="1" name="Key code is down" sid="712482814209145" type="Keyboard">
-                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
-                                                                </condition>
-                                                                <condition id="5" inverted="1" name="Key code is down" sid="867603538683789" type="Keyboard">
-                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_LEFT&quot;))</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action behavior="Platform" id="8" name="Set vector X" sid="427175467660711" type="Player">
-                                                                    <param id="0" name="Vector X">0</param>
-                                                                </action>
-                                                                <action id="-10" name="Set value" sid="709431234256042" type="Player_Mask">
-                                                                    <param id="0" name="Instance variable">wasMovingBeforeJump</param>
-                                                                    <param id="1" name="Value">&quot;no&quot;</param>
-                                                                </action>
-                                                            </actions>
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
                                                 <comment>Direction (separated from the movement like in GnG)</comment>
                                                 <event-block sid="490831774323948">
                                                     <conditions>
-                                                        <condition id="5" name="Key code is down" sid="958332433283043" type="Keyboard">
-                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
-                                                        </condition>
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="428044516523660" type="Player_Mask">
                                                             <param id="0" name="Instance variable">hurt</param>
                                                         </condition>
@@ -329,21 +512,38 @@
                                                             <param id="0" name="Instance variable">shoot</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-10" name="Set value" sid="116659089968538" type="Player_Mask">
-                                                            <param id="0" name="Instance variable">direction</param>
-                                                            <param id="1" name="Value">&quot;right&quot;</param>
-                                                        </action>
-                                                        <action id="7" name="Set mirrored" sid="637771609841751" type="Player_Mask">
-                                                            <param id="0" name="State">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="959130746264128">
+                                                            <conditions>
+                                                                <condition id="5" name="Key code is down" sid="930510051108469" type="Keyboard">
+                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_RIGHT&quot;))</param>
+                                                                </condition>
+                                                                <condition id="5" name="Compare axis" sid="180077153952206" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Axis">0</param>
+                                                                    <param id="2" name="Comparison">4</param>
+                                                                    <param id="3" name="Value">joyDeadzone</param>
+                                                                </condition>
+                                                                <condition id="3" name="Is button down" sid="855117605666992" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Button">15</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="116659089968538" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">direction</param>
+                                                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                                                </action>
+                                                                <action id="7" name="Set mirrored" sid="637771609841751" type="Player_Mask">
+                                                                    <param id="0" name="State">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="837147741895961">
                                                     <conditions>
-                                                        <condition id="5" name="Key code is down" sid="327446895258008" type="Keyboard">
-                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_LEFT&quot;))</param>
-                                                        </condition>
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="639318536185836" type="Player_Mask">
                                                             <param id="0" name="Instance variable">hurt</param>
                                                         </condition>
@@ -357,15 +557,35 @@
                                                             <param id="0" name="Animation">self.equip&amp;&quot;_Use_Arts&quot;</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-10" name="Set value" sid="711830671908855" type="Player_Mask">
-                                                            <param id="0" name="Instance variable">direction</param>
-                                                            <param id="1" name="Value">&quot;left&quot;</param>
-                                                        </action>
-                                                        <action id="7" name="Set mirrored" sid="297581426070528" type="Player_Mask">
-                                                            <param id="0" name="State">0</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="282410115262297">
+                                                            <conditions>
+                                                                <condition id="5" name="Key code is down" sid="781936569199923" type="Keyboard">
+                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_&quot;&amp;Player.IID+1&amp;&quot;_control_LEFT&quot;))</param>
+                                                                </condition>
+                                                                <condition id="5" name="Compare axis" sid="728582345371307" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Axis">0</param>
+                                                                    <param id="2" name="Comparison">2</param>
+                                                                    <param id="3" name="Value">joyDeadzone*-1</param>
+                                                                </condition>
+                                                                <condition id="3" name="Is button down" sid="280247045349516" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Button">14</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="711830671908855" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">direction</param>
+                                                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                                                </action>
+                                                                <action id="7" name="Set mirrored" sid="297581426070528" type="Player_Mask">
+                                                                    <param id="0" name="State">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="137423510159616">
                                                     <conditions>
@@ -450,10 +670,20 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="590115761065436">
+                                                <event-block any="1" sid="590115761065436">
                                                     <conditions>
                                                         <condition id="5" name="Key code is down" sid="866093751257588" type="Keyboard">
                                                             <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
+                                                        </condition>
+                                                        <condition id="5" name="Compare axis" sid="833800506115059" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">joyDeadzone*-1</param>
+                                                        </condition>
+                                                        <condition id="3" name="Is button down" sid="299877330852442" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Button">12</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -462,10 +692,20 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="737049154230171">
+                                                <event-block any="1" sid="737049154230171">
                                                     <conditions>
                                                         <condition id="5" name="Key code is down" sid="434026653782139" type="Keyboard">
                                                             <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                                        </condition>
+                                                        <condition id="5" name="Compare axis" sid="302476576847996" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">joyDeadzone</param>
+                                                        </condition>
+                                                        <condition id="3" name="Is button down" sid="696988042186956" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Button">13</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -493,26 +733,38 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="266911042774393">
+                                                <event-block any="1" sid="536996665549664">
                                                     <conditions>
-                                                        <condition id="5" name="Key code is down" sid="290137770518634" type="Keyboard">
+                                                        <condition id="5" name="Key code is down" sid="886909691325687" type="Keyboard">
                                                             <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_2_control_UP&quot;))</param>
+                                                        </condition>
+                                                        <condition id="5" name="Compare axis" sid="649059894356284" type="Gamepad">
+                                                            <param id="0" name="Gamepad">1</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">joyDeadzone*-1</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="290333815930735" type="Player">
+                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="119922666003490" type="Player">
                                                             <param id="0" name="Control">2</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="441573533905767">
+                                                <event-block any="1" sid="440817141933694">
                                                     <conditions>
-                                                        <condition id="5" name="Key code is down" sid="672240273712185" type="Keyboard">
+                                                        <condition id="5" name="Key code is down" sid="229236969385702" type="Keyboard">
                                                             <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_2_control_DOWN&quot;))</param>
+                                                        </condition>
+                                                        <condition id="5" name="Compare axis" sid="461394455715721" type="Gamepad">
+                                                            <param id="0" name="Gamepad">1</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">joyDeadzone</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="334051585059030" type="Player">
+                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="629623277657931" type="Player">
                                                             <param id="0" name="Control">3</param>
                                                         </action>
                                                     </actions>
@@ -824,43 +1076,54 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="927490655415381">
+                                        <event-block any="1" sid="532928118306904">
                                             <conditions>
-                                                <condition id="4" name="On key code pressed" sid="400425517061997" type="Keyboard">
+                                                <condition id="4" name="On key code pressed" sid="238232107698164" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_ARTS&quot;))</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="406958026389618" type="Player" />
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="990017928189356" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">crouch</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="496878853257175" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">bouncing</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="225329335655339" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">shoot</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="372137547192010" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">ladders</param>
+                                                <condition id="6" name="On button pressed" sid="466937710113146" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Button">3</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="828666091722789">
+                                                <event-block sid="927490655415381">
                                                     <conditions>
-                                                        <condition id="2" name="Is playing" sid="348547714747000" type="HUD_special_arts_bar">
-                                                            <param id="0" name="Animation">&quot;Super&quot;</param>
+                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="406958026389618" type="Player" />
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="990017928189356" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">crouch</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="496878853257175" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">bouncing</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="225329335655339" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">shoot</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="372137547192010" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">ladders</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-10" name="Set value" sid="613679431273024" type="HUD_special_arts_bar">
-                                                            <param id="0" name="Instance variable">bar_points</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                        <action id="0" name="Call function" sid="516503076548536" type="Function">
-                                                            <param id="0" name="Name">&quot;Player_UseArts&quot;</param>
-                                                            <param id="1" name="Parameter {n}">Player_Mask.p_type{###}0</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="828666091722789">
+                                                            <conditions>
+                                                                <condition id="2" name="Is playing" sid="348547714747000" type="HUD_special_arts_bar">
+                                                                    <param id="0" name="Animation">&quot;Super&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="613679431273024" type="HUD_special_arts_bar">
+                                                                    <param id="0" name="Instance variable">bar_points</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="516503076548536" type="Function">
+                                                                    <param id="0" name="Name">&quot;Player_UseArts&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Player_Mask.p_type{###}0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -994,12 +1257,17 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
+                        <comment></comment>
                         <event-group description="" sid="504348314717315" title="Jump - P1">
                             <sub-events>
-                                <event-block bookmark="1" sid="185938506427933">
+                                <event-block any="1" bookmark="1" sid="185938506427933">
                                     <conditions>
                                         <condition id="4" name="On key code pressed" sid="770132959670478" type="Keyboard">
                                             <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_JUMP&quot;))</param>
+                                        </condition>
+                                        <condition id="6" name="On button pressed" sid="872211909970096" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">0</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -1228,10 +1496,20 @@
                                                             </conditions>
                                                             <actions />
                                                             <sub-events>
-                                                                <event-block sid="366870864622212">
+                                                                <event-block any="1" sid="366870864622212">
                                                                     <conditions>
                                                                         <condition id="5" name="Key code is down" sid="113837615017233" type="Keyboard">
                                                                             <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
+                                                                        </condition>
+                                                                        <condition id="5" name="Compare axis" sid="845762013700740" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Axis">1</param>
+                                                                            <param id="2" name="Comparison">2</param>
+                                                                            <param id="3" name="Value">joyDeadzone*-1</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="287932212678204" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Button">12</param>
                                                                         </condition>
                                                                     </conditions>
                                                                     <actions>
@@ -1247,10 +1525,20 @@
                                                                 </event-block>
                                                             </sub-events>
                                                         </event-block>
-                                                        <event-block sid="406890251850377">
+                                                        <event-block any="1" sid="406890251850377">
                                                             <conditions>
                                                                 <condition id="5" name="Key code is down" sid="275833580440334" type="Keyboard">
                                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                                                </condition>
+                                                                <condition id="5" name="Compare axis" sid="216372744575679" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Axis">1</param>
+                                                                    <param id="2" name="Comparison">4</param>
+                                                                    <param id="3" name="Value">joyDeadzone</param>
+                                                                </condition>
+                                                                <condition id="3" name="Is button down" sid="863775377952458" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Button">13</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions />
@@ -1290,7 +1578,7 @@
                                                                                     <param id="0" name="Y">LadderCollision.Y</param>
                                                                                 </action>
                                                                                 <action id="-16" name="Wait" sid="326502114408732" type="System">
-                                                                                    <param id="0" name="Seconds">0.2</param>
+                                                                                    <param id="0" name="Seconds">0.1</param>
                                                                                 </action>
                                                                                 <action id="-2" name="Set Y" sid="124031899493727" type="Player">
                                                                                     <param id="0" name="Y">LadderCollision.Y+16</param>
@@ -1320,10 +1608,20 @@
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
-                                                        <event-block sid="328368837662553">
+                                                        <event-block any="1" sid="328368837662553">
                                                             <conditions>
                                                                 <condition id="5" name="Key code is down" sid="827403551660297" type="Keyboard">
                                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                                                </condition>
+                                                                <condition id="5" name="Compare axis" sid="539032665548415" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Axis">1</param>
+                                                                    <param id="2" name="Comparison">4</param>
+                                                                    <param id="3" name="Value">joyDeadzone</param>
+                                                                </condition>
+                                                                <condition id="3" name="Is button down" sid="432623996244909" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Button">13</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions />
@@ -1352,19 +1650,29 @@
                                                                 </event-block>
                                                             </sub-events>
                                                         </event-block>
-                                                        <event-block sid="710725696741782">
+                                                        <event-block any="1" sid="710725696741782">
                                                             <conditions>
                                                                 <condition id="5" name="Key code is down" sid="463293226323754" type="Keyboard">
                                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
                                                                 </condition>
-                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="401750743789548" type="Player_Mask">
-                                                                    <param id="0" name="Instance variable">climbTopEnd</param>
+                                                                <condition id="5" name="Compare axis" sid="229185650420200" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Axis">1</param>
+                                                                    <param id="2" name="Comparison">2</param>
+                                                                    <param id="3" name="Value">joyDeadzone*-1</param>
+                                                                </condition>
+                                                                <condition id="3" name="Is button down" sid="246047814272333" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Button">12</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions />
                                                             <sub-events>
                                                                 <event-block sid="313437114004846">
                                                                     <conditions>
+                                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="401750743789548" type="Player_Mask">
+                                                                            <param id="0" name="Instance variable">climbTopEnd</param>
+                                                                        </condition>
                                                                         <condition id="1" inverted="1" name="Is overlapping another object" sid="914059954083337" type="Player">
                                                                             <param id="0" name="Object">LadderCollision</param>
                                                                         </condition>
@@ -1390,7 +1698,7 @@
                                                                             <param id="0" name="Y">LadderCollision.Y</param>
                                                                         </action>
                                                                         <action id="-16" name="Wait" sid="275927939642870" type="System">
-                                                                            <param id="0" name="Seconds">0.2</param>
+                                                                            <param id="0" name="Seconds">0.1</param>
                                                                         </action>
                                                                         <action id="-2" name="Set Y" sid="708476494176699" type="Player">
                                                                             <param id="0" name="Y">LadderCollision.Y-17</param>
@@ -1647,20 +1955,47 @@
                                                 <condition id="5" inverted="1" name="Key code is down" sid="879780006375533" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
                                                 </condition>
-                                                <condition id="5" name="Key code is down" sid="245986257492315" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                                <condition id="5" inverted="1" name="Compare axis" sid="782299796468609" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Axis">1</param>
+                                                    <param id="2" name="Comparison">2</param>
+                                                    <param id="3" name="Value">joyDeadzone*-1</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Is button down" sid="496088308105409" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Button">12</param>
                                                 </condition>
                                                 <condition behavior="Platform" id="2" name="Is on floor" sid="620343358063578" type="Player" />
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="692224183759482" type="Player_Mask">
                                                     <param id="0" name="Instance variable">hasLadderOnBottom</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="465419363391674" type="Function">
-                                                    <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Activated&quot;{###}0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="460393272596238">
+                                                    <conditions>
+                                                        <condition id="5" name="Key code is down" sid="972001652278185" type="Keyboard">
+                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                                        </condition>
+                                                        <condition id="5" name="Compare axis" sid="231171001207949" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">joyDeadzone</param>
+                                                        </condition>
+                                                        <condition id="3" name="Is button down" sid="456402719831491" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Button">13</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="465419363391674" type="Function">
+                                                            <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Activated&quot;{###}0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -1726,29 +2061,71 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="708731129780622">
+                                        <event-block any="1" sid="708731129780622">
                                             <conditions>
                                                 <condition id="6" name="On key code released" sid="767495597626049" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
                                                 </condition>
-                                                <condition id="5" inverted="1" name="Key code is down" sid="575377051776335" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
+                                                <condition id="7" name="On button released" sid="486273189559486" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Button">13</param>
                                                 </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="811025387425646" type="Player" />
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="412632647346394" type="Function">
-                                                    <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Deactivated&quot;{###}0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="363880974159607">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Key code is down" sid="409031660558432" type="Keyboard">
+                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
+                                                        </condition>
+                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="970159030325401" type="Player" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="412632647346394" type="Function">
+                                                            <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Deactivated&quot;{###}0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="548907664836702">
+                                            <conditions>
+                                                <condition id="5" name="Compare axis" sid="341173273088121" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Axis">1</param>
+                                                    <param id="2" name="Comparison">4</param>
+                                                    <param id="3" name="Value">joyDeadzone*-1</param>
+                                                </condition>
+                                                <condition id="5" name="Compare axis" sid="291930171616176" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Axis">1</param>
+                                                    <param id="2" name="Comparison">2</param>
+                                                    <param id="3" name="Value">joyDeadzone</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="166687710107135">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="289819864449406" type="System" />
+                                                        <condition behavior="Platform" id="2" name="Is on floor" sid="533218068443278" type="Player" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="876210862177698" type="Function">
+                                                            <param id="0" name="Name">&quot;Player_Crouch&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Deactivated&quot;{###}0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="548509394221633">
                                             <conditions>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="857977473488854" type="Player_Mask">
                                                     <param id="0" name="Instance variable">ladders</param>
                                                 </condition>
-                                                <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="239134097228203" type="LadderCollision">
+                                                <condition id="-15" name="Pick nearest/furthest" sid="239134097228203" type="LadderCollision">
                                                     <param id="0" name="Which">0</param>
                                                     <param id="1" name="X">Player.X</param>
                                                     <param id="2" name="Y">Player.Y</param>
@@ -1757,32 +2134,60 @@
                                                     <param id="0" name="Comparison">5</param>
                                                     <param id="1" name="Y co-ordinate">LadderCollision.Y+LadderCollision.Height-3</param>
                                                 </condition>
-                                                <condition id="5" name="Key code is down" sid="424559237596132" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
-                                                </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="941779549965607" type="Function">
-                                                    <param id="0" name="Name">&quot;Player_Climb&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;False&quot;{###}0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="641641062164019">
+                                                    <conditions>
+                                                        <condition id="5" name="Key code is down" sid="193042508578904" type="Keyboard">
+                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                                        </condition>
+                                                        <condition id="5" name="Compare axis" sid="802322405249917" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">joyDeadzone</param>
+                                                        </condition>
+                                                        <condition id="3" name="Is button down" sid="168031110919855" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Button">13</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="941779549965607" type="Function">
+                                                            <param id="0" name="Name">&quot;Player_Climb&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;False&quot;{###}0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
-                                        <event-block sid="194734994346098">
+                                        <event-block any="1" sid="194734994346098">
                                             <conditions>
                                                 <condition id="4" name="On key code pressed" sid="589456010257044" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_JUMP&quot;))</param>
                                                 </condition>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="157834940838934" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">ladders</param>
+                                                <condition id="6" name="On button pressed" sid="849738475026372" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Button">0</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="774461548504641" type="Function">
-                                                    <param id="0" name="Name">&quot;Player_Climb&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;False&quot;{###}0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="746833607344444">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="214231295444197" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">ladders</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="774461548504641" type="Function">
+                                                            <param id="0" name="Name">&quot;Player_Climb&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;False&quot;{###}0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -1883,107 +2288,129 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="938166387479592">
+                                        <event-block any="1" sid="755838203548343">
                                             <conditions>
                                                 <condition id="4" name="On key code pressed" sid="123174615745084" type="Keyboard">
                                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_MAINWP&quot;))</param>
                                                 </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="292011956168754" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">ladders</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="840559884376246" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">hurt</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="583495529660165" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">shoot</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="265326433120370" type="Function">
-                                                    <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Main&quot;{###}0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="953829886256780">
-                                            <conditions>
-                                                <condition id="4" name="On key code pressed" sid="156309002656429" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_SUBWP&quot;))</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="165472355041103" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">ladders</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="849654172277442" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">hurt</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="929013939946467" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">shoot</param>
+                                                <condition id="6" name="On button pressed" sid="503995545720493" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Button">2</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <comment>Check if there are no projecticles on screen</comment>
-                                                <event-block sid="926638729262685">
+                                                <event-block sid="938166387479592">
                                                     <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="234157375862463" type="HUD_subammo">
-                                                            <param id="0" name="Instance variable">ammo</param>
-                                                            <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">0</param>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="292011956168754" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">ladders</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="840559884376246" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">hurt</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="583495529660165" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">shoot</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="265326433120370" type="Function">
+                                                            <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Main&quot;{###}0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block any="1" sid="640506616716108">
+                                            <conditions>
+                                                <condition id="4" name="On key code pressed" sid="156309002656429" type="Keyboard">
+                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_SUBWP&quot;))</param>
+                                                </condition>
+                                                <condition id="6" name="On button pressed" sid="932908233376467" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Button">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="953829886256780">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="165472355041103" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">ladders</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="849654172277442" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">hurt</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="929013939946467" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">shoot</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
-                                                        <event-block sid="464073113523446">
+                                                        <comment>Check if there are no projecticles on screen</comment>
+                                                        <event-block sid="926638729262685">
                                                             <conditions>
-                                                                <condition id="-7" name="Compare instance variable" sid="649584712412026" type="Player_Mask">
-                                                                    <param id="0" name="Instance variable">equip</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;Hi&quot;</param>
+                                                                <condition id="-7" name="Compare instance variable" sid="234157375862463" type="HUD_subammo">
+                                                                    <param id="0" name="Instance variable">ammo</param>
+                                                                    <param id="1" name="Comparison">4</param>
+                                                                    <param id="2" name="Value">0</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions />
                                                             <sub-events>
-                                                                <event-block sid="930423776486175">
+                                                                <event-block sid="464073113523446">
                                                                     <conditions>
-                                                                        <condition id="-8" name="Compare two values" sid="818790082837969" type="System">
-                                                                            <param id="0" name="First value">Player_Shield.count</param>
+                                                                        <condition id="-7" name="Compare instance variable" sid="649584712412026" type="Player_Mask">
+                                                                            <param id="0" name="Instance variable">equip</param>
                                                                             <param id="1" name="Comparison">0</param>
-                                                                            <param id="2" name="Second value">0</param>
+                                                                            <param id="2" name="Value">&quot;Hi&quot;</param>
                                                                         </condition>
                                                                     </conditions>
-                                                                    <actions>
-                                                                        <action id="0" name="Call function" sid="310020002315740" type="Function">
-                                                                            <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
-                                                                            <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
-                                                                        </action>
-                                                                    </actions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="930423776486175">
+                                                                            <conditions>
+                                                                                <condition id="-8" name="Compare two values" sid="818790082837969" type="System">
+                                                                                    <param id="0" name="First value">Player_Shield.count</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Second value">0</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="0" name="Call function" sid="310020002315740" type="Function">
+                                                                                    <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
                                                                 </event-block>
-                                                            </sub-events>
-                                                        </event-block>
-                                                        <event-block sid="465555819392618">
-                                                            <conditions>
-                                                                <condition id="-7" name="Compare instance variable" sid="904453690959351" type="Player_Mask">
-                                                                    <param id="0" name="Instance variable">equip</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;Eg&quot;</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions />
-                                                            <sub-events>
-                                                                <event-block sid="706806324332333">
+                                                                <event-block sid="465555819392618">
                                                                     <conditions>
-                                                                        <condition id="-8" name="Compare two values" sid="882307643026199" type="System">
-                                                                            <param id="0" name="First value">Player_Ankh.Count</param>
+                                                                        <condition id="-7" name="Compare instance variable" sid="904453690959351" type="Player_Mask">
+                                                                            <param id="0" name="Instance variable">equip</param>
                                                                             <param id="1" name="Comparison">0</param>
-                                                                            <param id="2" name="Second value">0</param>
+                                                                            <param id="2" name="Value">&quot;Eg&quot;</param>
                                                                         </condition>
                                                                     </conditions>
-                                                                    <actions>
-                                                                        <action id="0" name="Call function" sid="599854360237537" type="Function">
-                                                                            <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
-                                                                            <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
-                                                                        </action>
-                                                                    </actions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="706806324332333">
+                                                                            <conditions>
+                                                                                <condition id="-8" name="Compare two values" sid="882307643026199" type="System">
+                                                                                    <param id="0" name="First value">Player_Ankh.Count</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Second value">0</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="0" name="Call function" sid="599854360237537" type="Function">
+                                                                                    <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
                                                                 </event-block>
                                                             </sub-events>
                                                         </event-block>
@@ -2070,86 +2497,166 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="482133077414753">
+                                        <event-block sid="411968206296455">
                                             <conditions>
-                                                <condition id="5" name="Key code is down" sid="455079447474589" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
-                                                </condition>
-                                                <condition id="5" inverted="1" name="Key code is down" sid="298573687274392" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
-                                                </condition>
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="745644537080198" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shoot</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="893721856717997" type="Function">
-                                                    <param id="0" name="Name">&quot;Player_Aim&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Up&quot;{###}0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="337780555153366">
-                                            <conditions>
-                                                <condition id="5" name="Key code is down" sid="431876177417902" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
-                                                </condition>
-                                                <condition id="5" inverted="1" name="Key code is down" sid="255138106272242" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
-                                                </condition>
-                                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="329205016342117" type="Player" />
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="801122970406014" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">shoot</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="987826077750636" type="Function">
-                                                    <param id="0" name="Name">&quot;Player_Aim&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Down&quot;{###}0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="461617820059456">
-                                            <conditions>
-                                                <condition id="5" inverted="1" name="Key code is down" sid="357821421494759" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
-                                                </condition>
-                                                <condition id="5" inverted="1" name="Key code is down" sid="966600980749204" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
-                                                </condition>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="333846017655837" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">shoot</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="618500515770928" type="Function">
-                                                    <param id="0" name="Name">&quot;Player_Aim&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Normal&quot;{###}0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="356790133146435">
-                                            <conditions>
-                                                <condition id="5" inverted="1" name="Key code is down" sid="152411089047896" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
-                                                </condition>
-                                                <condition id="5" name="Key code is down" sid="348327107756006" type="Keyboard">
-                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
-                                                </condition>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="977675552261247" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">crouch</param>
-                                                </condition>
-                                                <condition behavior="Platform" id="2" name="Is on floor" sid="767568536218213" type="Player" />
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="570089929222497" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">shoot</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="247542077387819" type="Function">
-                                                    <param id="0" name="Name">&quot;Player_Aim&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;Crouch&quot;{###}0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="540700520901197">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Key code is down" sid="460939954717096" type="Keyboard">
+                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                                        </condition>
+                                                        <condition id="5" inverted="1" name="Compare axis" sid="228458803671320" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">joyDeadzone</param>
+                                                        </condition>
+                                                        <condition id="3" inverted="1" name="Is button down" sid="849680486512399" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Button">13</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="482133077414753">
+                                                            <conditions>
+                                                                <condition id="5" name="Key code is down" sid="455079447474589" type="Keyboard">
+                                                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
+                                                                </condition>
+                                                                <condition id="5" name="Compare axis" sid="463822291480224" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Axis">1</param>
+                                                                    <param id="2" name="Comparison">2</param>
+                                                                    <param id="3" name="Value">joyDeadzone*-1</param>
+                                                                </condition>
+                                                                <condition id="3" name="Is button down" sid="704946082228371" type="Gamepad">
+                                                                    <param id="0" name="Gamepad">0</param>
+                                                                    <param id="1" name="Button">12</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="893721856717997" type="Function">
+                                                                    <param id="0" name="Name">&quot;Player_Aim&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;Up&quot;{###}0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="411834201806357">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Key code is down" sid="642021311917717" type="Keyboard">
+                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
+                                                        </condition>
+                                                        <condition id="5" inverted="1" name="Compare axis" sid="245238641092678" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">joyDeadzone*-1</param>
+                                                        </condition>
+                                                        <condition id="3" inverted="1" name="Is button down" sid="214299858013326" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Button">12</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="211390350600601">
+                                                            <conditions>
+                                                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="610239970202818" type="Player" />
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block any="1" sid="409999374387517">
+                                                                    <conditions>
+                                                                        <condition id="5" name="Key code is down" sid="710133596633924" type="Keyboard">
+                                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                                                        </condition>
+                                                                        <condition id="5" name="Compare axis" sid="789853782610230" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Axis">1</param>
+                                                                            <param id="2" name="Comparison">4</param>
+                                                                            <param id="3" name="Value">joyDeadzone</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="724293634459698" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">0</param>
+                                                                            <param id="1" name="Button">13</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="586866697875446" type="Function">
+                                                                            <param id="0" name="Name">&quot;Player_Aim&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">&quot;Down&quot;{###}0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="318334619108058">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="616386638674021" type="System" />
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="356790133146435">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="977675552261247" type="Player_Mask">
+                                                                            <param id="0" name="Instance variable">crouch</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="247542077387819" type="Function">
+                                                                            <param id="0" name="Name">&quot;Player_Aim&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">&quot;Crouch&quot;{###}0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="461617820059456">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Key code is down" sid="357821421494759" type="Keyboard">
+                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
+                                                        </condition>
+                                                        <condition id="5" inverted="1" name="Key code is down" sid="966600980749204" type="Keyboard">
+                                                            <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                                        </condition>
+                                                        <condition id="5" inverted="1" name="Compare axis" sid="100694606981214" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">joyDeadzone*-1</param>
+                                                        </condition>
+                                                        <condition id="3" inverted="1" name="Is button down" sid="316988532242132" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Button">12</param>
+                                                        </condition>
+                                                        <condition id="5" inverted="1" name="Compare axis" sid="776367734788209" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">joyDeadzone</param>
+                                                        </condition>
+                                                        <condition id="3" inverted="1" name="Is button down" sid="433563954970308" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Button">13</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="618500515770928" type="Function">
+                                                            <param id="0" name="Name">&quot;Player_Aim&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;Normal&quot;{###}0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -5072,10 +5579,68 @@
                         <action id="-16" name="Wait" sid="697731115246724" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
-                        <action id="-26" name="Restart layout" sid="284766315725845" type="System" />
                     </actions>
                     <sub-events>
-                        <comment>Destroy player</comment>
+                        <event-block sid="798821987376105">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="493530582424163" type="System">
+                                    <param id="0" name="Variable">PlayeNum</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="441987438093387">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="265631963425531" type="System">
+                                            <param id="0" name="Variable">playerChosen</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Hi&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="524414705187295" type="System">
+                                            <param id="0" name="Variable">playerChosen</param>
+                                            <param id="1" name="Value">&quot;Eg&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="312098636382247">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="511386813980048" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="394719160984251">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="483839207412798" type="System">
+                                                    <param id="0" name="Variable">playerChosen</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Eg&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="845453206570955" type="System">
+                                                    <param id="0" name="Variable">playerChosen</param>
+                                                    <param id="1" name="Value">&quot;Hi&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="155261037500053">
+                            <conditions />
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="284766315725845" type="System" />
+                                <action id="-10" name="Set value" sid="722022900342381" type="Player_Mask">
+                                    <param id="0" name="Instance variable">equip</param>
+                                    <param id="1" name="Value">playerChosen</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>

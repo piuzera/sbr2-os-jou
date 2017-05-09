@@ -73,6 +73,25 @@
                                                     <param id="2" name="Value">75</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="276631373325564">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="679062989251541" type="System">
+                                                            <param id="0" name="Variable">PlayeNum</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-2" name="Set Y" sid="587970237711056" type="char_select_bg4">
+                                                            <param id="0" name="Y">368</param>
+                                                        </action>
+                                                        <action id="-1" name="Set X" sid="568500424408315" type="char_select_bg4">
+                                                            <param id="0" name="X">208</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -121,6 +140,25 @@
                                                     <param id="2" name="Value">100</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="183735029965858">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="796474143247210" type="System">
+                                                            <param id="0" name="Variable">PlayeNum</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-2" name="Set Y" sid="560795266277248" type="char_select_bg4">
+                                                            <param id="0" name="Y">368</param>
+                                                        </action>
+                                                        <action id="-1" name="Set X" sid="507377476866437" type="char_select_bg4">
+                                                            <param id="0" name="X">112</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -413,6 +451,25 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="454528588845603">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="949486875069751" type="System">
+                                    <param id="0" name="Variable">PlayeNum</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="503714999803662" type="char_select_bg4">
+                                    <param id="0" name="Y">368</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="525682972969972" type="char_select_bg4">
+                                    <param id="0" name="X">208</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="260949925991853">
                     <conditions>

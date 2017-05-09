@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TitleScreen_ES</name>
     <events>
+        <variable comment="Number of players" constant="0" name="PlayeNum" sid="923155883854546" static="0" type="number">1</variable>
         <include>Init_ES</include>
         <variable constant="0" name="menu_waitInput" sid="200643237937718" static="0" type="number">0</variable>
         <variable constant="0" name="mainmenuStart" sid="265546784247320" static="0" type="number">0</variable>
@@ -131,7 +132,7 @@
                                                             <actions>
                                                                 <action id="0" name="Call function" sid="318787104239367" type="Function">
                                                                     <param id="0" name="Name">&quot;changeMenu&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">&quot;CharSelect&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;PlayerNum&quot;</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -178,6 +179,58 @@
                                                             </conditions>
                                                             <actions>
                                                                 <action id="1" name="Close" sid="618366147865096" type="Browser" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="140761541502006">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="809090038312737" type="System">
+                                                            <param id="0" name="First value">LayoutName</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;PlayerNum&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <comment>1 player</comment>
+                                                        <event-block sid="650630017220684">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="979863076670654" type="System">
+                                                                    <param id="0" name="Variable">menuPick</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="713054971033735" type="System">
+                                                                    <param id="0" name="Variable">PlayeNum</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="702985567740937" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeMenu&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;CharSelect&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <comment>2 players</comment>
+                                                        <event-block sid="570320444835916">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="280735376009622" type="System">
+                                                                    <param id="0" name="Variable">menuPick</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="746146491977743" type="System">
+                                                                    <param id="0" name="Variable">PlayeNum</param>
+                                                                    <param id="1" name="Value">2</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="857646450908107" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeMenu&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;CharSelect&quot;</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>

@@ -1367,7 +1367,7 @@
                         </event-block>
                         <comment>Drop a pickup</comment>
                         <variable constant="0" name="ItemDrop" sid="174898673927425" static="0" type="number">0</variable>
-                        <event-block sid="162919658671337">
+                        <event-block bookmark="1" sid="162919658671337">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="787097778542073" type="Enemies">
                                     <param id="0" name="Instance variable">boss</param>
@@ -1420,14 +1420,14 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Create object" sid="168798274981474" type="System">
+                                        <action id="-3" name="Create object" sid="461273464186103" type="System">
                                             <param id="0" name="Object to create">Pickups</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Enemies.X</param>
                                             <param id="3" name="Y">Enemies.Y - Enemies.Height / 2</param>
                                         </action>
-                                        <action id="4" name="Set animation" sid="669278058656633" type="Pickups">
-                                            <param id="0" name="Animation">&quot;Screw&quot;</param>
+                                        <action id="4" name="Set animation" sid="327834688467973" type="Pickups">
+                                            <param id="0" name="Animation">&quot;Time&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
@@ -1438,22 +1438,26 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" disabled="1" sid="117322861235959" title="DEBUG">
+        <event-group description="" sid="117322861235959" title="DEBUG">
             <sub-events>
-                <event-block disabled="1" sid="502424901061008">
+                <event-block sid="502424901061008">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="137276081003703" type="Keyboard">
                             <param id="0" name="Key">80 (P)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="247271239429698" type="System">
-                            <param id="0" name="Object to create">En_Dragonfly</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">0</param>
-                            <param id="3" name="Y">0</param>
+                        <action id="-10" name="Add to" sid="428063836014600" type="System">
+                            <param id="0" name="Variable">LevelTimer</param>
+                            <param id="1" name="Value">10</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="115579293085398">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

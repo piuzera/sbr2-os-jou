@@ -10,18 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Level 1</layout>
-        <layout order="6">Object Bank</layout>
-        <event-sheet active="1" order="1">Player1_ES</event-sheet>
-        <event-sheet order="2">CharSelect_ES</event-sheet>
-        <event-sheet order="3">Enemies_ES</event-sheet>
-        <event-sheet order="4">Collectibles_ES</event-sheet>
-        <event-sheet order="5">HUD_ES</event-sheet>
+        <layout active="1" order="0">Level 1</layout>
+        <event-sheet order="1">Player1_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
@@ -101,5 +96,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Boss_Anubis_Projectile/" />
         <folder expanded="1" path="animation-folder/Boss_DestroyExplosion/" />
         <folder expanded="1" path="animation-folder/Player_Ankh_Particle/" />
+        <folder expanded="1" path="animation-folder/char_select_bg4/" />
     </folders-expanded>
 </c2uistate>

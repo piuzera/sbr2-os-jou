@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Options</name>
-    <sid>364392907781825</sid>
+    <sid>162323610602211</sid>
     <event-sheet>TitleScreen_ES</event-sheet>
     <size>
         <width>320</width>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="616098695755137">
+        <layer name="Layer 0" sid="586747741049559">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TitleScreen_BG" uid="65">
+                <instance type="TitleScreen_BG" uid="117">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpriteFont_Menus" uid="68">
+                <instance type="SpriteFont_Menus" uid="118">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
@@ -103,7 +103,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpriteFont_Menus" uid="71">
+                <instance type="SpriteFont_Menus" uid="153">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>

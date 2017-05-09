@@ -480,7 +480,7 @@
                 <instance type="char_select_bg3" uid="119">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>egyptian</initial-animation>
+                        <initial-animation>highlander</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -492,6 +492,31 @@
                     <world>
                         <x>112</x>
                         <y>368</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>35</height>
+                        <depth>0</depth>
+                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="char_select_bg4" uid="154">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>highlander</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <canSelect>true</canSelect>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-112</x>
+                        <y>192</y>
                         <z>0</z>
                         <width>35</width>
                         <height>35</height>
