@@ -11,6 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Level 1</layout>
+        <layout order="6">Object Bank</layout>
         <event-sheet active="1" order="1">Player1_ES</event-sheet>
         <event-sheet order="2">CharSelect_ES</event-sheet>
         <event-sheet order="3">Enemies_ES</event-sheet>

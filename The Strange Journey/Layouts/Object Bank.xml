@@ -470,6 +470,7 @@
                         <superArtsCounter>0</superArtsCounter>
                         <superArtsEffect>false</superArtsEffect>
                         <cutsceneControl>false</cutsceneControl>
+                        <climbTopEnd>false</climbTopEnd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -515,8 +516,8 @@
                         <behavior-instance type="8Direction">
                             <properties>
                                 <max-speed>200</max-speed>
-                                <acceleration>600</acceleration>
-                                <deceleration>500</deceleration>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
                                 <directions>Up &amp; down</directions>
                                 <set-angle>No</set-angle>
                                 <default-controls>No</default-controls>

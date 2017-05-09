@@ -410,6 +410,7 @@
                 <instance-variable name="superArtsCounter" sid="313963880239643" type="number" />
                 <instance-variable name="superArtsEffect" sid="203367045112902" type="boolean" />
                 <instance-variable name="cutsceneControl" sid="698781500052223" type="boolean" />
+                <instance-variable name="climbTopEnd" sid="778591891092140" type="boolean" />
             </instance-variables>
             <effects>
                 <effect-type name="AdjustHSL">
