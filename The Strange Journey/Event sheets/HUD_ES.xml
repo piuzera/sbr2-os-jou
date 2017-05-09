@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>HUD_ES</name>
     <events>
+        <variable constant="0" name="isPaused" sid="863415242072288" static="0" type="number">-1</variable>
         <variable constant="0" name="LevelTimer" sid="673313416821939" static="0" type="number">120</variable>
         <comment>Numbers</comment>
         <event-block sid="540863122927476">
@@ -503,5 +504,6 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="640720186523900" title="Pause" />
     </events>
 </c2eventsheet>

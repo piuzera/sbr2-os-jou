@@ -4,7 +4,7 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <show-addaction-links>1</show-addaction-links>
-    <scroll-pos>4259</scroll-pos>
+    <scroll-pos>2168</scroll-pos>
     <conditions-column>598</conditions-column>
     <actions-namecolumn>177</actions-namecolumn>
     <condition-namecolumns>
@@ -21,8 +21,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="513085891405960" />
         <event collapsed="1" sid="444123292717814" />
         <event collapsed="1" sid="989201012926198" />
+        <event collapsed="1" sid="652522352887219" />
         <event collapsed="1" sid="658946197880391" />
         <event collapsed="1" sid="798093815835021" />
+        <event collapsed="1" sid="779531074872661" />
         <event collapsed="1" sid="925866410656584" />
         <event collapsed="1" sid="858924269702854" />
         <event collapsed="1" sid="369401302145601" />
@@ -32,11 +34,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="713768555274379" />
         <event collapsed="1" sid="311755763047878" />
         <event collapsed="1" sid="840952203343199" />
+        <event collapsed="1" sid="876143119967684" />
         <event collapsed="1" sid="253388354267685" />
         <event collapsed="1" sid="766828985338883" />
         <event collapsed="1" sid="953829886256780" />
         <event collapsed="1" sid="157671722537298" />
+        <event collapsed="1" sid="463206180630725" />
         <event collapsed="1" sid="717692961704980" />
+        <event collapsed="1" sid="468930795681126" />
         <event collapsed="1" sid="483620776097780" />
         <event collapsed="1" sid="614816052153529" />
         <event collapsed="1" sid="811574652306563" />
@@ -58,5 +63,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="339142490990720" />
         <event collapsed="1" sid="331321264833105" />
         <event collapsed="1" sid="738078293449884" />
+        <event collapsed="1" sid="626407398816985" />
     </events>
 </c2uistate>

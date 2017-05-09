@@ -395,10 +395,18 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="608679667885456" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-31" name="Set layout effect parameter" sid="724276040268008" type="System">
                                     <param id="0" name="Effect">&quot;Pixellate&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="105828818101387" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -411,6 +419,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="296877182418798" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-31" name="Set layout effect parameter" sid="686317476424794" type="System">
                                     <param id="0" name="Effect">&quot;Pixellate&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
@@ -472,6 +484,10 @@
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">16</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="784027259024305" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -493,6 +509,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="600241266021654" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-31" name="Set layout effect parameter" sid="827791194205630" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
@@ -554,6 +574,10 @@
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">100</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="425946984372270" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="744754274810037">
@@ -565,6 +589,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="766439713092767" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-31" name="Set layout effect parameter" sid="312274363755350" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
@@ -626,6 +654,10 @@
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="927791936109629" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="953700583492422">
@@ -637,6 +669,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="121926199235317" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-31" name="Set layout effect parameter" sid="765779923783366" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
@@ -698,6 +734,10 @@
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">200</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="496095714524607" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="692616652607247">
@@ -709,6 +749,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="595371296419983" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-31" name="Set layout effect parameter" sid="907688669335252" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
@@ -769,6 +813,10 @@
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="227394056940049" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
