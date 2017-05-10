@@ -1685,10 +1685,6 @@
                             <param id="0" name="Name">&quot;Pixellate&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Normalize&quot;</param>
                         </action>
-                        <action id="-12" name="Set group active" sid="705456049052420" type="System">
-                            <param id="0" name="Group name">&quot;Player Engine&quot;</param>
-                            <param id="1" name="State">1</param>
-                        </action>
                         <action id="-13" name="Set boolean" sid="131246072192958" type="Player_Mask">
                             <param id="0" name="Instance variable">cutsceneControl</param>
                             <param id="1" name="Value">0</param>

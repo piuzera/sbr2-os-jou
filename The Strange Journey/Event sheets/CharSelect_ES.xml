@@ -18,6 +18,14 @@
                     <param id="0" name="Instance variable">canSelect</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="0" name="Call function" sid="194597270750017" type="Function">
+                    <param id="0" name="Name">&quot;Fade&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;In&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="731094639830310" type="Function">
+                    <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Normalize&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" inactive="1" sid="483587471215138" title="CharSelect">

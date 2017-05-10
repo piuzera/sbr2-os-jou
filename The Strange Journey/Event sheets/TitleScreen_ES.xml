@@ -44,10 +44,20 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="492617139981738">
+                        <event-block any="1" sid="492617139981738">
                             <conditions>
                                 <condition id="5" name="Key code is down" sid="775293509757640" type="Keyboard">
                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="774847225454042" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">joyDeadzone*-1</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="685870336490623" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">12</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -65,10 +75,20 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="668251193374165">
+                        <event-block any="1" sid="668251193374165">
                             <conditions>
                                 <condition id="5" name="Key code is down" sid="581013733927959" type="Keyboard">
                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="744819620427229" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">joyDeadzone</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="449824024999234" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">13</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -86,10 +106,14 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="109645871241182">
+                        <event-block any="1" sid="109645871241182">
                             <conditions>
                                 <condition id="5" name="Key code is down" sid="897264081361256" type="Keyboard">
                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_JUMP&quot;))</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="560283138533137" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
                                 </condition>
                             </conditions>
                             <actions />
