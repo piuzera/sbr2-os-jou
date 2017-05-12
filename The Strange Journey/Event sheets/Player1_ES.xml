@@ -74,27 +74,50 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="942672339083634">
+                <event-block sid="412816503325155">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="358027004736496" type="System">
-                            <param id="0" name="Variable">currentPlayer</param>
+                        <condition id="-14" name="Compare variable" sid="901943601071237" type="System">
+                            <param id="0" name="Variable">PlayeNum</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="508923403034116" type="System">
-                            <param id="0" name="Variable">currentPlayer</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="942672339083634">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="358027004736496" type="System">
+                                    <param id="0" name="Variable">currentPlayer</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="508923403034116" type="System">
+                                    <param id="0" name="Variable">currentPlayer</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="321006662257733">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="668214241247876" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="575082954420487" type="System">
+                                    <param id="0" name="Variable">currentPlayer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="321006662257733">
+                <event-block sid="839515769470008">
                     <conditions>
-                        <condition id="-22" name="Else" sid="668214241247876" type="System" />
+                        <condition id="-22" name="Else" sid="750071702071646" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="575082954420487" type="System">
+                        <action id="-9" name="Set value" sid="409750852511763" type="System">
                             <param id="0" name="Variable">currentPlayer</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -948,15 +971,36 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="124937793048332" type="Player_Mask">
-                                            <param id="0" name="Instance variable">p_defense</param>
-                                            <param id="1" name="Value">3</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="994055679021167" type="HUD_Super_Arts_Icon">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <event-block sid="974916572215878">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="927012525595829" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">equip</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Hi&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="190369917494686" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">p_defense</param>
+                                                    <param id="1" name="Value">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="193461284576263">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="551040196058113" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">equip</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Eg&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
                                         <event-block sid="641128793032382">
                                             <conditions>
                                                 <condition id="-6" name="Every X seconds" sid="876125049970107" type="System">
@@ -1155,7 +1199,7 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="927490655415381">
+                                                <event-block bookmark="1" sid="927490655415381">
                                                     <conditions>
                                                         <condition behavior="Platform" id="2" name="Is on floor" sid="406958026389618" type="Player" />
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="990017928189356" type="Player_Mask">
@@ -2415,22 +2459,22 @@
                                                     <actions />
                                                     <sub-events>
                                                         <comment>Check if there are no projecticles on screen</comment>
-                                                        <event-block sid="926638729262685">
+                                                        <event-block sid="464073113523446">
                                                             <conditions>
-                                                                <condition id="-7" name="Compare instance variable" sid="234157375862463" type="HUD_subammo">
-                                                                    <param id="0" name="Instance variable">ammo</param>
-                                                                    <param id="1" name="Comparison">4</param>
-                                                                    <param id="2" name="Value">0</param>
+                                                                <condition id="-7" name="Compare instance variable" sid="649584712412026" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">equip</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Hi&quot;</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions />
                                                             <sub-events>
-                                                                <event-block sid="464073113523446">
+                                                                <event-block sid="926638729262685">
                                                                     <conditions>
-                                                                        <condition id="-7" name="Compare instance variable" sid="649584712412026" type="Player_Mask">
-                                                                            <param id="0" name="Instance variable">equip</param>
-                                                                            <param id="1" name="Comparison">0</param>
-                                                                            <param id="2" name="Value">&quot;Hi&quot;</param>
+                                                                        <condition id="-7" name="Compare instance variable" sid="234157375862463" type="HUD_subammo">
+                                                                            <param id="0" name="Instance variable">ammo</param>
+                                                                            <param id="1" name="Comparison">4</param>
+                                                                            <param id="2" name="Value">0</param>
                                                                         </condition>
                                                                     </conditions>
                                                                     <actions />
@@ -2452,30 +2496,78 @@
                                                                         </event-block>
                                                                     </sub-events>
                                                                 </event-block>
-                                                                <event-block sid="465555819392618">
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="465555819392618">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="904453690959351" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">equip</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Eg&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <comment>If Eg superarts is being used, dont deplet from ammo</comment>
+                                                                <event-block sid="489471652155130">
                                                                     <conditions>
-                                                                        <condition id="-7" name="Compare instance variable" sid="904453690959351" type="Player_Mask">
-                                                                            <param id="0" name="Instance variable">equip</param>
-                                                                            <param id="1" name="Comparison">0</param>
-                                                                            <param id="2" name="Value">&quot;Eg&quot;</param>
+                                                                        <condition id="-7" name="Compare instance variable" sid="500177907943596" type="Player_Mask">
+                                                                            <param id="0" name="Instance variable">superArtsCounter</param>
+                                                                            <param id="1" name="Comparison">4</param>
+                                                                            <param id="2" name="Value">0</param>
                                                                         </condition>
                                                                     </conditions>
                                                                     <actions />
                                                                     <sub-events>
-                                                                        <event-block sid="706806324332333">
+                                                                        <event-block sid="176023025666546">
                                                                             <conditions>
-                                                                                <condition id="-8" name="Compare two values" sid="882307643026199" type="System">
+                                                                                <condition id="-8" name="Compare two values" sid="135766564853031" type="System">
                                                                                     <param id="0" name="First value">Player_Ankh.Count</param>
                                                                                     <param id="1" name="Comparison">0</param>
                                                                                     <param id="2" name="Second value">0</param>
                                                                                 </condition>
                                                                             </conditions>
                                                                             <actions>
-                                                                                <action id="0" name="Call function" sid="599854360237537" type="Function">
+                                                                                <action id="0" name="Call function" sid="830139442490834" type="Function">
                                                                                     <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
                                                                                     <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
                                                                                 </action>
                                                                             </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="238881184453385">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="339681478239870" type="System" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="637392215456397">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="550909733294954" type="HUD_subammo">
+                                                                                    <param id="0" name="Instance variable">ammo</param>
+                                                                                    <param id="1" name="Comparison">4</param>
+                                                                                    <param id="2" name="Value">0</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="706806324332333">
+                                                                                    <conditions>
+                                                                                        <condition id="-8" name="Compare two values" sid="882307643026199" type="System">
+                                                                                            <param id="0" name="First value">Player_Ankh.Count</param>
+                                                                                            <param id="1" name="Comparison">0</param>
+                                                                                            <param id="2" name="Second value">0</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="0" name="Call function" sid="599854360237537" type="Function">
+                                                                                            <param id="0" name="Name">&quot;Player_Shoot&quot;</param>
+                                                                                            <param id="1" name="Parameter {n}">&quot;Sub&quot;{###}0</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
                                                                         </event-block>
                                                                     </sub-events>
                                                                 </event-block>
@@ -2937,15 +3029,45 @@
                                             <param id="2" name="X">player_mask.X</param>
                                             <param id="3" name="Y">Player_Mask.Y</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="921622258047740" type="Player_Mask">
-                                            <param id="0" name="Instance variable">superArtsCounter</param>
-                                            <param id="1" name="Value">15</param>
+                                        <action id="4" name="Set animation" sid="852224195924290" type="Player_Arts">
+                                            <param id="0" name="Animation">Player_Mask.equip&amp;&quot;_Use_Arts&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                         <action id="7" name="Set mirrored" sid="973177875091462" type="Player_Mask">
                                             <param id="0" name="State">0</param>
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <event-block sid="791875379689157">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="575868649171623" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">equip</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Hi&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="921622258047740" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">superArtsCounter</param>
+                                                    <param id="1" name="Value">25</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="522908066087274">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="449866671796549" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">equip</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Eg&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="366099022366936" type="Player_Mask">
+                                                    <param id="0" name="Instance variable">superArtsCounter</param>
+                                                    <param id="1" name="Value">20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="342470354356228">
                                             <conditions>
                                                 <condition id="7" name="Is mirrored" sid="769443735869145" type="Player_Mask" />
@@ -4750,7 +4872,7 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="774706925213089">
+                                                <event-block bookmark="1" sid="774706925213089">
                                                     <conditions>
                                                         <condition id="-4" name="Trigger once while true" sid="682406042460608" type="System" />
                                                     </conditions>
@@ -4774,8 +4896,8 @@
                                                             <param id="0" name="Animation">&quot;Default_&quot;&amp;Player_Mask.shootAngle</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
-                                                        <action id="4" name="Set animation" sid="754084808006275" type="Player_Ankh_Particle">
-                                                            <param id="0" name="Animation">&quot;Default_&quot;&amp;Player_Mask.shootAngle</param>
+                                                        <action id="4" name="Set animation" sid="447427024131940" type="Player_Ankh_Particle">
+                                                            <param id="0" name="Animation">Player_Ankh.AnimationName</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
                                                         <action id="0" name="Play" sid="719400019907749" type="Audio">
@@ -5137,25 +5259,37 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
-                                                        <event-block sid="105752358667555">
+                                                        <event-block sid="422976713987462">
                                                             <conditions>
-                                                                <condition id="-33" name="Pick by comparison" sid="920535981253240" type="System">
-                                                                    <param id="0" name="Object">HUD_subammo</param>
-                                                                    <param id="1" name="Expression">HUD_subammo.type</param>
-                                                                    <param id="2" name="Comparison">0</param>
-                                                                    <param id="3" name="Value">&quot;p1ammo&quot;</param>
+                                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="443520612575602" type="Player_Mask">
+                                                                    <param id="0" name="Instance variable">superArtsCounter</param>
+                                                                    <param id="1" name="Comparison">4</param>
+                                                                    <param id="2" name="Value">0</param>
                                                                 </condition>
                                                             </conditions>
-                                                            <actions>
-                                                                <action id="-12" name="Subtract from" sid="552256280321473" type="HUD_subammo">
-                                                                    <param id="0" name="Instance variable">ammo</param>
-                                                                    <param id="1" name="Value">1</param>
-                                                                </action>
-                                                                <action id="0" name="Call function" sid="269889477426164" type="Function">
-                                                                    <param id="0" name="Name">&quot;p1updateammo&quot;</param>
-                                                                    <param id="1" name="Parameter {n}"></param>
-                                                                </action>
-                                                            </actions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="105752358667555">
+                                                                    <conditions>
+                                                                        <condition id="-33" name="Pick by comparison" sid="920535981253240" type="System">
+                                                                            <param id="0" name="Object">HUD_subammo</param>
+                                                                            <param id="1" name="Expression">HUD_subammo.type</param>
+                                                                            <param id="2" name="Comparison">0</param>
+                                                                            <param id="3" name="Value">&quot;p1ammo&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-12" name="Subtract from" sid="552256280321473" type="HUD_subammo">
+                                                                            <param id="0" name="Instance variable">ammo</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                        <action id="0" name="Call function" sid="269889477426164" type="Function">
+                                                                            <param id="0" name="Name">&quot;p1updateammo&quot;</param>
+                                                                            <param id="1" name="Parameter {n}"></param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
@@ -5309,7 +5443,7 @@
                                             <param id="2" name="Image point">0</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="472341772241795" type="Player_Ankh_Particle">
-                                            <param id="0" name="Animation">&quot;Default_&quot;&amp;Player_Mask.shootAngle</param>
+                                            <param id="0" name="Animation">Player_Ankh.AnimationName</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action id="-29" name="Move to object" sid="858350164228545" type="Player_Ankh_Particle">
@@ -5781,6 +5915,19 @@
                         <action id="-10" name="Set value" sid="619949949412167" type="Player_Mask">
                             <param id="0" name="Instance variable">equip</param>
                             <param id="1" name="Value">playerChosen</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="810596854283391">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="623458251311251" type="Keyboard">
+                            <param id="0" name="Key">51 (3)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="461869912238832" type="HUD_subammo">
+                            <param id="0" name="Instance variable">ammo</param>
+                            <param id="1" name="Value">99</param>
                         </action>
                     </actions>
                 </event-block>

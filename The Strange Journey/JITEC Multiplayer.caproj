@@ -2155,8 +2155,18 @@
             </effects>
             <animation-folder>
                 <animation-folder name="Default">
-                    <animation framecount="1" loop="0" name="Default_Use_Arts" pingpong="0" repeatcount="1" repeatto="0" sid="715688160471592" speed="5">
+                    <animation framecount="1" loop="0" name="Hi_Use_Arts" pingpong="0" repeatcount="1" repeatto="0" sid="715688160471592" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Eg_Use_Arts" pingpong="0" repeatcount="1" repeatto="0" sid="265947515371878" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </animation-folder>
