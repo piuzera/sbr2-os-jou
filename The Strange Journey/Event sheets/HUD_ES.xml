@@ -58,43 +58,6 @@
                 </action>
             </actions>
         </event-block>
-        <comment>If the current score is lower than the highscore, show the highscore. If not, update the highscore text to show the player current score.</comment>
-        <event-block sid="957074230468598">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="893482514960204" type="Spritefonts">
-                    <param id="0" name="Instance variable">type</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;hiscore&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="284882043099398">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="739298432572519" type="System">
-                            <param id="0" name="Variable">Total_Score</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">Data_Highscore_Array.At(0,0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="242923301620476" type="Spritefonts">
-                            <param id="0" name="Text">zeropad(Total_Score, 8)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="422737253376561">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="852727805315477" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="750822249392175" type="Spritefonts">
-                            <param id="0" name="Text">zeropad(Data_Highscore_Array.At(0,0), 8)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="260749421121954">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="519841378702138" type="Spritefonts">
@@ -536,50 +499,6 @@
                                     <param id="0" name="Frame number">1</param>
                                 </action>
                             </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="174303083479707" title="Highscore">
-            <sub-events>
-                <event-block sid="718923386190882">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="747346935767993" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="186374931976071">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="826276453782712" type="System">
-                                    <param id="0" name="Variable">currentPlayer</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="400987270190545">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="525466516361934" type="System">
-                                            <param id="0" name="Variable">Total_Score</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Value">curHighScore_P1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="927469796242156">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="324084607046254" type="System">
-                                    <param id="0" name="Variable">currentPlayer</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>

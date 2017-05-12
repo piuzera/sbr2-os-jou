@@ -165,8 +165,8 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
-                                                        <comment>scoreboard</comment>
-                                                        <event-block sid="424327610192799">
+                                                        <comment>normal mode</comment>
+                                                        <event-block disabled="1" sid="424327610192799">
                                                             <conditions>
                                                                 <condition id="-14" name="Compare variable" sid="166550008149476" type="System">
                                                                     <param id="0" name="Variable">menuPick</param>
@@ -177,7 +177,7 @@
                                                             <actions>
                                                                 <action id="0" name="Call function" sid="475503570460347" type="Function">
                                                                     <param id="0" name="Name">&quot;changeMenu&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">&quot;HighScores&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;CharSelect&quot;</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -187,7 +187,7 @@
                                                                 <condition id="-14" name="Compare variable" sid="299369126761338" type="System">
                                                                     <param id="0" name="Variable">menuPick</param>
                                                                     <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">2</param>
+                                                                    <param id="2" name="Value">1</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
@@ -203,7 +203,7 @@
                                                                 <condition id="-14" name="Compare variable" sid="355132828312119" type="System">
                                                                     <param id="0" name="Variable">menuPick</param>
                                                                     <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">3</param>
+                                                                    <param id="2" name="Value">2</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
@@ -730,159 +730,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="750721577964111" title="Load HighScores">
-            <sub-events>
-                <event-block sid="812353039271951">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="102468147148355" type="System" />
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="3" name="Clear storage" sid="418595504295325" type="LocalStorage" />
-                        <action disabled="1" id="5" name="Check item exists" sid="636757379578118" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highscores&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="586874213494739">
-                    <conditions>
-                        <condition id="-25" name="On loader layout complete" sid="542531810974660" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="3" name="Set at XY" sid="504064958019658" type="Data_Highscore_Array">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">2500</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="178196590912768" type="Data_Highscore_Array">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">&quot;YIN&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="406996102879988" type="Data_Highscore_Array">
-                            <param id="0" name="X">1</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">3000</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="758451417722574" type="Data_Highscore_Array">
-                            <param id="0" name="X">1</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">&quot;PIU&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="823906338746477" type="Data_Highscore_Array">
-                            <param id="0" name="X">2</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">2000</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="357128817944276" type="Data_Highscore_Array">
-                            <param id="0" name="X">2</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">&quot;LED&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="679686526805918" type="Data_Highscore_Array">
-                            <param id="0" name="X">3</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">1500</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="381029568947474" type="Data_Highscore_Array">
-                            <param id="0" name="X">3</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">&quot;NIK&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="263471099724509" type="Data_Highscore_Array">
-                            <param id="0" name="X">4</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">500</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="827128484431875" type="Data_Highscore_Array">
-                            <param id="0" name="X">4</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">&quot;LYC&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="380578056460437" type="Data_Highscore_Array">
-                            <param id="0" name="X">5</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">250</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="568703726845965" type="Data_Highscore_Array">
-                            <param id="0" name="X">5</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">&quot;NAN&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>If the highscore exists in localstorage, load it onto the Data_Highscore_Array</comment>
-                <event-block disabled="1" sid="312715189631926">
-                    <conditions>
-                        <condition id="9" name="On item exists" sid="814604631955889" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highscores&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Get item" sid="453304588050470" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highscores&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="931536647098091">
-                    <conditions>
-                        <condition id="1" name="On item get" sid="983422953049976" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highscores&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="11" name="Load" sid="651678230641352" type="Data_Highscore_Array">
-                            <param id="0" name="JSON">LocalStorage.ItemValue</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="622230043737510" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action disabled="1" id="8" name="Sort" sid="522975488627516" type="Data_Highscore_Array">
-                            <param id="0" name="Axis">0</param>
-                        </action>
-                        <action disabled="1" id="7" name="Reverse" sid="492117855384591" type="Data_Highscore_Array">
-                            <param id="0" name="Axis">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>If the highscore isn&apos;t able to load, populate it with default one.</comment>
-                <event-block disabled="1" sid="179782570765615">
-                    <conditions>
-                        <condition id="10" name="On item missing" sid="237752556726136" type="LocalStorage">
-                            <param id="0" name="Key">&quot;highscores&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="984021478268778">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Set item" sid="993366480031730" type="LocalStorage">
-                                    <param id="0" name="Key">&quot;highscores&quot;</param>
-                                    <param id="1" name="Value">Data_Highscore_Array.AsJSON</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="657153516171417" title="DEBUG - Titlescreen">
-            <sub-events>
-                <event-block sid="541642386482316">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="267430514543609" type="Keyboard">
-                            <param id="0" name="Key">76 (L)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="749781761284238" type="System">
-                            <param id="0" name="Variable">curHighScore_P1</param>
-                            <param id="1" name="Value">1000000</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
