@@ -10,12 +10,14 @@
     <unique-id>2qpiupr2gjili</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Mikael Nilsson" id="CAMFTimeManager" version="1.100000024">Time Manager</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Rex.Rainbow" id="Rex_TimeLine" version="1">TimeLine</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -3134,6 +3136,7 @@
             <plugin id="Spritefont2" />
             <instance-variables>
                 <instance-variable name="option_num" sid="374411839726903" type="number" />
+                <instance-variable name="curLetter" sid="999435271970289" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="EaseTween" sid="123869304883800">
@@ -3710,6 +3713,7 @@
                 </animation>
             </animation-folder>
         </object-type>
+<<<<<<< HEAD
         <object-type name="Wormhole_2" sid="129584940632803">
             <plugin id="Sprite" />
             <animation-folder>
@@ -3899,6 +3903,13 @@
                     </frame>
                 </animation>
             </animation-folder>
+=======
+        <object-type name="LocalStorage" sid="120710553010485">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type global="1" name="Data_Highscore_Array" sid="857203775984113">
+            <plugin id="Arr" />
+>>>>>>> 9aaf5be52d5e46039e007e984740c9a04b5b5a02
         </object-type>
     </object-folder>
     <families>
@@ -4068,6 +4079,7 @@
         <layout>Object Bank.xml</layout>
         <layout>SetControls.xml</layout>
         <layout>TitleScreen.xml</layout>
+        <layout>HighScores.xml</layout>
         <layout>PlayerNum.xml</layout>
         <layout>Options.xml</layout>
         <layout>CharSelect.xml</layout>
@@ -4087,6 +4099,7 @@
         <event-sheet>TitleScreen_ES.xml</event-sheet>
         <event-sheet>CharSelect_ES.xml</event-sheet>
         <event-sheet>Map_ES.xml</event-sheet>
+        <event-sheet>HighScores_ES.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
@@ -4113,6 +4126,7 @@
         <global-instance type="Browser" uid="7" />
         <global-instance type="Function" uid="8" />
         <global-instance type="TimeManager" uid="67" />
+        <global-instance type="LocalStorage" uid="160" />
     </global-instances>
     <sounds-folder>
         <file name="sfx_movement_jump13.m4a" />

@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player1_ES</name>
     <events>
+        <variable constant="0" name="curHighScore_P1" sid="182111733309582" static="0" type="number">0</variable>
+        <variable constant="0" name="curHighScore_P2" sid="598182251683886" static="0" type="number">0</variable>
         <variable constant="0" name="currentPlayer" sid="168220101280119" static="0" type="number">1</variable>
         <variable constant="0" name="controlType" sid="306797489847138" static="0" type="text">keyboard</variable>
         <variable constant="0" name="joyDeadzone" sid="967961621508216" static="0" type="number">50</variable>
@@ -304,7 +306,7 @@
             <sub-events>
                 <event-group description="" sid="729587107748018" title="Player Input">
                     <sub-events>
-                        <comment>Player Speed</comment>
+                        <comment>Update player Speed</comment>
                         <event-block sid="627447007023391">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="917461089186486" type="System" />
@@ -5722,7 +5724,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="626407398816985" title="DEBUG - player">
+        <event-group description="" disabled="1" sid="626407398816985" title="DEBUG - player">
             <sub-events>
                 <event-block sid="336325858367240">
                     <conditions>
