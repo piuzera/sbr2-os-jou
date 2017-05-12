@@ -963,7 +963,7 @@
                         <category>HUD</category>
                         <type>p1ammo</type>
                         <Menu_ID>0</Menu_ID>
-                        <ammo>99</ammo>
+                        <ammo>5</ammo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />

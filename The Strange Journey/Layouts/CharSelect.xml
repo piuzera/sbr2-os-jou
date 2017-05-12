@@ -15,7 +15,7 @@
     <layers>
         <layer name="Backgrounds" sid="722055319477890">
             <initially-visible>1</initially-visible>
-            <background-color>152,255,255</background-color>
+            <background-color>191,118,106</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -197,6 +197,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="Wormhole_1" uid="124">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Spawn</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>48</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="CharSelect_Highlander" uid="121">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -230,8 +252,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>112</x>
-                        <y>48</y>
+                        <x>120</x>
+                        <y>-24</y>
                         <z>0</z>
                         <width>48</width>
                         <height>48</height>
@@ -320,36 +342,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>208</x>
-                        <y>48</y>
+                        <x>200</x>
+                        <y>-24</y>
                         <z>0</z>
                         <width>48</width>
                         <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite" uid="124">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>32</x>
-                        <y>80</y>
-                        <z>0</z>
-                        <width>256</width>
-                        <height>80</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -431,14 +431,14 @@
                         <character-height>8</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
                         <text>THE WARRIOR THAT STRIVES TO TAKE BACK HIS LAND</text>
-                        <scale>1.5</scale>
+                        <scale>1</scale>
                         <initial-visibility>Invisible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
+                        <line-height>5</line-height>
                     </properties>
                     <instance-variables>
                         <option_num>1</option_num>
@@ -450,7 +450,7 @@
                                 <tweened-property>Position</tweened-property>
                                 <function>Linear</function>
                                 <initial>current</initial>
-                                <target>160,304</target>
+                                <target>160,280</target>
                                 <duration>0.5</duration>
                                 <wait>0,0</wait>
                                 <playback-mode>Play Once</playback-mode>
@@ -465,10 +465,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>480</x>
-                        <y>304</y>
+                        <x>440</x>
+                        <y>280</y>
                         <z>0</z>
-                        <width>304</width>
+                        <width>224</width>
                         <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -490,13 +490,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>112</x>
+                        <x>120</x>
                         <y>368</y>
                         <z>0</z>
-                        <width>35</width>
-                        <height>35</height>
+                        <width>24</width>
+                        <height>24</height>
                         <depth>0</depth>
-                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -518,11 +518,33 @@
                         <x>-112</x>
                         <y>192</y>
                         <z>0</z>
-                        <width>35</width>
-                        <height>35</height>
+                        <width>24</width>
+                        <height>24</height>
                         <depth>0</depth>
-                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Wormhole_2" uid="157">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>48</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -15,7 +15,7 @@
     <layers>
         <layer name="Layer 0" sid="775187283558466">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>4,4,4</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -40,13 +40,13 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>112</y>
+                        <y>64</y>
                         <z>0</z>
-                        <width>320</width>
-                        <height>224</height>
+                        <width>211</width>
+                        <height>89</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502369642</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -57,7 +57,7 @@
                         <character-height>8</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
                         <text>START DEMO</text>
-                        <scale>1.5</scale>
+                        <scale>2</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -92,7 +92,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>140</y>
+                        <y>128</y>
                         <z>0</z>
                         <width>240</width>
                         <height>32</height>
@@ -109,7 +109,7 @@
                         <character-height>8</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
                         <text>OPTIONS</text>
-                        <scale>1.5</scale>
+                        <scale>2</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -161,7 +161,7 @@
                         <character-height>8</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
                         <text>QUIT</text>
-                        <scale>1.5</scale>
+                        <scale>2</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -196,7 +196,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>180</y>
+                        <y>192</y>
                         <z>0</z>
                         <width>240</width>
                         <height>32</height>

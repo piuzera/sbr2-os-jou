@@ -51,19 +51,17 @@
                     <param id="2" name="X">320/2</param>
                     <param id="3" name="Y">224/4</param>
                 </action>
+                <action id="-15" name="Set visible" sid="784398784829068" type="SpriteFont_Menus">
+                    <param id="0" name="Visibility">1</param>
+                </action>
                 <action id="2" name="Set scale" sid="468525634708607" type="SpriteFont_Menus">
                     <param id="0" name="Scale">1</param>
                 </action>
                 <action id="0" name="Set text" sid="941831746094332" type="SpriteFont_Menus">
-                    <param id="0" name="Text">&quot;PLAYER &quot;&amp;str(currentPlayer)&amp;&quot; START!&quot;</param>
-                </action>
-                <action behavior="Flash" id="0" name="Flash" sid="287044754596694" type="SpriteFont_Menus">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
+                    <param id="0" name="Text">&quot;PLAYER &quot;&amp;str(currentPlayer)&amp;&quot;, GO!&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="305221862935085" type="System">
-                    <param id="0" name="Seconds">1</param>
+                    <param id="0" name="Seconds">2</param>
                 </action>
                 <action id="-9" name="Destroy" sid="990458541860729" type="SpriteFont_Menus" />
                 <action id="-12" name="Set group active" sid="929457476173741" type="System">

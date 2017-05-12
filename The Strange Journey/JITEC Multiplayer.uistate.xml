@@ -12,7 +12,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Level 1</layout>
         <layout order="1">TitleScreen</layout>
-        <event-sheet active="1" order="2">TitleScreen_ES</event-sheet>
+        <layout order="4">HUD</layout>
+        <layout order="5">CharSelect</layout>
+        <layout active="1" order="7">Object Bank</layout>
+        <event-sheet order="2">TitleScreen_ES</event-sheet>
+        <event-sheet order="3">Player1_ES</event-sheet>
+        <event-sheet order="6">CharSelect_ES</event-sheet>
+        <event-sheet order="8">Enemies_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -59,7 +65,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LadderCollision/" />
         <folder expanded="1" path="animation-folder/LadderGround/" />
         <folder expanded="1" path="animation-folder/En_PET/" />
-        <folder expanded="1" path="animation-folder/Par_Explosion/" />
+        <folder expanded="1" path="animation-folder/Par_ExplosionSmall/" />
         <folder expanded="1" path="animation-folder/HUD_special_arts_count/" />
         <folder expanded="1" path="animation-folder/HUD_Frame/" />
         <folder expanded="1" path="animation-folder/HUD_player_weapon/" />
@@ -86,7 +92,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/CharSelect_Highlander/" />
         <folder expanded="1" path="animation-folder/CharSelect_Camera/" />
         <folder expanded="1" path="animation-folder/CharSelect_Egyptian/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Wormhole_1/" />
         <folder expanded="1" path="animation-folder/Map_Sprite/" />
         <folder expanded="1" path="animation-folder/col_camera_limit/" />
         <folder expanded="1" path="animation-folder/Player_Wand/" />
@@ -98,5 +104,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Boss_DestroyExplosion/" />
         <folder expanded="1" path="animation-folder/Player_Ankh_Particle/" />
         <folder expanded="1" path="animation-folder/char_select_bg4/" />
+        <folder expanded="1" path="animation-folder/Wormhole_2/" />
+        <folder expanded="1" path="animation-folder/Par_ExplosionBig/" />
+        <folder expanded="1" path="animation-folder/En_BlueSandit/" />
+        <folder expanded="1" path="animation-folder/En_BlueScarab/" />
     </folders-expanded>
 </c2uistate>

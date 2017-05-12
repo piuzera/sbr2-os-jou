@@ -43,6 +43,7 @@
                         <active>true</active>
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
+                        <particleSize>0</particleSize>
                         <side>0</side>
                         <direction>0</direction>
                     </instance-variables>
@@ -143,6 +144,7 @@
                         <active>true</active>
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
+                        <particleSize>0</particleSize>
                         <side>0</side>
                         <direction>0</direction>
                     </instance-variables>
@@ -243,6 +245,7 @@
                         <active>true</active>
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
+                        <particleSize>0</particleSize>
                         <side>0</side>
                         <direction>0</direction>
                     </instance-variables>
@@ -350,6 +353,7 @@
                         <active>true</active>
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
+                        <particleSize>1</particleSize>
                         <side>0</side>
                         <direction>0</direction>
                     </instance-variables>
@@ -867,8 +871,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>582</x>
-                        <y>373</y>
+                        <x>538.534973145</x>
+                        <y>422.674224854</y>
                         <z>0</z>
                         <width>48</width>
                         <height>48</height>
@@ -895,14 +899,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>335</x>
-                        <y>263</y>
+                        <x>321.339294434</x>
+                        <y>258.032745361</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1074,6 +1078,7 @@
                         <active>true</active>
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
+                        <particleSize>1</particleSize>
                         <side>0</side>
                         <direction>0</direction>
                         <state>landed</state>
@@ -1262,6 +1267,7 @@
                         <active>true</active>
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
+                        <particleSize>0</particleSize>
                         <side>0</side>
                         <direction>0</direction>
                         <state>landed</state>
@@ -1421,6 +1427,7 @@
                         <active>true</active>
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
+                        <particleSize>0</particleSize>
                         <side>0</side>
                         <direction>0</direction>
                         <state>landed</state>
@@ -1524,6 +1531,7 @@
                         <active>true</active>
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
+                        <particleSize>1</particleSize>
                         <side>0</side>
                         <direction>0</direction>
                         <state>landed</state>
@@ -1688,8 +1696,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>593.705749512</x>
-                        <y>503.927490234</y>
+                        <x>598.672485352</x>
+                        <y>511.379119873</y>
                         <z>0</z>
                         <width>480</width>
                         <height>80</height>
@@ -1722,7 +1730,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Par_Explosion" uid="70">
+                <instance type="Par_ExplosionSmall" uid="70">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1735,11 +1743,11 @@
                         <x>507.932861328</x>
                         <y>153.014633179</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.671875</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2074,6 +2082,7 @@
                         <active>true</active>
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
+                        <particleSize>0</particleSize>
                         <pattern>landed</pattern>
                         <pattern_time>0</pattern_time>
                         <pattern_count>0</pattern_count>
@@ -2157,11 +2166,11 @@
                         <x>408.227355957</x>
                         <y>402.203063965</y>
                         <z>0</z>
-                        <width>96</width>
-                        <height>96</height>
+                        <width>64</width>
+                        <height>72</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.729166687</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2269,7 +2278,7 @@
                         <x>593.477111816</x>
                         <y>584.886535645</y>
                         <z>0</z>
-                        <width>480</width>
+                        <width>80</width>
                         <height>80</height>
                         <depth>0</depth>
                         <hotspotX>1</hotspotX>
@@ -2356,8 +2365,8 @@
                         <x>537.029602051</x>
                         <y>383.729217529</y>
                         <z>0</z>
-                        <width>48</width>
-                        <height>48</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2410,6 +2419,236 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Par_ExplosionBig" uid="158">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>476.092376709</x>
+                        <y>92.359527588</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="En_BlueSandit" uid="133">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <health>3</health>
+                        <power>25</power>
+                        <points>150</points>
+                        <active>true</active>
+                        <createdByResUID>0</createdByResUID>
+                        <boss>false</boss>
+                        <particleSize>0</particleSize>
+                        <side>0</side>
+                        <direction>0</direction>
+                        <state>landed</state>
+                        <initX>0</initX>
+                        <initY>0</initY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>96</max-speed>
+                                <acceleration>1080</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>200</jump-strength>
+                                <gravity>200</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Timer" />
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>Up &amp; down</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>128</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Brightness">
+                            <parameters>
+                                <brightness>1</brightness>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>172.461837769</x>
+                        <y>428.277618408</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.90625</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="En_BlueScarab" uid="160">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <health>1</health>
+                        <power>25</power>
+                        <points>150</points>
+                        <active>true</active>
+                        <createdByResUID>0</createdByResUID>
+                        <boss>false</boss>
+                        <particleSize>0</particleSize>
+                        <side>0</side>
+                        <direction>0</direction>
+                        <state>landed</state>
+                        <initX>0</initX>
+                        <initY>0</initY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>96</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>200</jump-strength>
+                                <gravity>200</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>192</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Timer" />
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>250</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>Up &amp; down</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>192</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Brightness">
+                            <parameters>
+                                <brightness>1</brightness>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>210.957336426</x>
+                        <y>427.03616333</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.6875</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

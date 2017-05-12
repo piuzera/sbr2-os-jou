@@ -28,6 +28,22 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="573572603436552">
+            <conditions>
+                <condition id="4" name="On finished" sid="653161251458880" type="Wormhole_1">
+                    <param id="0" name="Animation">&quot;Spawn&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="829416844219975" type="Wormhole_1">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="320003266169248" type="Wormhole_2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" inactive="1" sid="483587471215138" title="CharSelect">
             <sub-events>
                 <event-block sid="501927407797292">
@@ -68,7 +84,7 @@
                                                     <param id="0" name="Y">368</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="644729196247086" type="char_select_bg3">
-                                                    <param id="0" name="X">112</param>
+                                                    <param id="0" name="X">120</param>
                                                 </action>
                                                 <action id="-28" name="Set effect parameter" sid="329291216542022" type="CharSelect_Highlander">
                                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
@@ -95,7 +111,7 @@
                                                             <param id="0" name="Y">368</param>
                                                         </action>
                                                         <action id="-1" name="Set X" sid="568500424408315" type="char_select_bg4">
-                                                            <param id="0" name="X">208</param>
+                                                            <param id="0" name="X">200</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -135,7 +151,7 @@
                                                     <param id="0" name="Y">368</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="931066077740022" type="char_select_bg3">
-                                                    <param id="0" name="X">208</param>
+                                                    <param id="0" name="X">200</param>
                                                 </action>
                                                 <action id="-28" name="Set effect parameter" sid="257144028354946" type="CharSelect_Highlander">
                                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
@@ -162,7 +178,7 @@
                                                             <param id="0" name="Y">368</param>
                                                         </action>
                                                         <action id="-1" name="Set X" sid="507377476866437" type="char_select_bg4">
-                                                            <param id="0" name="X">112</param>
+                                                            <param id="0" name="X">120</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
