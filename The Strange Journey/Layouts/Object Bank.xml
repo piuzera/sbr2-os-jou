@@ -1437,7 +1437,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>96</max-speed>
+                                <max-speed>124</max-speed>
                                 <acceleration>1080</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>200</jump-strength>
@@ -1754,7 +1754,7 @@
                 </instance>
                 <instance type="LadderCollision" uid="11">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -2278,7 +2278,7 @@
                         <x>593.477111816</x>
                         <y>584.886535645</y>
                         <z>0</z>
-                        <width>80</width>
+                        <width>475.413452148</width>
                         <height>80</height>
                         <depth>0</depth>
                         <hotspotX>1</hotspotX>
@@ -2453,8 +2453,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <health>3</health>
-                        <power>25</power>
+                        <health>5</health>
+                        <power>10</power>
                         <points>150</points>
                         <active>true</active>
                         <createdByResUID>0</createdByResUID>
@@ -2598,13 +2598,13 @@
                         <behavior-instance type="Sine">
                             <properties>
                                 <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
+                                <movement>Vertical</movement>
                                 <wave>Sine</wave>
-                                <period>4</period>
+                                <period>1.5</period>
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>50</magnitude>
+                                <magnitude>32</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -2649,6 +2649,110 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.6875</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="En_Bat" uid="168">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <health>1</health>
+                        <power>10</power>
+                        <points>100</points>
+                        <active>true</active>
+                        <createdByResUID>0</createdByResUID>
+                        <boss>false</boss>
+                        <particleSize>0</particleSize>
+                        <side>0</side>
+                        <direction>0</direction>
+                        <state>normal</state>
+                        <initX>0</initX>
+                        <initY>0</initY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>96</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>200</jump-strength>
+                                <gravity>200</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>124</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Timer" />
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>250</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>Up &amp; down</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>100</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Brightness">
+                            <parameters>
+                                <brightness>1</brightness>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>247.174285889</x>
+                        <y>427.286193848</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.71875</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

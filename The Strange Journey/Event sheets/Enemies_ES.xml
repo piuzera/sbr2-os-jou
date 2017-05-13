@@ -6,346 +6,6 @@
         <comment>Activate enemies when they are on-screen</comment>
         <event-group description="" sid="118892386883504" title="Enemy AI">
             <sub-events>
-                <event-group description="" sid="692183519409171" title="Pig">
-                    <sub-events>
-                        <comment>Actions on floor</comment>
-                        <event-block any="1" sid="405474781361703">
-                            <conditions>
-                                <condition behavior="Platform" id="2" name="Is on floor" sid="953549784442583" type="En_Pig" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="989873187104619">
-                                    <conditions>
-                                        <condition id="-1" name="Compare X" sid="943392487125104" type="En_Pig">
-                                            <param id="0" name="Comparison">4</param>
-                                            <param id="1" name="X co-ordinate">Player.X</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="7" name="Set mirrored" sid="787722805224985" type="En_Pig">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="318140707570373" type="En_Pig">
-                                            <param id="0" name="Instance variable">side</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="386601407031577">
-                                    <conditions>
-                                        <condition id="-1" name="Compare X" sid="638351082454765" type="En_Pig">
-                                            <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="X co-ordinate">Player.X</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="7" name="Set mirrored" sid="872471363154602" type="En_Pig">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="963136529051863" type="En_Pig">
-                                            <param id="0" name="Instance variable">side</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="889996349554259">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="282971891263380" type="System">
-                                            <param id="0" name="Interval (seconds)">0.75</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="362699846671231" type="En_Pig">
-                                            <param id="0" name="Instance variable">direction</param>
-                                            <param id="1" name="Value">choose(0,1)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="952312438096733">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="939298185810609" type="En_Pig">
-                                            <param id="0" name="Instance variable">direction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="729983239375895" type="En_Pig">
-                                            <param id="0" name="Object">Player</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="730954197104602" type="En_Pig">
-                                            <param id="0" name="Animation">&quot;PreJump&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="384010948459856" type="En_Pig">
-                                            <param id="0" name="Control">0</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="389243732835959">
-                                            <conditions>
-                                                <condition behavior="Platform" id="0" name="Is moving" sid="539249741699470" type="En_Pig" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="622556730928438" type="En_Pig">
-                                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="462156015358124">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="228802784577990" type="En_Pig">
-                                            <param id="0" name="Instance variable">direction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="609873902989894" type="En_Pig">
-                                            <param id="0" name="Object">Player</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="179688203777305" type="En_Pig">
-                                            <param id="0" name="Animation">&quot;PreJump&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="702502206440545" type="En_Pig">
-                                            <param id="0" name="Control">1</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="323040201963500">
-                                            <conditions>
-                                                <condition behavior="Platform" id="0" name="Is moving" sid="194905735088713" type="En_Pig" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="621962647744530" type="En_Pig">
-                                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="634604737381056">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="567934510208401" type="System">
-                                            <param id="0" name="Interval (seconds)">random(2,6)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="189787621070456" type="En_Pig">
-                                            <param id="0" name="Animation">&quot;PreJump&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>Hop</comment>
-                        <event-block sid="242525039648600">
-                            <conditions>
-                                <condition id="4" name="On finished" sid="921545530061524" type="En_Pig">
-                                    <param id="0" name="Animation">&quot;PreJump&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="241695181092101" type="En_Pig">
-                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="375459485292437" type="En_Pig">
-                                    <param id="0" name="Control">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>Move left/right when in the air</comment>
-                        <event-block sid="584894672384851">
-                            <conditions>
-                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="617814295878683" type="En_Pig" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="497314872168978">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="398806446402775" type="En_Pig">
-                                            <param id="0" name="Instance variable">side</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="942485818519339" type="En_Pig">
-                                            <param id="0" name="Control">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="517479564409990">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="556819206452038" type="En_Pig">
-                                            <param id="0" name="Instance variable">side</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="574178170023572" type="En_Pig">
-                                            <param id="0" name="Control">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="277084592477332">
-                                    <conditions>
-                                        <condition behavior="Platform" id="4" name="Is falling" sid="818685856504151" type="En_Pig" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="148143831212020" type="En_Pig">
-                                            <param id="0" name="Animation">&quot;Fall&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="987848904749227" title="Dragonfly">
-                    <sub-events>
-                        <comment>Air Movement</comment>
-                        <event-block sid="630437344206135">
-                            <conditions>
-                                <condition id="-6" name="Every X seconds" sid="496377548175211" type="System">
-                                    <param id="0" name="Interval (seconds)">0.5</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="861259427589267" type="En_Dragonfly">
-                                    <param id="0" name="Angle">random(0,360)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="798341954471448">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="962349171819625" type="En_Dragonfly">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Player.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="306675403472577" type="En_Dragonfly">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="312778042004057">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="857563732683619" type="En_Dragonfly">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">Player.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="798852555398183" type="En_Dragonfly">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="620895971925857" title="Green Dragonfly">
-                    <sub-events>
-                        <comment>Chasing and Air Movement</comment>
-                        <variable constant="0" name="HitVar" sid="954482143387095" static="1" type="number">0</variable>
-                        <event-block sid="591944164719203">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="950968975168073" type="System">
-                                    <param id="0" name="Variable">HitVar</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="728417140239848">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="951670812396696" type="System">
-                                            <param id="0" name="Interval (seconds)">0.5</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="199211135854463" type="En_Dragonfly">
-                                            <param id="0" name="Angle">random(0,360)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="919294022944445">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="187022995806389" type="En_GreenDragonfly">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Player.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="490859887968927" type="En_GreenDragonfly">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="600130265602654">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="629139597658045" type="En_GreenDragonfly">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">Player.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="964725191285883" type="En_GreenDragonfly">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="182689205246842">
-                            <conditions>
-                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="701413649557747" type="En_GreenDragonfly">
-                                    <param id="0" name="Object">Player</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="198763917039626" type="System">
-                                    <param id="0" name="Variable">HitVar</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="982947529170711" type="En_GreenDragonfly">
-                                    <param id="0" name="Angle">angle(En_GreenDragonfly.X,En_GreenDragonfly.Y,Player.X,Player.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="447714076202440">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="551441686605529" type="En_GreenDragonfly">
-                                    <param id="0" name="Object">Player</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="864390414254373" type="System">
-                                    <param id="0" name="Variable">HitVar</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="686354241413631" type="System">
-                                    <param id="0" name="Seconds">2</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="360012171604090" type="System">
-                                    <param id="0" name="Variable">HitVar</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
                 <event-group description="" sid="686641081965610" title="Seed Bomber">
                     <sub-events>
                         <comment>Attack on sight</comment>
@@ -747,6 +407,19 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="819348238243944">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="668824427560856" type="En_PET">
+                                    <param id="0" name="Object">Enemy_Collider</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="749637338680478" type="En_PET">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">&quot;fly_back_home&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="626150495744314" title="Scarab">
@@ -862,7 +535,7 @@
                                                     <param id="0" name="State">1</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="322106364432534" type="System">
-                                                    <param id="0" name="Seconds">random(0.1,0.5)</param>
+                                                    <param id="0" name="Seconds">random(0.1,0.3)</param>
                                                 </action>
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="788205994914821" type="En_Scarab">
                                                     <param id="0" name="Angle">180</param>
@@ -889,10 +562,166 @@
                                                     <param id="0" name="State">0</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="134362370235718" type="System">
-                                                    <param id="0" name="Seconds">random(0.1,0.5)</param>
+                                                    <param id="0" name="Seconds">random(0.1,0.3)</param>
                                                 </action>
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="506101514812877" type="En_Scarab">
                                                     <param id="0" name="Angle">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="841044975156920" title="Crystal Scarab">
+                    <sub-events>
+                        <event-block sid="562983423045247">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="220990437663953" type="En_BlueScarab">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="433176239344975" type="En_BlueScarab">
+                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="331504787514665" type="En_BlueScarab">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="769328041611775">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="818200392889867" type="En_BlueScarab">
+                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="898724328662797" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="246276622011258" type="Audio">
+                                    <param id="0" name="Audio file">sfx_movement_footsteps1a</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="611456148892251" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Play" sid="340894667695123" type="Audio">
+                                    <param id="0" name="Audio file">sfx_movement_footsteps1a</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="262863662771770" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Play" sid="244007489648791" type="Audio">
+                                    <param id="0" name="Audio file">sfx_movement_footsteps1a</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="632620948180022" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Play" sid="269028893528638" type="Audio">
+                                    <param id="0" name="Audio file">sfx_movement_footsteps1a</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="714869161369584" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Play" sid="528421661329916" type="Audio">
+                                    <param id="0" name="Audio file">sfx_movement_footsteps1a</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="875301897190381">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="835751336707585" type="En_BlueScarab">
+                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LineOfSight" id="0" name="Set range" sid="234406850805001" type="En_BlueScarab">
+                                    <param id="0" name="Range">0</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="718091732444641" type="En_BlueScarab">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="103244471712494" type="En_BlueScarab">
+                                    <param id="0" name="Angle">270</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="886521160169149" type="En_BlueScarab">
+                                    <param id="0" name="Animation">&quot;Fly&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="514900464667945">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="735747858335865" type="En_BlueScarab">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="151231803593097">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="178232373036226" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="439867128809863" type="En_BlueScarab">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="972963670961134" type="System">
+                                                    <param id="0" name="Seconds">random(0.1,0.5)</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="882828751905715" type="En_BlueScarab">
+                                                    <param id="0" name="Angle">180</param>
+                                                </action>
+                                                <action behavior="Sine" id="0" name="Set active" sid="440056039815309" type="En_BlueScarab">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="803267738909398">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="614440347100318" type="En_BlueScarab">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="856083107133261">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="824313448466101" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="863390530808749" type="En_BlueScarab">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="980500019903695" type="System">
+                                                    <param id="0" name="Seconds">random(0.1,0.5)</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="142174602892936" type="En_BlueScarab">
+                                                    <param id="0" name="Angle">0</param>
+                                                </action>
+                                                <action behavior="Sine" id="0" name="Set active" sid="577030376887973" type="En_BlueScarab">
+                                                    <param id="0" name="State">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1024,6 +853,216 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="339157130222333" type="En_Sandit" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="889165397952897" title="Crystal Sandit">
+                    <sub-events>
+                        <event-block sid="158454770977423">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="436306778362818" type="En_BlueSandit">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="965803643886668" type="En_BlueSandit">
+                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="190956500751387" type="En_BlueSandit">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="223448661167983">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="587220531956717" type="En_BlueSandit">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="145467541443509" type="En_BlueSandit">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="529982679746066">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="940563479372409" type="En_BlueSandit">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="930834733747142" type="En_BlueSandit">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="502988498226323">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="322814018898985" type="En_BlueSandit">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="930882492139538">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="619252799618527" type="En_BlueSandit" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="483290406993352" type="En_BlueSandit">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="616917462703361">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="976161840605789" type="En_BlueSandit" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="541290577146458" type="En_BlueSandit">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="509985047249891">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="236157262518859" type="En_BlueSandit">
+                                    <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="899067854794358" type="En_BlueSandit">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="907240918880501" type="En_BlueSandit">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="LineOfSight" id="0" name="Set range" sid="252686162269503" type="En_BlueSandit">
+                                    <param id="0" name="Range">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="886372401856588">
+                            <conditions>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="941525173514695" type="En_BlueSandit">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="997905918418649" type="En_BlueSandit">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="881598802937159" type="En_BlueSandit">
+                                    <param id="0" name="Object">Enemy_Collider</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="966454954178183" type="En_BlueSandit">
+                                    <param id="0" name="Animation">&quot;Descend&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="586059054697250">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="748499643746526" type="En_BlueSandit">
+                                    <param id="0" name="Animation">&quot;Descend&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="862016142440963" type="En_BlueSandit" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="368181107034335" title="Bat">
+                    <sub-events>
+                        <event-block sid="730776566853509">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="254803446171976" type="En_Bat">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="971653941530601" type="En_Bat">
+                                    <param id="0" name="Animation">&quot;Fly&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="153593686386479">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="118419545424207" type="En_Bat">
+                                    <param id="0" name="Animation">&quot;Fly&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="300646362106078" type="En_Bat">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;hit&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LineOfSight" id="0" name="Set range" sid="565515266757003" type="En_Bat">
+                                    <param id="0" name="Range">0</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="606738707897007" type="En_Bat">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="845675096311431" type="En_Bat">
+                                    <param id="0" name="Angle">angle(En_Bat.X,En_Bat.Y,Player.X,Player.Y)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="138288082990193">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="194808381279454" type="En_Bat">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="892598159502482" type="En_Bat">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="903629266439289">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="242643484129320" type="En_Bat">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="585787666276311" type="En_Bat">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="257976082809033">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="426050596404205" type="En_Bat">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="694886749284356" type="En_Bat">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">&quot;hit&quot;</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="993785819795327" type="En_Bat">
+                                    <param id="0" name="Angle">angle(En_Bat.X,En_Bat.Y,Player.X,Player.Y)</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1660,6 +1699,54 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="462656573874534">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="744140660010365" type="Enemy_Respawner">
+                                    <param id="0" name="Animation">&quot;BlueScarab&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="530377860016539" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="174091923364961" type="Enemy_Respawner">
+                                    <param id="0" name="Object">En_BlueScarab</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="969469814227153" type="En_BlueScarab">
+                                    <param id="0" name="Instance variable">createdByResUID</param>
+                                    <param id="1" name="Value">Enemy_Respawner.UID</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="436542890378656" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="456693916863311" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">time</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="335387458408072">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="643891174616741" type="Enemy_Respawner">
+                                            <param id="0" name="Instance variable">stallingSpawn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="429915233487685" type="En_BlueScarab">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="961459734027281" type="En_BlueScarab">
+                                            <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="612874427410728">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="695712507049089" type="Enemy_Respawner">
@@ -1750,6 +1837,36 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="423014107110240">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="553030723140456" type="Enemy_Respawner">
+                                    <param id="0" name="Animation">&quot;Bat&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="344378169993709" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="978600985112941" type="Enemy_Respawner">
+                                    <param id="0" name="Object">En_Bat</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="417484909714245" type="En_Bat">
+                                    <param id="0" name="Instance variable">createdByResUID</param>
+                                    <param id="1" name="Value">Enemy_Respawner.UID</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="411994659099045" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="117111375693469" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">time</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="226953261883498">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="976523769526255" type="Enemy_Respawner">
@@ -1791,6 +1908,54 @@
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="762962548925690" type="En_Sandit">
+                                            <param id="0" name="Animation">&quot;Emerge&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="814962312483924">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="243496605455740" type="Enemy_Respawner">
+                                    <param id="0" name="Animation">&quot;BlueSandit&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="221343684158508" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="960007649733003" type="Enemy_Respawner">
+                                    <param id="0" name="Object">En_BlueSandit</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="191095126098396" type="En_BlueSandit">
+                                    <param id="0" name="Instance variable">createdByResUID</param>
+                                    <param id="1" name="Value">Enemy_Respawner.UID</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="318026779500375" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">enemySpawnedIsDestroyed</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="678654446557108" type="Enemy_Respawner">
+                                    <param id="0" name="Instance variable">time</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="847580032809807">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="620845108823770" type="Enemy_Respawner">
+                                            <param id="0" name="Instance variable">stallingSpawn</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="398814510767721" type="En_BlueSandit">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="409598676915166" type="En_BlueSandit">
                                             <param id="0" name="Animation">&quot;Emerge&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -2247,44 +2412,28 @@
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="743448314517390" type="Boss_Anubis_Projectile">
                                                     <param id="0" name="Angle">angle(Boss_Anubis.X,Boss_Anubis.Y,Player.X,Player.Y) + choose(0,5,10,15)</param>
                                                 </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="393010398486729">
-                                            <conditions>
-                                                <condition id="3" name="Compare frame" sid="304244078509185" type="Boss_Anubis">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Number">7</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="130958866278925" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-3" name="Create object" sid="105042657446497" type="System">
+                                                <action id="-16" name="Wait" sid="938222153105651" type="System">
+                                                    <param id="0" name="Seconds">0.2</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="518585504587576" type="System">
                                                     <param id="0" name="Object to create">Boss_Anubis_Projectile</param>
                                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                                     <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
                                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
                                                 </action>
-                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="359096158253399" type="Boss_Anubis_Projectile">
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="384737175683029" type="Boss_Anubis_Projectile">
                                                     <param id="0" name="Angle">angle(Boss_Anubis.X,Boss_Anubis.Y,Player.X,Player.Y) + choose(0,5,10,15)</param>
                                                 </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="561385380897672">
-                                            <conditions>
-                                                <condition id="3" name="Compare frame" sid="922844224687950" type="Boss_Anubis">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Number">9</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="294397434035279" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-3" name="Create object" sid="838224345216259" type="System">
+                                                <action id="-16" name="Wait" sid="202795778588116" type="System">
+                                                    <param id="0" name="Seconds">0.2</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="438124782824796" type="System">
                                                     <param id="0" name="Object to create">Boss_Anubis_Projectile</param>
                                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                                     <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
                                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
                                                 </action>
-                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="671921793768319" type="Boss_Anubis_Projectile">
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="906140425902088" type="Boss_Anubis_Projectile">
                                                     <param id="0" name="Angle">angle(Boss_Anubis.X,Boss_Anubis.Y,Player.X,Player.Y) + choose(0,5,10,15)</param>
                                                 </action>
                                             </actions>
@@ -2355,7 +2504,11 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="886376168613291" type="Boss_Anubis">
                                                     <param id="0" name="Instance variable">pattern</param>
-                                                    <param id="1" name="Value">&quot;Beam&quot;</param>
+                                                    <param id="1" name="Value">&quot;BeamCharge&quot;</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="776741240067908" type="Boss_Anubis">
+                                                    <param id="0" name="Animation">&quot;BeamCharge&quot;</param>
+                                                    <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2363,69 +2516,70 @@
                                 </event-block>
                                 <event-block sid="499515777590297">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="542867107742756" type="Boss_Anubis">
+                                        <condition id="4" name="On finished" sid="542867107742756" type="Boss_Anubis">
+                                            <param id="0" name="Animation">&quot;BeamCharge&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="209045424222779" type="Boss_Anubis">
+                                            <param id="0" name="Instance variable">pattern</param>
+                                            <param id="1" name="Value">&quot;Beam&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="392089467888001">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="244869422900100" type="Boss_Anubis">
                                             <param id="0" name="Instance variable">pattern</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Beam&quot;</param>
                                         </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="953981262212624" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="4" name="Set animation" sid="103005310592175" type="Boss_Anubis">
                                             <param id="0" name="Animation">&quot;Beam&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="-3" name="Create object" sid="700324622276949" type="System">
+                                            <param id="0" name="Object to create">Boss_Anubis_Beam</param>
+                                            <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                            <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
+                                            <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="112170246362710">
+                                        <event-block sid="279872380381927">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="161841255172610" type="Boss_Anubis">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Number">5</param>
+                                                <condition id="-1" name="Compare X" sid="929525293506751" type="Boss_Anubis">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">Player.X</param>
                                                 </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="830691045169572" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="-3" name="Create object" sid="443218360386453" type="System">
-                                                    <param id="0" name="Object to create">Boss_Anubis_Beam</param>
-                                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
-                                                    <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
-                                                    <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="373670237083535" type="Boss_Anubis_Beam">
+                                                    <param id="0" name="Angle">0</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="707710986927980" type="Boss_Anubis_Beam">
+                                                    <param id="0" name="State">1</param>
                                                 </action>
                                             </actions>
-                                            <sub-events>
-                                                <event-block sid="750602471404719">
-                                                    <conditions>
-                                                        <condition id="-1" name="Compare X" sid="945491636087906" type="Boss_Anubis">
-                                                            <param id="0" name="Comparison">4</param>
-                                                            <param id="1" name="X co-ordinate">Player.X</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="398912533629716" type="Boss_Anubis_Beam">
-                                                            <param id="0" name="Angle">0</param>
-                                                        </action>
-                                                        <action id="7" name="Set mirrored" sid="379342471390207" type="Boss_Anubis_Beam">
-                                                            <param id="0" name="State">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="686419593834313">
-                                                    <conditions>
-                                                        <condition id="-1" name="Compare X" sid="122879587232989" type="Boss_Anubis">
-                                                            <param id="0" name="Comparison">2</param>
-                                                            <param id="1" name="X co-ordinate">Player.X</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="602992522445688" type="Boss_Anubis_Beam">
-                                                            <param id="0" name="Angle">270</param>
-                                                        </action>
-                                                        <action id="7" name="Set mirrored" sid="644233601741343" type="Boss_Anubis_Beam">
-                                                            <param id="0" name="State">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="529651689568707">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="451276141516201" type="Boss_Anubis">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="343190687019145" type="Boss_Anubis_Beam">
+                                                    <param id="0" name="Angle">270</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="698399490380532" type="Boss_Anubis_Beam">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -2468,7 +2622,7 @@
                                             <actions>
                                                 <action id="-10" name="Set value" sid="361015596789403" type="Boss_Anubis">
                                                     <param id="0" name="Instance variable">pattern</param>
-                                                    <param id="1" name="Value">choose(&quot;TeleportProj&quot;,&quot;TeleportOut&quot;)</param>
+                                                    <param id="1" name="Value">&quot;TeleportBeam&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>

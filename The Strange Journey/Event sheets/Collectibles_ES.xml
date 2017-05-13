@@ -182,11 +182,24 @@
                         <event-block sid="580313957339255">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="294210368251030" type="Pickups">
-                                    <param id="0" name="Animation">&quot;Energy&quot;</param>
+                                    <param id="0" name="Animation">&quot;EnergyS&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="536135660862683" type="Function">
+                                    <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
+                                    <param id="1" name="Parameter {n}">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="792260511749722">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="910531789048123" type="Pickups">
+                                    <param id="0" name="Animation">&quot;EnergyB&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="583892892270516" type="Function">
                                     <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
                                     <param id="1" name="Parameter {n}">25</param>
                                 </action>
@@ -221,7 +234,7 @@
                         <event-block sid="936962759612860">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="671142075046894" type="Pickups">
-                                    <param id="0" name="Animation">&quot;Screw&quot;</param>
+                                    <param id="0" name="Animation">&quot;Treasure&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
