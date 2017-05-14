@@ -601,6 +601,11 @@
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="446775083128268" type="Player_Mask">
                                                             <param id="0" name="Instance variable">shoot</param>
                                                         </condition>
+                                                        <condition id="-14" name="Compare variable" sid="727648058938202" type="System">
+                                                            <param id="0" name="Variable">PAUSE_LOCK</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
@@ -3492,6 +3497,11 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="929925883158553" type="Player_Mask">
                                     <param id="0" name="Animation">self.equip&amp;&quot;_Climb_Top&quot;</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="438409153542232" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -3790,6 +3800,11 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="731694086465115" type="Player_Mask">
                                     <param id="0" name="Animation">self.equip&amp;&quot;_Climb_Bottom&quot;</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="221740548221155" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -3978,6 +3993,11 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="950725071217878" type="Player_Mask">
                                     <param id="0" name="Animation">self.equip&amp;&quot;_Climb_Bottom&quot;</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="783054793995205" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="933546238431497" type="Player_Mask">
@@ -4007,6 +4027,11 @@
                                 <condition id="-8" name="Is boolean instance variable set" sid="455299558204976" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurt</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="262614127078469" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="422645577101753" type="Player_Mask">
@@ -4035,6 +4060,11 @@
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="190688157657290" type="Player_Mask">
                                     <param id="0" name="Instance variable">ladders</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="851925446997192" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -5310,65 +5340,55 @@
                                 <action id="-9" name="Destroy" sid="200627513386715" type="Player_Wand" />
                             </actions>
                         </event-block>
-                        <event-block sid="745884991599401">
-                            <conditions>
-                                <condition id="7" name="Is mirrored" sid="751832857580781" type="Player_Mask" />
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="849953908946223" type="Player_Sword">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-group description="" sid="589950912127408" title="Highlander - Targe Slash">
+                        <event-group description="" sid="309625859687217" title="Highlander - Targe Slash">
                             <sub-events>
-                                <event-block sid="672951311075586">
+                                <event-block sid="945810689089217">
                                     <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="999979929649031" type="System">
+                                        <condition id="-6" name="Every X seconds" sid="543608742579817" type="System">
                                             <param id="0" name="Interval (seconds)">0.075</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="489307628244891" type="Player_Shield">
+                                        <action id="0" name="Spawn another object" sid="343967254804700" type="Player_Shield">
                                             <param id="0" name="Object">Player_Shield_Particle</param>
                                             <param id="1" name="Layer">self.LayerName</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
-                                        <action id="-29" name="Move to object" sid="558457482543027" type="Player_Shield_Particle">
+                                        <action id="-29" name="Move to object" sid="776439500831260" type="Player_Shield_Particle">
                                             <param id="0" name="Where">1</param>
                                             <param id="1" name="Object">Player_Shield</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="305452485264709">
+                                <event-block sid="875415191845908">
                                     <conditions />
                                     <actions>
-                                        <action id="-7" name="Set size" sid="616949483024117" type="Player_Shield_Particle">
+                                        <action id="-7" name="Set size" sid="923186371817532" type="Player_Shield_Particle">
                                             <param id="0" name="Width">self.Width-1</param>
                                             <param id="1" name="Height">self.Height-1</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="915835544450175">
+                                <event-block sid="583755392689727">
                                     <conditions>
-                                        <condition id="-5" name="Compare width" sid="972918628919618" type="Player_Shield_Particle">
+                                        <condition id="-5" name="Compare width" sid="845769906482536" type="Player_Shield_Particle">
                                             <param id="0" name="Comparison">3</param>
                                             <param id="1" name="Width">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="162913707287310" type="Player_Shield_Particle" />
+                                        <action id="-9" name="Destroy" sid="590892243373799" type="Player_Shield_Particle" />
                                     </actions>
                                 </event-block>
-                                <event-block sid="455085278344004">
+                                <event-block sid="350230581037687">
                                     <conditions>
-                                        <condition id="-3" name="Is on-screen" sid="914403177486647" type="Player_Shield" />
-                                        <condition id="-6" name="Every X seconds" sid="531882299954855" type="System">
+                                        <condition id="-3" name="Is on-screen" sid="471332383085456" type="Player_Shield" />
+                                        <condition id="-6" name="Every X seconds" sid="634960470873643" type="System">
                                             <param id="0" name="Interval (seconds)">0.12</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Play" sid="612178188089367" type="Audio">
+                                        <action id="0" name="Play" sid="434927741330079" type="Audio">
                                             <param id="0" name="Audio file">sfx_wpn_sword2</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">-10</param>
@@ -5376,132 +5396,132 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="485056757884687">
+                                <event-block sid="339142490990720">
                                     <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="925308833047636" type="Player_Shield">
+                                        <condition id="-8" name="Is boolean instance variable set" sid="234717648842410" type="Player_Shield">
                                             <param id="0" name="Instance variable">comeBack</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="230345978980012">
+                                        <event-block sid="742000264497013">
                                             <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="977066445758613" type="Player_Shield">
+                                                <condition id="-8" name="Is boolean instance variable set" sid="563951194391724" type="Player_Shield">
                                                     <param id="0" name="Instance variable">arc</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="887993081207653" type="Player_Shield">
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="975368247806331" type="Player_Shield">
                                                     <param id="0" name="Angle">anglelerp(self.Bullet.AngleOfMotion,angle(self.X,self.Y,Player.X,Player.Y-32),20*dt)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="953116232948892">
+                                        <event-block sid="958032245190949">
                                             <conditions>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="359865086252864" type="Player_Shield">
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="256910460642420" type="Player_Shield">
                                                     <param id="0" name="Instance variable">arc</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="968389296214217" type="Player_Shield">
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="812146209509680" type="Player_Shield">
                                                     <param id="0" name="Angle">angle(self.X,self.Y,Player.X,Player.Y)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="448281551925949">
+                                        <event-block sid="210166929564813">
                                             <conditions>
-                                                <condition id="1" name="Is overlapping another object" sid="312874391824139" type="Player_Shield">
+                                                <condition id="1" name="Is overlapping another object" sid="819521868104772" type="Player_Shield">
                                                     <param id="0" name="Object">Player</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-16" name="Wait" sid="576304372430938" type="System">
+                                                <action id="-16" name="Wait" sid="303731326386440" type="System">
                                                     <param id="0" name="Seconds">0.04</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="669552944872393" type="Player_Mask">
+                                                <action id="-13" name="Set boolean" sid="166459462361476" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shoot</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
-                                                <action id="-9" name="Destroy" sid="433526380923992" type="Player_Shield" />
+                                                <action id="-9" name="Destroy" sid="885533421092719" type="Player_Shield" />
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="779010050492892" title="Egyptian - Ankh">
+                        <event-group description="" sid="331321264833105" title="Egyptian - Ankh">
                             <sub-events>
                                 <comment>Destroy ankh if it leaves screen</comment>
-                                <event-block sid="339681650636779">
+                                <event-block sid="971900444970136">
                                     <conditions>
-                                        <condition id="-3" inverted="1" name="Is on-screen" sid="575442725573110" type="Player_Ankh" />
+                                        <condition id="-3" inverted="1" name="Is on-screen" sid="672910855433565" type="Player_Ankh" />
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="503585925548405" type="Player_Ankh" />
+                                        <action id="-9" name="Destroy" sid="336271014279847" type="Player_Ankh" />
                                     </actions>
                                 </event-block>
-                                <event-block sid="855984658267627">
+                                <event-block sid="382204708283773">
                                     <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="407697161702749" type="System">
+                                        <condition id="-6" name="Every X seconds" sid="689654965550692" type="System">
                                             <param id="0" name="Interval (seconds)">0.075</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="243652442778078" type="Player_Ankh">
+                                        <action id="0" name="Spawn another object" sid="986159532395098" type="Player_Ankh">
                                             <param id="0" name="Object">Player_Ankh_Particle</param>
                                             <param id="1" name="Layer">self.LayerName</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
-                                        <action id="4" name="Set animation" sid="850919557507755" type="Player_Ankh_Particle">
+                                        <action id="4" name="Set animation" sid="472341772241795" type="Player_Ankh_Particle">
                                             <param id="0" name="Animation">Player_Ankh.AnimationName</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="-29" name="Move to object" sid="120763108787039" type="Player_Ankh_Particle">
+                                        <action id="-29" name="Move to object" sid="858350164228545" type="Player_Ankh_Particle">
                                             <param id="0" name="Where">1</param>
                                             <param id="1" name="Object">Player_Ankh</param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="863370633053212">
+                                        <event-block sid="519927864171975">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="172518656769224" type="Player_Mask">
+                                                <condition id="-7" name="Compare instance variable" sid="623983249280966" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shootAngle</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">90</param>
                                                 </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="442052549043117" type="Player_Mask">
+                                                <condition id="-7" name="Compare instance variable" sid="890681550697633" type="Player_Mask">
                                                     <param id="0" name="Instance variable">shootAngle</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">270</param>
                                                 </condition>
-                                                <condition id="7" name="Is mirrored" sid="457710984180635" type="Player_Mask" />
+                                                <condition id="7" name="Is mirrored" sid="190430500572893" type="Player_Mask" />
                                             </conditions>
                                             <actions>
-                                                <action id="7" name="Set mirrored" sid="185558035088841" type="Player_Ankh_Particle">
+                                                <action id="7" name="Set mirrored" sid="499701855674850" type="Player_Ankh_Particle">
                                                     <param id="0" name="State">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="524258552506619">
+                                <event-block sid="427698245835966">
                                     <conditions />
                                     <actions>
-                                        <action id="-7" name="Set size" sid="132501960154041" type="Player_Ankh_Particle">
+                                        <action id="-7" name="Set size" sid="978487467573338" type="Player_Ankh_Particle">
                                             <param id="0" name="Width">self.Width-1</param>
                                             <param id="1" name="Height">self.Height-1</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="824311558240777">
+                                <event-block sid="668909134231027">
                                     <conditions>
-                                        <condition id="-5" name="Compare width" sid="409115146395877" type="Player_Ankh_Particle">
+                                        <condition id="-5" name="Compare width" sid="197511621834831" type="Player_Ankh_Particle">
                                             <param id="0" name="Comparison">3</param>
                                             <param id="1" name="Width">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="813831897938460" type="Player_Ankh_Particle" />
+                                        <action id="-9" name="Destroy" sid="537686093655535" type="Player_Ankh_Particle" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -5736,6 +5756,12 @@
         </event-group>
         <event-group description="" sid="762612073263650" title="Player 1 Death">
             <sub-events>
+                <event-block sid="938297438697978">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="959595423671563" type="Player" />
+                    </conditions>
+                    <actions />
+                </event-block>
                 <event-block sid="439333461006881">
                     <conditions>
                         <condition behavior="Platform" id="9" name="On landed" sid="766272126295537" type="Player" />
@@ -5764,46 +5790,46 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-2" name="Compare Y" sid="751769666676560" type="Player_Mask">
+                        <condition id="-2" name="Compare Y" sid="768420146411185" type="Player_Mask">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="Y co-ordinate">LayoutHeight</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="471095677594909">
+                        <event-block sid="120724263958613">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="120645975222507" type="System" />
+                                <condition id="-4" name="Trigger once while true" sid="774417619215593" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="822993195779620" type="System">
+                                <action id="-9" name="Set value" sid="837551144447740" type="System">
                                     <param id="0" name="Variable">PAUSE_LOCK</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="807732923753256" type="Player">
+                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="378062510246731" type="Player">
                                     <param id="0" name="Input">1</param>
                                 </action>
-                                <action behavior="Platform" id="0" name="Set ignoring input" sid="278960692757483" type="Player">
+                                <action behavior="Platform" id="0" name="Set ignoring input" sid="172499754631712" type="Player">
                                     <param id="0" name="Input">1</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="837783060993993" type="Player">
+                                <action behavior="Platform" id="11" name="Set enabled" sid="265865960722489" type="Player">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="143435905279398" type="System">
+                                <action id="-16" name="Wait" sid="652599556154292" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action id="0" name="Call function" sid="983213778797630" type="Function">
+                                <action id="0" name="Call function" sid="421792315662522" type="Function">
                                     <param id="0" name="Name">&quot;Fade&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="886768390589314" type="System">
+                                <action id="-16" name="Wait" sid="697731115246724" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="267608107758787">
+                                <event-block sid="798821987376105">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="656480689504357" type="System">
+                                        <condition id="-14" name="Compare variable" sid="493530582424163" type="System">
                                             <param id="0" name="Variable">PlayeNum</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">2</param>
@@ -5811,37 +5837,37 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="708602012435862">
+                                        <event-block sid="441987438093387">
                                             <conditions>
-                                                <condition id="-14" name="Compare variable" sid="378618968832520" type="System">
+                                                <condition id="-14" name="Compare variable" sid="265631963425531" type="System">
                                                     <param id="0" name="Variable">playerChosen</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Hi&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-9" name="Set value" sid="719229946644454" type="System">
+                                                <action id="-9" name="Set value" sid="524414705187295" type="System">
                                                     <param id="0" name="Variable">playerChosen</param>
                                                     <param id="1" name="Value">&quot;Eg&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="216100692047317">
+                                        <event-block sid="312098636382247">
                                             <conditions>
-                                                <condition id="-22" name="Else" sid="785028309639080" type="System" />
+                                                <condition id="-22" name="Else" sid="511386813980048" type="System" />
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="370303568191174">
+                                                <event-block sid="394719160984251">
                                                     <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="863636451301502" type="System">
+                                                        <condition id="-14" name="Compare variable" sid="483839207412798" type="System">
                                                             <param id="0" name="Variable">playerChosen</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Value">&quot;Eg&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-9" name="Set value" sid="550377317305628" type="System">
+                                                        <action id="-9" name="Set value" sid="845453206570955" type="System">
                                                             <param id="0" name="Variable">playerChosen</param>
                                                             <param id="1" name="Value">&quot;Hi&quot;</param>
                                                         </action>
@@ -5851,11 +5877,11 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="394239153695879">
+                                <event-block sid="155261037500053">
                                     <conditions />
                                     <actions>
-                                        <action id="-26" name="Restart layout" sid="635766523622169" type="System" />
-                                        <action id="-10" name="Set value" sid="686069233846514" type="Player_Mask">
+                                        <action id="-26" name="Restart layout" sid="284766315725845" type="System" />
+                                        <action id="-10" name="Set value" sid="722022900342381" type="Player_Mask">
                                             <param id="0" name="Instance variable">equip</param>
                                             <param id="1" name="Value">playerChosen</param>
                                         </action>
@@ -5867,6 +5893,16 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="568974401042758">
+            <conditions>
+                <condition id="7" name="Is mirrored" sid="243745390997129" type="Player_Mask" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="493215491251677" type="Player_Sword">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="626407398816985" title="DEBUG - player">
             <sub-events>
                 <event-block sid="336325858367240">

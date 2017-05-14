@@ -9,13 +9,13 @@
                 <condition id="-4" name="Trigger once while true" sid="264846463199272" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Add key" sid="119456189870175" type="Data_Players">
-                    <param id="0" name="Key">&quot;playertype&quot;</param>
-                    <param id="1" name="Value">&quot;highlander,knight,roman,barbarian,indian,egyptian,hippie,futureman&quot;</param>
-                </action>
                 <action id="0" name="Add key" sid="683195301287494" type="Data_Players">
-                    <param id="0" name="Key">&quot;playertype_arts&quot;</param>
-                    <param id="1" name="Value">&quot;600,600,600,600,600,600,600,600&quot;</param>
+                    <param id="0" name="Key">&quot;playertype_arts_Hi&quot;</param>
+                    <param id="1" name="Value">&quot;4000&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="754197814298564" type="Data_Players">
+                    <param id="0" name="Key">&quot;playertype_arts_Eg&quot;</param>
+                    <param id="1" name="Value">&quot;5000&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="568697681878120" type="Data_Players">
                     <param id="0" name="Key">&quot;player_1_control_UP&quot;</param>
