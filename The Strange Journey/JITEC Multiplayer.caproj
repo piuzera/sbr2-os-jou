@@ -1209,6 +1209,9 @@
                 <behavior-type name="Flash" sid="372828727919680">
                     <behavior id="Flash" />
                 </behavior-type>
+                <behavior-type name="Platform" sid="897789090900759">
+                    <behavior id="Platform" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="4" loop="1" name="EnergyTank" pingpong="0" repeatcount="1" repeatto="0" sid="420036761044061" speed="10">
@@ -1217,7 +1220,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="2" loop="1" name="MissileTank" pingpong="0" repeatcount="1" repeatto="0" sid="135307559274431" speed="10">
+                <animation framecount="2" loop="1" name="AmmoTank" pingpong="0" repeatcount="1" repeatto="0" sid="135307559274431" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
@@ -2492,7 +2495,14 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Hurt" pingpong="0" repeatcount="1" repeatto="0" sid="135983550595219" speed="13">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.90625" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.90625">
+                        <collision-poly>
+                            <point x="0.1875" y="0.375" />
+                            <point x="0.8125" y="0.375" />
+                            <point x="0.8125" y="0.90625" />
+                            <point x="0.1875" y="0.90625" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -4247,7 +4257,14 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.90625" />
                 </animation>
                 <animation framecount="1" loop="0" name="Hurt" pingpong="0" repeatcount="0" repeatto="0" sid="925594426689765" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.90625" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.90625">
+                        <collision-poly>
+                            <point x="0.125" y="0.3125" />
+                            <point x="0.8125" y="0.3125" />
+                            <point x="0.8125" y="0.90625" />
+                            <point x="0.125" y="0.90625" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -4436,10 +4453,8 @@
                 <member>Enemy_SeedProjectile</member>
                 <member>Enemy_WolfLaser</member>
                 <member>Player_Ankh</member>
-                <member>Player_Ankh_Particle</member>
                 <member>Player_Lance</member>
                 <member>Player_Shield</member>
-                <member>Player_Shield_Particle</member>
                 <member>Player_Sword</member>
                 <member>Player_Wand</member>
             </members>

@@ -27,16 +27,12 @@
                         <event-block sid="572911616248799">
                             <conditions />
                             <actions>
+                                <action id="-12" name="Set group active" sid="331314423584127" type="System">
+                                    <param id="0" name="Group name">&quot;Player Engine&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
                                 <action id="-13" name="Set time scale" sid="812064665243495" type="System">
                                     <param id="0" name="Time scale">0</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="331314423584127" type="System">
-                                    <param id="0" name="Group name">&quot;Player 1 Engine&quot;</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="533882983372928" type="System">
-                                    <param id="0" name="Group name">&quot;Player 2 Engine&quot;</param>
-                                    <param id="1" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -80,7 +76,7 @@
                         <event-block sid="588631263149914">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="707161084133911" type="Items">
-                                    <param id="0" name="Animation">&quot;MissileTank&quot;</param>
+                                    <param id="0" name="Animation">&quot;AmmoTank&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -530,12 +526,8 @@
                                 <action id="-13" name="Set time scale" sid="157172239794701" type="System">
                                     <param id="0" name="Time scale">1</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="542878933328556" type="System">
-                                    <param id="0" name="Group name">&quot;Player 1 Engine&quot;</param>
-                                    <param id="1" name="State">1</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="609045977639178" type="System">
-                                    <param id="0" name="Group name">&quot;Player 2 Engine&quot;</param>
+                                <action id="-12" name="Set group active" sid="589734170632598" type="System">
+                                    <param id="0" name="Group name">&quot;Player Engine&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="247626087593899" type="System">

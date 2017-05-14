@@ -1538,6 +1538,9 @@
                                             <param id="1" name="Comparison">4</param>
                                             <param id="2" name="Value">66</param>
                                         </condition>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="899001355667349" type="Enemies">
+                                            <param id="0" name="Object">Tilemap_Collisions</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="367363447866558" type="System">
