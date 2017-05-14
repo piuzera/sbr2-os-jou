@@ -5562,7 +5562,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="995742822164451" type="Function">
                                             <param id="0" name="Name">&quot;Player_Hurt&quot;</param>
-                                            <param id="1" name="Parameter {n}">((Enemies.power / Player_Mask.p_defense) * -1)</param>
+                                            <param id="1" name="Parameter {n}">(int(Enemies.power / Player_Mask.p_defense) * -1)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -5587,7 +5587,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="464010068616185" type="Function">
                                     <param id="0" name="Name">&quot;Player_Hurt&quot;</param>
-                                    <param id="1" name="Parameter {n}">WeaponsEtc.power * -1</param>
+                                    <param id="1" name="Parameter {n}">int(WeaponsEtc.power * -1)</param>
                                 </action>
                             </actions>
                         </event-block>
