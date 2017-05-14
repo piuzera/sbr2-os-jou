@@ -1571,40 +1571,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="117322861235959" title="DEBUG">
-            <sub-events>
-                <event-block sid="502424901061008">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="137276081003703" type="Keyboard">
-                            <param id="0" name="Key">80 (P)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="428063836014600" type="System">
-                            <param id="0" name="Variable">LevelTimer</param>
-                            <param id="1" name="Value">10</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="115579293085398">
-                            <conditions />
-                            <actions>
-                                <action id="-3" name="Create object" sid="187916494235254" type="System">
-                                    <param id="0" name="Object to create">Pickups</param>
-                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                    <param id="2" name="X">Enemies.X</param>
-                                    <param id="3" name="Y">Enemies.Y - Enemies.Height / 2</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="813767765925450" type="Pickups">
-                                    <param id="0" name="Animation">choose(&quot;EnergyB&quot;,&quot;EnergyS&quot;,&quot;Ammo&quot;,&quot;Time&quot;,&quot;Treasure&quot;)</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="863972839966259" title="Respawner">
             <sub-events>
                 <comment>Use the animation frames to pick the enemy the respawner should spawn. &#x0D;&#x0A;1: Scarab / 2: PET / 3: PIG / 4: Seedbomber/ 5: Dragonfly / 6: GreenDragonfly </comment>

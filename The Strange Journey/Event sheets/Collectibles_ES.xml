@@ -197,8 +197,8 @@
                                 <action id="-26" name="Move to layer" sid="917429695042694" type="Pickups">
                                     <param id="0" name="Layer">&quot;Player&quot;</param>
                                 </action>
-                                <action behavior="Platform" id="5" name="Set gravity" sid="868068696043565" type="Pickups">
-                                    <param id="0" name="Gravity">0</param>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="351730722330864" type="Pickups">
+                                    <param id="0" name="State">0</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="551733819515966" type="System">
                                     <param id="0" name="Seconds">0.5</param>
@@ -230,8 +230,8 @@
                                 <action id="-26" name="Move to layer" sid="966242678350895" type="Pickups">
                                     <param id="0" name="Layer">&quot;Player&quot;</param>
                                 </action>
-                                <action behavior="Platform" id="5" name="Set gravity" sid="993651982917577" type="Pickups">
-                                    <param id="0" name="Gravity">0</param>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="993651982917577" type="Pickups">
+                                    <param id="0" name="State">0</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="812588703096124" type="System">
                                     <param id="0" name="Seconds">0.5</param>
@@ -263,8 +263,8 @@
                                 <action id="-26" name="Move to layer" sid="859794052267638" type="Pickups">
                                     <param id="0" name="Layer">&quot;Player&quot;</param>
                                 </action>
-                                <action behavior="Platform" id="5" name="Set gravity" sid="423011686570318" type="Pickups">
-                                    <param id="0" name="Gravity">0</param>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="872074031535327" type="Pickups">
+                                    <param id="0" name="State">0</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="540771131883212" type="System">
                                     <param id="0" name="Seconds">0.5</param>
@@ -296,8 +296,8 @@
                                 <action id="-26" name="Move to layer" sid="325752264438114" type="Pickups">
                                     <param id="0" name="Layer">&quot;Player&quot;</param>
                                 </action>
-                                <action behavior="Platform" id="5" name="Set gravity" sid="268458081239307" type="Pickups">
-                                    <param id="0" name="Gravity">0</param>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="512301991981645" type="Pickups">
+                                    <param id="0" name="State">0</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="202635691831918" type="System">
                                     <param id="0" name="Seconds">0.5</param>
@@ -329,8 +329,8 @@
                                 <action id="-26" name="Move to layer" sid="130316014824475" type="Pickups">
                                     <param id="0" name="Layer">&quot;Player&quot;</param>
                                 </action>
-                                <action behavior="Platform" id="5" name="Set gravity" sid="796435111067689" type="Pickups">
-                                    <param id="0" name="Gravity">0</param>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="586369677256941" type="Pickups">
+                                    <param id="0" name="State">0</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="355147543246805" type="System">
                                     <param id="0" name="Seconds">0.5</param>
