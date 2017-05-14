@@ -175,9 +175,7 @@
                             <param id="0" name="Object">Pickups</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="625556138074452" type="Pickups" />
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="580313957339255">
                             <conditions>
@@ -190,6 +188,26 @@
                                     <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
                                     <param id="1" name="Parameter {n}">10</param>
                                 </action>
+                                <action id="0" name="Play" sid="921031510874318" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_powerup6</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="347358506984978" type="Pickups">
+                                    <param id="0" name="Animation">&quot;Plus10&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="917429695042694" type="Pickups">
+                                    <param id="0" name="Layer">&quot;Player&quot;</param>
+                                </action>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="868068696043565" type="Pickups">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="551733819515966" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="648988761828051" type="Pickups" />
                             </actions>
                         </event-block>
                         <event-block sid="792260511749722">
@@ -203,6 +221,26 @@
                                     <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
                                     <param id="1" name="Parameter {n}">25</param>
                                 </action>
+                                <action id="0" name="Play" sid="370434642867369" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_powerup6</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="706701452759256" type="Pickups">
+                                    <param id="0" name="Animation">&quot;Plus25&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="966242678350895" type="Pickups">
+                                    <param id="0" name="Layer">&quot;Player&quot;</param>
+                                </action>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="993651982917577" type="Pickups">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="812588703096124" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="727490423619158" type="Pickups" />
                             </actions>
                         </event-block>
                         <event-block sid="187120850342387">
@@ -213,9 +251,29 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="228057197369732" type="Function">
-                                    <param id="0" name="Name">&quot;p1addammo&quot;</param>
-                                    <param id="1" name="Parameter {n}">1</param>
+                                    <param id="0" name="Name">&quot;p1updateammo&quot;</param>
+                                    <param id="1" name="Parameter {n}">2</param>
                                 </action>
+                                <action id="0" name="Play" sid="290723858232331" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_powerup15</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="834202393230210" type="Pickups">
+                                    <param id="0" name="Animation">&quot;Plus2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="859794052267638" type="Pickups">
+                                    <param id="0" name="Layer">&quot;Player&quot;</param>
+                                </action>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="423011686570318" type="Pickups">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="540771131883212" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="764387632338749" type="Pickups" />
                             </actions>
                         </event-block>
                         <event-block sid="235620413502755">
@@ -227,8 +285,28 @@
                             <actions>
                                 <action id="-10" name="Add to" sid="168568812149628" type="System">
                                     <param id="0" name="Variable">LevelTimer</param>
-                                    <param id="1" name="Value">10</param>
+                                    <param id="1" name="Value">15</param>
                                 </action>
+                                <action id="0" name="Play" sid="990304497615287" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_powerup17</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="109317690852891" type="Pickups">
+                                    <param id="0" name="Animation">&quot;Plus15&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="325752264438114" type="Pickups">
+                                    <param id="0" name="Layer">&quot;Player&quot;</param>
+                                </action>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="268458081239307" type="Pickups">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="202635691831918" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="659892991642889" type="Pickups" />
                             </actions>
                         </event-block>
                         <event-block sid="936962759612860">
@@ -242,6 +320,26 @@
                                     <param id="0" name="Variable">Total_Score</param>
                                     <param id="1" name="Value">500</param>
                                 </action>
+                                <action id="0" name="Play" sid="930605123971563" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_powerup5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="941590929339083" type="Pickups">
+                                    <param id="0" name="Animation">&quot;Plus500&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="130316014824475" type="Pickups">
+                                    <param id="0" name="Layer">&quot;Player&quot;</param>
+                                </action>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="796435111067689" type="Pickups">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="355147543246805" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="232341954469487" type="Pickups" />
                             </actions>
                         </event-block>
                     </sub-events>

@@ -11,15 +11,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout active="1" order="0">Level 1</layout>
-        <layout order="1">TitleScreen</layout>
-        <layout order="4">HUD</layout>
-        <layout order="5">CharSelect</layout>
-        <layout order="7">Object Bank</layout>
-        <event-sheet order="2">TitleScreen_ES</event-sheet>
-        <event-sheet order="3">Player1_ES</event-sheet>
-        <event-sheet order="6">CharSelect_ES</event-sheet>
-        <event-sheet order="8">Enemies_ES</event-sheet>
-        <event-sheet order="9">Collectibles_ES</event-sheet>
+        <layout order="3">Object Bank</layout>
+        <layout order="6">HUD</layout>
+        <event-sheet order="1">Player1_ES</event-sheet>
+        <event-sheet order="2">Enemies_ES</event-sheet>
+        <event-sheet order="4">Main_ES</event-sheet>
+        <event-sheet order="5">Collectibles_ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -110,5 +107,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/En_BlueSandit/" />
         <folder expanded="1" path="animation-folder/En_BlueScarab/" />
         <folder expanded="1" path="animation-folder/En_Bat/" />
+        <folder expanded="1" path="animation-folder/Enemy_Collider2/" />
+        <folder expanded="1" path="animation-folder/Collision_BlockPlayer/" />
     </folders-expanded>
 </c2uistate>

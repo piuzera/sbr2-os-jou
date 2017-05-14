@@ -949,7 +949,7 @@
                         <character-width>8</character-width>
                         <character-height>7</character-height>
                         <character-set>1234567890</character-set>
-                        <text>5</text>
+                        <text>10</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -963,7 +963,7 @@
                         <category>HUD</category>
                         <type>p1ammo</type>
                         <Menu_ID>0</Menu_ID>
-                        <ammo>5</ammo>
+                        <ammo>10</ammo>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />

@@ -1715,6 +1715,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <name></name>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2150,6 +2153,22 @@
                                 <range>192</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="EaseTween">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>EaseOutBounce</function>
+                                <initial>current</initial>
+                                <target>100, 100</target>
+                                <duration>2.5</duration>
+                                <wait>0,0</wait>
+                                <playback-mode>Play Once</playback-mode>
+                                <value>0</value>
+                                <coordinate-mode>Relative</coordinate-mode>
+                                <force-initial-on-start>No</force-initial-on-start>
+                                <tween-group></tween-group>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

@@ -929,7 +929,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="160548579727626" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -957,7 +957,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="853460745616357" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -985,7 +985,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="596047371293973" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1013,7 +1013,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="236303957300678" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1041,7 +1041,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="654482871687383" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1069,7 +1069,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="277313426203249" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1097,7 +1097,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="585156409480508" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1125,7 +1125,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="288579395781890" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1153,7 +1153,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="412059965915843" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1181,7 +1181,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="675382460199842" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1209,7 +1209,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="393581816497280" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1237,7 +1237,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="888201270371292" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1269,7 +1269,7 @@
                                     <param id="2" name="Value">200</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="886837242233251" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1289,7 +1289,7 @@
                                     <param id="2" name="Value">100</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="363951301935465" type="System">
-                                    <param id="0" name="Object to create">Boss_DestroyExplosion</param>
+                                    <param id="0" name="Object to create">Par_ExplosionSmall</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">Boss_Anubis.ImagePointX(0) + random(-32,32)</param>
                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(0) + random(-32,32)</param>
@@ -1556,14 +1556,14 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="949831584577774" type="Player_Mask">
                                     <param id="0" name="Instance variable">wasMovingBeforeJump</param>
-                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                    <param id="1" name="Value">&quot;idle&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="179822456786227" type="System">
                                     <param id="0" name="Seconds">3</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="383928632274547" type="Player_Mask">
                                     <param id="0" name="Instance variable">wasMovingBeforeJump</param>
-                                    <param id="1" name="Value">&quot;no&quot;</param>
+                                    <param id="1" name="Value">&quot;victory&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="219438549843014" type="System">
                                     <param id="0" name="Seconds">2</param>
@@ -1586,6 +1586,12 @@
                                     <param id="0" name="Name">&quot;Fade&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="932443433337308" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="890353394822597" type="System">
+                                    <param id="0" name="Layout">TitleScreen</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1604,7 +1610,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="874241719864346" type="Player_Mask">
                                     <param id="0" name="Instance variable">wasMovingBeforeJump</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;no&quot;</param>
+                                    <param id="2" name="Value">&quot;victory&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1622,7 +1628,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="514363586419026" type="Player_Mask">
                                     <param id="0" name="Instance variable">wasMovingBeforeJump</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                    <param id="2" name="Value">&quot;idle&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
