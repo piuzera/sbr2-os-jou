@@ -1369,49 +1369,84 @@
                             <param id="0" name="Animation">&quot;Hurt&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-14" name="Set object time scale" sid="627127113517139" type="System">
-                            <param id="0" name="Object">Enemies</param>
-                            <param id="1" name="Time scale">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="903736783566648" type="Enemies">
-                            <param id="0" name="Instance variable">lastAnim</param>
-                            <param id="1" name="Value">self.AnimationName</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="259442756211122" type="WeaponsEtc">
-                            <param id="0" name="Instance variable">destroy</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-12" name="Subtract from" sid="771340489391400" type="Enemies">
-                            <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Value">WeaponsEtc.power</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="826347744588004" type="Enemies">
-                            <param id="0" name="Animation">&quot;Hurt&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="640501155685618" type="Function">
-                            <param id="0" name="Name">&quot;Object_Flash&quot;</param>
-                            <param id="1" name="Parameter {n}">Enemies.UID</param>
-                        </action>
-                        <action id="0" name="Play" sid="200249372209533" type="Audio">
-                            <param id="0" name="Audio file">sfx_sounds_impact6</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-6</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="880807099467482" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="168664679777554" type="Enemies">
-                            <param id="0" name="Animation">self.lastAnim</param>
-                            <param id="1" name="From">0</param>
-                        </action>
-                        <action id="-14" name="Set object time scale" sid="730382851122288" type="System">
-                            <param id="0" name="Object">Enemies</param>
-                            <param id="1" name="Time scale">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="452267055424485">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="671678564608979" type="Enemies">
+                                    <param id="0" name="Instance variable">boss</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Set object time scale" sid="627127113517139" type="System">
+                                    <param id="0" name="Object">Enemies</param>
+                                    <param id="1" name="Time scale">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="903736783566648" type="Enemies">
+                                    <param id="0" name="Instance variable">lastAnim</param>
+                                    <param id="1" name="Value">self.AnimationName</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="259442756211122" type="WeaponsEtc">
+                                    <param id="0" name="Instance variable">destroy</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="771340489391400" type="Enemies">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">WeaponsEtc.power</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="826347744588004" type="Enemies">
+                                    <param id="0" name="Animation">&quot;Hurt&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="640501155685618" type="Function">
+                                    <param id="0" name="Name">&quot;Object_Flash&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
+                                </action>
+                                <action id="0" name="Play" sid="200249372209533" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_impact6</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="880807099467482" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="168664679777554" type="Enemies">
+                                    <param id="0" name="Animation">self.lastAnim</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                                <action id="-14" name="Set object time scale" sid="730382851122288" type="System">
+                                    <param id="0" name="Object">Enemies</param>
+                                    <param id="1" name="Time scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="812240206840380">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="955422652924779" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="245373629006418" type="WeaponsEtc">
+                                    <param id="0" name="Instance variable">destroy</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="601337637750435" type="Enemies">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">WeaponsEtc.power</param>
+                                </action>
+                                <action id="0" name="Call function" sid="255231372848629" type="Function">
+                                    <param id="0" name="Name">&quot;Object_Flash&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
+                                </action>
+                                <action id="0" name="Play" sid="241587871423760" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_impact6</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Particles</comment>
                 <event-block sid="257883144985521">
@@ -1462,6 +1497,20 @@
                                     <param id="1" name="Parameter {n}">Enemies.UID</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="494033461726790">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="437094775812623" type="System">
+                                            <param id="0" name="Object">Collision_BlockPlayer</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="11" name="Set collisions enabled" sid="639486127514130" type="Collision_BlockPlayer">
+                                            <param id="0" name="Collisions">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Drop a pickup</comment>
                         <variable constant="0" name="ItemDrop" sid="174898673927425" static="0" type="number">0</variable>

@@ -51,6 +51,7 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Brightness">

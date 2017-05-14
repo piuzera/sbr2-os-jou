@@ -292,6 +292,11 @@
                 <condition id="-6" name="Every X seconds" sid="977842018809731" type="System">
                     <param id="0" name="Interval (seconds)">1</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="857748255749372" type="System">
+                    <param id="0" name="Variable">LevelTimer</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-11" name="Subtract from" sid="895655525859222" type="System">
@@ -299,6 +304,55 @@
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="125085388581974">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="120700111617469" type="Spritefonts">
+                    <param id="0" name="Instance variable">type</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;time&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="351424121825967">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="400753832349976" type="System">
+                            <param id="0" name="Variable">LevelTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="676573226013087" type="System">
+                            <param id="0" name="Variable">LevelTimer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="440908632780328">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="937011224772159" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="670379159194448" type="Spritefonts">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="901988696534713">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="169742203712590" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="1" name="Stop flashing" sid="808527034132413" type="Spritefonts" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="498629849344237" title="SubAmmo">
             <sub-events>
@@ -501,6 +555,59 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="408942067436931" title="Timer">
+            <sub-events>
+                <event-block sid="929046657689247">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="374477634617266" type="System">
+                            <param id="0" name="Variable">LevelTimer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="941511348533913" type="Data_Players">
+                            <param id="0" name="Key">&quot;Energy&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="983275633820425" type="Player_Mask">
+                            <param id="0" name="Animation">self.equip&amp;&quot;_Hurt&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="971899981810981" title="Debug">
+            <sub-events>
+                <event-block sid="212250506083375">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="627596893119978" type="Keyboard">
+                            <param id="0" name="Key">52 (4)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="201334551184574" type="System">
+                            <param id="0" name="Variable">LevelTimer</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="313133015214199">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="635358760042888" type="Keyboard">
+                            <param id="0" name="Key">53 (5)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="324928810020599" type="System">
+                            <param id="0" name="Variable">LevelTimer</param>
+                            <param id="1" name="Value">40</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

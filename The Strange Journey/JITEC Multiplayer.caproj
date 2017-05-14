@@ -4510,6 +4510,9 @@
                 <behavior-type name="Timer" sid="506220534726402">
                     <behavior id="Timer" />
                 </behavior-type>
+                <behavior-type name="Flash" sid="202505056340642">
+                    <behavior id="Flash" />
+                </behavior-type>
             </behaviors>
             <effects>
                 <effect-type name="Brightness">
