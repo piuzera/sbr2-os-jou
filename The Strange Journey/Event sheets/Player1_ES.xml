@@ -4027,11 +4027,6 @@
                                 <condition id="-8" name="Is boolean instance variable set" sid="455299558204976" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurt</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="262614127078469" type="System">
-                                    <param id="0" name="Variable">PAUSE_LOCK</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="422645577101753" type="Player_Mask">
