@@ -44,6 +44,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>0</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                     </instance-variables>
@@ -145,6 +146,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>0</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                     </instance-variables>
@@ -246,6 +248,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>0</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                     </instance-variables>
@@ -354,6 +357,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>1</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                     </instance-variables>
@@ -1079,6 +1083,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>1</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                         <state>landed</state>
@@ -1268,6 +1273,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>0</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                         <state>landed</state>
@@ -1428,6 +1434,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>0</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                         <state>landed</state>
@@ -1532,6 +1539,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>1</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                         <state>landed</state>
@@ -2083,6 +2091,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>0</particleSize>
+                        <lastAnim></lastAnim>
                         <pattern>landed</pattern>
                         <pattern_time>0</pattern_time>
                         <pattern_count>0</pattern_count>
@@ -2460,6 +2469,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>0</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                         <state>landed</state>
@@ -2564,6 +2574,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>0</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                         <state>landed</state>
@@ -2668,6 +2679,7 @@
                         <createdByResUID>0</createdByResUID>
                         <boss>false</boss>
                         <particleSize>0</particleSize>
+                        <lastAnim></lastAnim>
                         <side>0</side>
                         <direction>0</direction>
                         <state>normal</state>

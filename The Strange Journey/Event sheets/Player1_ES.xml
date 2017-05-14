@@ -601,6 +601,11 @@
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="446775083128268" type="Player_Mask">
                                                             <param id="0" name="Instance variable">shoot</param>
                                                         </condition>
+                                                        <condition id="-14" name="Compare variable" sid="727648058938202" type="System">
+                                                            <param id="0" name="Variable">PAUSE_LOCK</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
@@ -3492,6 +3497,11 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="929925883158553" type="Player_Mask">
                                     <param id="0" name="Animation">self.equip&amp;&quot;_Climb_Top&quot;</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="438409153542232" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -3790,6 +3800,11 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="731694086465115" type="Player_Mask">
                                     <param id="0" name="Animation">self.equip&amp;&quot;_Climb_Bottom&quot;</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="221740548221155" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -3978,6 +3993,11 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="950725071217878" type="Player_Mask">
                                     <param id="0" name="Animation">self.equip&amp;&quot;_Climb_Bottom&quot;</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="783054793995205" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="933546238431497" type="Player_Mask">
@@ -4007,6 +4027,11 @@
                                 <condition id="-8" name="Is boolean instance variable set" sid="455299558204976" type="Player_Mask">
                                     <param id="0" name="Instance variable">hurt</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="262614127078469" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="422645577101753" type="Player_Mask">
@@ -4035,6 +4060,11 @@
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="190688157657290" type="Player_Mask">
                                     <param id="0" name="Instance variable">ladders</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="851925446997192" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -5726,6 +5756,12 @@
         </event-group>
         <event-group description="" sid="762612073263650" title="Player 1 Death">
             <sub-events>
+                <event-block sid="938297438697978">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="959595423671563" type="Player" />
+                    </conditions>
+                    <actions />
+                </event-block>
                 <event-block sid="439333461006881">
                     <conditions>
                         <condition behavior="Platform" id="9" name="On landed" sid="766272126295537" type="Player" />
@@ -5747,100 +5783,111 @@
                         <action behavior="Flash" id="1" name="Stop flashing" sid="408334869981448" type="Player_Mask" />
                     </actions>
                 </event-block>
-                <event-block sid="816081859381424">
+                <event-block any="1" sid="816081859381424">
                     <conditions>
                         <condition id="0" name="Compare value" sid="773205517996245" type="Data_Players">
                             <param id="0" name="Key">&quot;Energy&quot;</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="712939968293381" type="System" />
+                        <condition id="-2" name="Compare Y" sid="768420146411185" type="Player_Mask">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">LayoutHeight</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="837551144447740" type="System">
-                            <param id="0" name="Variable">PAUSE_LOCK</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="378062510246731" type="Player">
-                            <param id="0" name="Input">1</param>
-                        </action>
-                        <action behavior="Platform" id="0" name="Set ignoring input" sid="172499754631712" type="Player">
-                            <param id="0" name="Input">1</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="265865960722489" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="652599556154292" type="System">
-                            <param id="0" name="Seconds">2</param>
-                        </action>
-                        <action id="0" name="Call function" sid="421792315662522" type="Function">
-                            <param id="0" name="Name">&quot;Fade&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="697731115246724" type="System">
-                            <param id="0" name="Seconds">2</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="798821987376105">
+                        <event-block sid="120724263958613">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="493530582424163" type="System">
-                                    <param id="0" name="Variable">PlayeNum</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="774417619215593" type="System" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="837551144447740" type="System">
+                                    <param id="0" name="Variable">PAUSE_LOCK</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="378062510246731" type="Player">
+                                    <param id="0" name="Input">1</param>
+                                </action>
+                                <action behavior="Platform" id="0" name="Set ignoring input" sid="172499754631712" type="Player">
+                                    <param id="0" name="Input">1</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="265865960722489" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="652599556154292" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="421792315662522" type="Function">
+                                    <param id="0" name="Name">&quot;Fade&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="697731115246724" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="441987438093387">
+                                <event-block sid="798821987376105">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="265631963425531" type="System">
-                                            <param id="0" name="Variable">playerChosen</param>
+                                        <condition id="-14" name="Compare variable" sid="493530582424163" type="System">
+                                            <param id="0" name="Variable">PlayeNum</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Hi&quot;</param>
+                                            <param id="2" name="Value">2</param>
                                         </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="524414705187295" type="System">
-                                            <param id="0" name="Variable">playerChosen</param>
-                                            <param id="1" name="Value">&quot;Eg&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="312098636382247">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="511386813980048" type="System" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="394719160984251">
+                                        <event-block sid="441987438093387">
                                             <conditions>
-                                                <condition id="-14" name="Compare variable" sid="483839207412798" type="System">
+                                                <condition id="-14" name="Compare variable" sid="265631963425531" type="System">
                                                     <param id="0" name="Variable">playerChosen</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Eg&quot;</param>
+                                                    <param id="2" name="Value">&quot;Hi&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-9" name="Set value" sid="845453206570955" type="System">
+                                                <action id="-9" name="Set value" sid="524414705187295" type="System">
                                                     <param id="0" name="Variable">playerChosen</param>
-                                                    <param id="1" name="Value">&quot;Hi&quot;</param>
+                                                    <param id="1" name="Value">&quot;Eg&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="312098636382247">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="511386813980048" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="394719160984251">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="483839207412798" type="System">
+                                                            <param id="0" name="Variable">playerChosen</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Eg&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="845453206570955" type="System">
+                                                            <param id="0" name="Variable">playerChosen</param>
+                                                            <param id="1" name="Value">&quot;Hi&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="155261037500053">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-26" name="Restart layout" sid="284766315725845" type="System" />
+                                        <action id="-10" name="Set value" sid="722022900342381" type="Player_Mask">
+                                            <param id="0" name="Instance variable">equip</param>
+                                            <param id="1" name="Value">playerChosen</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="155261037500053">
-                            <conditions />
-                            <actions>
-                                <action id="-26" name="Restart layout" sid="284766315725845" type="System" />
-                                <action id="-10" name="Set value" sid="722022900342381" type="Player_Mask">
-                                    <param id="0" name="Instance variable">equip</param>
-                                    <param id="1" name="Value">playerChosen</param>
-                                </action>
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

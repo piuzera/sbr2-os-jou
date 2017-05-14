@@ -102,11 +102,11 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="623381632645156" type="System">
                                             <param id="0" name="Variable">tempCurrArtsNeeded</param>
-                                            <param id="1" name="Value">int(tokenat(Data_Players.Get(&quot;playertype_arts&quot;),Player_Mask.p_type,&quot;,&quot;))</param>
+                                            <param id="1" name="Value">int(Data_Players.Get(&quot;playertype_arts_&quot;&amp;Player_Mask.equip))</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="361634992766341" type="System">
                                             <param id="0" name="Variable">tempCurrArtsNeededDivided</param>
-                                            <param id="1" name="Value">int(tokenat(Data_Players.Get(&quot;playertype_arts&quot;),Player_Mask.p_type,&quot;,&quot;))/8</param>
+                                            <param id="1" name="Value">int(Data_Players.Get(&quot;playertype_arts_&quot;&amp;Player_Mask.equip))/8</param>
                                         </action>
                                     </actions>
                                 </event-block>

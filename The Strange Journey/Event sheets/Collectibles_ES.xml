@@ -24,7 +24,7 @@
                     </actions>
                     <sub-events>
                         <comment>&gt;Pause the game for the item collect sequence</comment>
-                        <event-block disabled="1" sid="572911616248799">
+                        <event-block sid="572911616248799">
                             <conditions />
                             <actions>
                                 <action id="-13" name="Set time scale" sid="812064665243495" type="System">
@@ -41,7 +41,7 @@
                             </actions>
                         </event-block>
                         <comment>&gt;Set the item&apos;s timescale to 1 so it can flash during the item collect sequence</comment>
-                        <event-block disabled="1" sid="299522721284231">
+                        <event-block sid="299522721284231">
                             <conditions />
                             <actions>
                                 <action id="-14" name="Set object time scale" sid="182667540891202" type="System">
@@ -56,7 +56,7 @@
                             </actions>
                         </event-block>
                         <comment>&gt;Add item to save data &amp; create message</comment>
-                        <event-block disabled="1" sid="833128310842733">
+                        <event-block sid="833128310842733">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="831532933216592" type="Items">
                                     <param id="0" name="Animation">&quot;EnergyTank&quot;</param>
@@ -77,7 +77,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="588631263149914">
+                        <event-block sid="588631263149914">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="707161084133911" type="Items">
                                     <param id="0" name="Animation">&quot;MissileTank&quot;</param>
@@ -98,7 +98,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="337627297093613">
+                        <event-block sid="337627297093613">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="984789784318965" type="Items">
                                     <param id="0" name="Animation">&quot;HiJumpBoots&quot;</param>
@@ -115,7 +115,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="257608064090311">
+                        <event-block sid="257608064090311">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="454648652802872" type="Items">
                                     <param id="0" name="Animation">&quot;Armor&quot;</param>
@@ -136,7 +136,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="897091558731400">
+                        <event-block sid="897091558731400">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="587818162690355" type="Items">
                                     <param id="0" name="Animation">&quot;Map&quot;</param>
@@ -154,7 +154,7 @@
                             </actions>
                         </event-block>
                         <comment>Add the ID of the item to Data_Persist so it doesn&apos;t show up again. (See eRoomSystem event 48-49)</comment>
-                        <event-block disabled="1" sid="887277168541779">
+                        <event-block sid="887277168541779">
                             <conditions />
                             <actions>
                                 <action id="0" name="Add key" sid="745476488701938" type="Data_Persist">
@@ -265,7 +265,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="861527162296250" type="System">
                                     <param id="0" name="Object to create">AlertBox</param>
-                                    <param id="1" name="Layer">&quot;Transitions&quot;</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
                                     <param id="2" name="X">RES_WIDTH / 2</param>
                                     <param id="3" name="Y">RES_HEIGHT - 180</param>
                                 </action>
@@ -292,7 +292,7 @@
                                     <actions>
                                         <action id="-3" name="Create object" sid="283727843302495" type="System">
                                             <param id="0" name="Object to create">SpriteFont</param>
-                                            <param id="1" name="Layer">&quot;Transitions&quot;</param>
+                                            <param id="1" name="Layer">&quot;HUD&quot;</param>
                                             <param id="2" name="X">AlertBox.X</param>
                                             <param id="3" name="Y">AlertBox.Y - 6</param>
                                         </action>
@@ -309,7 +309,7 @@
                                         </action>
                                         <action id="-3" name="Create object" sid="539573086595541" type="System">
                                             <param id="0" name="Object to create">SpriteFont</param>
-                                            <param id="1" name="Layer">&quot;Transitions&quot;</param>
+                                            <param id="1" name="Layer">&quot;HUD&quot;</param>
                                             <param id="2" name="X">AlertBox.X</param>
                                             <param id="3" name="Y">AlertBox.Y + 6</param>
                                         </action>
@@ -338,7 +338,7 @@
                                     <actions>
                                         <action id="-3" name="Create object" sid="784416333338744" type="System">
                                             <param id="0" name="Object to create">SpriteFont</param>
-                                            <param id="1" name="Layer">&quot;Transitions&quot;</param>
+                                            <param id="1" name="Layer">&quot;HUD&quot;</param>
                                             <param id="2" name="X">AlertBox.X</param>
                                             <param id="3" name="Y">AlertBox.Y</param>
                                         </action>

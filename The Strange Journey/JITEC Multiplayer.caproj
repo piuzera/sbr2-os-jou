@@ -2349,13 +2349,16 @@
                             <point x="0.1875" y="0.90625" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.90625">
                         <collision-poly>
                             <point x="0.5" y="0.898438" />
                             <point x="0.8125" y="0.90625" />
                             <point x="0.1875" y="0.90625" />
                         </collision-poly>
                     </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Hurt" pingpong="0" repeatcount="1" repeatto="0" sid="135983550595219" speed="13">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.90625" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -4089,6 +4092,9 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.90625" />
                 </animation>
+                <animation framecount="1" loop="0" name="Hurt" pingpong="0" repeatcount="0" repeatto="0" sid="925594426689765" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.90625" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="En_BlueScarab" sid="622287249467056">
@@ -4284,6 +4290,7 @@
                 <instance-variable name="createdByResUID" sid="455606742710142" type="number" />
                 <instance-variable name="boss" sid="625310612528564" type="boolean" />
                 <instance-variable name="particleSize" sid="380143285142899" type="number" />
+                <instance-variable name="lastAnim" sid="663341785849901" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="LineOfSight" sid="174731930225332">
