@@ -81,7 +81,7 @@
                                             <conditions />
                                             <actions>
                                                 <action id="-2" name="Set Y" sid="381549874725125" type="char_select_bg3">
-                                                    <param id="0" name="Y">368</param>
+                                                    <param id="0" name="Y">360</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="644729196247086" type="char_select_bg3">
                                                     <param id="0" name="X">120</param>
@@ -108,7 +108,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-2" name="Set Y" sid="587970237711056" type="char_select_bg4">
-                                                            <param id="0" name="Y">368</param>
+                                                            <param id="0" name="Y">360</param>
                                                         </action>
                                                         <action id="-1" name="Set X" sid="568500424408315" type="char_select_bg4">
                                                             <param id="0" name="X">200</param>
@@ -148,7 +148,7 @@
                                             <conditions />
                                             <actions>
                                                 <action id="-2" name="Set Y" sid="910144961527703" type="char_select_bg3">
-                                                    <param id="0" name="Y">368</param>
+                                                    <param id="0" name="Y">360</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="931066077740022" type="char_select_bg3">
                                                     <param id="0" name="X">200</param>
@@ -175,7 +175,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-2" name="Set Y" sid="560795266277248" type="char_select_bg4">
-                                                            <param id="0" name="Y">368</param>
+                                                            <param id="0" name="Y">360</param>
                                                         </action>
                                                         <action id="-1" name="Set X" sid="507377476866437" type="char_select_bg4">
                                                             <param id="0" name="X">120</param>

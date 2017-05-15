@@ -432,8 +432,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>251.629104614</x>
-                        <y>385.214630127</y>
+                        <x>252.477035522</x>
+                        <y>387.759063721</y>
                         <z>0</z>
                         <width>48</width>
                         <height>48</height>
@@ -1934,7 +1934,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <power>2</power>
+                        <power>1</power>
                         <destroy>false</destroy>
                         <owner>player</owner>
                     </instance-variables>
@@ -2001,8 +2001,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>162.70173645</x>
-                        <y>268.717468262</y>
+                        <x>153.142883301</x>
+                        <y>267.442871094</y>
                         <z>0</z>
                         <width>128</width>
                         <height>160</height>
@@ -2021,7 +2021,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <power>1</power>
+                        <power>3</power>
                         <destroy>false</destroy>
                         <owner>player</owner>
                         <comeBack>false</comeBack>

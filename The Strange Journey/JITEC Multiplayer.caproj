@@ -56,6 +56,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>TitleScreen</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -632,7 +633,7 @@
                             <image-point name="Imagepoint 2" x="1" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Eg_Main_Up" pingpong="0" repeatcount="1" repeatto="0" sid="223729833170052" speed="11">
+                    <animation framecount="2" loop="0" name="Eg_Main_Up" pingpong="0" repeatcount="1" repeatto="0" sid="223729833170052" speed="13">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.25" y="0.5625" />
                             <image-point name="Imagepoint 2" x="0.375" y="0.375" />
@@ -642,30 +643,32 @@
                             <image-point name="Imagepoint 2" x="0.375" y="0.375" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Eg_Sub_Up" pingpong="0" repeatcount="1" repeatto="0" sid="327604336474729" speed="11">
+                    <animation framecount="2" loop="0" name="Eg_Sub_Up" pingpong="0" repeatcount="1" repeatto="0" sid="327604336474729" speed="13">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.25" y="0.5625" />
-                            <image-point name="Imagepoint 2" x="0.375" y="0.375" />
+                            <image-point name="Imagepoint 2" x="0.479167" y="0" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.25" y="0.5625" />
-                            <image-point name="Imagepoint 2" x="0.375" y="0.375" />
+                            <image-point name="Imagepoint 2" x="0.479167" y="0" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Eg_Main_Up_Air" pingpong="0" repeatcount="1" repeatto="0" sid="181512031137928" speed="15">
+                    <animation framecount="2" loop="0" name="Eg_Main_Up_Air" pingpong="0" repeatcount="1" repeatto="0" sid="181512031137928" speed="13">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 1" x="0.25" y="0.5625" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 1" x="0.25" y="0.5625" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Eg_Sub_Up_Air" pingpong="0" repeatcount="1" repeatto="0" sid="280416511407249" speed="15">
+                    <animation framecount="2" loop="0" name="Eg_Sub_Up_Air" pingpong="0" repeatcount="1" repeatto="0" sid="280416511407249" speed="13">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.479167" y="0" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.479167" y="0" />
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="Eg_Main_Down_Air" pingpong="0" repeatcount="1" repeatto="0" sid="140294873439880" speed="11">
@@ -692,15 +695,17 @@
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.8125" y="0.854167" />
+                            <image-point name="Imagepoint 2" x="1" y="0.479167" />
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="Eg_Sub_Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="349857924773076" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
-                            <image-point name="Imagepoint 2" x="1" y="0.645833" />
+                            <image-point name="Imagepoint 2" x="1" y="0.416667" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Imagepoint 2" x="1" y="0.645833" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            <image-point name="Imagepoint 2" x="1" y="0" />
                         </frame>
                     </animation>
                     <animation framecount="4" loop="1" name="Eg_Climb" pingpong="0" repeatcount="1" repeatto="0" sid="718049909396783" speed="15">
@@ -2945,7 +2950,7 @@
                 </effect-type>
             </effects>
             <animation-folder>
-                <animation framecount="1" loop="0" name="hi" pingpong="0" repeatcount="1" repeatto="0" sid="902468809220162" speed="0">
+                <animation framecount="1" loop="0" name="Hi" pingpong="0" repeatcount="1" repeatto="0" sid="902468809220162" speed="0">
                     <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\Piu\Dropbox\JITEC\assets\HUD\highlander_icon.png">
                         <collision-poly>
                             <point x="0" y="0.166666" />
@@ -2957,7 +2962,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="eg" pingpong="0" repeatcount="1" repeatto="0" sid="991248346891664" speed="0">
+                <animation framecount="1" loop="0" name="Eg" pingpong="0" repeatcount="1" repeatto="0" sid="991248346891664" speed="0">
                     <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\Piu\Dropbox\JITEC\assets\HUD\egyptian_icon.png">
                         <collision-poly>
                             <point x="0" y="0.166666" />
@@ -3507,7 +3512,7 @@
                             <point x="0.402344" y="0.565625" />
                         </collision-poly>
                     </frame>
-                    <frame duration="0.5" hotspotX="0.445313" hotspotY="0.725">
+                    <frame duration="0.4" hotspotX="0.445313" hotspotY="0.725">
                         <collision-poly>
                             <point x="0.671875" y="0.640625" />
                             <point x="0.75" y="0.85" />
@@ -3531,7 +3536,7 @@
                             <point x="0.402344" y="0.559375" />
                         </collision-poly>
                     </frame>
-                    <frame duration="0.5" hotspotX="0.414063" hotspotY="0.85625">
+                    <frame duration="0.4" hotspotX="0.414063" hotspotY="0.85625">
                         <collision-poly>
                             <point x="0.671875" y="0.640625" />
                             <point x="0.75" y="0.85" />
@@ -3555,7 +3560,7 @@
                             <point x="0.40625" y="0.58125" />
                         </collision-poly>
                     </frame>
-                    <frame duration="0.5" hotspotX="0.445313" hotspotY="0.725">
+                    <frame duration="0.4" hotspotX="0.445313" hotspotY="0.725">
                         <collision-poly>
                             <point x="0.671875" y="0.640625" />
                             <point x="0.75" y="0.85" />
@@ -3572,28 +3577,52 @@
                     </frame>
                 </animation>
                 <animation framecount="3" loop="0" name="DownAir" pingpong="0" repeatcount="1" repeatto="0" sid="559910651458924" speed="13">
-                    <frame duration="1" hotspotX="0.398438" hotspotY="0.54375" />
-                    <frame duration="1" hotspotX="0.507813" hotspotY="0.3125">
+                    <frame duration="1" hotspotX="0.398438" hotspotY="0.54375">
                         <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
+                            <point x="0.398438" y="0.55" />
+                            <point x="0.398438" y="0.55" />
+                            <point x="0.398438" y="0.54375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0.4" hotspotX="0.507813" hotspotY="0.3125">
+                        <collision-poly>
+                            <point x="0.664063" y="0.44375" />
+                            <point x="0.617188" y="0.66875" />
+                            <point x="0.414063" y="0.651562" />
+                            <point x="0.451172" y="0.429687" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.507813" hotspotY="0.3125">
                         <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
+                            <point x="0.46875" y="0.44375" />
+                            <point x="0.46875" y="0.44375" />
+                            <point x="0.46875" y="0.44375" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="3" loop="0" name="UpAir" pingpong="0" repeatcount="1" repeatto="0" sid="826130653077134" speed="13">
-                    <frame duration="1" hotspotX="0.40625" hotspotY="0.55625" />
-                    <frame duration="1" hotspotX="0.46875" hotspotY="0.6125" />
-                    <frame duration="1" hotspotX="0.46875" hotspotY="0.6125" />
+                    <frame duration="1" hotspotX="0.414063" hotspotY="0.55625">
+                        <collision-poly>
+                            <point x="0.59375" y="0.55625" />
+                            <point x="0.59375" y="0.55625" />
+                            <point x="0.59375" y="0.55625" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0.4" hotspotX="0.328125" hotspotY="0.6125">
+                        <collision-poly>
+                            <point x="0.625" y="0.581249" />
+                            <point x="0.429688" y="0.575" />
+                            <point x="0.419922" y="0.335937" />
+                            <point x="0.675781" y="0.4125" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.328125" hotspotY="0.6125">
+                        <collision-poly>
+                            <point x="0.46875" y="0.528125" />
+                            <point x="0.460938" y="0.525" />
+                            <point x="0.472656" y="0.525" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -4636,14 +4665,6 @@
         <file name="sfx_exp_shortest_hard5.ogg" />
         <file name="sfx_exp_long2.m4a" />
         <file name="sfx_exp_long2.ogg" />
-        <file name="sfx_sounds_powerup6.m4a" />
-        <file name="sfx_sounds_powerup6.ogg" />
-        <file name="sfx_sounds_powerup15.m4a" />
-        <file name="sfx_sounds_powerup15.ogg" />
-        <file name="sfx_sounds_powerup17.m4a" />
-        <file name="sfx_sounds_powerup17.ogg" />
-        <file name="sfx_sounds_powerup5.m4a" />
-        <file name="sfx_sounds_powerup5.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="02 World Nap.ogg" />

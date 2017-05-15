@@ -7,7 +7,7 @@
         <variable constant="0" name="controlType" sid="306797489847138" static="0" type="text">keyboard</variable>
         <variable constant="0" name="joyDeadzone" sid="967961621508216" static="0" type="number">50</variable>
         <comment>Player list: Hi / Eg</comment>
-        <variable constant="0" name="playerChosen" sid="998865438430962" static="0" type="text">Hi</variable>
+        <variable constant="0" name="playerChosen" sid="998865438430962" static="0" type="text">Eg</variable>
         <event-block sid="193616386465418">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="798448892020463" type="System" />
@@ -19,10 +19,6 @@
                 </action>
                 <action id="-10" name="Set value" sid="200445876365204" type="Player_Mask">
                     <param id="0" name="Instance variable">equip</param>
-                    <param id="1" name="Value">playerChosen</param>
-                </action>
-                <action id="-10" name="Set value" sid="886922980098351" type="HUD_player_weapon">
-                    <param id="0" name="Instance variable">type</param>
                     <param id="1" name="Value">playerChosen</param>
                 </action>
                 <action id="4" name="Set animation" sid="755808346843909" type="Player_Mask">
