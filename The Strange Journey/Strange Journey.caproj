@@ -4592,6 +4592,7 @@
         <layout>Options.xml</layout>
         <layout>CharSelect.xml</layout>
         <layout>Map.xml</layout>
+        <layout>Highscore.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Player1_ES.xml</event-sheet>
@@ -4607,6 +4608,7 @@
         <event-sheet>TitleScreen_ES.xml</event-sheet>
         <event-sheet>CharSelect_ES.xml</event-sheet>
         <event-sheet>Map_ES.xml</event-sheet>
+        <event-sheet>Highscore_ES.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
