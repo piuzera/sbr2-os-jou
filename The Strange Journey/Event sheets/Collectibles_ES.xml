@@ -242,7 +242,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="228057197369732" type="Function">
-                                    <param id="0" name="Name">&quot;p1updateammo&quot;</param>
+                                    <param id="0" name="Name">&quot;p1addammo&quot;</param>
                                     <param id="1" name="Parameter {n}">2</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="834202393230210" type="Pickups">

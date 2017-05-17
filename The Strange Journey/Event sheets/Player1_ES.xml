@@ -1267,6 +1267,23 @@
                                             <param id="2" name="Value">100</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="301797417584729">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="985328982254046" type="System">
+                                                    <param id="0" name="Object">HUD_subammo</param>
+                                                    <param id="1" name="Expression">HUD_subammo.type</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">&quot;p1ammo&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="457431281894958" type="HUD_subammo">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="286087849550719">
                                     <conditions>
@@ -3168,6 +3185,23 @@
                                                     <param id="1" name="Value">20</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="906621084132560">
+                                                    <conditions>
+                                                        <condition id="-33" name="Pick by comparison" sid="734727237666857" type="System">
+                                                            <param id="0" name="Object">HUD_subammo</param>
+                                                            <param id="1" name="Expression">HUD_subammo.type</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">&quot;p1ammo&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="667951164144831" type="HUD_subammo">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="342470354356228">
                                             <conditions>
@@ -6584,5 +6618,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="753069466859589">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="857377389813966" type="Keyboard">
+                    <param id="0" name="Key">80 (P)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="858192488076941" type="System">
+                    <param id="0" name="Variable">Total_Score</param>
+                    <param id="1" name="Value">60000</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

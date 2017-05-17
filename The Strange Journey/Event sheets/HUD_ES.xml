@@ -386,13 +386,13 @@
                                         <condition id="-7" name="Compare instance variable" sid="874156798879711" type="HUD_subammo">
                                             <param id="0" name="Instance variable">ammo</param>
                                             <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Value">5</param>
+                                            <param id="2" name="Value">99</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-11" name="Add to" sid="950920945720197" type="HUD_subammo">
                                             <param id="0" name="Instance variable">ammo</param>
-                                            <param id="1" name="Value">1</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
                                         </action>
                                         <action id="0" name="Call function" sid="158561791620314" type="Function">
                                             <param id="0" name="Name">&quot;p1updateammo&quot;</param>
@@ -582,36 +582,6 @@
                         <action id="4" name="Set animation" sid="983275633820425" type="Player_Mask">
                             <param id="0" name="Animation">self.equip&amp;&quot;_Hurt&quot;</param>
                             <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="971899981810981" title="Debug">
-            <sub-events>
-                <event-block sid="212250506083375">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="627596893119978" type="Keyboard">
-                            <param id="0" name="Key">52 (4)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="201334551184574" type="System">
-                            <param id="0" name="Variable">LevelTimer</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="313133015214199">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="635358760042888" type="Keyboard">
-                            <param id="0" name="Key">53 (5)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="324928810020599" type="System">
-                            <param id="0" name="Variable">LevelTimer</param>
-                            <param id="1" name="Value">40</param>
                         </action>
                     </actions>
                 </event-block>
