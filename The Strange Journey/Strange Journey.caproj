@@ -3313,8 +3313,7 @@
             <plugin id="Spritefont2" />
             <instance-variables>
                 <instance-variable name="option_num" sid="374411839726903" type="number" />
-                <instance-variable name="curHighscore_P1" sid="868194537757227" type="number" />
-                <instance-variable name="curHighscore_P2" sid="611676196632118" type="number" />
+                <instance-variable name="curLetter" sid="868194537757227" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="EaseTween" sid="123869304883800">

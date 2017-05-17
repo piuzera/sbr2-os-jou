@@ -15,7 +15,7 @@
     <layers>
         <layer name="Layer 0" sid="228837565939938">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>4,4,4</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -29,56 +29,24 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="SpriteFont_Menus" uid="206">
+                <instance type="TitleScreen_BG" uid="206">
                     <properties>
-                        <character-width>8</character-width>
-                        <character-height>8</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
-                        <text>CONTINUE</text>
-                        <scale>1.5</scale>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <option_num>0</option_num>
-                        <curHighscore_P1>0</curHighscore_P1>
-                        <curHighscore_P2>0</curHighscore_P2>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="EaseTween">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <tweened-property>Position</tweened-property>
-                                <function>EaseOutBounce</function>
-                                <initial>current</initial>
-                                <target>100, 100</target>
-                                <duration>2.5</duration>
-                                <wait>0,0</wait>
-                                <playback-mode>Play Once</playback-mode>
-                                <value>0</value>
-                                <coordinate-mode>Relative</coordinate-mode>
-                                <force-initial-on-start>No</force-initial-on-start>
-                                <tween-group></tween-group>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>162.787719727</x>
-                        <y>151.163635254</y>
+                        <x>160</x>
+                        <y>64</y>
                         <z>0</z>
-                        <width>240</width>
-                        <height>32</height>
+                        <width>211</width>
+                        <height>89</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502369642</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -88,20 +56,19 @@
                         <character-width>8</character-width>
                         <character-height>8</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
-                        <text>CONTINUE</text>
+                        <text>HIGH SCORES</text>
                         <scale>1.5</scale>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <option_num>0</option_num>
-                        <curHighscore_P1>0</curHighscore_P1>
-                        <curHighscore_P2>0</curHighscore_P2>
+                        <option_num>-1</option_num>
+                        <curLetter>0</curLetter>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="EaseTween">
@@ -125,10 +92,169 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>166.180404663</x>
-                        <y>111.298370361</y>
+                        <x>161.515029907</x>
+                        <y>161.341888428</y>
                         <z>0</z>
-                        <width>240</width>
+                        <width>352</width>
+                        <height>96</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteFont_Menus" uid="210">
+                    <properties>
+                        <character-width>8</character-width>
+                        <character-height>8</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
+                        <text>A</text>
+                        <scale>1.5</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <option_num>0</option_num>
+                        <curLetter>0</curLetter>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="EaseTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>EaseOutBounce</function>
+                                <initial>current</initial>
+                                <target>100, 100</target>
+                                <duration>2.5</duration>
+                                <wait>0,0</wait>
+                                <playback-mode>Play Once</playback-mode>
+                                <value>0</value>
+                                <coordinate-mode>Relative</coordinate-mode>
+                                <force-initial-on-start>No</force-initial-on-start>
+                                <tween-group></tween-group>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>129.515029907</x>
+                        <y>177.341888428</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteFont_Menus" uid="211">
+                    <properties>
+                        <character-width>8</character-width>
+                        <character-height>8</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
+                        <text>A</text>
+                        <scale>1.5</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <option_num>1</option_num>
+                        <curLetter>0</curLetter>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="EaseTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>EaseOutBounce</function>
+                                <initial>current</initial>
+                                <target>100, 100</target>
+                                <duration>2.5</duration>
+                                <wait>0,0</wait>
+                                <playback-mode>Play Once</playback-mode>
+                                <value>0</value>
+                                <coordinate-mode>Relative</coordinate-mode>
+                                <force-initial-on-start>No</force-initial-on-start>
+                                <tween-group></tween-group>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>161.515029907</x>
+                        <y>177.341888428</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteFont_Menus" uid="212">
+                    <properties>
+                        <character-width>8</character-width>
+                        <character-height>8</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;!?&quot;.,:;&apos;()/\+=~-#%[]</character-set>
+                        <text>A</text>
+                        <scale>1.5</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <option_num>2</option_num>
+                        <curLetter>0</curLetter>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="EaseTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>EaseOutBounce</function>
+                                <initial>current</initial>
+                                <target>100, 100</target>
+                                <duration>2.5</duration>
+                                <wait>0,0</wait>
+                                <playback-mode>Play Once</playback-mode>
+                                <value>0</value>
+                                <coordinate-mode>Relative</coordinate-mode>
+                                <force-initial-on-start>No</force-initial-on-start>
+                                <tween-group></tween-group>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>193.515029907</x>
+                        <y>177.341888428</y>
+                        <z>0</z>
+                        <width>128</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
