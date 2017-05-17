@@ -2,7 +2,7 @@
 <c2layout>
     <name>Highscore</name>
     <sid>337115064802090</sid>
-    <event-sheet></event-sheet>
+    <event-sheet>Highscore_ES</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -268,5 +268,22 @@
         </layer>
     </layers>
     <nonworld-instances />
-    <effects />
+    <effects>
+        <effect-type name="Brightness">
+            <effect id="brightness" />
+            <effect-instance type="Brightness">
+                <parameters>
+                    <brightness>1</brightness>
+                </parameters>
+            </effect-instance>
+        </effect-type>
+        <effect-type name="Pixellate">
+            <effect id="pixellate" />
+            <effect-instance type="Pixellate">
+                <parameters>
+                    <size>1</size>
+                </parameters>
+            </effect-instance>
+        </effect-type>
+    </effects>
 </c2layout>
