@@ -68,6 +68,9 @@
                     <param id="0" name="Variable">PAUSE_LOCK</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="6" name="Stop" sid="176307579223986" type="Audio">
+                    <param id="0" name="Tag">&quot;bossmusic&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="412816503325155">
@@ -1003,6 +1006,86 @@
                                                     <param id="1" name="Value">3</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="530441253103171">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="257978172127494" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">superArtsEffect</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-28" name="Set effect parameter" sid="936688742392453" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">255</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="878000262989291" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="100276013166923" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="386203305516087" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">255</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="208484183713896" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="388518728585504" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="463569956703444">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="684764328802727" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">superArtsEffect</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-28" name="Set effect parameter" sid="428211331279531" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="168236487679869" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="603266166953138" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="332797976065236" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="397271644617057" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="352055920955823" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="193461284576263">
                                             <conditions>
@@ -1013,6 +1096,86 @@
                                                 </condition>
                                             </conditions>
                                             <actions />
+                                            <sub-events>
+                                                <event-block sid="341603190998482">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="707427384339249" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">superArtsEffect</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-28" name="Set effect parameter" sid="694467606244730" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">133</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="532653651003888" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">53</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="894300078260530" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">13</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="437858841518665" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">255</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="766764677859562" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="728721154317540" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="694261761068443">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="944568927105111" type="Player_Mask">
+                                                            <param id="0" name="Instance variable">superArtsEffect</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-28" name="Set effect parameter" sid="955120571966533" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="392750713381995" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="749372144200810" type="Player_Mask">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="258096078493990" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="783507484672688" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="616032526160327" type="HUD_player_icon">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">230</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="641128793032382">
                                             <conditions>
@@ -1036,84 +1199,6 @@
                                             <actions>
                                                 <action id="-14" name="Toggle boolean" sid="569296292646740" type="Player_Mask">
                                                     <param id="0" name="Instance variable">superArtsEffect</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="797333372047531">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="447780458711390" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">superArtsEffect</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-28" name="Set effect parameter" sid="385564125330571" type="Player_Mask">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">0</param>
-                                                    <param id="2" name="Value">255</param>
-                                                </action>
-                                                <action id="-28" name="Set effect parameter" sid="358493248450477" type="Player_Mask">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">1</param>
-                                                    <param id="2" name="Value">100</param>
-                                                </action>
-                                                <action id="-28" name="Set effect parameter" sid="853036965500457" type="Player_Mask">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="-28" name="Set effect parameter" sid="475871329716114" type="HUD_player_icon">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">0</param>
-                                                    <param id="2" name="Value">255</param>
-                                                </action>
-                                                <action id="-28" name="Set effect parameter" sid="266867719023489" type="HUD_player_icon">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">1</param>
-                                                    <param id="2" name="Value">100</param>
-                                                </action>
-                                                <action id="-28" name="Set effect parameter" sid="891964577233289" type="HUD_player_icon">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="798225602227707">
-                                            <conditions>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="598232638494988" type="Player_Mask">
-                                                    <param id="0" name="Instance variable">superArtsEffect</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-28" name="Set effect parameter" sid="747791845646302" type="Player_Mask">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">0</param>
-                                                    <param id="2" name="Value">230</param>
-                                                </action>
-                                                <action id="-28" name="Set effect parameter" sid="353972522029576" type="Player_Mask">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">1</param>
-                                                    <param id="2" name="Value">230</param>
-                                                </action>
-                                                <action id="-28" name="Set effect parameter" sid="897688896280011" type="Player_Mask">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">2</param>
-                                                    <param id="2" name="Value">230</param>
-                                                </action>
-                                                <action id="-28" name="Set effect parameter" sid="204397858531819" type="HUD_player_icon">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">0</param>
-                                                    <param id="2" name="Value">230</param>
-                                                </action>
-                                                <action id="-28" name="Set effect parameter" sid="219950162471382" type="HUD_player_icon">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">1</param>
-                                                    <param id="2" name="Value">230</param>
-                                                </action>
-                                                <action id="-28" name="Set effect parameter" sid="856227026112982" type="HUD_player_icon">
-                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                                    <param id="1" name="Parameter index">2</param>
-                                                    <param id="2" name="Value">230</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -3046,8 +3131,11 @@
                                             <param id="0" name="Animation">Player_Mask.equip&amp;&quot;_Use_Arts&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="7" name="Set mirrored" sid="973177875091462" type="Player_Mask">
-                                            <param id="0" name="State">0</param>
+                                        <action id="0" name="Play" sid="442003005195738" type="Audio">
+                                            <param id="0" name="Audio file">sfx_sounds_powerup2</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -5947,6 +6035,12 @@
                                     <param id="2" name="X">256</param>
                                     <param id="3" name="Y">168</param>
                                 </action>
+                                <action id="0" name="Play" sid="561686058782010" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_pause3_in</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="539819643853464">
@@ -5981,6 +6075,12 @@
                                     <param id="1" name="State">1</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="715378840162549" type="spr_black_superart" />
+                                <action id="0" name="Play" sid="778753978471261" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_pause3_out</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="844085749519301">

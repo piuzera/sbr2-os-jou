@@ -2125,6 +2125,12 @@
                                             <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="0" name="Play" sid="152377822750638" type="Audio">
+                                            <param id="0" name="Audio file">sfx_sounds_interaction11</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="882305753701368">
@@ -2198,6 +2204,12 @@
                                         <action id="4" name="Set animation" sid="741298164729570" type="Boss_Anubis">
                                             <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="934326101429330" type="Audio">
+                                            <param id="0" name="Audio file">sfx_sounds_interaction11</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2368,6 +2380,12 @@
                                             <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="0" name="Play" sid="448071564585604" type="Audio">
+                                            <param id="0" name="Audio file">sfx_sounds_interaction11</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="333670958515067">
@@ -2434,6 +2452,12 @@
                                                     <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
                                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
                                                 </action>
+                                                <action id="0" name="Play" sid="495512618855982" type="Audio">
+                                                    <param id="0" name="Audio file">sfx_weapon_singleshot13</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="743448314517390" type="Boss_Anubis_Projectile">
                                                     <param id="0" name="Angle">angle(Boss_Anubis.X,Boss_Anubis.Y,Player.X,Player.Y) + choose(0,5,10,15)</param>
                                                 </action>
@@ -2446,6 +2470,12 @@
                                                     <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
                                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
                                                 </action>
+                                                <action id="0" name="Play" sid="699034548877319" type="Audio">
+                                                    <param id="0" name="Audio file">sfx_weapon_singleshot13</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="384737175683029" type="Boss_Anubis_Projectile">
                                                     <param id="0" name="Angle">angle(Boss_Anubis.X,Boss_Anubis.Y,Player.X,Player.Y) + choose(0,5,10,15)</param>
                                                 </action>
@@ -2457,6 +2487,12 @@
                                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                                     <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
                                                     <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="292189053590700" type="Audio">
+                                                    <param id="0" name="Audio file">sfx_weapon_singleshot13</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                                 </action>
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="906140425902088" type="Boss_Anubis_Projectile">
                                                     <param id="0" name="Angle">angle(Boss_Anubis.X,Boss_Anubis.Y,Player.X,Player.Y) + choose(0,5,10,15)</param>
@@ -2498,6 +2534,12 @@
                                         <action id="4" name="Set animation" sid="345892482452342" type="Boss_Anubis">
                                             <param id="0" name="Animation">&quot;TeleportOut&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="821960492088947" type="Audio">
+                                            <param id="0" name="Audio file">sfx_sounds_interaction11</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2571,6 +2613,12 @@
                                             <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                             <param id="2" name="X">Boss_Anubis.ImagePointX(1)</param>
                                             <param id="3" name="Y">Boss_Anubis.ImagePointY(1)</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="492462600340194" type="Audio">
+                                            <param id="0" name="Audio file">sfx_wpn_laser6</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -2962,6 +3010,15 @@
                                         <action id="-12" name="Set group active" sid="884877184541416" type="System">
                                             <param id="0" name="Group name">&quot;Player Engine&quot;</param>
                                             <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="6" name="Stop" sid="641409168734122" type="Audio">
+                                            <param id="0" name="Tag">&quot;Stage01&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="501839447516440" type="Audio">
+                                            <param id="0" name="Audio file">09 Indiscriminate</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;bossmusic&quot;</param>
                                         </action>
                                     </actions>
                                     <sub-events>

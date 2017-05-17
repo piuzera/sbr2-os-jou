@@ -17,6 +17,12 @@
                     <param id="0" name="Name">&quot;Init&quot;</param>
                     <param id="1" name="Parameter {n}">0</param>
                 </action>
+                <action id="0" name="Play" sid="962315519238157" type="Audio">
+                    <param id="0" name="Audio file">MapTest2</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="720087292451212" title="Map Init">
@@ -38,12 +44,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="574619572027697" type="Audio">
-                                    <param id="0" name="Audio file">CHOMAKAI_00021</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
                                 <action id="-31" name="Set layout effect parameter" sid="889095882477501" type="System">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>

@@ -875,6 +875,7 @@
                                     <param id="0" name="Name">&quot;LevelEnd&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Init&quot;</param>
                                 </action>
+                                <action id="33" name="Stop all" sid="277358864563572" type="Audio" />
                                 <action id="-28" name="Set effect parameter" sid="718075325941548" type="Behaviors">
                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                     <param id="1" name="Parameter index">0</param>

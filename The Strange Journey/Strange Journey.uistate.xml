@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="0">Level 1</layout>
+        <layout order="1">TitleScreen</layout>
+        <layout order="4">HUD</layout>
+        <layout order="5">Object Bank</layout>
+        <layout order="10">Map</layout>
+        <event-sheet order="2">Enemies_ES</event-sheet>
+        <event-sheet order="3">Player1_ES</event-sheet>
+        <event-sheet order="6">CharSelect_ES</event-sheet>
+        <event-sheet order="7">Collectibles_ES</event-sheet>
+        <event-sheet order="8">TitleScreen_ES</event-sheet>
+        <event-sheet order="9">Map_ES</event-sheet>
+        <event-sheet order="11">Main_ES</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="Behaviors" />
+        <family expanded="1" name="WeaponsEtc" />
+        <family expanded="0" name="Enemies" />
+        <family expanded="0" name="Spritefonts" />
+        <family expanded="0" name="Solids" />
+        <family expanded="0" name="Camera" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/intro/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/Player_Mask/" />
+        <folder expanded="1" path="animation-folder/Player_Mask/Highlander/" />
+        <folder expanded="1" path="animation-folder/Player_Mask/Egyptian/" />
+        <folder expanded="1" path="animation-folder/Player_Mask/Armor/" />
+        <folder expanded="1" path="animation-folder/Player_Lance/" />
+        <folder expanded="1" path="animation-folder/En_Pig/" />
+        <folder expanded="1" path="animation-folder/Player_Sword/" />
+        <folder expanded="1" path="animation-folder/HUD_EnergyTab/" />
+        <folder expanded="1" path="animation-folder/HUD_EnergyTank/" />
+        <folder expanded="1" path="animation-folder/HUD_MissileCounter/" />
+        <folder expanded="1" path="animation-folder/MiniMap_Cursor/" />
+        <folder expanded="1" path="animation-folder/Items/" />
+        <folder expanded="1" path="animation-folder/Pickups/" />
+        <folder expanded="1" path="animation-folder/Block/" />
+        <folder expanded="1" path="animation-folder/En_Dragonfly/" />
+        <folder expanded="1" path="animation-folder/En_GreenDragonfly/" />
+        <folder expanded="1" path="animation-folder/En_SeedBomber/" />
+        <folder expanded="1" path="animation-folder/Enemy_SeedProjectile/" />
+        <folder expanded="1" path="animation-folder/LadderCollision/" />
+        <folder expanded="1" path="animation-folder/LadderGround/" />
+        <folder expanded="1" path="animation-folder/En_PET/" />
+        <folder expanded="1" path="animation-folder/Par_ExplosionSmall/" />
+        <folder expanded="1" path="animation-folder/HUD_special_arts_count/" />
+        <folder expanded="1" path="animation-folder/HUD_Frame/" />
+        <folder expanded="1" path="animation-folder/HUD_player_weapon/" />
+        <folder expanded="1" path="animation-folder/Player2_Mask/" />
+        <folder expanded="1" path="animation-folder/Player2_Mask/Default/" />
+        <folder expanded="1" path="animation-folder/Player2_Mask/Armor/" />
+        <folder expanded="1" path="animation-folder/Player2_Base/" />
+        <folder expanded="1" path="animation-folder/Player_Shield/" />
+        <folder expanded="1" path="animation-folder/spr_black_superart/" />
+        <folder expanded="1" path="animation-folder/Player_Arts/" />
+        <folder expanded="1" path="animation-folder/Player_Arts/Default/" />
+        <folder expanded="1" path="animation-folder/HUD_Super_Arts_Icon/" />
+        <folder expanded="1" path="animation-folder/En_Scarab/" />
+        <folder expanded="1" path="animation-folder/En_Sandit/" />
+        <folder expanded="1" path="animation-folder/Player_Shield_Particle/" />
+        <folder expanded="1" path="animation-folder/Enemy_Respawner/" />
+        <folder expanded="1" path="animation-folder/En_CybersandWolf/" />
+        <folder expanded="1" path="animation-folder/Enemy_WolfLaser/" />
+        <folder expanded="1" path="animation-folder/Enemy_Collider/" />
+        <folder expanded="1" path="animation-folder/HUD_player_icon/" />
+        <folder expanded="1" path="animation-folder/HUD_special_arts_bar/" />
+        <folder expanded="1" path="animation-folder/TitleScreen_BG/" />
+        <folder expanded="1" path="animation-folder/char_select_bg3/" />
+        <folder expanded="1" path="animation-folder/CharSelect_Highlander/" />
+        <folder expanded="1" path="animation-folder/CharSelect_Camera/" />
+        <folder expanded="1" path="animation-folder/CharSelect_Egyptian/" />
+        <folder expanded="1" path="animation-folder/Wormhole_1/" />
+        <folder expanded="1" path="animation-folder/Map_Sprite/" />
+        <folder expanded="1" path="animation-folder/col_camera_limit/" />
+        <folder expanded="1" path="animation-folder/Player_Wand/" />
+        <folder expanded="1" path="animation-folder/Player_Ankh/" />
+        <folder expanded="1" path="animation-folder/Boss_Anubis/" />
+        <folder expanded="1" path="animation-folder/Boss_Anubis_TeleportLocation/" />
+        <folder expanded="1" path="animation-folder/Boss_Anubis_Beam/" />
+        <folder expanded="1" path="animation-folder/Boss_Anubis_Projectile/" />
+        <folder expanded="1" path="animation-folder/Boss_DestroyExplosion/" />
+        <folder expanded="1" path="animation-folder/Player_Ankh_Particle/" />
+        <folder expanded="1" path="animation-folder/char_select_bg4/" />
+        <folder expanded="1" path="animation-folder/Wormhole_2/" />
+        <folder expanded="1" path="animation-folder/Par_ExplosionBig/" />
+        <folder expanded="1" path="animation-folder/En_BlueSandit/" />
+        <folder expanded="1" path="animation-folder/En_BlueScarab/" />
+        <folder expanded="1" path="animation-folder/En_Bat/" />
+        <folder expanded="1" path="animation-folder/Enemy_Collider2/" />
+        <folder expanded="1" path="animation-folder/Collision_BlockPlayer/" />
+    </folders-expanded>
+</c2uistate>

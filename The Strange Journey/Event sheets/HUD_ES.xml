@@ -143,6 +143,12 @@
                             <param id="0" name="Animation">&quot;Super&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Play" sid="838191996399892" type="Audio">
+                            <param id="0" name="Audio file">sfx_sounds_fanfare1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
