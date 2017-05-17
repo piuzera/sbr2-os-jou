@@ -1057,6 +1057,8 @@
                     </properties>
                     <instance-variables>
                         <option_num>0</option_num>
+                        <curHighscore_P1>0</curHighscore_P1>
+                        <curHighscore_P2>0</curHighscore_P2>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="EaseTween">
@@ -1109,6 +1111,8 @@
                     </properties>
                     <instance-variables>
                         <option_num>1</option_num>
+                        <curHighscore_P1>0</curHighscore_P1>
+                        <curHighscore_P2>0</curHighscore_P2>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="EaseTween">

@@ -2,5 +2,825 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Highscore_ES</name>
-    <events />
+    <events>
+        <variable constant="0" name="TYPESET" sid="666795498961664" static="0" type="text">ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</variable>
+        <variable constant="0" name="tempNameToSave" sid="159748418420931" static="0" type="number">0</variable>
+        <variable constant="0" name="curHighScore_P2" sid="537902028569423" static="0" type="number">0</variable>
+        <variable constant="0" name="curHighScore_P1" sid="207078531911482" static="0" type="number">0</variable>
+        <event-block sid="139566438128358">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="256037745856101" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="558945842209082" type="System">
+                    <param id="0" name="Variable">menuPick</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="1" name="Append text" sid="441096387604163" type="SpriteFont_Menus">
+                    <param id="0" name="Text">newline</param>
+                </action>
+                <action id="-16" name="Wait" sid="370378564707767" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="692175052428056" type="System">
+                    <param id="0" name="Group name">&quot;Show Name Input&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="980599047466046" type="System">
+                    <param id="0" name="Group name">&quot;Show HighScore&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="538898724114856">
+                    <conditions>
+                        <condition id="-34" name="Pick by evaluate" sid="884743356003585" type="System">
+                            <param id="0" name="Object">SpriteFont_Menus</param>
+                            <param id="1" name="Expression">SpriteFont_Menus.option_num &gt; -1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="765100857003329" type="SpriteFont_Menus">
+                            <param id="0" name="Text">&quot;A&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>if the P1 highscore is higher than the lowest top score, store it there</comment>
+                <event-block sid="463888360286877">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="408528577795809" type="System">
+                            <param id="0" name="Variable">curHighScore_P1</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Data_Highscore_Array.At(5,0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="271854016067928" type="Data_Highscore_Array">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">curHighScore_P1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="534742364584860" type="System">
+                            <param id="0" name="Group name">&quot;Show Name Input&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="278813273127148">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="828093596460998" type="System">
+                                    <param id="0" name="Object">SpriteFont_Menus</param>
+                                    <param id="1" name="Expression">spritefont_menus.option_num</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="545276880194393" type="SpriteFont_Menus">
+                                    <param id="0" name="Text">&quot;PLAYER 1 ENTER YOUR INITIALS&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="961502583864179">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="160888591773154" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="839582843909834">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="965100970107654" type="System">
+                                    <param id="0" name="Variable">curHighScore_P2</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">Data_Highscore_Array.At(5,0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="735129654134288" type="Data_Highscore_Array">
+                                    <param id="0" name="X">5</param>
+                                    <param id="1" name="Value">curHighScore_P2</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="570944753892000" type="System">
+                                    <param id="0" name="Group name">&quot;Show Name Input&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="647699449885456">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="568050248934692" type="System">
+                                            <param id="0" name="Object">SpriteFont_Menus</param>
+                                            <param id="1" name="Expression">spritefont_menus.option_num</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="388656117978385" type="SpriteFont_Menus">
+                                            <param id="0" name="Text">&quot;PLAYER 2 ENTER YOUR INITIALS&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="148722372731964">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="236941593599715" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="394171488477883" type="SpriteFont_Menus">
+                                    <param id="0" name="Text">&quot;HIGH SCORES&quot;</param>
+                                </action>
+                                <action id="8" name="Sort" sid="564011632896717" type="Data_Highscore_Array">
+                                    <param id="0" name="Axis">0</param>
+                                </action>
+                                <action id="7" name="Reverse" sid="852801340371894" type="Data_Highscore_Array">
+                                    <param id="0" name="Axis">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="264049995221651" type="System">
+                                    <param id="0" name="Group name">&quot;Show HighScore&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" inactive="1" sid="509702083208378" title="Show Name Input">
+            <sub-events>
+                <event-block sid="162845579842218">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="838899043706065" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="799733752975530" type="System">
+                            <param id="0" name="Layer">&quot;nameinput&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Makes selected letter bigger</comment>
+                <event-block sid="580100879476785">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="796137874585283" type="System">
+                            <param id="0" name="Object">SpriteFont_Menus</param>
+                            <param id="1" name="Expression">spritefont_menus.option_num</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">menuPick</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set scale" sid="968212502582586" type="SpriteFont_Menus">
+                            <param id="0" name="Scale">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="361331633809085">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="865663287358022" type="System">
+                            <param id="0" name="Object">SpriteFont_Menus</param>
+                            <param id="1" name="Expression">spritefont_menus.option_num</param>
+                            <param id="2" name="Comparison">1</param>
+                            <param id="3" name="Value">menuPick</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set scale" sid="988171181801287" type="SpriteFont_Menus">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="758609591167672" title="Letter Controls">
+                    <sub-events>
+                        <comment>Enter name</comment>
+                        <event-block any="1" sid="469930292130368">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="752301170237460" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_JUMP&quot;))</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="248572009388431" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="234193717751306" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">9</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="247383545773148">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="147174265528651" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="325267625166568" type="System">
+                                            <param id="0" name="Group name">&quot;Show Name Input&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="992223213131191">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="804092404008922" type="SpriteFont_Menus">
+                                                    <param id="0" name="Instance variable">option_num</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="537149440153176" type="System">
+                                                    <param id="0" name="Variable">tempNameToSave</param>
+                                                    <param id="1" name="Value">spritefont_menus.Text</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="389505400846672">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="320998388319252" type="SpriteFont_Menus">
+                                                    <param id="0" name="Instance variable">option_num</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="438915597495827" type="System">
+                                                    <param id="0" name="Variable">tempNameToSave</param>
+                                                    <param id="1" name="Value">tempNameToSave&amp;spritefont_menus.Text</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="746811664156887">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="284889108944776" type="SpriteFont_Menus">
+                                                    <param id="0" name="Instance variable">option_num</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="430764136636188" type="System">
+                                                    <param id="0" name="Variable">tempNameToSave</param>
+                                                    <param id="1" name="Value">tempNameToSave&amp;spritefont_menus.Text</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="216534497733694">
+                                            <conditions />
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="423729779106878" type="Data_Highscore_Array">
+                                                    <param id="0" name="X">5</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">tempNameToSave</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="336644587234957" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="865193315022139" type="System">
+                                                    <param id="0" name="Variable">mode</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="894309526070974" type="System">
+                                                    <param id="0" name="Variable">curHighScore_P1</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="585988948878762" type="System">
+                                                    <param id="0" name="Variable">curHighScore_P2</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="607312810316226" type="System">
+                                                    <param id="0" name="Seconds">0.2</param>
+                                                </action>
+                                                <action id="-26" name="Restart layout" sid="426677128116013" type="System" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Left</comment>
+                        <event-block any="1" sid="495535536261570">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="173891864278420" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_LEFT&quot;))</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="916664937956547" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">joyDeadzone*-1</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="305631976074949" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">14</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="874226564912805">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="552245374357194" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="516299090923156" type="System">
+                                            <param id="0" name="Variable">menuPick</param>
+                                            <param id="1" name="Value">clamp(menuPick-1,0,2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Right</comment>
+                        <event-block any="1" sid="270726980007028">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="223109602260410" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_RIGHT&quot;))</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="814735306472511" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">joyDeadzone</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="514668890885667" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">15</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="954434949243746">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="591984302570703" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="711580429382320" type="System">
+                                            <param id="0" name="Variable">menuPick</param>
+                                            <param id="1" name="Value">clamp(menuPick+1,0,2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Up</comment>
+                        <event-block any="1" sid="627233479032190">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="950135043264649" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_UP&quot;))</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="422509395791244" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">joyDeadzone*-1</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="674986421114130" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">12</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="423237810510067">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="914302596463413" type="System">
+                                            <param id="0" name="Object">SpriteFont_Menus</param>
+                                            <param id="1" name="Expression">spritefont_menus.option_num</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">menuPick</param>
+                                        </condition>
+                                        <condition id="-6" name="Every X seconds" sid="120454491836764" type="System">
+                                            <param id="0" name="Interval (seconds)">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="119959761673459" type="SpriteFont_Menus">
+                                            <param id="0" name="Text">tokenat(TYPESET,clamp(find(TYPESET,self.Text)-1,0,35),&quot;&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Down</comment>
+                        <event-block any="1" sid="101163668366613">
+                            <conditions>
+                                <condition id="5" name="Key code is down" sid="735640911800762" type="Keyboard">
+                                    <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_DOWN&quot;))</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="571163891474580" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">joyDeadzone</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="293280505859793" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">13</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="686730301801949">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="815250686543157" type="System">
+                                            <param id="0" name="Object">SpriteFont_Menus</param>
+                                            <param id="1" name="Expression">spritefont_menus.option_num</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">menuPick</param>
+                                        </condition>
+                                        <condition id="-6" name="Every X seconds" sid="371400784801427" type="System">
+                                            <param id="0" name="Interval (seconds)">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="822114957461899" type="SpriteFont_Menus">
+                                            <param id="0" name="Text">tokenat(TYPESET,clamp(find(TYPESET,self.Text)+1,0,35),&quot;&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="165196971974350" title="Show HighScore">
+            <sub-events>
+                <event-block any="1" sid="380863454577579">
+                    <conditions>
+                        <condition id="8" name="On any button pressed" sid="178157813321168" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                        </condition>
+                        <condition id="1" name="On any key pressed" sid="816389256475441" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="362143217096296" type="System">
+                            <param id="0" name="Group name">&quot;Show HighScore&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="321191331078612" type="Function">
+                            <param id="0" name="Name">&quot;changeMenu&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;TitleScreen&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="905281861532639">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="434167794340110" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="322975369962674" type="System">
+                            <param id="0" name="Layer">&quot;nameinput&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="123946273947388">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="883196267721643" type="System">
+                                    <param id="0" name="Count">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="570415510152481" type="SpriteFont_Menus">
+                                    <param id="0" name="Text">newline&amp;Data_Highscore_Array.At(loopindex,1)&amp;&quot;.......&quot;&amp;zeropad(Data_Highscore_Array.At(loopindex,0), 8)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="459939338943875" title="Title Effects and Sounds2">
+            <sub-events>
+                <event-block sid="682225731871385">
+                    <conditions>
+                        <condition id="0" name="On function" sid="477776182965180" type="Function">
+                            <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="491548152830509">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="671099534298356" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Normalize&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-31" name="Set layout effect parameter" sid="107485403571018" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="125483625132027">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="156252250406331" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Pixellate&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-31" name="Set layout effect parameter" sid="523020978534015" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="781133794064730" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="918202860689073" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="166511789133946" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="373636649639856" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="609635656328633" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="394263001798311" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="382020962482939" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="343673269967501" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="258132663529900" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="946468160460742" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">12</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="466414640763479" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="420473092745508" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">14</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="794924584472344" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="260103680258861" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="639610163751838">
+                    <conditions>
+                        <condition id="0" name="On function" sid="375245316123859" type="Function">
+                            <param id="0" name="Name">&quot;Fade&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="828619053500806">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="405787272145697" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;In&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-31" name="Set layout effect parameter" sid="624245775565118" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">12.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="335065652716666" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="642222274345553" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">25</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="956863810644583" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="296297500384800" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">37.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="966157563968743" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="845803655276299" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">50</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="155979286022695" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="185690024122737" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">62.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="886452437342173" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="286196771194678" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">75</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="121069208151534" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="851013449691815" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">87.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="660356034969133" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="721613875043817" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="151202546622590">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="439480912991171" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Out&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-31" name="Set layout effect parameter" sid="740091667839727" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">87.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="938206207765702" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="610108289391766" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">75</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="548602565976770" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="148518776288646" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">62.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="350976918080321" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="351937751301918" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">50</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="875913907925371" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="360958290483151" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">37.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="234143909094997" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="145027125692467" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">25</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="946400077682831" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="908165498261010" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">12.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="463901086775119" type="System">
+                                    <param id="0" name="Seconds">0.025</param>
+                                </action>
+                                <action id="-31" name="Set layout effect parameter" sid="277413690186779" type="System">
+                                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="274521717073958">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="247308508562768" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="123702327356216" type="Function">
+                            <param id="0" name="Name">&quot;Fade&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;In&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="749578557114423" type="Function">
+                            <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Normalize&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="859242701749100" title="Change Menu - HighScores">
+            <sub-events>
+                <event-block sid="608906951078540">
+                    <conditions>
+                        <condition id="0" name="On function" sid="251183393358834" type="Function">
+                            <param id="0" name="Name">&quot;changeMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="731801818001734" type="Audio">
+                            <param id="0" name="Audio file">sfx_sounds_pause5_in</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-6</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="409114874060817" type="Audio">
+                            <param id="0" name="Tag">&quot;mainmenu&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="874652440855180" type="System">
+                            <param id="0" name="Variable">menuFuncLayoutName</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="522884420248622" type="System">
+                            <param id="0" name="Variable">canPick</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="153762952593362">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="854264947336289" type="Function">
+                                    <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Pixellate&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="888163656568045" type="Function">
+                                    <param id="0" name="Name">&quot;Fade&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Out&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="238133742308835" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="290173589809204" type="System">
+                                    <param id="0" name="Variable">canPick</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="876128619863008" type="System">
+                                    <param id="0" name="Layout">menuFuncLayoutName</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="911805632616688" type="System">
+                                    <param id="0" name="Variable">menuPick</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>
