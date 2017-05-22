@@ -23,6 +23,10 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="0" name="Call function" sid="842763022561308" type="Function">
+                    <param id="0" name="Name">&quot;Pixellate&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Normalize&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="720087292451212" title="Map Init">
@@ -82,7 +86,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="113873434132139">
+                <event-block disabled="1" sid="113873434132139">
                     <conditions>
                         <condition id="1" name="On any key pressed" sid="165798216363671" type="Keyboard" />
                         <condition behavior="EaseTween" id="1" inverted="1" name="Compare progress" sid="310325305279819" type="Map_Sprite">
@@ -131,7 +135,13 @@
                                     <param id="2" name="Value">&quot;Normalize&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-31" name="Set layout effect parameter" sid="113445636172244" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="473003881433302">
                             <conditions>

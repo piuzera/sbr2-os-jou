@@ -171,14 +171,7 @@
                             <param id="0" name="Object">Pickups</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="475042331728990" type="Audio">
-                            <param id="0" name="Audio file">sfx_sounds_powerup15</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="580313957339255">
                             <conditions>
@@ -190,6 +183,12 @@
                                 <action id="0" name="Call function" sid="536135660862683" type="Function">
                                     <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
                                     <param id="1" name="Parameter {n}">10</param>
+                                </action>
+                                <action id="0" name="Play" sid="475042331728990" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_powerup15</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="347358506984978" type="Pickups">
                                     <param id="0" name="Animation">&quot;Plus10&quot;</param>
@@ -218,6 +217,12 @@
                                     <param id="0" name="Name">&quot;Adjust_Energy_P1&quot;</param>
                                     <param id="1" name="Parameter {n}">25</param>
                                 </action>
+                                <action id="0" name="Play" sid="579361837947249" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_powerup15</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="706701452759256" type="Pickups">
                                     <param id="0" name="Animation">&quot;Plus25&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -244,6 +249,12 @@
                                 <action id="0" name="Call function" sid="228057197369732" type="Function">
                                     <param id="0" name="Name">&quot;p1addammo&quot;</param>
                                     <param id="1" name="Parameter {n}">2</param>
+                                </action>
+                                <action id="0" name="Play" sid="120274721969495" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_powerup15</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="834202393230210" type="Pickups">
                                     <param id="0" name="Animation">&quot;Plus2&quot;</param>
@@ -272,6 +283,12 @@
                                     <param id="0" name="Variable">LevelTimer</param>
                                     <param id="1" name="Value">15</param>
                                 </action>
+                                <action id="0" name="Play" sid="608775181696430" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_powerup15</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="109317690852891" type="Pickups">
                                     <param id="0" name="Animation">&quot;Plus15&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -298,6 +315,12 @@
                                 <action id="-10" name="Add to" sid="405163338926781" type="System">
                                     <param id="0" name="Variable">Total_Score</param>
                                     <param id="1" name="Value">500</param>
+                                </action>
+                                <action id="0" name="Play" sid="351754026189319" type="Audio">
+                                    <param id="0" name="Audio file">sfx_sounds_powerup15</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="941590929339083" type="Pickups">
                                     <param id="0" name="Animation">&quot;Plus500&quot;</param>

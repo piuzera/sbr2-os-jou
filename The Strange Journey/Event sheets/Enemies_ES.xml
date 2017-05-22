@@ -2455,7 +2455,7 @@
                                                 <action id="0" name="Play" sid="495512618855982" type="Audio">
                                                     <param id="0" name="Audio file">sfx_weapon_singleshot13</param>
                                                     <param id="2" name="Loop">0</param>
-                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="3" name="Volume">-10</param>
                                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                                 </action>
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="743448314517390" type="Boss_Anubis_Projectile">
@@ -2473,7 +2473,7 @@
                                                 <action id="0" name="Play" sid="699034548877319" type="Audio">
                                                     <param id="0" name="Audio file">sfx_weapon_singleshot13</param>
                                                     <param id="2" name="Loop">0</param>
-                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="3" name="Volume">-10</param>
                                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                                 </action>
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="384737175683029" type="Boss_Anubis_Projectile">
@@ -2491,7 +2491,7 @@
                                                 <action id="0" name="Play" sid="292189053590700" type="Audio">
                                                     <param id="0" name="Audio file">sfx_weapon_singleshot13</param>
                                                     <param id="2" name="Loop">0</param>
-                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="3" name="Volume">-10</param>
                                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                                 </action>
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="906140425902088" type="Boss_Anubis_Projectile">

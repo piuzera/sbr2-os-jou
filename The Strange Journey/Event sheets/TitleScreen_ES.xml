@@ -30,12 +30,6 @@
                     <param id="1" name="Parameter index">0</param>
                     <param id="2" name="Value">100</param>
                 </action>
-                <action id="0" name="Play" sid="162450798412991" type="Audio">
-                    <param id="0" name="Audio file">06 Interception</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;Title&quot;</param>
-                </action>
             </actions>
         </event-block>
         <event-group description="" sid="518898110236120" title="TitleScreen">

@@ -69,10 +69,20 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="492072142554682">
+                        <event-block any="1" sid="492072142554682">
                             <conditions>
                                 <condition id="5" name="Key code is down" sid="987419489322131" type="Keyboard">
                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_LEFT&quot;))</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="804587158316770" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">joyDeadzone*-1</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="817736062780279" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">14</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -96,10 +106,10 @@
                                             <conditions />
                                             <actions>
                                                 <action id="-2" name="Set Y" sid="381549874725125" type="char_select_bg3">
-                                                    <param id="0" name="Y">360</param>
+                                                    <param id="0" name="Y">363</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="644729196247086" type="char_select_bg3">
-                                                    <param id="0" name="X">120</param>
+                                                    <param id="0" name="X">128</param>
                                                 </action>
                                                 <action id="-28" name="Set effect parameter" sid="329291216542022" type="CharSelect_Highlander">
                                                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
@@ -123,7 +133,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-2" name="Set Y" sid="587970237711056" type="char_select_bg4">
-                                                            <param id="0" name="Y">360</param>
+                                                            <param id="0" name="Y">363</param>
                                                         </action>
                                                         <action id="-1" name="Set X" sid="568500424408315" type="char_select_bg4">
                                                             <param id="0" name="X">200</param>
@@ -136,10 +146,20 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="877003347236499">
+                        <event-block any="1" sid="877003347236499">
                             <conditions>
                                 <condition id="5" name="Key code is down" sid="755088095939230" type="Keyboard">
                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_RIGHT&quot;))</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="180936607639613" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">joyDeadzone</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="176037046182857" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">15</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -163,7 +183,7 @@
                                             <conditions />
                                             <actions>
                                                 <action id="-2" name="Set Y" sid="910144961527703" type="char_select_bg3">
-                                                    <param id="0" name="Y">360</param>
+                                                    <param id="0" name="Y">363</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="931066077740022" type="char_select_bg3">
                                                     <param id="0" name="X">200</param>
@@ -190,10 +210,10 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-2" name="Set Y" sid="560795266277248" type="char_select_bg4">
-                                                            <param id="0" name="Y">360</param>
+                                                            <param id="0" name="Y">363</param>
                                                         </action>
                                                         <action id="-1" name="Set X" sid="507377476866437" type="char_select_bg4">
-                                                            <param id="0" name="X">120</param>
+                                                            <param id="0" name="X">128</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -203,10 +223,14 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="843206056726021">
+                        <event-block any="1" sid="843206056726021">
                             <conditions>
                                 <condition id="5" name="Key code is down" sid="221854322124709" type="Keyboard">
                                     <param id="0" name="Keycode">int(Data_Players.Get(&quot;player_1_control_JUMP&quot;))</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="133685783157232" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -232,6 +256,12 @@
                                         </action>
                                         <action id="6" name="Stop" sid="149189051768884" type="Audio">
                                             <param id="0" name="Tag">&quot;Char&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="189801278582635" type="char_select_bg3">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="730948210066770" type="char_select_bg4">
+                                            <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -517,10 +547,10 @@
                             </conditions>
                             <actions>
                                 <action id="-2" name="Set Y" sid="503714999803662" type="char_select_bg4">
-                                    <param id="0" name="Y">368</param>
+                                    <param id="0" name="Y">363</param>
                                 </action>
                                 <action id="-1" name="Set X" sid="525682972969972" type="char_select_bg4">
-                                    <param id="0" name="X">208</param>
+                                    <param id="0" name="X">200</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -568,7 +598,13 @@
                                     <param id="2" name="Value">&quot;Normalize&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-31" name="Set layout effect parameter" sid="281055202943274" type="System">
+                                    <param id="0" name="Effect">&quot;Pixellate&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="592136040919273">
                             <conditions>
